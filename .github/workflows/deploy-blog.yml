@@ -1,4 +1,6 @@
-name: Deploy Hexo Site
+name: GH Page Deploy
+
+# only on master push
 on:
   push:
     branches:
@@ -10,10 +12,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      # set up node version
+      - name: Read .nvmrc
+        run: NVMRC=$(cat ./blog/.nvmrc)
+
+      - name: Use Node.js (.nvmrc)
+        uses: dcodeIO/setup-node-nvm@master
         with:
-          node-version: '22'
+          node-version: lts/*
 
       - name: Install dependencies
         working-directory: ./blog
