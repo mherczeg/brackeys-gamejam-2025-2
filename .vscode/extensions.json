@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "eddiedover.gdscript-formatter-linter",
+        "eamodio.gitlens",
+        "geequlim.godot-tools",
+        "vscode-icons-team.vscode-icons"
+    ]
+}

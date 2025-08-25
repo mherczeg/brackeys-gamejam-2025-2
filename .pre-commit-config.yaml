@@ -1,0 +1,13 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+-   repo: local
+    hooks:
+    -   id: gdlint
+        name: Run gdlint
+        entry: gdlint
+        language: system
+        types: [file]  
+        files: \.gd$ 
+        exclude: ^\.git/|\.vscode/|app/addons/
+    

@@ -1,0 +1,6 @@
+# Godot 4+ specific ignores
+.godot/
+# this is where I usually keep my godot executable
+godot/ 
+/android/
+.vscode/launch.json

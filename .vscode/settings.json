@@ -1,0 +1,7 @@
+{
+    "godotTools.editorPath.godot4": "./godot/godot",
+    "[gdscript]": {
+        "editor.defaultFormatter": "geequlim.godot-tools",
+        "editor.formatOnSave": true
+    }
+}
