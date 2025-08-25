@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Okay, the following is the result of about two hours of very targeted brainstorming. Time to get coding. High level:  I’ll aim to get the core gameplay loop going by EOD Wednesday. Thursday-Friday I’l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Day 1 - Plans and Dreams">
+<meta property="og:url" content="https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/25/day-1-plans-and-dreams/index.html">
+<meta property="og:site_name" content="Vending Machine Gremlin">
+<meta property="og:description" content="Okay, the following is the result of about two hours of very targeted brainstorming. Time to get coding. High level:  I’ll aim to get the core gameplay loop going by EOD Wednesday. Thursday-Friday I’l">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-08-25T08:26:13.000Z">
+<meta property="article:modified_time" content="2025-08-25T10:47:47.081Z">
+<meta property="article:author" content="mherczeg">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/brackeys-gamejam-2025-2/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/brackeys-gamejam-2025-2/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/brackeys-gamejam-2025-2/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Day 1 - Plans and Dreams</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/brackeys-gamejam-2025-2/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/brackeys-gamejam-2025-2/">Home</a></li><!--
+     --><!--
+       --><li><a href="/brackeys-gamejam-2025-2/about/">About</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/brackeys-gamejam-2025-2/2025/08/25/game-ideas/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/25/day-1-plans-and-dreams/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/25/day-1-plans-and-dreams/&text=Day 1 - Plans and Dreams"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/25/day-1-plans-and-dreams/&title=Day 1 - Plans and Dreams"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/25/day-1-plans-and-dreams/&is_video=false&description=Day 1 - Plans and Dreams"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Day 1 - Plans and Dreams&body=Check out this article: https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/25/day-1-plans-and-dreams/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/25/day-1-plans-and-dreams/&title=Day 1 - Plans and Dreams"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/25/day-1-plans-and-dreams/&title=Day 1 - Plans and Dreams"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/25/day-1-plans-and-dreams/&title=Day 1 - Plans and Dreams"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/25/day-1-plans-and-dreams/&title=Day 1 - Plans and Dreams"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/25/day-1-plans-and-dreams/&name=Day 1 - Plans and Dreams&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/25/day-1-plans-and-dreams/&t=Day 1 - Plans and Dreams"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Day 1 - Plans and Dreams
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">mherczeg</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2025-08-25T08:26:13.000Z" class="dt-published" itemprop="datePublished">2025-08-25</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <p>Okay, the following is the result of about two hours of very targeted brainstorming. Time to get coding.</p>
+<p>High level:</p>
+<ul>
+<li>I’ll aim to get the core gameplay loop going by EOD Wednesday.</li>
+<li>Thursday-Friday I’ll try to keep as art days, get the audio-visuals in place.</li>
+<li>Saturday-Sunday is for testing, fixes, and small improvements.</li>
+</ul>
+<p>Core gameplay days:</p>
+<ul>
+<li>Day 1 I want the core mixing UI&#x2F;gameplay in place.</li>
+<li>All other efforts day 1 I want to spend on organizing my thoughts&#x2F;ideas, document all my system ideas.</li>
+<li>Day 2 I want to implement whatever I come up with for the customers.</li>
+<li>Day 3 Link the two systems, and fill the content (names and description).</li>
+</ul>
+<p>Art Days:</p>
+<ul>
+<li>For now the plan is to try not to think about it. I’ll solve it when I get there. (This means a whole lot of rectangles for Days 1-3)</li>
+<li>Sound is just going to be whatever royalty free stuff I can find. There are no other options even worth considering</li>
+<li>Visuals are going to be a lot of asset packs, and stock photos with a pixelart filter.</li>
+</ul>
+<p>Core gameplay loop (I’m just brainstorming, this will likely be reduced to what is achievable):</p>
+<ol>
+<li>An NPC or group of NPCs appear on screen conversing<ul>
+<li>They have names, and descriptions<ul>
+<li>But since our hero is a gremlin, they names customers by what they see and hear, like “Bitchy Cyclist Guy” and “Fat Goth Hates Wanessa”</li>
+<li>Descriptions are very basic by default: look, and later purchase history</li>
+<li>Name could be editable for the players enjoyment</li>
+</ul>
+</li>
+<li>Return customers are recognized by consistent naming, and their description grows<ul>
+<li>Only the purchase history is automatic, everything else needs to be added manually by players who care&#x2F;deduce correctly: likes&#x2F;dislikes&#x2F;allergies&#x2F;etc</li>
+</ul>
+</li>
+<li>Conversation often include context clues to NPCs likes&#x2F;dislikes&#x2F;allergies in terms of ingredients.<ul>
+<li>QoL feature is to right-click a word in conversation, and save it to description</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>An NPC or group of NPCs approach the machine and place an order (they may still be conversing)<ul>
+<li>Their order clearly defines the recipe for the mixture, deducing it is not part of the game</li>
+</ul>
+</li>
+<li>The gremlin mixes their drink (but also: ramen, gum, candy bar, etc)<ul>
+<li>They select the base (soft drink, ramen, etc)</li>
+<li>They add ingredients to product the correct drink, like Cola, Fanta, Coffee, Mineral&#x2F;Still water.</li>
+<li>At this point they may send the mixture on it’s way.<ul>
+<li>If it satisfies the order, they get good points (TODO: figure theme out for this later. Management approval? Yelp Rating?), if it isn’t they get bad points.</li>
+<li>They have options to produce things which does more than the recipe. Customer ask for a drink, but they have likes&#x2F;dislikes&#x2F;allergies.<ul>
+<li>A person may appear with their boss for example or with someone they wish to impress, and ask for a serious drink (like a sour drink), but the gremlin know they like other ingredients, and add that as well (making their sour drink more sweet than sour) </li>
+<li>The gremlin could choose to provide an unsatisfactory drink to save someone from their allergy</li>
+<li>Or let’s say someone is rude and&#x2F;or abusive to someone else, the gremlin could trigger their allergy</li>
+<li>This is very stretch, but we are reaching the point of having quests in the game, like a crime boss becomes a regular, and the gremlin has to learn their taste to poison them</li>
+</ul>
+</li>
+<li>They should also have abilities to do further things her:<ul>
+<li>Like the rare second drop: a second, free drink</li>
+<li>Or just taking their money and refusing to serve (which actually has tactical utility, if ingredients cost money)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The customer(s) leave with another conversation snippet.</li>
+<li>Repeat until refill day</li>
+<li>On refill day earned currencies can be spent to restock ingredients, buy new unknown ingredients, unlock new bases, maybe some other perks.</li>
+<li>Repeat until win condition (TODO: what’s the win condition. Could be just mastering all ingredients, and then endless mode, but with the risk gone, this prototype will become stale).</li>
+</ol>
+<p>With that out of the way, today’s focus is mixing:</p>
+<ul>
+<li>A product is a base + min 2, max 4 ingredients. </li>
+<li>At least 2 of the same effect on an ingredient activates.</li>
+<li>3 and 4 matches provide bigger and stronger effects.</li>
+<li>Do we limit the effects on the final product to 4? Theoretical limit is 8 right now.<ul>
+<li>Could be an upgrade to have more than 4 effects on a product.</li>
+<li>Could also be an upgrade to have more ingredients actually, start the game with just 2 or 3</li>
+</ul>
+</li>
+<li>Effects have antithesis, between the two the larger one overpowers the lower one (for example carbonated, and decardonated).<ul>
+<li>or maybe we have groups, and within groups only the largest effect can be active?</li>
+<li>or maybe some of them mix? like red food coloring and blue food coloring produces purple food coloring.</li>
+</ul>
+</li>
+<li>Ingredients should be semi-randomized at the start of the game, for replayability: we have actually a list of ingredients, but their icon&#x2F;image, name, and description is generated randomly assigned, otherwise players would quickly learn&#x2F;google what pixie-dust does for example.<ul>
+<li>I think the effect list does not need obfuscation. If players correctly deduce between two half discovered ingredient, which one is which, and what are the unknown effects, that’s just player skill. They are allowed to be good at the game.</li>
+</ul>
+</li>
+<li>Questions to consider:<ul>
+<li><em>How many ingredients?</em> Morrowind had 72 but that seems like a lot, aim for 50 for now, and we’ll see if the gameplay requires more&#x2F;fewer.</li>
+<li><em>How many products?</em> 10-to-20 seems a good baseline</li>
+<li><em>How frequent should reliance on unknown ingredients be?</em> People could stick to safe recipes only, is that ok&#x2F;not ok? Do we design against it?<ul>
+<li>Incentivize: if using unknown ingredients is actually desirable, the player will do so just because they want it. Possible fluff: They are a gremlin. Gremlins are innately creatures fo chaos They could just unlock gremlin powers by feeding chaos (using unknown ingredients)<ul>
+<li>Pro: more player agency, they are still able to enjoy the game in whatever style they want</li>
+<li>Con: we need to be careful not to imbalance it. Basically we need to avoid the game devolving into just producing random mixtures, to farm gremlin powers</li>
+</ul>
+</li>
+<li>Force them out of the safe recipe zone: this needs more brainstorming, but what if we don’t purchase ingredients, we purchase ingredient producers (like a pixie in a cage for pixiedust or a tree for a leaf&#x2F;flower). If the producers production cycle is low enough, players are forced to look for alternate ingredients <ul>
+<li>Pro: makes sure the player plays the game the way we envisioned</li>
+<li>Con: this is the sick method, and I’m vary of the stick method, because if it does not work, it’s more likely that the whole design crumbles. much prefer the carrot if possible, it fails more gracefully.</li>
+</ul>
+</li>
+<li>A compromise: as I verbalized Pros and Cons of the above two approach I started to like parts of both. Maybe we compromise? We restrict production, but not by that much, and add gremlin upgrades? That’s a whole new game system though. So lets just go with buying bulks of ingredients first, and we can add producers later.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Just theme the ingredients whatever for now, we will fill the content later.</li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/brackeys-gamejam-2025-2/">Home</a></li>
+        
+          <li><a href="/brackeys-gamejam-2025-2/about/">About</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/25/day-1-plans-and-dreams/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/25/day-1-plans-and-dreams/&text=Day 1 - Plans and Dreams"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/25/day-1-plans-and-dreams/&title=Day 1 - Plans and Dreams"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/25/day-1-plans-and-dreams/&is_video=false&description=Day 1 - Plans and Dreams"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Day 1 - Plans and Dreams&body=Check out this article: https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/25/day-1-plans-and-dreams/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/25/day-1-plans-and-dreams/&title=Day 1 - Plans and Dreams"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/25/day-1-plans-and-dreams/&title=Day 1 - Plans and Dreams"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/25/day-1-plans-and-dreams/&title=Day 1 - Plans and Dreams"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/25/day-1-plans-and-dreams/&title=Day 1 - Plans and Dreams"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/25/day-1-plans-and-dreams/&name=Day 1 - Plans and Dreams&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/25/day-1-plans-and-dreams/&t=Day 1 - Plans and Dreams"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2025
+    mherczeg
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/brackeys-gamejam-2025-2/">Home</a></li><!--
+     --><!--
+       --><li><a href="/brackeys-gamejam-2025-2/about/">About</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/brackeys-gamejam-2025-2/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
