@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfvtyjrhh4cqx"]
+
+[ext_resource type="Script" uid="uid://v04tiq78fthu" path="res://components/BaseSelector.gd" id="1_udtad"]
+
+[node name="BaseSelector" type="HBoxContainer"]
+script = ExtResource("1_udtad")

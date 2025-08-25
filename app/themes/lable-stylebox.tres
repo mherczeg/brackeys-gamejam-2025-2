@@ -1,0 +1,16 @@
+[gd_resource type="StyleBoxTexture" load_steps=3 format=3 uid="uid://dj5g08sef8hlt"]
+
+[ext_resource type="Texture2D" uid="uid://bkpheoltshcfn" path="res://themes/MetalPixelTheme4/MetalPixel.png" id="1_fbgo4"]
+
+[sub_resource type="AtlasTexture" id="25"]
+atlas = ExtResource("1_fbgo4")
+
+[resource]
+texture = SubResource("25")
+texture_margin_left = 6.0
+texture_margin_top = 10.0
+texture_margin_right = 4.0
+texture_margin_bottom = 10.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(81, 48, 14, 16)

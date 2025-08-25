@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Base" load_steps=4 format=3 uid="uid://hp6kglgksgs4"]
+
+[ext_resource type="Texture2D" uid="uid://b6j1c1jj15h3b" path="res://assets/BaseAtlas.png" id="1_acepn"]
+[ext_resource type="Script" uid="uid://bgwochg5pfqrl" path="res://resources/Base.gd" id="2_sr6ri"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iibn4"]
+atlas = ExtResource("1_acepn")
+region = Rect2(128, 0, 32, 32)
+
+[resource]
+script = ExtResource("2_sr6ri")
+name = "Base1"
+description = ""
+icon = SubResource("AtlasTexture_iibn4")
+metadata/_custom_type_script = "uid://bgwochg5pfqrl"

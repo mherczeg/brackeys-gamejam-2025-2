@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=9 format=3 uid="uid://031b8ayhhtvq"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_oog3x"]
+[ext_resource type="Texture2D" uid="uid://dedq1s2isp1ro" path="res://assets/IngredientsAtlas.png" id="2_1paqq"]
+[ext_resource type="Resource" uid="uid://b7liwqkcrys8l" path="res://resources/effects/Effect2.tres" id="2_lhy06"]
+[ext_resource type="Resource" uid="uid://crrubfaww0nxy" path="res://resources/effects/Effect1.tres" id="3_eornc"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="3_lhy06"]
+[ext_resource type="Resource" uid="uid://2gbmp1hjdl6k" path="res://resources/effects/Effect9.tres" id="4_nopw7"]
+[ext_resource type="Resource" uid="uid://eq2fbd6j88nc" path="res://resources/effects/Effect10.tres" id="5_xxpvu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3i6k5"]
+atlas = ExtResource("2_1paqq")
+region = Rect2(224, 0, 32, 32)
+
+[resource]
+script = ExtResource("3_lhy06")
+name = "Ingredient 8"
+description = "Description describing ingredient 8"
+icon = SubResource("AtlasTexture_3i6k5")
+effects = Array[ExtResource("1_oog3x")]([ExtResource("2_lhy06"), ExtResource("3_eornc"), ExtResource("4_nopw7"), ExtResource("5_xxpvu")])
+metadata/_custom_type_script = "uid://dl1mifitwir4r"

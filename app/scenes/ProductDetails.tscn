@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhdwspygl8is8"]
+
+[ext_resource type="Script" uid="uid://dqtxo8v0bpt3t" path="res://scenes/ProductDetails.gd" id="1_hum7m"]
+
+[node name="ProductDetails" type="VBoxContainer"]
+size_flags_horizontal = 3
+script = ExtResource("1_hum7m")
+
+[node name="EffectList" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="BaseWarning" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Base not selected!"
+
+[node name="ServeButton" type="Button" parent="."]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Mix It!"

@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://yrym8oofb8p4"]
+
+[ext_resource type="Script" uid="uid://d3obb74fl2sda" path="res://components/MixerButtons.gd" id="1_jsqpx"]
+[ext_resource type="PackedScene" uid="uid://qqu3aivipcrv" path="res://components/IngredientButton.tscn" id="1_lnkbb"]
+
+[sub_resource type="Gradient" id="Gradient_jsqpx"]
+colors = PackedColorArray(0.621175, 0.663973, 0.855973, 1, 0.619608, 0.662745, 0.854902, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ht0kh"]
+gradient = SubResource("Gradient_jsqpx")
+
+[node name="MixerButtons" type="HBoxContainer"]
+script = ExtResource("1_jsqpx")
+
+[node name="BaseButton" type="TextureButton" parent="."]
+layout_mode = 2
+texture_normal = SubResource("GradientTexture2D_ht0kh")
+
+[node name="Icon" type="TextureRect" parent="BaseButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="IngredientButton1" parent="." instance=ExtResource("1_lnkbb")]
+layout_mode = 2
+
+[node name="IngredientButton2" parent="." instance=ExtResource("1_lnkbb")]
+layout_mode = 2
+ingredient_slot = 1
+
+[node name="IngredientButton3" parent="." instance=ExtResource("1_lnkbb")]
+layout_mode = 2
+ingredient_slot = 2
+
+[node name="IngredientButton4" parent="." instance=ExtResource("1_lnkbb")]
+layout_mode = 2
+ingredient_slot = 3
