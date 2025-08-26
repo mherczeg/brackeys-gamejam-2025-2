@@ -11,11 +11,3 @@ offset_bottom = 193.0
 texture = ExtResource("1_7evva")
 expand_mode = 1
 script = ExtResource("2_o16h7")
-
-[node name="Text" type="Label" parent="."]
-layout_mode = 0
-offset_left = 22.0
-offset_top = -26.0
-offset_right = 147.0
-offset_bottom = -3.0
-text = "Stage NPC Text"

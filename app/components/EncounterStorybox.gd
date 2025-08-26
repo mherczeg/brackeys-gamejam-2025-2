@@ -23,7 +23,7 @@ func render_story_step(new_encounter: Encounter, new_stage: Encounter.STAGE) -> 
 
 func _render() -> void:
 	_reset_group_visibility()
-	stage_group_nodes[stage].show_encounter(encounter)
+	await stage_group_nodes[stage].show_encounter(encounter)
 
 func _reset_group_visibility() -> void:
 	for stage_group_node: StageNPCGroup in stage_group_nodes.values():

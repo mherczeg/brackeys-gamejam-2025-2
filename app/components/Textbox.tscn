@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctq6hd8yog16o"]
+
+[ext_resource type="Script" uid="uid://q5te6xetrs0i" path="res://components/Textbox.gd" id="1_d5fel"]
+
+[node name="Textbox" type="Label"]
+offset_right = 117.0
+offset_bottom = 23.0
+text = "Stage NPC Text"
+script = ExtResource("1_d5fel")
+
+[node name="DisplayTimer" type="Timer" parent="."]
+one_shot = true

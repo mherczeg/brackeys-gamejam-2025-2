@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bqlkljml3wgye"]
+[gd_scene load_steps=6 format=3 uid="uid://bqlkljml3wgye"]
 
 [ext_resource type="Script" uid="uid://crplonc8qkgt7" path="res://scenes/Game.gd" id="1_78awf"]
 [ext_resource type="PackedScene" uid="uid://dtq073ey6thiy" path="res://scenes/CustomerPane.tscn" id="2_cpr0p"]
 [ext_resource type="PackedScene" uid="uid://cl1c5ipfnf66f" path="res://scenes/MixingPane.tscn" id="2_qbsmt"]
+[ext_resource type="Theme" uid="uid://yqmay0cd53tl" path="res://themes/MetalPixelTheme4/MetalPixel.tres" id="2_s0nni"]
 [ext_resource type="PackedScene" uid="uid://b37hth77ew4nl" path="res://components/CustomerDevtools.tscn" id="3_cpr0p"]
 
 [node name="Game" type="Node2D"]
@@ -31,6 +32,7 @@ grow_vertical = 2
 [node name="MixingPane" parent="Control/VBoxContainer" instance=ExtResource("2_qbsmt")]
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("2_s0nni")
 
 [node name="CustomerPane" parent="Control/VBoxContainer" instance=ExtResource("2_cpr0p")]
 unique_name_in_owner = true

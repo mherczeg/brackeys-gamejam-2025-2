@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dtq073ey6thiy"]
+[gd_scene load_steps=5 format=3 uid="uid://dtq073ey6thiy"]
 
 [ext_resource type="Script" uid="uid://jrurvo7ml2qx" path="res://scenes/CustomerPane.gd" id="1_37uis"]
 [ext_resource type="Texture2D" uid="uid://ckqsafpib02rl" path="res://assets/placeholder/Pixel Art Vending Machines Pack/Machine 2/Vending Machine 2.1 (No Glass).png" id="2_rt0hj"]
 [ext_resource type="PackedScene" uid="uid://dheal4pgk1m5o" path="res://components/EncounterStorybox.tscn" id="3_fno5u"]
+[ext_resource type="Theme" uid="uid://yqmay0cd53tl" path="res://themes/MetalPixelTheme4/MetalPixel.tres" id="4_ong1v"]
 
 [node name="CustomersPane" type="Control"]
 layout_mode = 3
@@ -33,3 +34,4 @@ expand_mode = 1
 
 [node name="EncounterStorybox" parent="Panel" instance=ExtResource("3_fno5u")]
 unique_name_in_owner = true
+theme = ExtResource("4_ong1v")
