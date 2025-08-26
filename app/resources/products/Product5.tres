@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_ymnja"]
 [ext_resource type="Texture2D" uid="uid://ctoluscsljeg2" path="res://assets/ProductAtlas.png" id="3_umyev"]
 [ext_resource type="Resource" uid="uid://crrubfaww0nxy" path="res://resources/effects/Effect1.tres" id="3_wgc80"]
-[ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="4_6r0b5"]
+[ext_resource type="Script" path="res://resources/Product.gd" id="4_6r0b5"]
 [ext_resource type="Resource" uid="uid://drggcgqhojyn0" path="res://resources/effects/Effect4.tres" id="4_tjh5w"]
 [ext_resource type="Resource" uid="uid://eq2fbd6j88nc" path="res://resources/effects/Effect10.tres" id="5_ja2u5"]
 [ext_resource type="Resource" uid="uid://2gbmp1hjdl6k" path="res://resources/effects/Effect9.tres" id="6_bwiwh"]

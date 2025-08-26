@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_t402h"]
 [ext_resource type="Texture2D" uid="uid://daduajcy7mdne" path="res://assets/NPCAtlas.png" id="2_42thi"]
 [ext_resource type="Resource" uid="uid://eq2fbd6j88nc" path="res://resources/effects/Effect10.tres" id="2_efyao"]
-[ext_resource type="Script" uid="uid://dxpfvppfif2ht" path="res://resources/NPC.gd" id="3_hthj8"]
+[ext_resource type="Script" path="res://resources/NPC.gd" id="3_hthj8"]
 [ext_resource type="Resource" uid="uid://crrubfaww0nxy" path="res://resources/effects/Effect1.tres" id="4_gy16u"]
 [ext_resource type="Resource" uid="uid://dt4xfhb2hjxi0" path="res://resources/effects/Effect3.tres" id="5_wu6sg"]
 [ext_resource type="Resource" uid="uid://e2n84d1cdb0v" path="res://resources/effects/Effect7.tres" id="6_hsdl1"]

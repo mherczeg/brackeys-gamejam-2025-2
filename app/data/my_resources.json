@@ -1,0 +1,43 @@
+[
+  {
+    "out_name": "spicy_effect.tres",
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Spicy",
+      "description": "Burns the tongue but adds excitement"
+    }
+  },
+  {
+    "out_name": "sweet_effect.tres", 
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Sweet",
+      "description": "Deliciously sweet flavor"
+    }
+  },
+  {
+    "out_name": "chili_pepper.tres",
+    "script_path": "res://resources/Ingredient.gd", 
+    "properties": {
+      "name": "Chili Pepper",
+      "description": "A fiery red pepper",
+      "effects": {
+        "res://effects/spicy_effect.tres": true,
+        "res://effects/hot_effect.tres": false
+      }
+    }
+  },
+  {
+    "out_name": "healing_potion.tres",
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Healing Potion",
+      "description": "Restores health",
+      "base": "res://bases/liquid_base.tres",
+      "effects": [
+        "res://effects/healing_effect.tres",
+        "res://effects/bitter_effect.tres"
+      ]
+    }
+  }
+]

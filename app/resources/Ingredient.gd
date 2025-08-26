@@ -4,4 +4,4 @@ extends Resource
 @export var name: String
 @export var description: String
 @export var icon: Texture2D
-@export var effects: Array[Effect]
+@export var effects: Dictionary[Effect, bool]

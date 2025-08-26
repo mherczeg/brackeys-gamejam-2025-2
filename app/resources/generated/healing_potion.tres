@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Product" load_steps=3 format=3 uid="uid://lunb6nq5yjl8"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_qhk4v"]
+[ext_resource type="Script" path="res://resources/Product.gd" id="2_ny8l7"]
+
+[resource]
+script = ExtResource("2_ny8l7")
+name = "Healing Potion"
+description = "Restores health"
+effects = Array[ExtResource("1_qhk4v")]([])

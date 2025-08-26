@@ -16,5 +16,10 @@ script = ExtResource("3_gciaw")
 name = "Ingredient 7"
 description = "Description describing ingredient 7"
 icon = SubResource("AtlasTexture_3i6k5")
-effects = Array[ExtResource("1_v2fk5")]([ExtResource("2_g6ipq"), ExtResource("3_21t6h"), ExtResource("4_f2gln"), ExtResource("2_g6ipq")])
+effects = Dictionary[ExtResource("1_v2fk5"), bool]({
+ExtResource("2_g6ipq"): false,
+ExtResource("3_21t6h"): false,
+ExtResource("4_f2gln"): false,
+ExtResource("2_g6ipq"): false
+})
 metadata/_custom_type_script = "uid://dl1mifitwir4r"
