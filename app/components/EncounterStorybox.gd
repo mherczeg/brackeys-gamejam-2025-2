@@ -16,14 +16,18 @@ func _ready() -> void:
 	_reset_group_visibility()
 
 
-func render_story_step(new_encounter: Encounter, new_stage: Encounter.STAGE) -> void:
+func render_story_step(new_encounter: Encounter, new_stage: Encounter.STAGE) -> Signal:
 	encounter = new_encounter
 	stage = new_stage
-	_render()
+	return _render()
 
-func _render() -> void:
+func clear() -> void:
 	_reset_group_visibility()
-	await stage_group_nodes[stage].show_encounter(encounter)
+
+
+func _render() -> Signal:
+	_reset_group_visibility()
+	return stage_group_nodes[stage].show_encounter(encounter)
 
 func _reset_group_visibility() -> void:
 	for stage_group_node: StageNPCGroup in stage_group_nodes.values():

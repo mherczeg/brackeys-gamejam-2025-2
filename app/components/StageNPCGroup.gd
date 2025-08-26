@@ -25,26 +25,16 @@ func show_encounter(encounter: Encounter) -> Signal:
 
 func _set_npc_visibility(npc_count: int) -> void:
 	for i: int in npc_count:
-		stage_npcs[i].show()
+		stage_npcs[i].activate_for_interaction()
 
 func _process_npc_interactions(texts: Array[String], _current_npc: int = 0) -> void:
 	if _current_npc >= texts.size():
 		encounter_complete.emit()
 		return
 
-	await stage_npcs[_current_npc].set_text(texts[_current_npc])
+	await stage_npcs[_current_npc].display_text(texts[_current_npc])
 
 	_process_npc_interactions(texts, _current_npc + 1)
-
-
-func watch_display_completion(encounter: Encounter) -> void:
-	_npc_with_interaciton = encounter.get_stage_text(stage).size()
-	if _npc_with_interaciton == 0:
-		return
-
-	for i: int in _npc_with_interaciton:
-		stage_npcs[i].set_text_complete.connect(_on_npc_done, CONNECT_ONE_SHOT)
-
 
 func _on_npc_done() -> void:
 	_npc_with_interaciton -= 1
@@ -55,3 +45,4 @@ func _reset_npcs() -> void:
 	for stage_npc: StageNPC in stage_npcs:
 		stage_npc.hide()
 		stage_npc.clear_text()
+		stage_npc.clear_interaction()

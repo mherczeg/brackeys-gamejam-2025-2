@@ -12,11 +12,15 @@ var encounter_stages: Array[Encounter.STAGE] = [
 
 @onready var encounter_selector: OptionButton = $HBoxContainer/EncounterSelector
 @onready var stage_selector: OptionButton = $HBoxContainer/StageSelector
-@onready var render_encounter_button: Button = $HBoxContainer/Button
+@onready var render_encounter_button: Button = $HBoxContainer/RenderEncounter
+@onready var start_encounter_button: Button = $HBoxContainer/StartEncounter
+@onready var simulate_serving_mix: Button = $HBoxContainer/SimulateServingMix
 
 func _ready() -> void:
 	_load_all_effects()
 	render_encounter_button.pressed.connect(_on_render_encounter_button_pressed)
+	start_encounter_button.pressed.connect(EventBus.debug.start_random_encounter.emit)
+	simulate_serving_mix.pressed.connect(EventBus.debug.serve_mixture.emit)
 
 func _load_all_effects() -> void:
 	var dir: DirAccess = DirAccess.open(ENCOUNTERS)

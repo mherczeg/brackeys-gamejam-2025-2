@@ -37,7 +37,15 @@ popup/item_1/id = 1
 popup/item_2/text = "Stage 3"
 popup/item_2/id = 2
 
-[node name="Button" type="Button" parent="HBoxContainer"]
+[node name="RenderEncounter" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-text = "Render Encounter
+text = "Render Encounter Step
 "
+
+[node name="StartEncounter" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Play Random Encounter"
+
+[node name="SimulateServingMix" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Simulate Serving Mix"

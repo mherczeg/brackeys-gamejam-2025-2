@@ -6,26 +6,37 @@ signal display_complete
 var letter_index: int = 0
 var display_time: float = 0.02
 var text_to_display: String = ""
+var is_active_for_interaction: bool = false
+var fast_forward: bool = false
 
 @onready var display_timer: Timer = $DisplayTimer
 
 func _ready() -> void:
 	display_timer.timeout.connect(_display_letter)
 
-
 func clear_text() -> void:
+	display_timer.stop()
 	text = ""
 
 func display_text(new_text: String) -> Signal:
 	text_to_display = new_text
 	letter_index = 0
+
 	# start with timer instead of calling the function to sequence boxes
 	display_timer.start(display_time)
 
 	return display_complete
 
 func _display_letter() -> void:
+	if fast_forward:
+		display_timer.stop()
+		text = text_to_display
+		fast_forward = false
+		display_complete.emit()
+		return
+
 	if letter_index >= text_to_display.length():
+		is_active_for_interaction = false
 		display_complete.emit()
 		return
 

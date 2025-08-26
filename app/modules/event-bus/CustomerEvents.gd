@@ -1,0 +1,4 @@
+class_name CustomerEvents
+extends RefCounted
+
+signal fast_forward
