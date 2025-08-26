@@ -2,20 +2,21 @@
 class_name StageNPC
 extends TextureRect
 
-signal set_text_complete
 
 @onready var textbox: Textbox = $Text
 
 
-func set_text(text: String) -> void:
+func clear_text() -> void:
+	textbox.clear_text()
+	textbox.hide()
+
+func set_text(text: String) -> Signal:
 	if !text:
-		textbox.clear_text()
 		textbox.hide()
-		set_text_complete.emit()
 	else:
 		textbox.show()
-		await textbox.display_text(text)
-		set_text_complete.emit()
+
+	return textbox.display_text(text)
 
 
 func _get_configuration_warnings() -> PackedStringArray:

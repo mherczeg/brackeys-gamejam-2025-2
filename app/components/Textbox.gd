@@ -16,23 +16,19 @@ func _ready() -> void:
 func clear_text() -> void:
 	text = ""
 
-
 func display_text(new_text: String) -> Signal:
-	# text = new_text
-	# await resized
 	text_to_display = new_text
 	letter_index = 0
-	_display_letter()
+	# start with timer instead of calling the function to sequence boxes
+	display_timer.start(display_time)
+
 	return display_complete
 
-
 func _display_letter() -> void:
-	text += text_to_display[letter_index]
-
-	letter_index += 1
-
 	if letter_index >= text_to_display.length():
 		display_complete.emit()
 		return
 
+	text += text_to_display[letter_index]
+	letter_index += 1
 	display_timer.start(display_time)
