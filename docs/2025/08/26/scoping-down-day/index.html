@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="I spent a lot of time yesterday thinking about the “customers” part of the game.  This was the initial design from Day 1:   An NPC or group of NPCs approach the machine and place an order (they may st">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Scoping Down Day">
+<meta property="og:url" content="https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/26/scoping-down-day/index.html">
+<meta property="og:site_name" content="Vending Machine Gremlin">
+<meta property="og:description" content="I spent a lot of time yesterday thinking about the “customers” part of the game.  This was the initial design from Day 1:   An NPC or group of NPCs approach the machine and place an order (they may st">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://mherczeg.github.io/brackeys-gamejam-2025-2/images/day-1-commit.png">
+<meta property="article:published_time" content="2025-08-26T07:30:40.000Z">
+<meta property="article:modified_time" content="2025-08-26T07:49:50.738Z">
+<meta property="article:author" content="mherczeg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mherczeg.github.io/brackeys-gamejam-2025-2/images/day-1-commit.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/brackeys-gamejam-2025-2/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/brackeys-gamejam-2025-2/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/brackeys-gamejam-2025-2/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Scoping Down Day</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/brackeys-gamejam-2025-2/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/brackeys-gamejam-2025-2/">Home</a></li><!--
+     --><!--
+       --><li><a href="/brackeys-gamejam-2025-2/about/">About</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/brackeys-gamejam-2025-2/2025/08/25/long-monday/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/26/scoping-down-day/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/26/scoping-down-day/&text=Scoping Down Day"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/26/scoping-down-day/&title=Scoping Down Day"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/26/scoping-down-day/&is_video=false&description=Scoping Down Day"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Scoping Down Day&body=Check out this article: https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/26/scoping-down-day/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/26/scoping-down-day/&title=Scoping Down Day"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/26/scoping-down-day/&title=Scoping Down Day"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/26/scoping-down-day/&title=Scoping Down Day"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/26/scoping-down-day/&title=Scoping Down Day"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/26/scoping-down-day/&name=Scoping Down Day&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/26/scoping-down-day/&t=Scoping Down Day"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Scoping Down Day
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">mherczeg</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2025-08-26T07:30:40.000Z" class="dt-published" itemprop="datePublished">2025-08-26</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <p>I spent a lot of time yesterday thinking about the “customers” part of the game. </p>
+<p>This was the initial design from Day 1:</p>
+<blockquote>
+<ol start="2">
+<li>An NPC or group of NPCs approach the machine and place an order (they may still be conversing)<ul>
+<li>Their order clearly defines the recipe for the mixture, deducing it is not part of the game</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<p>So in my head this was like: ok, we generate this whole thing randomly by a predefined pool and that’s it. But looking into it: </p>
+<ul>
+<li>we generate a random person or persons, each with an order, likes and dislikes. </li>
+<li>we add “caching” for return customers</li>
+<li>we generate a random conversation that is linked to each person and each like&#x2F;dislike in the scene</li>
+</ul>
+<p>Each of these generates have a lot of complexity, and starts to sound suspiciously a lot like a story generator. Which takes a long time to do.<br>And the only purpose it serves is to make the game replayable.</p>
+<p>I think it is important to set some expectations here: the majority of the players will spend a few minutes trying this thing out. A few will play it through. Replayability is not a concern.</p>
+<p>So I scoped it down. </p>
+<p>Today we are going to add:</p>
+<ul>
+<li>NPCs&#x2F;customers, which is going to be a set predefined list</li>
+<li>Products, which was always going to be a predefined list</li>
+<li>Encounters, which will be predefined conversations between predefined NPCs, while ordering predefined products</li>
+</ul>
+<p>The only random generation will be picking a random encounter, and then moving on to the next one.</p>
+<p>I’ll also try to commit more frequently today. Yesterday I did the whole day in one commit, and that’s a terrible habit to get into</p>
+<p><img src="/brackeys-gamejam-2025-2/images/day-1-commit.png" alt="day-1-commit.png"></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/brackeys-gamejam-2025-2/">Home</a></li>
+        
+          <li><a href="/brackeys-gamejam-2025-2/about/">About</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/26/scoping-down-day/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/26/scoping-down-day/&text=Scoping Down Day"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/26/scoping-down-day/&title=Scoping Down Day"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/26/scoping-down-day/&is_video=false&description=Scoping Down Day"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Scoping Down Day&body=Check out this article: https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/26/scoping-down-day/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/26/scoping-down-day/&title=Scoping Down Day"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/26/scoping-down-day/&title=Scoping Down Day"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/26/scoping-down-day/&title=Scoping Down Day"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/26/scoping-down-day/&title=Scoping Down Day"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/26/scoping-down-day/&name=Scoping Down Day&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://mherczeg.github.io/brackeys-gamejam-2025-2/2025/08/26/scoping-down-day/&t=Scoping Down Day"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2025
+    mherczeg
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/brackeys-gamejam-2025-2/">Home</a></li><!--
+     --><!--
+       --><li><a href="/brackeys-gamejam-2025-2/about/">About</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/brackeys-gamejam-2025-2/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
