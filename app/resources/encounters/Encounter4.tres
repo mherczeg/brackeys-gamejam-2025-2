@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Encounter" load_steps=10 format=3 uid="uid://ccy5vyhppfve8"]
+
+[ext_resource type="Script" uid="uid://dxpfvppfif2ht" path="res://resources/NPC.gd" id="1_4coqk"]
+[ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="2_ipc7m"]
+[ext_resource type="Script" uid="uid://dbbnqe7xp83lh" path="res://resources/Encounter.gd" id="3_awwrg"]
+[ext_resource type="Resource" uid="uid://dkbirsklwqvsg" path="res://resources/npcs/NPC5.tres" id="3_xybtp"]
+[ext_resource type="Resource" uid="uid://b03ap73jvboyi" path="res://resources/npcs/NPC2.tres" id="4_c0hiq"]
+[ext_resource type="Resource" uid="uid://b8ruh3tbvbnwh" path="res://resources/products/Product4.tres" id="4_p56af"]
+[ext_resource type="Resource" uid="uid://de2uc77f54xai" path="res://resources/npcs/NPC7.tres" id="5_sju0c"]
+[ext_resource type="Resource" uid="uid://dwyqi08pyif6f" path="res://resources/products/Product5.tres" id="6_1yqmo"]
+[ext_resource type="Resource" uid="uid://bpx6k43vfi8ri" path="res://resources/products/Product7.tres" id="8_nusrc"]
+
+[resource]
+script = ExtResource("3_awwrg")
+order = Dictionary[ExtResource("1_4coqk"), ExtResource("2_ipc7m")]({
+ExtResource("3_xybtp"): ExtResource("4_p56af"),
+ExtResource("4_c0hiq"): ExtResource("6_1yqmo"),
+ExtResource("5_sju0c"): ExtResource("8_nusrc")
+})
+stage_1_text = Dictionary[ExtResource("1_4coqk"), String]({
+ExtResource("3_xybtp"): "",
+ExtResource("4_c0hiq"): "Encounter 4 Stage 1 Line 2",
+ExtResource("5_sju0c"): "Encounter 4 Stage 1 Line 3"
+})
+stage_2_text = Dictionary[ExtResource("1_4coqk"), String]({
+ExtResource("3_xybtp"): "Encounter 4 Stage 2 Line 1",
+ExtResource("4_c0hiq"): "Encounter 4 Stage 2 Line 2",
+ExtResource("5_sju0c"): "Encounter 4 Stage 2 Line 3"
+})
+stage_3_text = Dictionary[ExtResource("1_4coqk"), String]({
+ExtResource("3_xybtp"): "Encounter 4 Stage 3 Line 1",
+ExtResource("4_c0hiq"): "Encounter 4 Stage 3 Line 2",
+ExtResource("5_sju0c"): "Encounter 4 Stage 3 Line 3"
+})
+metadata/_custom_type_script = "uid://dbbnqe7xp83lh"

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Product" load_steps=9 format=3 uid="uid://lifnqkyn2ppm"]
+
+[ext_resource type="Resource" uid="uid://btkor1u8y613l" path="res://resources/bases/Base1.tres" id="1_v8cg6"]
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_hcuef"]
+[ext_resource type="Texture2D" uid="uid://ctoluscsljeg2" path="res://assets/ProductAtlas.png" id="3_la01w"]
+[ext_resource type="Resource" uid="uid://dt4xfhb2hjxi0" path="res://resources/effects/Effect3.tres" id="3_qtw2h"]
+[ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="4_qtw2h"]
+[ext_resource type="Resource" uid="uid://e2n84d1cdb0v" path="res://resources/effects/Effect7.tres" id="4_xeq0j"]
+[ext_resource type="Resource" uid="uid://j1rdudjerck6" path="res://resources/effects/Effect8.tres" id="5_shgoe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikclo"]
+atlas = ExtResource("3_la01w")
+region = Rect2(160, 0, 32, 32)
+
+[resource]
+script = ExtResource("4_qtw2h")
+name = "Product 6"
+description = "Product 6 description"
+icon = SubResource("AtlasTexture_ikclo")
+base = ExtResource("1_v8cg6")
+effects = Array[ExtResource("2_hcuef")]([ExtResource("3_qtw2h"), ExtResource("4_xeq0j"), ExtResource("5_shgoe")])
+metadata/_custom_type_script = "uid://dq7ayo4b47kat"

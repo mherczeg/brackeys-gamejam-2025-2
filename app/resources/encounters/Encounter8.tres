@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Encounter" load_steps=10 format=3 uid="uid://cg0k8ntrreqfo"]
+
+[ext_resource type="Script" uid="uid://dxpfvppfif2ht" path="res://resources/NPC.gd" id="1_5sfyi"]
+[ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="2_44n8w"]
+[ext_resource type="Script" uid="uid://dbbnqe7xp83lh" path="res://resources/Encounter.gd" id="3_hom6d"]
+[ext_resource type="Resource" uid="uid://de2uc77f54xai" path="res://resources/npcs/NPC7.tres" id="3_txvjv"]
+[ext_resource type="Resource" uid="uid://djmisayhp6igg" path="res://resources/npcs/NPC8.tres" id="4_0t1p4"]
+[ext_resource type="Resource" uid="uid://b8ruh3tbvbnwh" path="res://resources/products/Product4.tres" id="4_bdupg"]
+[ext_resource type="Resource" uid="uid://0n7x2epd1lbr" path="res://resources/npcs/NPC4.tres" id="5_oerts"]
+[ext_resource type="Resource" uid="uid://dwyqi08pyif6f" path="res://resources/products/Product5.tres" id="6_t2ae7"]
+[ext_resource type="Resource" uid="uid://bpx6k43vfi8ri" path="res://resources/products/Product7.tres" id="8_5vdoi"]
+
+[resource]
+script = ExtResource("3_hom6d")
+order = Dictionary[ExtResource("1_5sfyi"), ExtResource("2_44n8w")]({
+ExtResource("3_txvjv"): ExtResource("4_bdupg"),
+ExtResource("4_0t1p4"): ExtResource("6_t2ae7"),
+ExtResource("5_oerts"): ExtResource("8_5vdoi")
+})
+stage_1_text = Dictionary[ExtResource("1_5sfyi"), String]({
+ExtResource("3_txvjv"): "",
+ExtResource("4_0t1p4"): "Encounter 8 Stage 1 Line 2",
+ExtResource("5_oerts"): "Encounter 8 Stage 1 Line 3"
+})
+stage_2_text = Dictionary[ExtResource("1_5sfyi"), String]({
+ExtResource("3_txvjv"): "Encounter 8 Stage 2 Line 1",
+ExtResource("4_0t1p4"): "Encounter 8 Stage 2 Line 2",
+ExtResource("5_oerts"): "Encounter 8 Stage 2 Line 3"
+})
+stage_3_text = Dictionary[ExtResource("1_5sfyi"), String]({
+ExtResource("3_txvjv"): "",
+ExtResource("4_0t1p4"): "Encounter 8 Stage 3 Line 2",
+ExtResource("5_oerts"): "Encounter 8 Stage 3 Line 3"
+})
+metadata/_custom_type_script = "uid://dbbnqe7xp83lh"

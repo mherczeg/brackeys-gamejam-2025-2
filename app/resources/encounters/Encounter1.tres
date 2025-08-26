@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Encounter" load_steps=8 format=3 uid="uid://ds8oa47binq3a"]
+
+[ext_resource type="Script" uid="uid://dxpfvppfif2ht" path="res://resources/NPC.gd" id="1_0ot52"]
+[ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="2_n74tj"]
+[ext_resource type="Script" uid="uid://dbbnqe7xp83lh" path="res://resources/Encounter.gd" id="3_n1q6w"]
+[ext_resource type="Resource" uid="uid://cq0y4qp5fw4jv" path="res://resources/npcs/NPC1.tres" id="3_xn71l"]
+[ext_resource type="Resource" uid="uid://cx8qn72enwrlb" path="res://resources/products/Product2.tres" id="4_g3hnc"]
+[ext_resource type="Resource" uid="uid://djmisayhp6igg" path="res://resources/npcs/NPC8.tres" id="4_wn581"]
+[ext_resource type="Resource" uid="uid://dwyqi08pyif6f" path="res://resources/products/Product5.tres" id="6_wxwcm"]
+
+[resource]
+script = ExtResource("3_n1q6w")
+order = Dictionary[ExtResource("1_0ot52"), ExtResource("2_n74tj")]({
+ExtResource("3_xn71l"): ExtResource("4_g3hnc"),
+ExtResource("4_wn581"): ExtResource("6_wxwcm")
+})
+stage_1_text = Dictionary[ExtResource("1_0ot52"), String]({
+ExtResource("3_xn71l"): "Encounter 1 Stage 1 Line 1",
+ExtResource("4_wn581"): "Encounter 1 Stage 1 Line 2"
+})
+stage_2_text = Dictionary[ExtResource("1_0ot52"), String]({
+ExtResource("3_xn71l"): "Encounter 1 Stage 2 Line 1,
+ExtResource("4_wn581"): "Encounter 1 Stage 2 Line 2"
+})
+stage_3_text = Dictionary[ExtResource("1_0ot52"), String]({
+ExtResource("3_xn71l"): "Encounter 1 Stage 3 Line 1",
+ExtResource("4_wn581"): "Encounter 1 Stage 3 Line 3"
+})
+metadata/_custom_type_script = "uid://dbbnqe7xp83lh"

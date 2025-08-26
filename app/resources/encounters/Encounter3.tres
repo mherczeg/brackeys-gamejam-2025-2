@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Encounter" load_steps=10 format=3 uid="uid://dfwkhre1ss1f6"]
+
+[ext_resource type="Script" uid="uid://dxpfvppfif2ht" path="res://resources/NPC.gd" id="1_wdynw"]
+[ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="2_v63ow"]
+[ext_resource type="Script" uid="uid://dbbnqe7xp83lh" path="res://resources/Encounter.gd" id="3_6xqp2"]
+[ext_resource type="Resource" uid="uid://djmisayhp6igg" path="res://resources/npcs/NPC8.tres" id="3_l5fld"]
+[ext_resource type="Resource" uid="uid://cl8aqn771bp8w" path="res://resources/products/Product1.tres" id="4_2g8aj"]
+[ext_resource type="Resource" uid="uid://d6b4crb5lssa" path="res://resources/npcs/NPC9.tres" id="4_u5ris"]
+[ext_resource type="Resource" uid="uid://l52howq3y2ly" path="res://resources/npcs/NPC10.tres" id="5_d3fdg"]
+[ext_resource type="Resource" uid="uid://bpx6k43vfi8ri" path="res://resources/products/Product7.tres" id="6_y1b8l"]
+[ext_resource type="Resource" uid="uid://cx8qn72enwrlb" path="res://resources/products/Product2.tres" id="8_jcqka"]
+
+[resource]
+script = ExtResource("3_6xqp2")
+order = Dictionary[ExtResource("1_wdynw"), ExtResource("2_v63ow")]({
+ExtResource("3_l5fld"): ExtResource("4_2g8aj"),
+ExtResource("4_u5ris"): ExtResource("6_y1b8l"),
+ExtResource("5_d3fdg"): ExtResource("8_jcqka")
+})
+stage_1_text = Dictionary[ExtResource("1_wdynw"), String]({
+ExtResource("3_l5fld"): "Encounter 3 Stage 1 Line 1",
+ExtResource("4_u5ris"): "Encounter 3 Stage 1 Line 2",
+ExtResource("5_d3fdg"): "Encounter 3 Stage 1 Line 3"
+})
+stage_2_text = Dictionary[ExtResource("1_wdynw"), String]({
+ExtResource("3_l5fld"): "Encounter 3 Stage 2 Line 1",
+ExtResource("4_u5ris"): "Encounter 3 Stage 2 Line 2",
+ExtResource("5_d3fdg"): "Encounter 3 Stage 2 Line 3"
+})
+stage_3_text = Dictionary[ExtResource("1_wdynw"), String]({
+ExtResource("3_l5fld"): "",
+ExtResource("4_u5ris"): "Encounter 3 Stage 3 Line 2",
+ExtResource("5_d3fdg"): "Encounter 3 Stage 3 Line 3"
+})
+metadata/_custom_type_script = "uid://dbbnqe7xp83lh"
