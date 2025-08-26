@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://2w0x8qpymg3"]
+
+[ext_resource type="Script" uid="uid://8kl2q3obet4s" path="res://components/StageNPCGroup.gd" id="1_ud8gk"]
+[ext_resource type="PackedScene" uid="uid://dtnqnc2gqicsd" path="res://components/StageNPC.tscn" id="2_xpn2c"]
+
+[node name="StageNPCGroup" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ud8gk")
+
+[node name="StageNPC" parent="." instance=ExtResource("2_xpn2c")]
+layout_mode = 0
+offset_left = 455.0
+offset_top = 84.0
+offset_right = 508.0
+offset_bottom = 192.0
+
+[node name="StageNPC2" parent="." instance=ExtResource("2_xpn2c")]
+offset_left = 419.0
+offset_top = 74.0
+offset_right = 472.0
+offset_bottom = 182.0
+
+[node name="StageNPC3" parent="." instance=ExtResource("2_xpn2c")]
+offset_left = 387.0
+offset_top = 87.0
+offset_right = 440.0
+offset_bottom = 195.0

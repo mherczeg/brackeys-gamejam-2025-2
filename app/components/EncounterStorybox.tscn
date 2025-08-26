@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dheal4pgk1m5o"]
+
+[ext_resource type="Script" uid="uid://dodp3dojky44e" path="res://components/EncounterStorybox.gd" id="1_3lgi6"]
+[ext_resource type="PackedScene" uid="uid://2w0x8qpymg3" path="res://components/StageNPCGroup.tscn" id="2_3lgi6"]
+
+[node name="EncounterStorybox" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3lgi6")
+
+[node name="FirstStageGroup" parent="." instance=ExtResource("2_3lgi6")]
+offset_left = -250.0
+offset_top = -4.0
+offset_right = -250.0
+offset_bottom = -4.0
+
+[node name="SecondStageGroup" parent="." instance=ExtResource("2_3lgi6")]
+offset_left = 36.0
+offset_top = 6.0
+offset_right = 36.0
+offset_bottom = 6.0
+stage = 1
+
+[node name="ThirdStageGroup" parent="." instance=ExtResource("2_3lgi6")]
+offset_left = -73.0
+offset_top = 30.0
+offset_right = -73.0
+offset_bottom = 30.0
+stage = 2

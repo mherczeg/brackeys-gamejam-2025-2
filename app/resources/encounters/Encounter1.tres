@@ -19,7 +19,7 @@ ExtResource("3_xn71l"): "Encounter 1 Stage 1 Line 1",
 ExtResource("4_wn581"): "Encounter 1 Stage 1 Line 2"
 })
 stage_2_text = Dictionary[ExtResource("1_0ot52"), String]({
-ExtResource("3_xn71l"): "Encounter 1 Stage 2 Line 1,
+ExtResource("3_xn71l"): "Encounter 1 Stage 2 Line 1",
 ExtResource("4_wn581"): "Encounter 1 Stage 2 Line 2"
 })
 stage_3_text = Dictionary[ExtResource("1_0ot52"), String]({

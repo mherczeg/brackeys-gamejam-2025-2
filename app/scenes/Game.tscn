@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqlkljml3wgye"]
+[gd_scene load_steps=5 format=3 uid="uid://bqlkljml3wgye"]
 
+[ext_resource type="Script" uid="uid://crplonc8qkgt7" path="res://scenes/Game.gd" id="1_78awf"]
 [ext_resource type="PackedScene" uid="uid://dtq073ey6thiy" path="res://scenes/CustomerPane.tscn" id="2_cpr0p"]
 [ext_resource type="PackedScene" uid="uid://cl1c5ipfnf66f" path="res://scenes/MixingPane.tscn" id="2_qbsmt"]
+[ext_resource type="PackedScene" uid="uid://b37hth77ew4nl" path="res://components/CustomerDevtools.tscn" id="3_cpr0p"]
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_78awf")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -29,6 +32,19 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="CustomersPane" parent="Control/VBoxContainer" instance=ExtResource("2_cpr0p")]
+[node name="CustomerPane" parent="Control/VBoxContainer" instance=ExtResource("2_cpr0p")]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
+
+[node name="CustomerDevtools" parent="Control" instance=ExtResource("3_cpr0p")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 5.0
+offset_top = 369.0
+offset_right = 5.0
+offset_bottom = 369.0
+grow_horizontal = 1
+grow_vertical = 1

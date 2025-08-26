@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtnqnc2gqicsd"]
+
+[ext_resource type="Texture2D" uid="uid://dotkqju4undxo" path="res://assets/a-human.png" id="1_7evva"]
+[ext_resource type="Script" uid="uid://cckbd01iwdkmn" path="res://components/StageNPC.gd" id="2_o16h7"]
+
+[node name="StageNPC" type="TextureRect"]
+offset_left = 451.0
+offset_top = 85.0
+offset_right = 504.0
+offset_bottom = 193.0
+texture = ExtResource("1_7evva")
+expand_mode = 1
+script = ExtResource("2_o16h7")
+
+[node name="Text" type="Label" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = -26.0
+offset_right = 147.0
+offset_bottom = -3.0
+text = "Stage NPC Text"
