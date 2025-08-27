@@ -45,6 +45,7 @@ func _ready() -> void:
 	EventBus.mixer.ingredient_selected.connect(set_slot_ingredient)
 	EventBus.mixer.ingredient_selector_unset.connect(unset_slot_ingredient)
 	EventBus.mixer.mixture_changed.connect(recalculate_mixture)
+	product_details.serve_button_pressed.connect(_on_serve_button_pressed)
 	recalculate_order()
 
 
@@ -118,3 +119,9 @@ func recalculate_mixture() -> void:
 				ingredients_with_unknown_set[ingredient] = true
 
 	product_details.update_mixture(mixture_known_effects_set.keys(), ingredients_with_unknown_set.size())
+
+func _on_serve_button_pressed() -> void:
+	var mixed_product: MixedProduct = MixedProduct.new()
+	mixed_product.base = _selected_base
+	mixed_product.ingredients = _selected_ingredients.values()
+	EventBus.mixer.serve_mix.emit(mixed_product)

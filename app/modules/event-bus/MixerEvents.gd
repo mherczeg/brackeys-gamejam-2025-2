@@ -6,4 +6,4 @@ signal ingredient_selector_toggle(slot: IngredientButton.SLOT)
 signal ingredient_selector_unset(slot: IngredientButton.SLOT)
 signal ingredient_selected(slot: IngredientButton.SLOT, ingredient: Ingredient)
 signal mixture_changed
-signal serve_mix
+signal serve_mix(product: MixedProduct)

@@ -70,7 +70,8 @@ func gameplay_loop() -> void:
 			await customer_pane.encounter_storybox.render_story_step(_current_encounter, Encounter.STAGE.THIRD)
 			_render_complete = true
 		GAMEPLAY_STEPS.MIXING:
-			await serve_order()
+			var served: MixedProduct = await serve_order()
+			print("served:", served)
 			setup_next_order()
 			next_step()
 		GAMEPLAY_STEPS.CLEANUP:
@@ -91,7 +92,7 @@ func is_step_complete() -> bool:
 
 func serve_order() -> Signal:
 	mixing_pane.set_npc(_current_npc)
-	return EventBus.debug.serve_mixture
+	return EventBus.mixer.serve_mix
 
 
 func setup_next_order() -> void:

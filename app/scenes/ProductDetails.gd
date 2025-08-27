@@ -1,6 +1,8 @@
 class_name ProductDetails
 extends VBoxContainer
 
+signal serve_button_pressed
+
 const EFFECTS_PATH: String = "res://resources/effects"
 const EFFECT_LABEL_SCENE: PackedScene = preload("res://components/EffectLabel.tscn")
 const EFFECT_LABEL_GROUP: String = "product-details-effect-labels"
@@ -38,6 +40,7 @@ var _is_craftable: bool:
 func _ready() -> void:
 	hide()
 	_load_all_effects()
+	server_button.pressed.connect(serve_button_pressed.emit)
 
 func update_base(updated_base: Base) -> void:
 	_base = updated_base
