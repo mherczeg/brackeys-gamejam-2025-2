@@ -6,8 +6,29 @@ const EFFECT_LABEL_SCENE: PackedScene = preload("res://components/EffectLabel.ts
 const EFFECT_LABEL_GROUP: String = "product-details-effect-labels"
 
 var _mixture: Array[Effect] = []
-var _has_unknown_effects: bool = false
+var _ingredients_with_unknown_effect: int = 0
 var _base: Base
+
+var _has_mix_information: bool:
+	get():
+		if _ingredients_with_unknown_effect >= 2:
+			return true
+		if _mixture.size() > 0:
+			return true
+		return false
+
+var _has_unknown_potential: bool:
+	get():
+		if _ingredients_with_unknown_effect >= 2:
+			return true
+		if _mixture.size() > 0 && _ingredients_with_unknown_effect == 1:
+			return true
+		return false
+
+var _is_craftable: bool:
+	get():
+		return _base && (_has_unknown_potential || _has_mix_information)
+
 
 @onready var effect_list: VBoxContainer = $EffectList
 @onready var server_button: Button = $ServeButton
@@ -22,14 +43,13 @@ func update_base(updated_base: Base) -> void:
 	_base = updated_base
 	update_content()
 
-func update_mixture(updated_mixture: Array[Effect], has_unknown_effects: bool) -> void:
+func update_mixture(updated_mixture: Array[Effect], ingredients_with_unknown_effect: int) -> void:
 	_mixture = updated_mixture
-	_has_unknown_effects = has_unknown_effects
+	_ingredients_with_unknown_effect = ingredients_with_unknown_effect
 	update_content()
 
 func update_content() -> void:
 	update_mixture_list()
-	update_validation()
 	update_visibility()
 
 func update_mixture_list() -> void:
@@ -40,24 +60,26 @@ func update_mixture_list() -> void:
 			else:
 				child.hide()
 
-func update_validation() -> void:
-	if _base:
-		server_button.show()
-		base_warning.hide()
+func update_visibility() -> void:
+	if _has_mix_information:
+		show()
 	else:
-		server_button.hide()
-		base_warning.show()
+		hide()
 
-	if _has_unknown_effects:
+	if _has_unknown_potential:
 		unknown_effect_warning.show()
 	else:
 		unknown_effect_warning.hide()
 
-func update_visibility() -> void:
-	if (!_mixture.size()):
-		hide()
+	if _base:
+		base_warning.hide()
 	else:
-		show()
+		base_warning.show()
+
+	if _is_craftable:
+		server_button.show()
+	else:
+		server_button.hide()
 
 func _load_all_effects() -> void:
 	var dir: DirAccess = DirAccess.open(EFFECTS_PATH)

@@ -116,4 +116,4 @@ func recalculate_mixture() -> void:
 			else:
 				ingredients_with_unknown_set[ingredient] = true
 
-	product_details.update_mixture(mixture_known_effects_set.keys(), ingredients_with_unknown_set.size() > 1)
+	product_details.update_mixture(mixture_known_effects_set.keys(), ingredients_with_unknown_set.size())
