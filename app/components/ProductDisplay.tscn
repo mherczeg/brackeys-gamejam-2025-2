@@ -29,3 +29,16 @@ text = "BaseLabel"
 [node name="Effects" type="VBoxContainer" parent="."]
 layout_mode = 2
 size_flags_horizontal = 4
+
+[node name="EffectsDiscovered" type="Label" parent="."]
+layout_mode = 2
+text = "New effects discovered!"
+
+[node name="IngredientList" type="HBoxContainer" parent="EffectsDiscovered"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 32.0
+grow_horizontal = 2
+alignment = 1

@@ -113,7 +113,7 @@ func evaluate_served_product(mixed_product: MixedProduct) -> void:
 	else:
 		print("this is wrong")
 
-	if (mixed_product.unlocked_ingredient_effects.size()):
+	if (mixed_product.unlocked_effects.size()):
 		EventBus.mixer.ingredient_effects_unlocked.emit()
 
 
