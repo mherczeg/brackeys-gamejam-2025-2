@@ -8,3 +8,4 @@ signal ingredient_selected(slot: IngredientButton.SLOT, ingredient: Ingredient)
 signal mixture_changed
 signal serve_mix(product: MixedProduct)
 signal ingredient_effects_unlocked
+signal order_received(product: Product)

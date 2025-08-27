@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ctoluscsljeg2" path="res://assets/ProductAtlas.png" id="3_u57l3"]
 [ext_resource type="Resource" uid="uid://dt4xfhb2hjxi0" path="res://resources/effects/Effect3.tres" id="3_vs0nk"]
 [ext_resource type="Resource" uid="uid://j1rdudjerck6" path="res://resources/effects/Effect8.tres" id="4_eurss"]
-[ext_resource type="Script" path="res://resources/Product.gd" id="4_vs0nk"]
+[ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="4_vs0nk"]
 [ext_resource type="Resource" uid="uid://2gbmp1hjdl6k" path="res://resources/effects/Effect9.tres" id="5_8rroa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ikclo"]
@@ -19,4 +19,5 @@ description = "Product 7 description"
 icon = SubResource("AtlasTexture_ikclo")
 base = ExtResource("1_l10bh")
 effects = Array[ExtResource("2_4vor1")]([ExtResource("3_vs0nk"), ExtResource("4_eurss"), ExtResource("5_8rroa")])
+price = 1.0
 metadata/_custom_type_script = "uid://dq7ayo4b47kat"

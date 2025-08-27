@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cl1c5ipfnf66f"]
+[gd_scene load_steps=11 format=3 uid="uid://cl1c5ipfnf66f"]
 
 [ext_resource type="Theme" uid="uid://yqmay0cd53tl" path="res://themes/MetalPixelTheme4/MetalPixel.tres" id="1_o0xl2"]
 [ext_resource type="Script" uid="uid://r26vig0m7xh8" path="res://scenes/MixingPane.gd" id="1_svtgx"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bvhr2kpc3py1q" path="res://components/IngredientSelector.tscn" id="5_nyt5e"]
 [ext_resource type="PackedScene" uid="uid://dhdwspygl8is8" path="res://scenes/ProductDetails.tscn" id="6_cgagm"]
 [ext_resource type="PackedScene" uid="uid://loicby15dxae" path="res://scenes/ToolsPane.tscn" id="7_83n0o"]
+[ext_resource type="PackedScene" uid="uid://cixif270j8h8b" path="res://components/MoneyCounter.tscn" id="9_je0hr"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fi2f3"]
 
@@ -90,3 +91,10 @@ offset_bottom = 180.0
 grow_horizontal = 1
 grow_vertical = 1
 horizontal_scroll_mode = 0
+
+[node name="HBoxContainer" parent="." instance=ExtResource("9_je0hr")]
+layout_mode = 0
+offset_left = 1075.0
+offset_top = 16.0
+offset_right = 1134.0
+offset_bottom = 56.0

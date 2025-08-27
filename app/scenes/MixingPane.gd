@@ -102,6 +102,8 @@ func complete_encounter() -> void:
 func start_new_order(npc: NPC) -> void:
 	reset_mixer()
 	_current_npc = npc
+	if _current_product:
+		EventBus.mixer.order_received.emit(_current_product)
 
 func display_result(display_product: MixedProduct) -> void:
 	reset_mixer()

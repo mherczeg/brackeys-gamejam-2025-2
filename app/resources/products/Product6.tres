@@ -19,4 +19,5 @@ description = "Product 6 description"
 icon = SubResource("AtlasTexture_ikclo")
 base = ExtResource("1_v8cg6")
 effects = Array[ExtResource("2_hcuef")]([ExtResource("3_qtw2h"), ExtResource("4_xeq0j"), ExtResource("5_shgoe")])
+price = 1.0
 metadata/_custom_type_script = "uid://dq7ayo4b47kat"

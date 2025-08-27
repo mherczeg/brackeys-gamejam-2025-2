@@ -6,3 +6,4 @@ extends Resource
 @export var icon: Texture2D
 @export var base: Base
 @export var effects: Array[Effect]
+@export var price: float

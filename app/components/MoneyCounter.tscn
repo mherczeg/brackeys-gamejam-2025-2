@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cixif270j8h8b"]
+
+[ext_resource type="Script" uid="uid://conjoqspcbhlq" path="res://components/MoneyCounter.gd" id="1_3ymom"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_cgagm"]
+size = Vector2(32, 32)
+
+[node name="MoneyCounter" type="HBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_3ymom")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "$ 0"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture = SubResource("PlaceholderTexture2D_cgagm")
