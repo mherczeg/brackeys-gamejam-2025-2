@@ -139,7 +139,6 @@ func reset_mixer() -> void:
 	unset_slot_ingredient(IngredientButton.SLOT.FOURTH)
 	ingredient_selector.hide()
 
-
 func _on_serve_button_pressed() -> void:
 	var mixed_product: MixedProduct = MixedProduct.new()
 	mixed_product.base = _selected_base

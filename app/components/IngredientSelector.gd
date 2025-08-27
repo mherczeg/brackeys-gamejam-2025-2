@@ -8,6 +8,7 @@ const INGREDIENT_SELECTOR_ELEMENT_SCENE: PackedScene = preload("res://components
 
 
 func _ready() -> void:
+	# EventBus.mixer.ingredient_effects_unlocked.connect(update_ingredient_selector)
 	mouse_filter = MOUSE_FILTER_STOP
 	for ingredient: Ingredient in ResourceManager.ingredients:
 		var ingredient_selector_element_instance: IngredientSelectorElement = \

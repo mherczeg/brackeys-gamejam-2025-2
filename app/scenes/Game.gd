@@ -113,6 +113,9 @@ func evaluate_served_product(mixed_product: MixedProduct) -> void:
 	else:
 		print("this is wrong")
 
+	if (mixed_product.unlocked_ingredient_effects.size()):
+		EventBus.mixer.ingredient_effects_unlocked.emit()
+
 
 func _on_customer_pane_click() -> void:
 	if _current_encounter && SKIPPABLE_STEPS.has(GAME_LOOP_STEPS[_current_step_index]):
