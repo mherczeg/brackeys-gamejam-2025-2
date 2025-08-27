@@ -2,6 +2,7 @@ class_name IngredientSelectorElement
 extends PanelContainer
 
 const EFFECT_LABEL_SCENE: PackedScene = preload("res://components/EffectLabel.tscn")
+const UNKNOWN_EFFECT_LABEL_SCENE: PackedScene = preload("res://components/UnknownEffectLabel.tscn")
 
 var ingredient: Ingredient
 var slot: IngredientButton.SLOT
@@ -13,12 +14,20 @@ var slot: IngredientButton.SLOT
 
 func _ready() -> void:
 	if ingredient:
+		var has_unknown: bool = false
 		icon.texture = ingredient.icon
 		name_label.text = ingredient.name
-		for effect: Effect in ingredient.effects:
-			var effect_label: EffectLabel = EFFECT_LABEL_SCENE.instantiate()
-			effect_label.effect = effect
+		for effect: Effect in ingredient.effects.keys():
+			if ingredient.effects[effect]:
+				var effect_label: EffectLabel = EFFECT_LABEL_SCENE.instantiate()
+				effect_label.effect = effect
+				effects.add_child(effect_label)
+			else:
+				has_unknown = true
+		if has_unknown:
+			var effect_label: Label = UNKNOWN_EFFECT_LABEL_SCENE.instantiate()
 			effects.add_child(effect_label)
+
 
 	EventBus.mixer.ingredient_selector_toggle.connect(_on_selector_opened)
 

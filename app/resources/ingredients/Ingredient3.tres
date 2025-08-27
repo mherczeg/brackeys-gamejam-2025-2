@@ -18,7 +18,7 @@ name = "Ingredient 3"
 description = "Description describing ingredient 3"
 icon = SubResource("AtlasTexture_3i6k5")
 effects = Dictionary[ExtResource("1_8csg2"), bool]({
-ExtResource("2_pvs5w"): false,
+ExtResource("2_pvs5w"): true,
 ExtResource("3_8x8ou"): false,
 ExtResource("4_xm5l8"): false,
 ExtResource("5_if8la"): false

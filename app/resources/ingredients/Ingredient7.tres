@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://bc076f2bhdhmm"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=9 format=3 uid="uid://bc076f2bhdhmm"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_v2fk5"]
 [ext_resource type="Resource" uid="uid://cpfjwktiud2ms" path="res://resources/effects/Effect5.tres" id="2_g6ipq"]
@@ -6,6 +6,7 @@
 [ext_resource type="Resource" uid="uid://eq2fbd6j88nc" path="res://resources/effects/Effect10.tres" id="3_21t6h"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="3_gciaw"]
 [ext_resource type="Resource" uid="uid://drggcgqhojyn0" path="res://resources/effects/Effect4.tres" id="4_f2gln"]
+[ext_resource type="Resource" uid="uid://h1itxdasb32g" path="res://resources/effects/Effect6.tres" id="5_21t6h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3i6k5"]
 atlas = ExtResource("2_hhbjw")
@@ -17,9 +18,9 @@ name = "Ingredient 7"
 description = "Description describing ingredient 7"
 icon = SubResource("AtlasTexture_3i6k5")
 effects = Dictionary[ExtResource("1_v2fk5"), bool]({
-ExtResource("2_g6ipq"): false,
+ExtResource("2_g6ipq"): true,
 ExtResource("3_21t6h"): false,
 ExtResource("4_f2gln"): false,
-ExtResource("2_g6ipq"): false
+ExtResource("5_21t6h"): false
 })
 metadata/_custom_type_script = "uid://dl1mifitwir4r"

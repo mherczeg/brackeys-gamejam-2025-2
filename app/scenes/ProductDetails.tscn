@@ -11,6 +11,11 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
+[node name="UnkownEffectsWarning" type="Label" parent="."]
+layout_mode = 2
+text = "May have unintended effects"
+horizontal_alignment = 1
+
 [node name="BaseWarning" type="Label" parent="."]
 layout_mode = 2
 size_flags_horizontal = 4
