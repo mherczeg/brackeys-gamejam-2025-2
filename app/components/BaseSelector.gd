@@ -4,7 +4,7 @@ const BASE_SELECTOR_BUTTON_SCENE: PackedScene = preload("res://components/BaseSe
 
 
 func _ready() -> void:
-	for base: Base in ResourceManager.bases:
+	for base: Base in Player.bases:
 		var button_instance: BaseSelectorButton = BASE_SELECTOR_BUTTON_SCENE.instantiate()
 		button_instance.base = base
 		add_child(button_instance)

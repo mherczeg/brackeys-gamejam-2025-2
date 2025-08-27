@@ -6,8 +6,10 @@
 size = Vector2(32, 32)
 
 [node name="MoneyCounter" type="HBoxContainer"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 3.0
+offset_top = 6.0
+offset_right = 62.0
+offset_bottom = 46.0
 script = ExtResource("1_3ymom")
 
 [node name="Label" type="Label" parent="."]

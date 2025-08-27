@@ -65,8 +65,7 @@ func toggle_ingredient_selector(slot: IngredientButton.SLOT) -> void:
 	else:
 		var ingredient_button: IngredientButton = mixer_buttons.get_slot_button(slot)
 		ingredient_selector.position = _get_ingredient_selector_position(ingredient_button)
-		ingredient_selector.update_used_ingredients(_selected_ingredients.values())
-		ingredient_selector.show()
+		ingredient_selector.open(_selected_ingredients.values())
 
 func set_selected_base(base: Base) -> void:
 	_selected_base = base

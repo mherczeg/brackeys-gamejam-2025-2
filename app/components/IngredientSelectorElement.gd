@@ -17,12 +17,13 @@ var slot: IngredientButton.SLOT
 func _ready() -> void:
 	if ingredient:
 		icon.texture = ingredient.icon
-		name_label.text = ingredient.name
+		_update_label()
 		_render_effect_labels()
 		_update_effect_label_visibility()
 
 	EventBus.mixer.ingredient_selector_toggle.connect(_on_selector_opened)
 	EventBus.mixer.ingredient_effects_unlocked.connect(_update_effect_label_visibility)
+	EventBus.player.ingredient_stock_changed.connect(_on_ingredient_stock_changed)
 
 func _on_selector_opened(slot_opened: IngredientButton.SLOT) -> void:
 	slot = slot_opened
@@ -60,3 +61,18 @@ func _update_effect_label_visibility() -> void:
 		unknown_effect_label.show()
 	else:
 		unknown_effect_label.hide()
+
+func _update_label() -> void:
+	var count: int = 0
+
+	if Player.ingredients.has(ingredient):
+		count = Player.ingredients[ingredient]
+
+	name_label.text = "%s (%d in stock)" % [ingredient.name, count]
+
+func is_unavailable(used_ingredients: Array[Ingredient]) -> bool:
+	return used_ingredients.has(ingredient) || !Player.ingredients.has(ingredient) || Player.ingredients[ingredient] == 0
+
+func _on_ingredient_stock_changed(changed_ingredient: Ingredient) -> void:
+	if changed_ingredient == ingredient:
+		_update_label()

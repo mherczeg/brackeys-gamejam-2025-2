@@ -8,21 +8,17 @@ const INGREDIENT_SELECTOR_ELEMENT_SCENE: PackedScene = preload("res://components
 
 
 func _ready() -> void:
-	# EventBus.mixer.ingredient_effects_unlocked.connect(update_ingredient_selector)
 	mouse_filter = MOUSE_FILTER_STOP
-	for ingredient: Ingredient in ResourceManager.ingredients:
-		var ingredient_selector_element_instance: IngredientSelectorElement = \
-			INGREDIENT_SELECTOR_ELEMENT_SCENE.instantiate()
-		ingredient_selector_element_instance.ingredient = ingredient
-		list_container.add_child(ingredient_selector_element_instance)
+	_render_ingredient_selector_elements()
 
-func update_used_ingredients(used_ingredients: Array[Ingredient]) -> void:
+func open(used_ingredients: Array[Ingredient]) -> void:
 	for child: IngredientSelectorElement in list_container.get_children():
 		if child is IngredientSelectorElement:
-			if used_ingredients.has(child.ingredient):
+			if child.is_unavailable(used_ingredients):
 				child.hide()
 			else:
 				child.show()
+	show()
 
 func _render_ingredient_selector_elements() -> void:
 	for ingredient: Ingredient in ResourceManager.ingredients:
