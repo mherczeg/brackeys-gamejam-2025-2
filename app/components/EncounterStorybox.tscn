@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dheal4pgk1m5o"]
 
-[ext_resource type="Script" path="res://components/EncounterStorybox.gd" id="1_3lgi6"]
+[ext_resource type="Script" uid="uid://dodp3dojky44e" path="res://components/EncounterStorybox.gd" id="1_3lgi6"]
 [ext_resource type="PackedScene" uid="uid://2w0x8qpymg3" path="res://components/StageNPCGroup.tscn" id="2_3lgi6"]
 
 [node name="EncounterStorybox" type="Control"]

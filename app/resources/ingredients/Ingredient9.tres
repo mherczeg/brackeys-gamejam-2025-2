@@ -19,8 +19,8 @@ description = "Description describing ingredient 9"
 icon = SubResource("AtlasTexture_3i6k5")
 effects = Dictionary[ExtResource("1_hmivm"), bool]({
 ExtResource("2_0yg1a"): true,
-ExtResource("3_fvb55"): false,
-ExtResource("4_hcihm"): false,
-ExtResource("5_fvb55"): false
+ExtResource("3_fvb55"): true,
+ExtResource("4_hcihm"): true,
+ExtResource("5_fvb55"): true
 })
 metadata/_custom_type_script = "uid://dl1mifitwir4r"

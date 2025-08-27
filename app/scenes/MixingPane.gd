@@ -9,12 +9,6 @@ var _selected_base: Base:
 		mixer_buttons.update_base_icon(updated_base.icon)
 		product_details.update_base(updated_base)
 
-var _mixture: Dictionary[Effect, bool] = {}:
-	set(updated_mixture):
-		_mixture = updated_mixture
-		product_details.update_mixture(updated_mixture)
-
-
 var _selected_ingredients: Dictionary[IngredientButton.SLOT, Ingredient] = {}
 
 # Unfortunately this does not work
@@ -76,18 +70,18 @@ func _get_ingredient_selector_position(ingredient_button: IngredientButton) -> V
 	)
 
 func recalculate_mixture() -> void:
-	var effect_set: Dictionary[Effect, int] = {}
-	var mixture: Dictionary[Effect, bool] = {}
+	var effect_appeared_once_set: Dictionary[Effect, bool] = {}
+	var mixture_known_effects_set: Dictionary[Effect, bool] = {}
+	var ingredients_with_unknown_set: Dictionary[Ingredient, bool] = {}
 
 	for ingredient: Ingredient in _selected_ingredients.values():
-		for effect: Effect in ingredient.effects.keys():
-			if (!effect_set.has(effect)):
-				effect_set[effect] = 0
-			# this elif is important, since we only want to track how many 
-			elif ingredient.effects[effect]:
-				effect_set[effect] += 1
+		for effect: Effect in ingredient.effects:
+			if ingredient.is_effect_known(effect):
+				if !effect_appeared_once_set.has(effect):
+					effect_appeared_once_set[effect] = true
+				elif !mixture_known_effects_set.has(effect):
+					mixture_known_effects_set[effect] = true
+			else:
+				ingredients_with_unknown_set[ingredient] = true
 
-	for effect: Effect in effect_set.keys():
-		mixture[effect] = effect_set[effect] > 1
-
-	_mixture = mixture
+	product_details.update_mixture(mixture_known_effects_set.keys(), ingredients_with_unknown_set.size() > 1)

@@ -1,4 +1,23 @@
-[gd_scene load_steps=0 format=3 uid="uid://co71iujwnx85g"]
+[gd_scene load_steps=3 format=3 uid="uid://co71iujwnx85g"]
 
-[node name="Label" type="Label"]
-text = "??? May have unintended effects"
+[ext_resource type="Script" uid="uid://c032qaliru1sb" path="res://components/UnknownEffectLabel.gd" id="1_4jwup"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_f3byg"]
+size = Vector2(32, 32)
+
+[node name="HBoxContainer" type="HBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_4jwup")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = SubResource("PlaceholderTexture2D_f3byg")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "May have unintended effects"

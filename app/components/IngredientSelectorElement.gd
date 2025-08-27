@@ -25,7 +25,7 @@ func _ready() -> void:
 			else:
 				has_unknown = true
 		if has_unknown:
-			var effect_label: Label = UNKNOWN_EFFECT_LABEL_SCENE.instantiate()
+			var effect_label: UnknownEffectLabel = UNKNOWN_EFFECT_LABEL_SCENE.instantiate()
 			effects.add_child(effect_label)
 
 

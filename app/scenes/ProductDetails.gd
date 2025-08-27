@@ -5,12 +5,14 @@ const EFFECTS_PATH: String = "res://resources/effects"
 const EFFECT_LABEL_SCENE: PackedScene = preload("res://components/EffectLabel.tscn")
 const EFFECT_LABEL_GROUP: String = "product-details-effect-labels"
 
-var _mixture: Dictionary[Effect, bool] = {}
+var _mixture: Array[Effect] = []
+var _has_unknown_effects: bool = false
 var _base: Base
 
 @onready var effect_list: VBoxContainer = $EffectList
 @onready var server_button: Button = $ServeButton
 @onready var base_warning: Label = $BaseWarning
+@onready var unknown_effect_warning: Label = $UnkownEffectsWarning
 
 func _ready() -> void:
 	hide()
@@ -20,8 +22,9 @@ func update_base(updated_base: Base) -> void:
 	_base = updated_base
 	update_content()
 
-func update_mixture(updated_mixture: Dictionary[Effect, bool]) -> void:
+func update_mixture(updated_mixture: Array[Effect], has_unknown_effects: bool) -> void:
 	_mixture = updated_mixture
+	_has_unknown_effects = has_unknown_effects
 	update_content()
 
 func update_content() -> void:
@@ -30,21 +33,12 @@ func update_content() -> void:
 	update_visibility()
 
 func update_mixture_list() -> void:
-	var has_unknown: bool = false
 	for child: EffectLabel in effect_list.get_children():
 		if child.is_in_group(EFFECT_LABEL_GROUP):
-			var effect_listable: bool = _mixture.has(child.effect)
-			var effect_known: bool = false
-			if effect_listable && _mixture[child.effect]:
-				effect_known = true
-			if effect_listable && effect_known:
+			if _mixture.has(child.effect):
 				child.show()
 			else:
-				if effect_listable:
-					has_unknown = true
 				child.hide()
-	if has_unknown:
-		pass
 
 func update_validation() -> void:
 	if _base:
@@ -53,6 +47,11 @@ func update_validation() -> void:
 	else:
 		server_button.hide()
 		base_warning.show()
+
+	if _has_unknown_effects:
+		unknown_effect_warning.show()
+	else:
+		unknown_effect_warning.hide()
 
 func update_visibility() -> void:
 	if (!_mixture.size()):
