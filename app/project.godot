@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 EventBus="*res://modules/event-bus/EventBus.gd"
+ResourceManager="*res://modules/resource-manager/ResourceManager.gd"
 
 [debug]
 

@@ -1,8 +1,6 @@
 class_name CustomerDevtools
 extends Control
 
-const ENCOUNTERS: String = "res://resources/encounters"
-
 var encounters: Dictionary[int, Encounter] = {}
 var encounter_stages: Array[Encounter.STAGE] = [
 	Encounter.STAGE.FIRST,
@@ -17,22 +15,17 @@ var encounter_stages: Array[Encounter.STAGE] = [
 @onready var simulate_serving_mix: Button = $HBoxContainer/SimulateServingMix
 
 func _ready() -> void:
-	_load_all_effects()
+	_init_encounter_selector()
 	render_encounter_button.pressed.connect(_on_render_encounter_button_pressed)
 	start_encounter_button.pressed.connect(EventBus.debug.start_random_encounter.emit)
 	simulate_serving_mix.pressed.connect(EventBus.debug.serve_mixture.emit)
 
-func _load_all_effects() -> void:
-	var dir: DirAccess = DirAccess.open(ENCOUNTERS)
+func _init_encounter_selector() -> void:
 	var encounter_id: int = 1
-	if dir:
-		for file_name: String in dir.get_files():
-			if file_name.ends_with(".tres"):
-				var resource: Resource = load(ENCOUNTERS.path_join(file_name))
-				if resource is Encounter:
-					encounter_selector.add_item(file_name.replace(".tres", ""), encounter_id)
-					encounters[encounter_id] = resource
-					encounter_id += 1
+	for encounter: Encounter in ResourceManager.encounters:
+		encounter_selector.add_item("Encounter %d" % encounter_id, encounter_id)
+		encounters[encounter_id] = encounter
+		encounter_id += 1
 
 	encounter_selector.select(encounters.keys()[0])
 

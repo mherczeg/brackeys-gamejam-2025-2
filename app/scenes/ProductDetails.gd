@@ -85,14 +85,9 @@ func update_visibility() -> void:
 		server_button.hide()
 
 func _load_all_effects() -> void:
-	var dir: DirAccess = DirAccess.open(EFFECTS_PATH)
-	if dir:
-		for file_name: String in dir.get_files():
-			if file_name.ends_with(".tres"):
-				var resource: Resource = load(EFFECTS_PATH.path_join(file_name))
-				if resource is Effect:
-					var effect_label: EffectLabel = EFFECT_LABEL_SCENE.instantiate()
-					effect_label.effect = resource
-					effect_label.hide()
-					effect_label.add_to_group(EFFECT_LABEL_GROUP)
-					effect_list.add_child(effect_label)
+	for effect: Effect in ResourceManager.effects:
+		var effect_label: EffectLabel = EFFECT_LABEL_SCENE.instantiate()
+		effect_label.effect = effect
+		effect_label.hide()
+		effect_label.add_to_group(EFFECT_LABEL_GROUP)
+		effect_list.add_child(effect_label)

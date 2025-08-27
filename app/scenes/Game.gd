@@ -35,16 +35,7 @@ func _ready() -> void:
 
 # this is very ineffiecient, but should be gone by tomorrow
 func start_random_encounter() -> void:
-	var dir: DirAccess = DirAccess.open(ENCOUNTERS)
-	if dir:
-		var randomized_files: Array = Array(dir.get_files())
-		randomized_files.shuffle()
-		for file_name: String in randomized_files:
-			if file_name.ends_with(".tres"):
-				var resource: Resource = load(ENCOUNTERS.path_join(file_name))
-				if resource is Encounter:
-					start_encounter(resource)
-					return
+	start_encounter(ResourceManager.encounters.pick_random())
 
 func start_encounter(encounter: Encounter) -> void:
 	_current_step_index = 0
