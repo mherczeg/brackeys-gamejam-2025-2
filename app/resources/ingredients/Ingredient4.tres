@@ -23,4 +23,5 @@ ExtResource("3_kq75v"): false,
 ExtResource("4_ib2an"): false,
 ExtResource("5_kq75v"): false
 })
+price = 0.1
 metadata/_custom_type_script = "uid://dl1mifitwir4r"

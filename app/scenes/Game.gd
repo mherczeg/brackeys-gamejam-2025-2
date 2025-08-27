@@ -27,11 +27,13 @@ var _render_complete: bool = false
 
 @onready var customer_pane: CustomerPane = %CustomerPane
 @onready var mixing_pane: MixingPane = %MixingPane
+@onready var shop_pane: ShopPane = %ShopPane
 
 func _ready() -> void:
 	customer_pane.pressed.connect(_on_customer_pane_click)
 	EventBus.debug.render_encounter_stage.connect(render_encounter_stage)
 	EventBus.debug.start_random_encounter.connect(start_random_encounter)
+	EventBus.debug.start_shop.connect(shop_pane.open)
 
 # this is very ineffiecient, but should be gone by tomorrow
 func start_random_encounter() -> void:

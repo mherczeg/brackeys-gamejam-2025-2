@@ -1,6 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://co8rafq3ug2by"]
+[gd_scene load_steps=8 format=3 uid="uid://2p7me5q6ybyg"]
 
-[ext_resource type="Script" uid="uid://bexpcaa6xwqn8" path="res://components/BaseSelectorButton.gd" id="1_x4dgr"]
+[ext_resource type="Script" uid="uid://degykrocrhqvr" path="res://components/BasePurchaseButton.gd" id="1_w4d48"]
 
 [sub_resource type="Gradient" id="Gradient_x4dgr"]
 offsets = PackedFloat32Array(0, 0)
@@ -21,14 +21,14 @@ colors = PackedColorArray(0.273873, 0.273873, 0.273873, 1, 0.27451, 0.27451, 0.2
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_v6utm"]
 gradient = SubResource("Gradient_toarm")
 
-[node name="BaseSelectorButton" type="TextureButton"]
+[node name="BasePurchaseButton" type="TextureButton"]
 offset_right = 64.0
 offset_bottom = 64.0
 mouse_default_cursor_shape = 2
 texture_normal = SubResource("GradientTexture2D_uicyv")
 texture_pressed = SubResource("GradientTexture2D_toarm")
 texture_hover = SubResource("GradientTexture2D_v6utm")
-script = ExtResource("1_x4dgr")
+script = ExtResource("1_w4d48")
 
 [node name="Icon" type="TextureRect" parent="."]
 layout_mode = 1
@@ -43,3 +43,32 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Price" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = 2.0
+offset_right = 20.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 0

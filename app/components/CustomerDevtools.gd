@@ -13,12 +13,14 @@ var encounter_stages: Array[Encounter.STAGE] = [
 @onready var render_encounter_button: Button = $HBoxContainer/RenderEncounter
 @onready var start_encounter_button: Button = $HBoxContainer/StartEncounter
 @onready var simulate_serving_mix: Button = $HBoxContainer/SimulateServingMix
+@onready var start_shop_turn: Button = $HBoxContainer/StartShopTurn
 
 func _ready() -> void:
 	_init_encounter_selector()
 	render_encounter_button.pressed.connect(_on_render_encounter_button_pressed)
 	start_encounter_button.pressed.connect(EventBus.debug.start_random_encounter.emit)
 	simulate_serving_mix.pressed.connect(EventBus.debug.serve_mixture.emit)
+	start_shop_turn.pressed.connect(EventBus.debug.start_shop.emit)
 
 func _init_encounter_selector() -> void:
 	var encounter_id: int = 1

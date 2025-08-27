@@ -12,4 +12,5 @@ script = ExtResource("2_sr6ri")
 name = "Base 5"
 description = ""
 icon = SubResource("AtlasTexture_iibn4")
+price = 10.0
 metadata/_custom_type_script = "uid://bgwochg5pfqrl"

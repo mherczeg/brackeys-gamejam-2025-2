@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1qtp0cds7p43"]
+
+[ext_resource type="Script" uid="uid://g4880y1y5y6w" path="res://scenes/ShopPane.gd" id="1_808da"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_808da"]
+size = Vector2(16, 16)
+
+[node name="ShopPane" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_808da")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 10.0
+offset_right = 20.0
+offset_bottom = 33.0
+grow_horizontal = 2
+text = "Shop"
+
+[node name="Wallet" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -37.0
+offset_top = 40.0
+offset_right = 37.0
+offset_bottom = 63.0
+grow_horizontal = 2
+text = "Funds: $0"
+
+[node name="Items" type="GridContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 40
+columns = 8
+
+[node name="CloseButton" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -70.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "Close
+"
+icon = SubResource("PlaceholderTexture2D_808da")
