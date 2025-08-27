@@ -1,3 +1,4 @@
+class_name MixingPane
 extends Control
 
 const INGREDIENT_LIST_SPACING: int = 10
@@ -10,6 +11,19 @@ var _selected_base: Base:
 		product_details.update_base(updated_base)
 
 var _selected_ingredients: Dictionary[IngredientButton.SLOT, Ingredient] = {}
+var _current_encounter: Encounter = null
+var _current_npc: NPC = null:
+	set(new_npc):
+		_current_npc = new_npc
+		recalculate_order()
+
+var _current_product: Product:
+	get():
+		if (_current_encounter == null || _current_npc == null):
+			return null
+		if !_current_encounter.order.has(_current_npc):
+			return null
+		return _current_encounter.order[_current_npc]
 
 # Unfortunately this does not work
 # var _selected_ingredients: Dictionary[IngredientButton.SLOT, Ingredient] = {}:
@@ -20,6 +34,7 @@ var _selected_ingredients: Dictionary[IngredientButton.SLOT, Ingredient] = {}
 @onready var ingredient_selector: ScrollContainer = $IngredientSelector
 @onready var mixer_buttons: MixerButtons = %MixerButtons
 @onready var product_details: ProductDetails = %ProductDetails
+@onready var order_details: OrderDetails = %OrderDetails
 @onready var left_margin: float = ($MixingWrapper as BoxContainer).offset_left
 
 func _ready() -> void:
@@ -30,6 +45,7 @@ func _ready() -> void:
 	EventBus.mixer.ingredient_selected.connect(set_slot_ingredient)
 	EventBus.mixer.ingredient_selector_unset.connect(unset_slot_ingredient)
 	EventBus.mixer.mixture_changed.connect(recalculate_mixture)
+	recalculate_order()
 
 
 func _gui_input(event: InputEvent) -> void:
@@ -68,6 +84,22 @@ func _get_ingredient_selector_position(ingredient_button: IngredientButton) -> V
 		left_margin + ingredient_button.position.x + ingredient_button.size.x + INGREDIENT_LIST_SPACING,
 		100 # TODO, this should consider element count
 	)
+
+func start_encounter(encounter: Encounter) -> void:
+	_current_encounter = encounter
+
+func complete_encounter() -> void:
+	_current_encounter = null
+	_current_npc = null
+
+func set_npc(npc: NPC) -> void:
+	_current_npc = npc
+
+func recalculate_order() -> void:
+	if !_current_product:
+		order_details.set_simple_text("Idle text")
+	else:
+		order_details.set_order_with_texture(_current_npc, _current_product)
 
 func recalculate_mixture() -> void:
 	var effect_appeared_once_set: Dictionary[Effect, bool] = {}

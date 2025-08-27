@@ -49,3 +49,8 @@ Encounter is a resource.
 Product is still a resource, but now maybe hardcoded into encounter?
 Game picks random encounter and plays it   
 
+
+
+Day 3 TODO
+
+-highlight product and effect name in order details

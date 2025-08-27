@@ -1,16 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://cl1c5ipfnf66f"]
+[gd_scene load_steps=10 format=3 uid="uid://cl1c5ipfnf66f"]
 
 [ext_resource type="Theme" uid="uid://yqmay0cd53tl" path="res://themes/MetalPixelTheme4/MetalPixel.tres" id="1_o0xl2"]
 [ext_resource type="Script" uid="uid://r26vig0m7xh8" path="res://scenes/MixingPane.gd" id="1_svtgx"]
-[ext_resource type="StyleBox" uid="uid://dj5g08sef8hlt" path="res://themes/lable-stylebox.tres" id="2_rmkpb"]
+[ext_resource type="PackedScene" uid="uid://fokn520phn5m" path="res://components/OrderDetails.tscn" id="3_cgagm"]
 [ext_resource type="PackedScene" uid="uid://yrym8oofb8p4" path="res://components/MixerButtons.tscn" id="4_svtgx"]
 [ext_resource type="PackedScene" uid="uid://cfvtyjrhh4cqx" path="res://components/BaseSelector.tscn" id="5_83n0o"]
 [ext_resource type="PackedScene" uid="uid://bvhr2kpc3py1q" path="res://components/IngredientSelector.tscn" id="5_nyt5e"]
 [ext_resource type="PackedScene" uid="uid://dhdwspygl8is8" path="res://scenes/ProductDetails.tscn" id="6_cgagm"]
 [ext_resource type="PackedScene" uid="uid://loicby15dxae" path="res://scenes/ToolsPane.tscn" id="7_83n0o"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_secb7"]
-font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fi2f3"]
 
@@ -48,15 +45,14 @@ grow_vertical = 2
 [node name="IngredientSelection" type="VBoxContainer" parent="MixingWrapper"]
 layout_mode = 2
 
-[node name="Customer Order" type="Label" parent="MixingWrapper/IngredientSelection"]
-custom_minimum_size = Vector2(298, 0)
+[node name="OrderDetails" parent="MixingWrapper/IngredientSelection" instance=ExtResource("3_cgagm")]
+unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 0
-theme_override_styles/normal = ExtResource("2_rmkpb")
-text = "Hello I would like a coke please 
-Multiline"
-label_settings = SubResource("LabelSettings_secb7")
-autowrap_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 16
+fit_content = true
+scroll_active = false
 
 [node name="HSeparator" type="HSeparator" parent="MixingWrapper/IngredientSelection"]
 custom_minimum_size = Vector2(0, 30)
