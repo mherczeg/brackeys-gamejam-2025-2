@@ -2,7 +2,7 @@ class_name Game
 extends Node2D
 
 # I hate this, but I am not gonna figure out a good workaround to godot enum values matching up with other enums
-enum GAMEPLAY_STEPS {MIXING = 11, CLEANUP = 12}
+enum GAMEPLAY_STEPS {MIXING = 11, CLEANUP = 12, WAIT_FOR_FEEDBACK = 13}
 
 const GAME_LOOP_STEPS: Array = [
 	Encounter.STAGE.FIRST,
@@ -24,6 +24,7 @@ var _current_step_index: int = 0
 var _current_encounter: Encounter
 var _current_npc: NPC
 var _render_complete: bool = false
+var _is_mixing: bool = false
 
 @onready var customer_pane: CustomerPane = %CustomerPane
 @onready var mixing_pane: MixingPane = %MixingPane
@@ -35,7 +36,6 @@ func _ready() -> void:
 	EventBus.debug.start_random_encounter.connect(start_random_encounter)
 	EventBus.debug.start_shop.connect(shop_pane.open)
 
-# this is very ineffiecient, but should be gone by tomorrow
 func start_random_encounter() -> void:
 	start_encounter(ResourceManager.encounters.pick_random())
 
@@ -63,11 +63,16 @@ func gameplay_loop() -> void:
 			await customer_pane.encounter_storybox.render_story_step(_current_encounter, Encounter.STAGE.THIRD)
 			_render_complete = true
 		GAMEPLAY_STEPS.MIXING:
+			_is_mixing = true
 			var mixed_product: MixedProduct = await serve_order()
 			mixing_pane.display_result(mixed_product)
-			evaluate_served_product(mixed_product)
+			_is_mixing = false
+			_render_complete = false
+			await evaluate_served_product(mixed_product)
+			_render_complete = true
 			setup_next_order()
-			next_step()
+			if _current_npc:
+				next_step()
 		GAMEPLAY_STEPS.CLEANUP:
 			customer_pane.encounter_storybox.clear()
 			_current_encounter = null
@@ -101,26 +106,28 @@ func setup_next_order() -> void:
 func render_encounter_stage(encounter: Encounter, stage: Encounter.STAGE) -> void:
 	customer_pane.encounter_storybox.render_story_step(encounter, stage)
 
-func evaluate_served_product(mixed_product: MixedProduct) -> void:
+func evaluate_served_product(mixed_product: MixedProduct) -> Signal:
+	var current_npc_index: int = _current_encounter.customers.find(_current_npc)
 	var ordered_product: Product = _current_encounter.order[_current_npc]
+	var product_reaction: String = "..."
 
-	var is_correct_base: bool = mixed_product.base == ordered_product.base
-	var has_all_effects: bool = SetUtils.is_a_subset_of_b(
-		SetUtils.array_to_set(ordered_product.effects),
-		SetUtils.array_to_set(mixed_product.effects)
-	)
-
-	if (is_correct_base && has_all_effects):
-		print("just what I wanted")
-	else:
-		print("this is wrong")
+	if current_npc_index == 0:
+		customer_pane.encounter_storybox.clear_stage_text()
 
 	if (mixed_product.unlocked_effects.size()):
 		EventBus.mixer.ingredient_effects_unlocked.emit()
 
+	if !mixed_product.has_fulfilled_product(ordered_product):
+		product_reaction = _current_encounter.failure_text[_current_npc]
+	elif mixed_product.has_additional_liked_effects(ordered_product, _current_npc):
+		product_reaction = _current_encounter.like_text[_current_npc]
+	elif mixed_product.has_additional_disliked_effects(ordered_product, _current_npc):
+		product_reaction = _current_encounter.dislike_text[_current_npc]
+
+	return customer_pane.encounter_storybox.render_single_message(current_npc_index, product_reaction)
 
 func _on_customer_pane_click() -> void:
-	if _current_encounter && SKIPPABLE_STEPS.has(GAME_LOOP_STEPS[_current_step_index]):
+	if _current_encounter && !_is_mixing:
 		if _render_complete:
 			next_step()
 		else:

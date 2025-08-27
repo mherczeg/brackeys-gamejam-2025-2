@@ -32,4 +32,19 @@ ExtResource("3_l5fld"): "",
 ExtResource("4_u5ris"): "Encounter 3 Stage 3 Line 2",
 ExtResource("5_d3fdg"): "Encounter 3 Stage 3 Line 3"
 })
+like_text = Dictionary[ExtResource("1_wdynw"), String]({
+ExtResource("3_l5fld"): "I like this",
+ExtResource("4_u5ris"): "I like this",
+ExtResource("5_d3fdg"): "I like this"
+})
+dislike_text = Dictionary[ExtResource("1_wdynw"), String]({
+ExtResource("3_l5fld"): "I dislike this",
+ExtResource("4_u5ris"): "I dislike this",
+ExtResource("5_d3fdg"): "I dislike this"
+})
+failure_text = Dictionary[ExtResource("1_wdynw"), String]({
+ExtResource("3_l5fld"): "This is not what I wanted",
+ExtResource("4_u5ris"): "This is not what I wanted",
+ExtResource("5_d3fdg"): "This is not what I wanted"
+})
 metadata/_custom_type_script = "uid://dbbnqe7xp83lh"

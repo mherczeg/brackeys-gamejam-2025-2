@@ -21,9 +21,14 @@ func render_story_step(new_encounter: Encounter, new_stage: Encounter.STAGE) -> 
 	stage = new_stage
 	return _render()
 
+func clear_stage_text() -> void:
+	stage_group_nodes[stage].clear_text()
+
+func render_single_message(npc_index: int, text: String) -> Signal:
+	return stage_group_nodes[stage].display_npc_text(npc_index, text)
+
 func clear() -> void:
 	_reset_group_visibility()
-
 
 func _render() -> Signal:
 	_reset_group_visibility()

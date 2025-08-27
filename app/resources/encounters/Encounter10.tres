@@ -26,4 +26,16 @@ stage_3_text = Dictionary[ExtResource("1_rt8t1"), String]({
 ExtResource("3_gs8wx"): "Encounter 10 Stage 3 Line 1",
 ExtResource("4_pomux"): "Encounter 10 Stage 3 Line 2"
 })
+like_text = Dictionary[ExtResource("1_rt8t1"), String]({
+ExtResource("3_gs8wx"): "I like this",
+ExtResource("4_pomux"): "I like this"
+})
+dislike_text = Dictionary[ExtResource("1_rt8t1"), String]({
+ExtResource("3_gs8wx"): "I dislike this",
+ExtResource("4_pomux"): "I dislike this"
+})
+failure_text = Dictionary[ExtResource("1_rt8t1"), String]({
+ExtResource("3_gs8wx"): "This is not what I wanted",
+ExtResource("4_pomux"): "This is not what I wanted"
+})
 metadata/_custom_type_script = "uid://dbbnqe7xp83lh"

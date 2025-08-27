@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Encounter" load_steps=8 format=3 uid="uid://ds8oa47binq3a"]
 
-[ext_resource type="Script" uid="uid://dxpfvppfif2ht" path="res://resources/NPC.gd" id="1_0ot52"]
+[ext_resource type="Script" path="res://resources/NPC.gd" id="1_0ot52"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="2_n74tj"]
 [ext_resource type="Script" uid="uid://dbbnqe7xp83lh" path="res://resources/Encounter.gd" id="3_n1q6w"]
 [ext_resource type="Resource" uid="uid://cq0y4qp5fw4jv" path="res://resources/npcs/NPC1.tres" id="3_xn71l"]
@@ -25,5 +25,17 @@ ExtResource("4_wn581"): "Encounter 1 Stage 2 Line 2"
 stage_3_text = Dictionary[ExtResource("1_0ot52"), String]({
 ExtResource("3_xn71l"): "Encounter 1 Stage 3 Line 1",
 ExtResource("4_wn581"): "Encounter 1 Stage 3 Line 3"
+})
+like_text = Dictionary[ExtResource("1_0ot52"), String]({
+ExtResource("3_xn71l"): "I like this",
+ExtResource("4_wn581"): "I like this"
+})
+dislike_text = Dictionary[ExtResource("1_0ot52"), String]({
+ExtResource("3_xn71l"): "I dislike this",
+ExtResource("4_wn581"): "I dislike this"
+})
+failure_text = Dictionary[ExtResource("1_0ot52"), String]({
+ExtResource("3_xn71l"): "This is not what I wanted",
+ExtResource("4_wn581"): "This is not what I wanted"
 })
 metadata/_custom_type_script = "uid://dbbnqe7xp83lh"

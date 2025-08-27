@@ -46,3 +46,17 @@ func _reset_npcs() -> void:
 		stage_npc.hide()
 		stage_npc.clear_text()
 		stage_npc.clear_interaction()
+
+func clear_text() -> void:
+	for stage_npc: StageNPC in stage_npcs:
+		stage_npc.clear_text()
+		stage_npc.clear_interaction()
+
+func display_npc_text(npc_index: int, text: String) -> Signal:
+	stage_npcs[npc_index].textbox.is_active_for_interaction = true
+	var display: Signal = stage_npcs[npc_index].display_text(text)
+	display.connect(
+		func() -> void: stage_npcs[npc_index].textbox.is_active_for_interaction = false,
+		ConnectFlags.CONNECT_ONE_SHOT
+	)
+	return display
