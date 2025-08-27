@@ -61,8 +61,9 @@ func gameplay_loop() -> void:
 			await customer_pane.encounter_storybox.render_story_step(_current_encounter, Encounter.STAGE.THIRD)
 			_render_complete = true
 		GAMEPLAY_STEPS.MIXING:
-			var served: MixedProduct = await serve_order()
-			print("served:", served)
+			var mixed_product: MixedProduct = await serve_order()
+			mixing_pane.display_result(mixed_product)
+			evaluate_served_product(mixed_product)
 			setup_next_order()
 			next_step()
 		GAMEPLAY_STEPS.CLEANUP:
@@ -82,7 +83,7 @@ func is_step_complete() -> bool:
 	return true
 
 func serve_order() -> Signal:
-	mixing_pane.set_npc(_current_npc)
+	mixing_pane.start_new_order(_current_npc)
 	return EventBus.mixer.serve_mix
 
 
@@ -97,6 +98,21 @@ func setup_next_order() -> void:
 
 func render_encounter_stage(encounter: Encounter, stage: Encounter.STAGE) -> void:
 	customer_pane.encounter_storybox.render_story_step(encounter, stage)
+
+func evaluate_served_product(mixed_product: MixedProduct) -> void:
+	var ordered_product: Product = _current_encounter.order[_current_npc]
+
+	var is_correct_base: bool = mixed_product.base == ordered_product.base
+	var has_all_effects: bool = SetUtils.is_a_subset_of_b(
+		SetUtils.array_to_set(ordered_product.effects),
+		SetUtils.array_to_set(mixed_product.effects)
+	)
+
+	if (is_correct_base && has_all_effects):
+		print("just what I wanted")
+	else:
+		print("this is wrong")
+
 
 func _on_customer_pane_click() -> void:
 	if _current_encounter && SKIPPABLE_STEPS.has(GAME_LOOP_STEPS[_current_step_index]):

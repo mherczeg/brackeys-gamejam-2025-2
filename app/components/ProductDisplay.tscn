@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://17do5csli6m2"]
+
+[ext_resource type="Script" uid="uid://cyk8crbmu2pwr" path="res://components/ProductDisplay.gd" id="1_nixoc"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_hum7m"]
+size = Vector2(32, 32)
+
+[node name="ProductDisplay" type="VBoxContainer"]
+script = ExtResource("1_nixoc")
+
+[node name="BaseIcon" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = SubResource("PlaceholderTexture2D_hum7m")
+
+[node name="BaseLabel" type="Label" parent="BaseIcon"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "BaseLabel"
+
+[node name="Effects" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4

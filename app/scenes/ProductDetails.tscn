@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhdwspygl8is8"]
+[gd_scene load_steps=3 format=3 uid="uid://dhdwspygl8is8"]
 
 [ext_resource type="Script" uid="uid://dqtxo8v0bpt3t" path="res://scenes/ProductDetails.gd" id="1_hum7m"]
+[ext_resource type="PackedScene" uid="uid://17do5csli6m2" path="res://components/ProductDisplay.tscn" id="2_0xnmx"]
 
 [node name="ProductDetails" type="VBoxContainer"]
 size_flags_horizontal = 3
@@ -11,7 +12,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="UnkownEffectsWarning" type="Label" parent="."]
+[node name="UnknownEffectsWarning" type="Label" parent="."]
 layout_mode = 2
 text = "May have unintended effects"
 horizontal_alignment = 1
@@ -26,3 +27,6 @@ custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Mix It!"
+
+[node name="ProductDisplay" parent="." instance=ExtResource("2_0xnmx")]
+layout_mode = 2

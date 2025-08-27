@@ -7,7 +7,10 @@ const INGREDIENT_LIST_SPACING: int = 10
 var _selected_base: Base:
 	set(updated_base):
 		_selected_base = updated_base
-		mixer_buttons.update_base_icon(updated_base.icon)
+		if updated_base:
+			mixer_buttons.update_base_icon(updated_base.icon)
+		else:
+			mixer_buttons.update_base_icon(null)
 		product_details.update_base(updated_base)
 
 var _selected_ingredients: Dictionary[IngredientButton.SLOT, Ingredient] = {}
@@ -70,6 +73,7 @@ func set_selected_base(base: Base) -> void:
 	EventBus.mixer.mixture_changed.emit()
 
 func set_slot_ingredient(slot: IngredientButton.SLOT, ingredient: Ingredient) -> void:
+	product_details.update_current_display_product(null)
 	_selected_ingredients[slot] = ingredient
 	mixer_buttons.update_slot_icon(slot, ingredient.icon)
 	ingredient_selector.hide()
@@ -88,14 +92,20 @@ func _get_ingredient_selector_position(ingredient_button: IngredientButton) -> V
 	)
 
 func start_encounter(encounter: Encounter) -> void:
+	product_details.update_current_display_product(null)
 	_current_encounter = encounter
 
 func complete_encounter() -> void:
 	_current_encounter = null
 	_current_npc = null
 
-func set_npc(npc: NPC) -> void:
+func start_new_order(npc: NPC) -> void:
+	reset_mixer()
 	_current_npc = npc
+
+func display_result(display_product: MixedProduct) -> void:
+	reset_mixer()
+	product_details.update_current_display_product(display_product)
 
 func recalculate_order() -> void:
 	if !_current_product:
@@ -118,7 +128,17 @@ func recalculate_mixture() -> void:
 			else:
 				ingredients_with_unknown_set[ingredient] = true
 
+
 	product_details.update_mixture(mixture_known_effects_set.keys(), ingredients_with_unknown_set.size())
+
+func reset_mixer() -> void:
+	set_selected_base(null)
+	unset_slot_ingredient(IngredientButton.SLOT.FIRST)
+	unset_slot_ingredient(IngredientButton.SLOT.SECOND)
+	unset_slot_ingredient(IngredientButton.SLOT.THIRD)
+	unset_slot_ingredient(IngredientButton.SLOT.FOURTH)
+	ingredient_selector.hide()
+
 
 func _on_serve_button_pressed() -> void:
 	var mixed_product: MixedProduct = MixedProduct.new()

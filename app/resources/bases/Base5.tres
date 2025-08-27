@@ -9,7 +9,7 @@ region = Rect2(128, 0, 32, 32)
 
 [resource]
 script = ExtResource("2_sr6ri")
-name = "Base1"
+name = "Base 5"
 description = ""
 icon = SubResource("AtlasTexture_iibn4")
 metadata/_custom_type_script = "uid://bgwochg5pfqrl"

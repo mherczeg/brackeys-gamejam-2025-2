@@ -31,11 +31,16 @@ var _is_craftable: bool:
 	get():
 		return _base && (_has_unknown_potential || _has_mix_information)
 
+var _current_display_product: MixedProduct:
+	set(new_product):
+		_current_display_product = new_product
+		update_content()
 
 @onready var effect_list: VBoxContainer = $EffectList
 @onready var server_button: Button = $ServeButton
 @onready var base_warning: Label = $BaseWarning
-@onready var unknown_effect_warning: Label = $UnkownEffectsWarning
+@onready var unknown_effect_warning: Label = $UnknownEffectsWarning
+@onready var product_display: ProductDisplay = $ProductDisplay
 
 func _ready() -> void:
 	hide()
@@ -55,6 +60,9 @@ func update_content() -> void:
 	update_mixture_list()
 	update_visibility()
 
+func update_current_display_product(product: MixedProduct) -> void:
+	_current_display_product = product
+
 func update_mixture_list() -> void:
 	for child: EffectLabel in effect_list.get_children():
 		if child.is_in_group(EFFECT_LABEL_GROUP):
@@ -64,17 +72,22 @@ func update_mixture_list() -> void:
 				child.hide()
 
 func update_visibility() -> void:
-	if _has_mix_information:
+	if _has_mix_information || _current_display_product:
 		show()
 	else:
 		hide()
+
+	if _current_display_product:
+		product_display.show_product(_current_display_product)
+	else:
+		product_display.hide()
 
 	if _has_unknown_potential:
 		unknown_effect_warning.show()
 	else:
 		unknown_effect_warning.hide()
 
-	if _base:
+	if _base || _current_display_product:
 		base_warning.hide()
 	else:
 		base_warning.show()
