@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://c22e28wmv25ih"]
+
+[ext_resource type="Script" uid="uid://bn3r71t8bkdho" path="res://components/IngredientLabelIcon.gd" id="1_3jgr3"]
+[ext_resource type="Shader" uid="uid://eqturlsphwhk" path="res://components/outline-test-3.gdshader" id="1_n3nu5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u7rbb"]
+shader = ExtResource("1_n3nu5")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/blink_color = Color(1, 1, 1, 1)
+shader_parameter/blink_time_scale = 0.0
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_cypqi"]
+size = Vector2(32, 32)
+
+[node name="IngredientLabelIcon" type="TextureRect"]
+material = SubResource("ShaderMaterial_u7rbb")
+custom_minimum_size = Vector2(48, 48)
+texture = SubResource("PlaceholderTexture2D_cypqi")
+script = ExtResource("1_3jgr3")

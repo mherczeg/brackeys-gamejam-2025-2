@@ -1,20 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://yrym8oofb8p4"]
+[gd_scene load_steps=4 format=3 uid="uid://yrym8oofb8p4"]
 
 [ext_resource type="Script" uid="uid://d3obb74fl2sda" path="res://components/MixerButtons.gd" id="1_jsqpx"]
 [ext_resource type="PackedScene" uid="uid://qqu3aivipcrv" path="res://components/IngredientButton.tscn" id="1_lnkbb"]
-
-[sub_resource type="Gradient" id="Gradient_jsqpx"]
-colors = PackedColorArray(0.621175, 0.663973, 0.855973, 1, 0.619608, 0.662745, 0.854902, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_ht0kh"]
-gradient = SubResource("Gradient_jsqpx")
+[ext_resource type="Texture2D" uid="uid://cxnqy72easkxu" path="res://assets/slots-purple.png" id="2_ht0kh"]
 
 [node name="MixerButtons" type="HBoxContainer"]
 script = ExtResource("1_jsqpx")
 
 [node name="BaseButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture_normal = SubResource("GradientTexture2D_ht0kh")
+texture_normal = ExtResource("2_ht0kh")
+stretch_mode = 0
 
 [node name="Icon" type="TextureRect" parent="BaseButton"]
 layout_mode = 1

@@ -1,24 +1,52 @@
-[gd_scene load_steps=3 format=3 uid="uid://cixif270j8h8b"]
+[gd_scene load_steps=11 format=3 uid="uid://cixif270j8h8b"]
 
 [ext_resource type="Script" uid="uid://conjoqspcbhlq" path="res://components/MoneyCounter.gd" id="1_3ymom"]
+[ext_resource type="Theme" uid="uid://segr3l7pwr4u" path="res://scenes/naked-info-label.tres" id="2_otc4u"]
+[ext_resource type="Texture2D" uid="uid://butg2614w8lva" path="res://assets/coin1.png" id="3_07rbm"]
+[ext_resource type="Texture2D" uid="uid://d3q2rm1kkqrpk" path="res://assets/coin2.png" id="4_x41hc"]
+[ext_resource type="Texture2D" uid="uid://okn1o2udyj4r" path="res://assets/coin3.png" id="5_5kkh6"]
+[ext_resource type="Texture2D" uid="uid://nie4443v73by" path="res://assets/coin4.png" id="6_51sf4"]
+[ext_resource type="Texture2D" uid="uid://c2vxxhj6cw43b" path="res://assets/coin5.png" id="7_v5wup"]
+[ext_resource type="Texture2D" uid="uid://2rhjksqcg45k" path="res://assets/coin6.png" id="8_hr1c5"]
+[ext_resource type="Texture2D" uid="uid://b5r3coek3ojps" path="res://assets/coin7.png" id="9_lwhkj"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_cgagm"]
-size = Vector2(32, 32)
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_nf10n"]
+frames = 7
+pause = true
+one_shot = true
+frame_0/texture = ExtResource("3_07rbm")
+frame_0/duration = 0.1
+frame_1/texture = ExtResource("4_x41hc")
+frame_1/duration = 0.05
+frame_2/texture = ExtResource("5_5kkh6")
+frame_2/duration = 0.05
+frame_3/texture = ExtResource("6_51sf4")
+frame_3/duration = 0.1
+frame_4/texture = ExtResource("7_v5wup")
+frame_4/duration = 0.05
+frame_5/texture = ExtResource("8_hr1c5")
+frame_5/duration = 0.05
+frame_6/texture = ExtResource("9_lwhkj")
+frame_6/duration = 0.05
 
 [node name="MoneyCounter" type="HBoxContainer"]
 offset_left = 3.0
 offset_top = 6.0
 offset_right = 62.0
 offset_bottom = 46.0
+theme_override_constants/separation = 4
 script = ExtResource("1_3ymom")
 
 [node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(0, 31)
 layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_otc4u")
 text = "$ 0"
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Coin" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
-texture = SubResource("PlaceholderTexture2D_cgagm")
+texture = SubResource("AnimatedTexture_nf10n")

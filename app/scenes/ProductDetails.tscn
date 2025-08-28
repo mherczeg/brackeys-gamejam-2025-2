@@ -1,31 +1,109 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhdwspygl8is8"]
+[gd_scene load_steps=12 format=3 uid="uid://dhdwspygl8is8"]
 
 [ext_resource type="Script" uid="uid://dqtxo8v0bpt3t" path="res://scenes/ProductDetails.gd" id="1_hum7m"]
 [ext_resource type="PackedScene" uid="uid://17do5csli6m2" path="res://components/ProductDisplay.tscn" id="2_0xnmx"]
+[ext_resource type="Theme" uid="uid://segr3l7pwr4u" path="res://scenes/naked-info-label.tres" id="2_73f5a"]
+[ext_resource type="Texture2D" uid="uid://rwa0voyxkihk" path="res://assets/button.png" id="3_vr7d3"]
+[ext_resource type="FontFile" uid="uid://cegaqt0bhepqa" path="res://assets/Public_Pixel_Font_1_24/PublicPixel.otf" id="3_wvuut"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wvuut"]
+texture = ExtResource("3_vr7d3")
+texture_margin_left = 21.0
+texture_margin_top = 20.0
+texture_margin_right = 22.0
+texture_margin_bottom = 24.0
+region_rect = Rect2(8, 8, 48, 48)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gsdpb"]
+texture = ExtResource("3_vr7d3")
+texture_margin_left = 21.0
+texture_margin_top = 20.0
+texture_margin_right = 22.0
+texture_margin_bottom = 24.0
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+region_rect = Rect2(8, 8, 48, 48)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7mh63"]
+texture = ExtResource("3_vr7d3")
+texture_margin_left = 21.0
+texture_margin_top = 20.0
+texture_margin_right = 22.0
+texture_margin_bottom = 24.0
+region_rect = Rect2(8, 8, 48, 48)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uaslf"]
+texture = ExtResource("3_vr7d3")
+texture_margin_left = 21.0
+texture_margin_top = 20.0
+texture_margin_right = 22.0
+texture_margin_bottom = 24.0
+region_rect = Rect2(8, 8, 48, 48)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_owppq"]
+texture = ExtResource("3_vr7d3")
+texture_margin_left = 21.0
+texture_margin_top = 20.0
+texture_margin_right = 22.0
+texture_margin_bottom = 24.0
+region_rect = Rect2(72, 8, 48, 48)
+
+[sub_resource type="Theme" id="Theme_ix3a4"]
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 2
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("3_wvuut")
+Button/styles/disabled = SubResource("StyleBoxTexture_wvuut")
+Button/styles/focus = SubResource("StyleBoxTexture_gsdpb")
+Button/styles/hover = SubResource("StyleBoxTexture_7mh63")
+Button/styles/normal = SubResource("StyleBoxTexture_uaslf")
+Button/styles/pressed = SubResource("StyleBoxTexture_owppq")
 
 [node name="ProductDetails" type="VBoxContainer"]
 size_flags_horizontal = 3
+theme_override_constants/separation = 16
 script = ExtResource("1_hum7m")
 
 [node name="EffectList" type="VBoxContainer" parent="."]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_constants/separation = 16
 
-[node name="UnknownEffectsWarning" type="Label" parent="."]
-layout_mode = 2
-text = "May have unintended effects"
-horizontal_alignment = 1
-
-[node name="BaseWarning" type="Label" parent="."]
+[node name="Label" type="Label" parent="EffectList"]
+custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Base not selected!"
+theme = ExtResource("2_73f5a")
+text = "Known effects in mixture:"
+
+[node name="EffectIcons" type="HBoxContainer" parent="EffectList"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 8
 
 [node name="ServeButton" type="Button" parent="."]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+theme = SubResource("Theme_ix3a4")
 text = "Mix It!"
 
 [node name="ProductDisplay" parent="." instance=ExtResource("2_0xnmx")]

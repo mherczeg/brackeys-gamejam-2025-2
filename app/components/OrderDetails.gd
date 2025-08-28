@@ -19,37 +19,17 @@ func set_order_with_texture(npc: NPC, product: Product) -> void:
 
 	add_image(product.icon, 16, 16)
 
-	append_text(" ")
+	append_text(" %s" % product.name)
 
-	push_bold()
-
-	append_text(product.name)
-
-	pop()
-
-	append_text(".\n(Recipe: ")
+	append_text(".Ingredients:\n- ")
 
 	add_image(product.base.icon, 16, 16)
 
-	append_text(" ")
-
-	push_bold()
-
-	append_text(product.base.name)
-
-	pop()
+	append_text(" %s" % product.base.name)
 
 	for effect: Effect in product.effects:
-		append_text(", ")
+		append_text("\n- ")
 
 		add_image(effect.icon, 16, 16)
 
-		append_text(" ")
-
-		push_bold()
-
-		append_text(effect.name)
-
-		pop()
-
-	append_text(")")
+		append_text(" %s" % effect.name)

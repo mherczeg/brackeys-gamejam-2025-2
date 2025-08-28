@@ -1,0 +1,21 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://ce7t0yssoacju"]
+
+[ext_resource type="StyleBox" uid="uid://b16502eveejlt" path="res://themes/blue-stylebox.tres" id="1_8n558"]
+[ext_resource type="FontFile" uid="uid://cegaqt0bhepqa" path="res://assets/Public_Pixel_Font_1_24/PublicPixel.otf" id="1_35fu2"]
+
+[sub_resource type="FontVariation" id="FontVariation_xbpvu"]
+base_font = ExtResource("1_35fu2")
+
+[resource]
+RichTextLabel/font_sizes/bold_font_size = 10
+RichTextLabel/font_sizes/bold_italics_font_size = 10
+RichTextLabel/font_sizes/italics_font_size = 10
+RichTextLabel/font_sizes/mono_font_size = 10
+RichTextLabel/font_sizes/normal_font_size = 10
+RichTextLabel/fonts/bold_font = SubResource("FontVariation_xbpvu")
+RichTextLabel/fonts/bold_italics_font = SubResource("FontVariation_xbpvu")
+RichTextLabel/fonts/italics_font = SubResource("FontVariation_xbpvu")
+RichTextLabel/fonts/mono_font = SubResource("FontVariation_xbpvu")
+RichTextLabel/fonts/normal_font = SubResource("FontVariation_xbpvu")
+RichTextLabel/styles/focus = ExtResource("1_8n558")
+RichTextLabel/styles/normal = ExtResource("1_8n558")

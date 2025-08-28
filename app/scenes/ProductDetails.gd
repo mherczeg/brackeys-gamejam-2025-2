@@ -4,7 +4,7 @@ extends VBoxContainer
 signal serve_button_pressed
 
 const EFFECTS_PATH: String = "res://resources/effects"
-const EFFECT_LABEL_SCENE: PackedScene = preload("res://components/EffectLabel.tscn")
+const EFFECT_LABEL_ICON_SCENE: PackedScene = preload("res://components/EffectLabelIcon.tscn")
 const EFFECT_LABEL_GROUP: String = "product-details-effect-labels"
 
 var _mixture: Array[Effect] = []
@@ -37,9 +37,8 @@ var _current_display_product: MixedProduct:
 		update_content()
 
 @onready var effect_list: VBoxContainer = $EffectList
+@onready var effect_icons: HBoxContainer = $EffectList/EffectIcons
 @onready var server_button: Button = $ServeButton
-@onready var base_warning: Label = $BaseWarning
-@onready var unknown_effect_warning: Label = $UnknownEffectsWarning
 @onready var product_display: ProductDisplay = $ProductDisplay
 
 func _ready() -> void:
@@ -64,12 +63,19 @@ func update_current_display_product(product: MixedProduct) -> void:
 	_current_display_product = product
 
 func update_mixture_list() -> void:
-	for child: EffectLabel in effect_list.get_children():
+	var visible_icons: int = 0
+	for child: EffectLabelIcon in effect_icons.get_children():
 		if child.is_in_group(EFFECT_LABEL_GROUP):
 			if _mixture.has(child.effect):
+				visible_icons += 1
 				child.show()
 			else:
 				child.hide()
+
+	if visible_icons > 0:
+		effect_list.show()
+	else:
+		effect_list.hide()
 
 func update_visibility() -> void:
 	if _has_mix_information || _current_display_product:
@@ -83,14 +89,14 @@ func update_visibility() -> void:
 		product_display.hide()
 
 	if _has_unknown_potential:
-		unknown_effect_warning.show()
+		EventBus.mixer.unknown_effect_warning.emit(true)
 	else:
-		unknown_effect_warning.hide()
+		EventBus.mixer.unknown_effect_warning.emit(false)
 
 	if _base || _current_display_product:
-		base_warning.hide()
+		EventBus.mixer.base_warning.emit(false)
 	else:
-		base_warning.show()
+		EventBus.mixer.base_warning.emit(true)
 
 	if _is_craftable:
 		server_button.show()
@@ -99,8 +105,9 @@ func update_visibility() -> void:
 
 func _load_all_effects() -> void:
 	for effect: Effect in ResourceManager.effects:
-		var effect_label: EffectLabel = EFFECT_LABEL_SCENE.instantiate()
+		var effect_label: EffectLabelIcon = EFFECT_LABEL_ICON_SCENE.instantiate()
 		effect_label.effect = effect
+		effect_label.custom_minimum_size = Vector2(32, 32)
 		effect_label.hide()
 		effect_label.add_to_group(EFFECT_LABEL_GROUP)
-		effect_list.add_child(effect_label)
+		effect_icons.add_child(effect_label)

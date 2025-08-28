@@ -38,10 +38,12 @@ var _current_product: Product:
 @onready var mixer_buttons: MixerButtons = %MixerButtons
 @onready var product_details: ProductDetails = %ProductDetails
 @onready var order_details: OrderDetails = %OrderDetails
-@onready var left_margin: float = ($MixingWrapper as BoxContainer).offset_left
+@onready var base_warning: Label = %BaseWarning
+@onready var unknown_effect_warning: Label = %UnknownEffectsWarning
+@onready var left_margin: float = 0
 
 func _ready() -> void:
-	($Background as Panel).mouse_filter = MOUSE_FILTER_IGNORE
+	# ($Background as Panel).mouse_filter = MOUSE_FILTER_IGNORE
 	ingredient_selector.hide()
 	EventBus.mixer.ingredient_selector_toggle.connect(toggle_ingredient_selector)
 	EventBus.mixer.base_selected.connect(set_selected_base)

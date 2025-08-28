@@ -1,30 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://qqu3aivipcrv"]
+[gd_scene load_steps=3 format=3 uid="uid://qqu3aivipcrv"]
 
+[ext_resource type="Texture2D" uid="uid://cisieujwnupju" path="res://assets/slots-blue.png" id="1_nc5m2"]
 [ext_resource type="Script" uid="uid://blxwhwo7x30wa" path="res://components/IngredientButton.gd" id="1_t5vgk"]
 
-[sub_resource type="Gradient" id="Gradient_t5vgk"]
-colors = PackedColorArray(0.607843, 0.607843, 0.607843, 1, 0.607843, 0.607843, 0.607843, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_nc5m2"]
-gradient = SubResource("Gradient_t5vgk")
-
-[sub_resource type="Gradient" id="Gradient_nc5m2"]
-colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_hi8c0"]
-gradient = SubResource("Gradient_nc5m2")
-
-[sub_resource type="Gradient" id="Gradient_hi8c0"]
-colors = PackedColorArray(0.27451, 0.27451, 0.27451, 1, 0.27451, 0.27451, 0.27451, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_0ge1a"]
-gradient = SubResource("Gradient_hi8c0")
-
 [node name="IngredientButton" type="TextureButton"]
+custom_minimum_size = Vector2(64, 64)
 mouse_default_cursor_shape = 2
-texture_normal = SubResource("GradientTexture2D_nc5m2")
-texture_pressed = SubResource("GradientTexture2D_hi8c0")
-texture_hover = SubResource("GradientTexture2D_0ge1a")
+texture_normal = ExtResource("1_nc5m2")
+stretch_mode = 0
 script = ExtResource("1_t5vgk")
 
 [node name="Icon" type="TextureRect" parent="."]

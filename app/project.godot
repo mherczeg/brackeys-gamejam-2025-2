@@ -30,6 +30,12 @@ gdscript/warnings/unsafe_property_access=1
 gdscript/warnings/unsafe_method_access=1
 gdscript/warnings/native_method_override=1
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+
 [dotnet]
 
 project/assembly_name="Vending Machine Gremlin"
@@ -41,5 +47,6 @@ project/assembly_name="Vending Machine Gremlin"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
