@@ -30,7 +30,7 @@ func has_fulfilled_product(product: Product) -> bool:
 		SetUtils.array_to_set(product.effects),
 		SetUtils.array_to_set(effects)
 	)
-	
+
 
 	return is_correct_base && has_all_effects
 
