@@ -28,65 +28,51 @@ var _current_product: Product:
 			return null
 		return _current_encounter.order[_current_npc]
 
-# Unfortunately this does not work
-# var _selected_ingredients: Dictionary[IngredientButton.SLOT, Ingredient] = {}:
-# 	set(updated_ingredients):
-# 		_selected_ingredients = updated_ingredients
-# 		print(_selected_ingredients)
-
-@onready var ingredient_selector: IngredientSelector = $IngredientSelector
 @onready var mixer_buttons: MixerButtons = %MixerButtons
 @onready var product_details: ProductDetails = %ProductDetails
 @onready var order_details: OrderDetails = %OrderDetails
-@onready var base_warning: Label = %BaseWarning
-@onready var unknown_effect_warning: Label = %UnknownEffectsWarning
 @onready var coin_insert: AudioStreamPlayer2D = $CoinInsert
 @onready var product_drop: AudioStreamPlayer2D = $ProductDrop
 @onready var left_margin: float = 0
 
 func _ready() -> void:
 	# ($Background as Panel).mouse_filter = MOUSE_FILTER_IGNORE
-	ingredient_selector.hide()
-	EventBus.mixer.ingredient_selector_toggle.connect(toggle_ingredient_selector)
 	EventBus.mixer.base_selected.connect(set_selected_base)
-	EventBus.mixer.ingredient_selected.connect(set_slot_ingredient)
+	EventBus.mixer.ingredient_selected.connect(set_next_slot_ingredient)
 	EventBus.mixer.ingredient_selector_unset.connect(unset_slot_ingredient)
 	EventBus.mixer.mixture_changed.connect(recalculate_mixture)
 	product_details.serve_button_pressed.connect(_on_serve_button_pressed)
 	recalculate_order()
 
-
-func _gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton && (event as InputEventMouseButton).pressed:
-		match (event as InputEventMouseButton).button_index:
-			MOUSE_BUTTON_LEFT:
-				if ingredient_selector.visible:
-					ingredient_selector.hide()
-
-func toggle_ingredient_selector(slot: IngredientButton.SLOT) -> void:
-	if ingredient_selector.visible:
-		ingredient_selector.hide()
-	else:
-		var ingredient_button: IngredientButton = mixer_buttons.get_slot_button(slot)
-		ingredient_selector.position = _get_ingredient_selector_position(ingredient_button)
-		ingredient_selector.open(_selected_ingredients.values())
-
 func set_selected_base(base: Base) -> void:
 	_selected_base = base
-	EventBus.mixer.mixture_changed.emit()
+	EventBus.mixer.mixture_changed.emit(_selected_base, _selected_ingredients.values())
+
+func set_next_slot_ingredient(ingredient: Ingredient) -> void:
+	var next_slot: IngredientButton.SLOT = get_first_empty_slot()
+	if (next_slot == null):
+		return
+
+	set_slot_ingredient(next_slot, ingredient)
 
 func set_slot_ingredient(slot: IngredientButton.SLOT, ingredient: Ingredient) -> void:
 	product_details.update_current_display_product(null)
 	_selected_ingredients[slot] = ingredient
 	mixer_buttons.update_slot_icon(slot, ingredient.icon)
-	ingredient_selector.hide()
-	EventBus.mixer.mixture_changed.emit()
+	EventBus.mixer.mixture_changed.emit(_selected_base, _selected_ingredients.values())
 
 func unset_slot_ingredient(slot: IngredientButton.SLOT) -> void:
 	if _selected_ingredients.has(slot):
 		_selected_ingredients.erase(slot)
 		mixer_buttons.update_slot_icon(slot, null)
-		EventBus.mixer.mixture_changed.emit()
+		EventBus.mixer.mixture_changed.emit(_selected_base, _selected_ingredients.values())
+
+func get_first_empty_slot() -> Variant:
+	for slot: IngredientButton.SLOT in mixer_buttons.slot_buttons.keys():
+		if !_selected_ingredients.has(slot):
+			return slot
+
+	return null
 
 func _get_ingredient_selector_position(ingredient_button: IngredientButton) -> Vector2:
 	return Vector2(
@@ -121,7 +107,7 @@ func recalculate_order() -> void:
 	else:
 		order_details.set_order_with_texture(_current_npc, _current_product)
 
-func recalculate_mixture() -> void:
+func recalculate_mixture(_b: Base, _i: Array[Ingredient]) -> void:
 	var effect_appeared_once_set: Dictionary[Effect, bool] = {}
 	var mixture_known_effects_set: Dictionary[Effect, bool] = {}
 	var ingredients_with_unknown_set: Dictionary[Ingredient, bool] = {}
@@ -145,7 +131,6 @@ func reset_mixer() -> void:
 	unset_slot_ingredient(IngredientButton.SLOT.SECOND)
 	unset_slot_ingredient(IngredientButton.SLOT.THIRD)
 	unset_slot_ingredient(IngredientButton.SLOT.FOURTH)
-	ingredient_selector.hide()
 
 func _on_serve_button_pressed() -> void:
 	var mixed_product: MixedProduct = MixedProduct.new()

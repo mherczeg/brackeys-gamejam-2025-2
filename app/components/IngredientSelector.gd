@@ -1,28 +1,28 @@
 class_name IngredientSelector
 extends ScrollContainer
 
-const INGREDIENTS_PATH: String = "res://resources/ingredients"
-const INGREDIENT_SELECTOR_ELEMENT_SCENE: PackedScene = preload("res://components/IngredientSelectorElement.tscn")
+const INGREDIENT_SELECTOR_BUTTON_SCENE: PackedScene = preload("res://components/IngredientSelectorButton.tscn")
+const BASE_SELECTOR_BUTTON_SCENE: PackedScene = preload("res://components/BaseSelectorButton.tscn")
 
-@onready var list_container: VBoxContainer = $ListContainer
+@onready var bases_container: GridContainer = %ListContainer/Bases
+@onready var ingredients_container: GridContainer = %ListContainer/Ingredients
 
 
 func _ready() -> void:
 	mouse_filter = MOUSE_FILTER_STOP
+	_render_base_selector_elements()
 	_render_ingredient_selector_elements()
-
-func open(used_ingredients: Array[Ingredient]) -> void:
-	for child: IngredientSelectorElement in list_container.get_children():
-		if child is IngredientSelectorElement:
-			if child.is_unavailable(used_ingredients):
-				child.hide()
-			else:
-				child.show()
-	show()
 
 func _render_ingredient_selector_elements() -> void:
 	for ingredient: Ingredient in ResourceManager.ingredients:
-		var ingredient_selector_element_instance: IngredientSelectorElement = \
-			INGREDIENT_SELECTOR_ELEMENT_SCENE.instantiate()
+		var ingredient_selector_element_instance: IngredientSelectorButton = \
+			INGREDIENT_SELECTOR_BUTTON_SCENE.instantiate()
 		ingredient_selector_element_instance.ingredient = ingredient
-		list_container.add_child(ingredient_selector_element_instance)
+		ingredients_container.add_child(ingredient_selector_element_instance)
+
+func _render_base_selector_elements() -> void:
+	for base: Base in ResourceManager.bases:
+		var base_selector_element: BaseSelectorButton = \
+			BASE_SELECTOR_BUTTON_SCENE.instantiate()
+		base_selector_element.base = base
+		bases_container.add_child(base_selector_element)

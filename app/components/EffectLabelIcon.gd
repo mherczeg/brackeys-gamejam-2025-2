@@ -1,7 +1,7 @@
 class_name EffectLabelIcon
 extends TextureRect
 
-var effect: Effect
+@export var effect: Effect
 
 
 func _ready() -> void:

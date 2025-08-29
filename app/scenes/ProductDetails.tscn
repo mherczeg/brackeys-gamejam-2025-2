@@ -1,10 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://dhdwspygl8is8"]
+[gd_scene load_steps=14 format=3 uid="uid://dhdwspygl8is8"]
 
 [ext_resource type="Script" uid="uid://dqtxo8v0bpt3t" path="res://scenes/ProductDetails.gd" id="1_hum7m"]
 [ext_resource type="PackedScene" uid="uid://17do5csli6m2" path="res://components/ProductDisplay.tscn" id="2_0xnmx"]
 [ext_resource type="Theme" uid="uid://cpa44ka17yapc" path="res://themes/naked-button.tres" id="2_wvuut"]
+[ext_resource type="Script" uid="uid://dd48ng5meui8a" path="res://scenes/UnknownEffectWarning.gd" id="3_7mh63"]
 [ext_resource type="Texture2D" uid="uid://rwa0voyxkihk" path="res://assets/button.png" id="3_vr7d3"]
 [ext_resource type="FontFile" uid="uid://cegaqt0bhepqa" path="res://assets/Public_Pixel_Font_1_24/PublicPixel.otf" id="3_wvuut"]
+[ext_resource type="Script" uid="uid://bqlgyjmoog678" path="res://scenes/BaseWarning.gd" id="4_uaslf"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wvuut"]
 texture = ExtResource("3_vr7d3")
@@ -98,6 +100,27 @@ text = "Known effects in mixture:"
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 8
+
+[node name="UnknownEffectsWarning" type="Label" parent="EffectList"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(69, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_wvuut")
+text = "May have unintended effects!"
+horizontal_alignment = 1
+autowrap_mode = 2
+justification_flags = 131
+script = ExtResource("3_7mh63")
+
+[node name="BaseWarning" type="Label" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_wvuut")
+text = "Base not selected!"
+script = ExtResource("4_uaslf")
 
 [node name="ServeButton" type="Button" parent="."]
 custom_minimum_size = Vector2(300, 0)

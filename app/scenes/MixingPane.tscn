@@ -1,18 +1,15 @@
-[gd_scene load_steps=19 format=3 uid="uid://cl1c5ipfnf66f"]
+[gd_scene load_steps=16 format=3 uid="uid://cl1c5ipfnf66f"]
 
 [ext_resource type="Script" uid="uid://r26vig0m7xh8" path="res://scenes/MixingPane.gd" id="1_svtgx"]
 [ext_resource type="Texture2D" uid="uid://dq28el46s1moi" path="res://assets/BackGround.png" id="2_vhkge"]
 [ext_resource type="PackedScene" uid="uid://fokn520phn5m" path="res://components/OrderDetails.tscn" id="3_cgagm"]
 [ext_resource type="Theme" uid="uid://ce7t0yssoacju" path="res://themes/order-details.tres" id="3_vhkge"]
 [ext_resource type="PackedScene" uid="uid://yrym8oofb8p4" path="res://components/MixerButtons.tscn" id="4_svtgx"]
-[ext_resource type="PackedScene" uid="uid://cfvtyjrhh4cqx" path="res://components/BaseSelector.tscn" id="5_83n0o"]
 [ext_resource type="PackedScene" uid="uid://bvhr2kpc3py1q" path="res://components/IngredientSelector.tscn" id="5_nyt5e"]
 [ext_resource type="PackedScene" uid="uid://dhdwspygl8is8" path="res://scenes/ProductDetails.tscn" id="6_cgagm"]
-[ext_resource type="Theme" uid="uid://cpa44ka17yapc" path="res://themes/naked-button.tres" id="7_2ikhv"]
 [ext_resource type="PackedScene" uid="uid://loicby15dxae" path="res://scenes/ToolsPane.tscn" id="7_83n0o"]
-[ext_resource type="Script" uid="uid://dd48ng5meui8a" path="res://scenes/UnknownEffectWarning.gd" id="8_2ikhv"]
 [ext_resource type="PackedScene" uid="uid://cixif270j8h8b" path="res://components/MoneyCounter.tscn" id="9_je0hr"]
-[ext_resource type="Script" uid="uid://bqlgyjmoog678" path="res://scenes/BaseWarning.gd" id="9_q322n"]
+[ext_resource type="Theme" uid="uid://wng5u40163hw" path="res://scenes/IngredientSelector.tres" id="12_8e04o"]
 [ext_resource type="AudioStream" uid="uid://coaa3xnsbkwep" path="res://assets/audio/coin-clean.ogg" id="14_61iek"]
 [ext_resource type="AudioStream" uid="uid://dvoee2nyuifut" path="res://assets/audio/product-drop-short.ogg" id="15_61iek"]
 
@@ -41,11 +38,15 @@ script = ExtResource("1_svtgx")
 
 [node name="IngredientSelection" type="VBoxContainer" parent="."]
 clip_contents = true
-layout_mode = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 1.0
 offset_left = 100.0
 offset_top = 40.0
 offset_right = 500.0
-offset_bottom = 225.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 theme = SubResource("Theme_vhkge")
@@ -73,9 +74,6 @@ custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxEmpty_fi2f3")
 
-[node name="BaseSelector" parent="IngredientSelection" instance=ExtResource("5_83n0o")]
-layout_mode = 2
-
 [node name="Background" type="Sprite2D" parent="IngredientSelection"]
 visible = false
 show_behind_parent = true
@@ -83,28 +81,10 @@ position = Vector2(540, 321)
 scale = Vector2(5, 5)
 texture = ExtResource("2_vhkge")
 
-[node name="UnknownEffectsWarning" type="Label" parent="IngredientSelection"]
-unique_name_in_owner = true
-visible = false
-custom_minimum_size = Vector2(69, 44)
+[node name="IngredientSelector" parent="IngredientSelection" instance=ExtResource("5_nyt5e")]
 layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("7_2ikhv")
-text = "May have unintended effects!"
-horizontal_alignment = 1
-autowrap_mode = 2
-justification_flags = 131
-script = ExtResource("8_2ikhv")
-
-[node name="BaseWarning" type="Label" parent="IngredientSelection"]
-unique_name_in_owner = true
-visible = false
-custom_minimum_size = Vector2(0, 25)
-layout_mode = 2
-size_flags_horizontal = 4
-theme = ExtResource("7_2ikhv")
-text = "Base not selected!"
-script = ExtResource("9_q322n")
+size_flags_vertical = 3
+theme = ExtResource("12_8e04o")
 
 [node name="ProductDetails" parent="." instance=ExtResource("6_cgagm")]
 unique_name_in_owner = true
@@ -120,19 +100,6 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.7
 grow_horizontal = 0
-
-[node name="IngredientSelector" parent="." instance=ExtResource("5_nyt5e")]
-visible = false
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 102.0
-offset_right = 210.0
-offset_bottom = 180.0
-grow_horizontal = 1
-grow_vertical = 1
-horizontal_scroll_mode = 0
 
 [node name="MoneyCounter" parent="." instance=ExtResource("9_je0hr")]
 layout_mode = 1
