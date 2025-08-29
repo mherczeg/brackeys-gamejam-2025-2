@@ -40,6 +40,8 @@ var _current_product: Product:
 @onready var order_details: OrderDetails = %OrderDetails
 @onready var base_warning: Label = %BaseWarning
 @onready var unknown_effect_warning: Label = %UnknownEffectsWarning
+@onready var coin_insert: AudioStreamPlayer2D = $CoinInsert
+@onready var product_drop: AudioStreamPlayer2D = $ProductDrop
 @onready var left_margin: float = 0
 
 func _ready() -> void:
@@ -101,6 +103,9 @@ func complete_encounter() -> void:
 	_current_npc = null
 
 func start_new_order(npc: NPC) -> void:
+	product_drop.stop()
+	coin_insert.play()
+	await get_tree().create_timer(1.0).timeout
 	reset_mixer()
 	_current_npc = npc
 	if _current_product:
@@ -146,4 +151,7 @@ func _on_serve_button_pressed() -> void:
 	var mixed_product: MixedProduct = MixedProduct.new()
 	mixed_product.base = _selected_base
 	mixed_product.ingredients = _selected_ingredients.values()
+	coin_insert.stop()
+	product_drop.play()
+	await product_drop.finished
 	EventBus.mixer.serve_mix.emit(mixed_product)

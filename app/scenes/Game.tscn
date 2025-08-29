@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqlkljml3wgye"]
+[gd_scene load_steps=9 format=3 uid="uid://bqlkljml3wgye"]
 
 [ext_resource type="Script" uid="uid://crplonc8qkgt7" path="res://scenes/Game.gd" id="1_78awf"]
 [ext_resource type="PackedScene" uid="uid://dtq073ey6thiy" path="res://scenes/CustomerPane.tscn" id="2_cpr0p"]
@@ -7,6 +7,7 @@
 [ext_resource type="Theme" uid="uid://yqmay0cd53tl" path="res://themes/MetalPixelTheme4/MetalPixel.tres" id="2_s0nni"]
 [ext_resource type="PackedScene" uid="uid://b37hth77ew4nl" path="res://components/CustomerDevtools.tscn" id="3_cpr0p"]
 [ext_resource type="PackedScene" uid="uid://b1qtp0cds7p43" path="res://scenes/ShopPane.tscn" id="6_aug50"]
+[ext_resource type="AudioStream" uid="uid://8sg43fxjcy2r" path="res://assets/audio/ambiance.ogg" id="8_400sg"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_78awf")
@@ -61,3 +62,9 @@ grow_vertical = 1
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_400sg")
+autoplay = true
+bus = &"Background"
+area_mask = 2

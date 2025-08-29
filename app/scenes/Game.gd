@@ -40,6 +40,7 @@ func start_random_encounter() -> void:
 	start_encounter(ResourceManager.encounters.pick_random())
 
 func start_encounter(encounter: Encounter) -> void:
+	_is_mixing = false
 	_current_step_index = 0
 	_current_encounter = encounter
 	_current_npc = encounter.customers[0]

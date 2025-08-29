@@ -1,12 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctq6hd8yog16o"]
+[gd_scene load_steps=5 format=3 uid="uid://ctq6hd8yog16o"]
 
 [ext_resource type="Script" uid="uid://q5te6xetrs0i" path="res://components/Textbox.gd" id="1_d5fel"]
+[ext_resource type="AudioStream" uid="uid://dx8c8jf5irlfq" path="res://assets/audio/voices.ogg" id="2_7haxk"]
+[ext_resource type="AudioStream" uid="uid://clsg6jogf4r6" path="res://assets/audio/highDown.ogg" id="2_yr10m"]
+[ext_resource type="AudioStream" uid="uid://dwxin40l205ar" path="res://assets/audio/highUp.ogg" id="3_66peg"]
 
 [node name="Textbox" type="Label"]
 offset_right = 117.0
 offset_bottom = 23.0
 text = "Stage NPC Text"
 script = ExtResource("1_d5fel")
+consonant_sound = ExtResource("2_yr10m")
+vowel_sound = ExtResource("3_66peg")
 
 [node name="DisplayTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="Voice" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_7haxk")
+volume_db = -12.881
+bus = &"Speech"

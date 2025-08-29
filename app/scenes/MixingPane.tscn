@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cl1c5ipfnf66f"]
+[gd_scene load_steps=19 format=3 uid="uid://cl1c5ipfnf66f"]
 
 [ext_resource type="Script" uid="uid://r26vig0m7xh8" path="res://scenes/MixingPane.gd" id="1_svtgx"]
 [ext_resource type="Texture2D" uid="uid://dq28el46s1moi" path="res://assets/BackGround.png" id="2_vhkge"]
@@ -13,6 +13,8 @@
 [ext_resource type="Script" uid="uid://dd48ng5meui8a" path="res://scenes/UnknownEffectWarning.gd" id="8_2ikhv"]
 [ext_resource type="PackedScene" uid="uid://cixif270j8h8b" path="res://components/MoneyCounter.tscn" id="9_je0hr"]
 [ext_resource type="Script" uid="uid://bqlgyjmoog678" path="res://scenes/BaseWarning.gd" id="9_q322n"]
+[ext_resource type="AudioStream" uid="uid://coaa3xnsbkwep" path="res://assets/audio/coin-clean.ogg" id="14_61iek"]
+[ext_resource type="AudioStream" uid="uid://dvoee2nyuifut" path="res://assets/audio/product-drop-short.ogg" id="15_61iek"]
 
 [sub_resource type="Theme" id="Theme_vhkge"]
 
@@ -157,3 +159,11 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_d3rqh")
+
+[node name="CoinInsert" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_61iek")
+volume_db = 10.0
+
+[node name="ProductDrop" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_61iek")
+volume_db = -10.0
