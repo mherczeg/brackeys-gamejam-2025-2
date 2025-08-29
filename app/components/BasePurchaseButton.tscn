@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://2p7me5q6ybyg"]
+[gd_scene load_steps=6 format=3 uid="uid://2p7me5q6ybyg"]
 
 [ext_resource type="Shader" uid="uid://eqturlsphwhk" path="res://components/outline-test-3.gdshader" id="1_jlivj"]
 [ext_resource type="Script" uid="uid://degykrocrhqvr" path="res://components/BasePurchaseButton.gd" id="1_w4d48"]
+[ext_resource type="Theme" uid="uid://dcrvqrmx00anv" path="res://themes/shop-price.tres" id="2_sgd0g"]
 [ext_resource type="PackedScene" uid="uid://cfturkxpcx5pd" path="res://components/ShadeButtonTexture.tscn" id="3_s3qfb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sgd0g"]
@@ -23,20 +24,21 @@ script = ExtResource("1_w4d48")
 
 [node name="Price" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 offset_left = -20.0
-offset_top = -11.5
+offset_top = -23.0
 offset_right = 20.0
-offset_bottom = 11.5
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
+theme = ExtResource("2_sgd0g")
 horizontal_alignment = 1
 
 [node name="Name" type="Label" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
