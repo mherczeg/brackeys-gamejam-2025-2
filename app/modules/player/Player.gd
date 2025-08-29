@@ -2,8 +2,9 @@ extends Node
 
 var money: float = 100:
 	set(new_money):
+		var old_money: float = money
 		money = new_money
-		EventBus.player.money_changed.emit(new_money)
+		EventBus.player.money_changed.emit(new_money, old_money)
 
 var health: int = 100
 

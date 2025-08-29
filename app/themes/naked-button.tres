@@ -1,0 +1,39 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://cpa44ka17yapc"]
+
+[ext_resource type="FontFile" uid="uid://ck87b6iklt5dg" path="res://themes/naked-outlined_font.tres" id="1_edmxy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_edmxy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h5u6l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gw461"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_poraf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4od6x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2td4e"]
+
+[resource]
+Button/constants/align_to_largest_stylebox = 3
+Button/constants/h_separation = 0
+Button/constants/icon_max_width = 1
+Button/constants/line_spacing = 1
+Button/constants/outline_size = 10
+Button/fonts/font = ExtResource("1_edmxy")
+Button/styles/disabled = SubResource("StyleBoxEmpty_edmxy")
+Button/styles/focus = SubResource("StyleBoxEmpty_h5u6l")
+Button/styles/hover = SubResource("StyleBoxEmpty_gw461")
+Button/styles/normal = SubResource("StyleBoxEmpty_poraf")
+Button/styles/pressed = SubResource("StyleBoxEmpty_4od6x")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 1)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 10
+Label/font_sizes/font_size = 16
+Label/fonts/font = ExtResource("1_edmxy")
+Label/styles/normal = SubResource("StyleBoxEmpty_2td4e")

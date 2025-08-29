@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dqtxo8v0bpt3t" path="res://scenes/ProductDetails.gd" id="1_hum7m"]
 [ext_resource type="PackedScene" uid="uid://17do5csli6m2" path="res://components/ProductDisplay.tscn" id="2_0xnmx"]
-[ext_resource type="Theme" uid="uid://segr3l7pwr4u" path="res://themes/naked-info-label.tres" id="2_73f5a"]
+[ext_resource type="Theme" uid="uid://cpa44ka17yapc" path="res://themes/naked-button.tres" id="2_wvuut"]
 [ext_resource type="Texture2D" uid="uid://rwa0voyxkihk" path="res://assets/button.png" id="3_vr7d3"]
 [ext_resource type="FontFile" uid="uid://cegaqt0bhepqa" path="res://assets/Public_Pixel_Font_1_24/PublicPixel.otf" id="3_wvuut"]
 
@@ -91,7 +91,7 @@ theme_override_constants/separation = 16
 custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("2_73f5a")
+theme = ExtResource("2_wvuut")
 text = "Known effects in mixture:"
 
 [node name="EffectIcons" type="HBoxContainer" parent="EffectList"]

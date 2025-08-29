@@ -4,17 +4,22 @@ extends Control
 const BASE_PURCHASE_BUTTON_SCENE: PackedScene = preload("res://components/BasePurchaseButton.tscn")
 const INGREDIENT_PURCHASE_BUTTON_SCENE: PackedScene = preload("res://components/IngredientPurchaseButton.tscn")
 
-@onready var wallet: Label = $Panel/Wallet
-@onready var items: GridContainer = $Panel/Items
+@onready var wallet: Label = $Panel/VBoxContainer/Wallet
+@onready var items: GridContainer = $Panel/VBoxContainer/Items
 @onready var close_button: Button = $Panel/CloseButton
 
 func _ready() -> void:
 	hide()
 	close_button.pressed.connect(hide)
+	EventBus.player.money_changed.connect(func(_n: float, _o: float) -> void: update_money_label())
 
-func open() -> void:
+
+func update_money_label() -> void:
 	wallet.text = "Funds: $%d" % Player.money
 
+
+func open() -> void:
+	update_money_label()
 	reset_items()
 
 	for base: Base in ResourceManager.bases:

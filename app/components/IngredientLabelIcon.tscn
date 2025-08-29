@@ -6,8 +6,10 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_u7rbb"]
 shader = ExtResource("1_n3nu5")
 shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/width = 1.0
 shader_parameter/blink_color = Color(1, 1, 1, 1)
 shader_parameter/blink_time_scale = 0.0
+shader_parameter/grayscale = 0.0
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_cypqi"]
 size = Vector2(32, 32)

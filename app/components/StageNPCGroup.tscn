@@ -8,6 +8,7 @@
 [node name="StageNPCGroup" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+mouse_filter = 2
 theme = ExtResource("3_111vd")
 script = ExtResource("1_ud8gk")
 

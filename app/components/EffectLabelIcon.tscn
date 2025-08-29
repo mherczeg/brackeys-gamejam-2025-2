@@ -6,11 +6,13 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dye7e"]
 shader = ExtResource("1_ib4o0")
 shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/width = 1.0
 shader_parameter/blink_color = Color(1, 1, 1, 0)
 shader_parameter/blink_time_scale = 0.0
+shader_parameter/grayscale = 0.0
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_hox32"]
-size = Vector2(32, 32)
+size = Vector2(32, 31)
 
 [node name="EffectLabelIcon" type="TextureRect"]
 material = SubResource("ShaderMaterial_dye7e")

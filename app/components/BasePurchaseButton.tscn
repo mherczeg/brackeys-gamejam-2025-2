@@ -1,48 +1,25 @@
-[gd_scene load_steps=8 format=3 uid="uid://2p7me5q6ybyg"]
+[gd_scene load_steps=5 format=3 uid="uid://2p7me5q6ybyg"]
 
+[ext_resource type="Shader" uid="uid://eqturlsphwhk" path="res://components/outline-test-3.gdshader" id="1_jlivj"]
 [ext_resource type="Script" uid="uid://degykrocrhqvr" path="res://components/BasePurchaseButton.gd" id="1_w4d48"]
+[ext_resource type="PackedScene" uid="uid://cfturkxpcx5pd" path="res://components/ShadeButtonTexture.tscn" id="3_s3qfb"]
 
-[sub_resource type="Gradient" id="Gradient_x4dgr"]
-offsets = PackedFloat32Array(0, 0)
-colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_uicyv"]
-gradient = SubResource("Gradient_x4dgr")
-
-[sub_resource type="Gradient" id="Gradient_uicyv"]
-colors = PackedColorArray(0.60933, 0.60933, 0.60933, 1, 0.607843, 0.607843, 0.607843, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_toarm"]
-gradient = SubResource("Gradient_uicyv")
-
-[sub_resource type="Gradient" id="Gradient_toarm"]
-colors = PackedColorArray(0.273873, 0.273873, 0.273873, 1, 0.27451, 0.27451, 0.27451, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_v6utm"]
-gradient = SubResource("Gradient_toarm")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sgd0g"]
+shader = ExtResource("1_jlivj")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/width = 1.0
+shader_parameter/blink_color = Color(1, 1, 1, 1)
+shader_parameter/blink_time_scale = 0.0
+shader_parameter/grayscale = 0.0
 
 [node name="BasePurchaseButton" type="TextureButton"]
-offset_right = 64.0
+custom_minimum_size = Vector2(64, 64)
+offset_left = 1.0
+offset_right = 65.0
 offset_bottom = 64.0
 mouse_default_cursor_shape = 2
-texture_normal = SubResource("GradientTexture2D_uicyv")
-texture_pressed = SubResource("GradientTexture2D_toarm")
-texture_hover = SubResource("GradientTexture2D_v6utm")
+stretch_mode = 0
 script = ExtResource("1_w4d48")
-
-[node name="Icon" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="Price" type="Label" parent="."]
 layout_mode = 1
@@ -72,3 +49,6 @@ offset_right = 20.0
 offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 0
+
+[node name="ShadeButtonTexture" parent="." instance=ExtResource("3_s3qfb")]
+material = SubResource("ShaderMaterial_sgd0g")

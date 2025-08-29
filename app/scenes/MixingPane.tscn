@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://cfvtyjrhh4cqx" path="res://components/BaseSelector.tscn" id="5_83n0o"]
 [ext_resource type="PackedScene" uid="uid://bvhr2kpc3py1q" path="res://components/IngredientSelector.tscn" id="5_nyt5e"]
 [ext_resource type="PackedScene" uid="uid://dhdwspygl8is8" path="res://scenes/ProductDetails.tscn" id="6_cgagm"]
+[ext_resource type="Theme" uid="uid://cpa44ka17yapc" path="res://themes/naked-button.tres" id="7_2ikhv"]
 [ext_resource type="PackedScene" uid="uid://loicby15dxae" path="res://scenes/ToolsPane.tscn" id="7_83n0o"]
-[ext_resource type="Theme" uid="uid://segr3l7pwr4u" path="res://themes/naked-info-label.tres" id="7_d3rqh"]
 [ext_resource type="Script" uid="uid://dd48ng5meui8a" path="res://scenes/UnknownEffectWarning.gd" id="8_2ikhv"]
 [ext_resource type="PackedScene" uid="uid://cixif270j8h8b" path="res://components/MoneyCounter.tscn" id="9_je0hr"]
 [ext_resource type="Script" uid="uid://bqlgyjmoog678" path="res://scenes/BaseWarning.gd" id="9_q322n"]
@@ -87,7 +87,7 @@ visible = false
 custom_minimum_size = Vector2(69, 44)
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("7_d3rqh")
+theme = ExtResource("7_2ikhv")
 text = "May have unintended effects!"
 horizontal_alignment = 1
 autowrap_mode = 2
@@ -100,7 +100,7 @@ visible = false
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("7_d3rqh")
+theme = ExtResource("7_2ikhv")
 text = "Base not selected!"
 script = ExtResource("9_q322n")
 

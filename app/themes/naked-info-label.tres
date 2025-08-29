@@ -1,9 +1,6 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://segr3l7pwr4u"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://segr3l7pwr4u"]
 
-[ext_resource type="FontFile" uid="uid://cegaqt0bhepqa" path="res://assets/Public_Pixel_Font_1_24/PublicPixel.otf" id="1_2td4e"]
-
-[sub_resource type="FontVariation" id="FontVariation_0hcp0"]
-base_font = ExtResource("1_2td4e")
+[ext_resource type="FontFile" uid="uid://ck87b6iklt5dg" path="res://themes/naked-outlined_font.tres" id="1_vuhjb"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2td4e"]
 
@@ -16,6 +13,6 @@ Label/constants/outline_size = 0
 Label/constants/shadow_offset_x = 1
 Label/constants/shadow_offset_y = 1
 Label/constants/shadow_outline_size = 10
-Label/font_sizes/font_size = 10
-Label/fonts/font = SubResource("FontVariation_0hcp0")
+Label/font_sizes/font_size = 16
+Label/fonts/font = ExtResource("1_vuhjb")
 Label/styles/normal = SubResource("StyleBoxEmpty_2td4e")

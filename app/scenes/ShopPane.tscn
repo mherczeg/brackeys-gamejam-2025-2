@@ -1,9 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1qtp0cds7p43"]
+[gd_scene load_steps=7 format=3 uid="uid://b1qtp0cds7p43"]
 
+[ext_resource type="Theme" uid="uid://ooascwd5ji3s" path="res://themes/blue-text-bubble.tres" id="1_5lax1"]
 [ext_resource type="Script" uid="uid://g4880y1y5y6w" path="res://scenes/ShopPane.gd" id="1_808da"]
+[ext_resource type="Theme" uid="uid://segr3l7pwr4u" path="res://themes/naked-info-label.tres" id="3_052uh"]
+[ext_resource type="Texture2D" uid="uid://dq28el46s1moi" path="res://assets/BackGround.png" id="4_052uh"]
+[ext_resource type="Theme" uid="uid://cpa44ka17yapc" path="res://themes/naked-button.tres" id="4_abysv"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_808da"]
-size = Vector2(16, 16)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_052uh"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.0862745, 0.0745098, 0.133333, 1)
 
 [node name="ShopPane" type="Control"]
 layout_mode = 3
@@ -12,61 +21,71 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_5lax1")
 script = ExtResource("1_808da")
 
 [node name="Panel" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="Panel"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_top = 10.0
-offset_right = 20.0
-offset_bottom = 33.0
-grow_horizontal = 2
-text = "Shop"
-
-[node name="Wallet" type="Label" parent="Panel"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -37.0
-offset_top = 40.0
-offset_right = 37.0
-offset_bottom = 63.0
-grow_horizontal = 2
-text = "Funds: $0"
-
-[node name="Items" type="GridContainer" parent="Panel"]
+clip_contents = true
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 32.0
-offset_top = 100.0
+offset_left = 200.0
+offset_top = 200.0
+offset_right = -200.0
+offset_bottom = -200.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/h_separation = 25
-theme_override_constants/v_separation = 40
-columns = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_052uh")
+
+[node name="BackGround" type="Sprite2D" parent="Panel"]
+show_behind_parent = true
+position = Vector2(440, 162)
+scale = Vector2(5.00008, 4.97235)
+texture = ExtResource("4_052uh")
 
 [node name="CloseButton" type="Button" parent="Panel"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -70.0
-offset_bottom = 31.0
+offset_left = -93.0
+offset_top = 16.0
+offset_right = -13.0
+offset_bottom = 47.0
 grow_horizontal = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("4_abysv")
 text = "Close
 "
-icon = SubResource("PlaceholderTexture2D_808da")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.05
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_052uh")
+theme_override_font_sizes/font_size = 32
+text = "Shop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Wallet" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_052uh")
+text = "Funds: $0"
+horizontal_alignment = 1
+
+[node name="Items" type="GridContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 40
+columns = 8

@@ -1,11 +1,11 @@
 [gd_resource type="Theme" load_steps=5 format=3 uid="uid://b60apfe0tvloq"]
 
-[ext_resource type="FontFile" uid="uid://tig34mlfw83n" path="res://assets/m6x11plus.ttf" id="1_a6mbh"]
+[ext_resource type="FontFile" uid="uid://tig34mlfw83n" path="res://assets/m6x11plus.ttf" id="1_vjyg0"]
 
-[sub_resource type="FontVariation" id="FontVariation_a6mbh"]
-base_font = ExtResource("1_a6mbh")
+[sub_resource type="FontVariation" id="FontVariation_dmrsr"]
+base_font = ExtResource("1_vjyg0")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a6mbh"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nk1wv"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yvrno"]
 
@@ -19,6 +19,6 @@ Label/constants/shadow_offset_x = 1
 Label/constants/shadow_offset_y = 1
 Label/constants/shadow_outline_size = 10
 Label/font_sizes/font_size = 16
-Label/fonts/font = SubResource("FontVariation_a6mbh")
-Label/styles/normal = SubResource("StyleBoxEmpty_a6mbh")
+Label/fonts/font = SubResource("FontVariation_dmrsr")
+Label/styles/normal = SubResource("StyleBoxEmpty_nk1wv")
 VSeparator/styles/separator = SubResource("StyleBoxEmpty_yvrno")

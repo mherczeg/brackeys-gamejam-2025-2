@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfturkxpcx5pd"]
+
+[ext_resource type="Script" uid="uid://civandqsl7jux" path="res://components/ShadeButtonTexture.gd" id="1_0jegl"]
+
+[node name="ShadeButtonTexture" type="Node"]
+script = ExtResource("1_0jegl")

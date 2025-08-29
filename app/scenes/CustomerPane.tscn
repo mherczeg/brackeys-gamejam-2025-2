@@ -30,3 +30,4 @@ offset_left = -59.0
 offset_top = -10.0
 offset_right = -59.0
 offset_bottom = -10.0
+mouse_filter = 2
