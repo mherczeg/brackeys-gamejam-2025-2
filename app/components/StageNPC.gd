@@ -1,7 +1,7 @@
 class_name StageNPC
 extends TextureRect
 
-@onready var textbox: Textbox = $Text
+@export var textbox: Textbox
 
 func _ready() -> void:
 	EventBus.customer.fast_forward.connect(fast_forward_display_text)

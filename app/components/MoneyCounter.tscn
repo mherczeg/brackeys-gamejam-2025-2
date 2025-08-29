@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://cixif270j8h8b"]
 
 [ext_resource type="Script" uid="uid://conjoqspcbhlq" path="res://components/MoneyCounter.gd" id="1_3ymom"]
-[ext_resource type="Theme" uid="uid://segr3l7pwr4u" path="res://scenes/naked-info-label.tres" id="2_otc4u"]
+[ext_resource type="Theme" uid="uid://segr3l7pwr4u" path="res://themes/naked-info-label.tres" id="2_otc4u"]
 [ext_resource type="Texture2D" uid="uid://butg2614w8lva" path="res://assets/coin1.png" id="3_07rbm"]
 [ext_resource type="Texture2D" uid="uid://d3q2rm1kkqrpk" path="res://assets/coin2.png" id="4_x41hc"]
 [ext_resource type="Texture2D" uid="uid://okn1o2udyj4r" path="res://assets/coin3.png" id="5_5kkh6"]

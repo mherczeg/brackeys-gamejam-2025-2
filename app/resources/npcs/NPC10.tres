@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="NPC" load_steps=7 format=3 uid="uid://l52howq3y2ly"]
+[gd_resource type="Resource" script_class="NPC" load_steps=8 format=3 uid="uid://l52howq3y2ly"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_kw6w8"]
 [ext_resource type="Texture2D" uid="uid://daduajcy7mdne" path="res://assets/NPCAtlas.png" id="2_1nxpb"]
 [ext_resource type="Resource" uid="uid://drggcgqhojyn0" path="res://resources/effects/Effect4.tres" id="2_d02jw"]
-[ext_resource type="Script" path="res://resources/NPC.gd" id="3_d02jw"]
+[ext_resource type="Script" uid="uid://dxpfvppfif2ht" path="res://resources/NPC.gd" id="3_d02jw"]
 [ext_resource type="Resource" uid="uid://2gbmp1hjdl6k" path="res://resources/effects/Effect9.tres" id="3_fcyl8"]
+[ext_resource type="Texture2D" uid="uid://cfojorq5lrlaj" path="res://assets/humans/ay frown.png" id="4_fcyl8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qogo5"]
 atlas = ExtResource("2_1nxpb")
@@ -15,6 +16,7 @@ script = ExtResource("3_d02jw")
 real_name = "NPC 10 Name"
 display_name = "NPC 10 G_Name"
 icon = SubResource("AtlasTexture_qogo5")
+body_image = ExtResource("4_fcyl8")
 likes = Array[ExtResource("1_kw6w8")]([])
 dislikes = Array[ExtResource("1_kw6w8")]([])
 allergies = Array[ExtResource("1_kw6w8")]([ExtResource("2_d02jw"), ExtResource("3_fcyl8")])

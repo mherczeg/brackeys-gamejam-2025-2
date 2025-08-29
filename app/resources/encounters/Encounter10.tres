@@ -16,15 +16,15 @@ ExtResource("4_pomux"): ExtResource("6_qe5vl")
 })
 stage_1_text = Dictionary[ExtResource("1_rt8t1"), String]({
 ExtResource("3_gs8wx"): "",
-ExtResource("4_pomux"): "Encounter 10 Stage 1 Line 2"
+ExtResource("4_pomux"): "Encounter 10 Stage 1 Line 2 this is the long line text, it will be about 100-120 characters long, to test long lines"
 })
 stage_2_text = Dictionary[ExtResource("1_rt8t1"), String]({
-ExtResource("3_gs8wx"): "Encounter 10 Stage 2 Line 1",
-ExtResource("4_pomux"): "Encounter 10 Stage 2 Line 2"
+ExtResource("3_gs8wx"): "Encounter 10 Stage 2 Line 1 this is the long line text, it will be about 100-120 characters long, to test long lines",
+ExtResource("4_pomux"): "Encounter 10 Stage 2 Line 2 this is also the long line text, it will be about 100-120 characters long, to test long lines"
 })
 stage_3_text = Dictionary[ExtResource("1_rt8t1"), String]({
-ExtResource("3_gs8wx"): "Encounter 10 Stage 3 Line 1",
-ExtResource("4_pomux"): "Encounter 10 Stage 3 Line 2"
+ExtResource("3_gs8wx"): "Encounter 10 Stage 3 Line 1 this is the long line text, it will be about 100-120 characters long, to test long lines",
+ExtResource("4_pomux"): "Encounter 10 Stage 3 Line 2 this is also the long line text, it will be about 100-120 characters long, to test long lines"
 })
 like_text = Dictionary[ExtResource("1_rt8t1"), String]({
 ExtResource("3_gs8wx"): "I like this",

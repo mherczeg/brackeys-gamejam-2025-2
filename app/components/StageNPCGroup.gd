@@ -8,24 +8,26 @@ signal encounter_complete
 
 var _npc_with_interaciton: int = 0
 @onready var stage_npcs: Array[StageNPC] = [
-	$StageNPC,
+	$StageNPC1,
 	$StageNPC2,
 	$StageNPC3
 ]
 
 func show_encounter(encounter: Encounter) -> Signal:
 	var texts: Array[String] = encounter.get_stage_text(stage).values()
-	var npc_count: int = encounter.get_stage_text(stage).size()
+	var npcs: Array[NPC] = encounter.get_stage_text(stage).keys()
 	_reset_npcs()
 	show()
-	_set_npc_visibility(npc_count)
+	_setup_visible_npcs(npcs, texts)
 	_process_npc_interactions(texts)
 
 	return encounter_complete
 
-func _set_npc_visibility(npc_count: int) -> void:
-	for i: int in npc_count:
+func _setup_visible_npcs(npcs: Array[NPC], texts: Array[String]) -> void:
+	for i: int in npcs.size():
+		# stage_npcs[i].texture = npcs[i].body_image
 		stage_npcs[i].activate_for_interaction()
+		stage_npcs[i].textbox.prepare_size_for_text(texts[i])
 
 func _process_npc_interactions(texts: Array[String], _current_npc: int = 0) -> void:
 	if _current_npc >= texts.size():

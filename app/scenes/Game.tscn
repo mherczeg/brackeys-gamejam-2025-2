@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://crplonc8qkgt7" path="res://scenes/Game.gd" id="1_78awf"]
 [ext_resource type="PackedScene" uid="uid://dtq073ey6thiy" path="res://scenes/CustomerPane.tscn" id="2_cpr0p"]
-[ext_resource type="Texture2D" uid="uid://ctnaev0d2b7dm" path="res://assets/City-fullhd.jpg" id="2_kiw3p"]
+[ext_resource type="Texture2D" uid="uid://bnliprcb2rfcl" path="res://assets/City.png" id="2_g4kob"]
 [ext_resource type="PackedScene" uid="uid://cl1c5ipfnf66f" path="res://scenes/MixingPane.tscn" id="2_qbsmt"]
 [ext_resource type="Theme" uid="uid://yqmay0cd53tl" path="res://themes/MetalPixelTheme4/MetalPixel.tres" id="2_s0nni"]
 [ext_resource type="PackedScene" uid="uid://b37hth77ew4nl" path="res://components/CustomerDevtools.tscn" id="3_cpr0p"]
@@ -23,7 +23,7 @@ script = ExtResource("1_78awf")
 [node name="City-fullhd" type="Sprite2D" parent="."]
 position = Vector2(640, 360)
 scale = Vector2(0.666667, 0.666667)
-texture = ExtResource("2_kiw3p")
+texture = ExtResource("2_g4kob")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

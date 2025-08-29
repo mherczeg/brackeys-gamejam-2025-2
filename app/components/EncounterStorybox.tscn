@@ -10,9 +10,9 @@ script = ExtResource("1_3lgi6")
 
 [node name="FirstStageGroup" parent="." instance=ExtResource("2_3lgi6")]
 offset_left = -250.0
-offset_top = -4.0
+offset_top = 13.0
 offset_right = -250.0
-offset_bottom = -4.0
+offset_bottom = 13.0
 
 [node name="SecondStageGroup" parent="." instance=ExtResource("2_3lgi6")]
 offset_left = 36.0

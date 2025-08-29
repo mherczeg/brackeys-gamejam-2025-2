@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cyk8crbmu2pwr" path="res://components/ProductDisplay.gd" id="1_nixoc"]
 [ext_resource type="Texture2D" uid="uid://bgss3dyq8y1wx" path="res://components/ProductDisplayStar.tres" id="2_crg54"]
-[ext_resource type="Theme" uid="uid://segr3l7pwr4u" path="res://scenes/naked-info-label.tres" id="3_scono"]
+[ext_resource type="Theme" uid="uid://segr3l7pwr4u" path="res://themes/naked-info-label.tres" id="3_scono"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_scono"]
 
