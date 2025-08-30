@@ -8,3 +8,4 @@ script = ExtResource("2_bq5sk")
 name = "Chili Pepper"
 description = "A fiery red pepper"
 effects = Dictionary[ExtResource("1_n70rl"), bool]({})
+price = 0.0

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://daduajcy7mdne" path="res://assets/NPCAtlas.png" id="2_xdi3v"]
 [ext_resource type="Resource" uid="uid://j1rdudjerck6" path="res://resources/effects/Effect8.tres" id="3_46p87"]
 [ext_resource type="Script" uid="uid://dxpfvppfif2ht" path="res://resources/NPC.gd" id="3_arsx1"]
-[ext_resource type="Texture2D" uid="uid://c50wr7dwyw26g" path="res://assets/humans/arl.png" id="4_46p87"]
+[ext_resource type="Texture2D" uid="uid://c50wr7dwyw26g" path="res://assets/triftshop/humans/arl.png" id="4_46p87"]
 [ext_resource type="Resource" uid="uid://cpfjwktiud2ms" path="res://resources/effects/Effect5.tres" id="4_qlhdb"]
 [ext_resource type="Resource" uid="uid://h1itxdasb32g" path="res://resources/effects/Effect6.tres" id="5_i7nxa"]
 [ext_resource type="Resource" uid="uid://dt4xfhb2hjxi0" path="res://resources/effects/Effect3.tres" id="7_soe68"]

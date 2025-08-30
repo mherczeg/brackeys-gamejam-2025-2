@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://b7liwqkcrys8l" path="res://resources/effects/Effect2.tres" id="3_snmen"]
 [ext_resource type="Resource" uid="uid://eq2fbd6j88nc" path="res://resources/effects/Effect10.tres" id="4_ib3oc"]
 [ext_resource type="Resource" uid="uid://2gbmp1hjdl6k" path="res://resources/effects/Effect9.tres" id="5_7he47"]
-[ext_resource type="Texture2D" uid="uid://bvkq820yngjho" path="res://assets/humans/ay.png" id="5_snmen"]
+[ext_resource type="Texture2D" uid="uid://bvkq820yngjho" path="res://assets/triftshop/humans/ay.png" id="5_snmen"]
 [ext_resource type="Resource" uid="uid://e2n84d1cdb0v" path="res://resources/effects/Effect7.tres" id="6_x0us4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qogo5"]

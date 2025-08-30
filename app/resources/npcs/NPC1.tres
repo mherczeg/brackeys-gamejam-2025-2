@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://daduajcy7mdne" path="res://assets/NPCAtlas.png" id="2_0g50g"]
 [ext_resource type="Resource" uid="uid://eq2fbd6j88nc" path="res://resources/effects/Effect10.tres" id="2_77jye"]
 [ext_resource type="Script" uid="uid://dxpfvppfif2ht" path="res://resources/NPC.gd" id="2_mc7dx"]
-[ext_resource type="Texture2D" uid="uid://e1qncu8aewxu" path="res://assets/humans/arl frown.png" id="3_3ukgj"]
+[ext_resource type="Texture2D" uid="uid://e1qncu8aewxu" path="res://assets/triftshop/humans/arl frown.png" id="3_3ukgj"]
 [ext_resource type="Resource" uid="uid://b7liwqkcrys8l" path="res://resources/effects/Effect2.tres" id="4_3ukgj"]
 [ext_resource type="Resource" uid="uid://2gbmp1hjdl6k" path="res://resources/effects/Effect9.tres" id="5_qogo5"]
 

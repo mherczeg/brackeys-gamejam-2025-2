@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://drggcgqhojyn0" path="res://resources/effects/Effect4.tres" id="2_d02jw"]
 [ext_resource type="Script" uid="uid://dxpfvppfif2ht" path="res://resources/NPC.gd" id="3_d02jw"]
 [ext_resource type="Resource" uid="uid://2gbmp1hjdl6k" path="res://resources/effects/Effect9.tres" id="3_fcyl8"]
-[ext_resource type="Texture2D" uid="uid://cfojorq5lrlaj" path="res://assets/humans/ay frown.png" id="4_fcyl8"]
+[ext_resource type="Texture2D" uid="uid://cfojorq5lrlaj" path="res://assets/triftshop/humans/ay frown.png" id="4_fcyl8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qogo5"]
 atlas = ExtResource("2_1nxpb")

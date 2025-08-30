@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://b7liwqkcrys8l" path="res://resources/effects/Effect2.tres" id="3_bvbbj"]
 [ext_resource type="Script" uid="uid://dxpfvppfif2ht" path="res://resources/NPC.gd" id="3_jces1"]
 [ext_resource type="Resource" uid="uid://eq2fbd6j88nc" path="res://resources/effects/Effect10.tres" id="4_uvet4"]
-[ext_resource type="Texture2D" uid="uid://bxtiqqu8emqmg" path="res://assets/humans/cour.png" id="5_bvbbj"]
+[ext_resource type="Texture2D" uid="uid://bxtiqqu8emqmg" path="res://assets/triftshop/humans/cour.png" id="5_bvbbj"]
 [ext_resource type="Resource" uid="uid://2gbmp1hjdl6k" path="res://resources/effects/Effect9.tres" id="6_wybgt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qogo5"]
