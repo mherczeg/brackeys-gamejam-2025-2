@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Product" load_steps=7 format=3 uid="uid://brl77mvxv1lwf"]
+
+[ext_resource type="Resource" uid="uid://pyg5nom8yqp6" path="res://resources/bases/sandwich.tres" id="1_52hqp"]
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_543vr"]
+[ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_58brt"]
+[ext_resource type="Resource" uid="uid://dl6xhwsef3ei7" path="res://resources/effects/protein.tres" id="3_ih465"]
+[ext_resource type="Resource" uid="uid://bolcex3rycr80" path="res://resources/effects/creamy.tres" id="4_wsenw"]
+[ext_resource type="Resource" uid="uid://c2xrl6deftmnr" path="res://resources/effects/red.tres" id="5_x3yfh"]
+
+[resource]
+script = ExtResource("3_58brt")
+name = "Ham & Cheddar"
+description = "Savory ham and sharp cheddar, a hearty and satisfying sandwich."
+base = ExtResource("1_52hqp")
+effects = Array[ExtResource("2_543vr")]([ExtResource("3_ih465"), ExtResource("4_wsenw"), ExtResource("5_x3yfh")])
+price = 0.0

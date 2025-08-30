@@ -1,0 +1,49 @@
+Soda
+- Cola Classic: Energizing, Sweet, Comfort
+- Lemon-Lime Sparkle: Zest, Green
+- Orange Fizz: Zest, Yellow
+- Root Beer Float: Creamy, Metabolistic
+- Grape Blast: Burst, Sweet
+- Ginger Ale: Soothing, Pungent
+Sandwich
+- Turkey & Swiss: Protein, Creamy, Tender
+- Ham & Cheddar: Protein, Creamy, Red
+- Roast Beef & Provolone: Protein, Preservative
+- Tuna Salad: Creamy, Tender
+- Egg Salad: Creamy, Digestive, Yellow
+- Italian Sub: Gluten, Aromatic
+Chocolate Bar
+- Milk Bar: Sweet, Comfort
+- Dark Almonds: Discomfort, Earthy
+- Caramel-Filled: Sweet, Thick
+- Crispy Rice Chocolate: Expanding, Creamy
+- White But Y: White, Sweet
+- Peanut Cup Butter Cup: Sweet, Earthy
+Hot Beverage
+- Black Coffee: Discomfort, Energizing, Black 
+- Iced Coffee: Discomfort, Energizing, Water
+- Latte: Discomfort, Energizing, Creamy
+- Hot Chocolate: Comfort, Sweet, Fire
+- Green Tea: Antioxidant, Focusing
+- Herbal Tea: Antioxidant, Comfort
+Crisps
+- Chips: Minerals, Earthy
+- Tortilla: Minerals, Earthy, Gluten
+- Cheese Puffs: Umami, Expanding, Yellow
+- Pretzels: Gluten, Earthy
+- Saltine Crackers: Minerals, Digestive
+Soups
+- Miso Ramen: Umami, Soothing, Water
+- Pho: Aromatic, Soothing, Water
+- Wonton: Protein, Soothing, Water
+Ice Cream
+- CVS Sandwich: Sweet, Creamy, Gluten
+- Chocolate Coated Bar:Sweet, Earthy
+- Soft-served: Sweet, Creamy
+- Fruit Popsicle: Water, Zest
+- Fudge Bar: Thick
+Pills
+- Pain Reliever: Comfort
+- Sleep Aid: Comfort, Soothing
+- Vitamin C Tablet: Fortifying
+- Stomach Soother: Digestive

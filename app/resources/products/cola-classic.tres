@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Product" load_steps=7 format=3 uid="uid://cv28hyrrxji3o"]
+
+[ext_resource type="Resource" uid="uid://yjnv2md2an4c" path="res://resources/bases/soda.tres" id="1_u6vfa"]
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_tw5yl"]
+[ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_31tid"]
+[ext_resource type="Resource" uid="uid://cut8o4kugfvce" path="res://resources/effects/energizing.tres" id="3_yuoas"]
+[ext_resource type="Resource" uid="uid://dkxgfalr0y0ei" path="res://resources/effects/sweet.tres" id="4_hphsm"]
+[ext_resource type="Resource" uid="uid://c2tm0u2u3vubs" path="res://resources/effects/comfort.tres" id="5_ffns0"]
+
+[resource]
+script = ExtResource("3_31tid")
+name = "Cola Classic"
+description = "The timeless taste of cola, bubbling with sweet, familiar comfort."
+base = ExtResource("1_u6vfa")
+effects = Array[ExtResource("2_tw5yl")]([ExtResource("3_yuoas"), ExtResource("4_hphsm"), ExtResource("5_ffns0")])
+price = 0.0

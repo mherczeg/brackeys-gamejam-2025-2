@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://bknmbx3vgkqoi"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_hapj4"]
+
+[resource]
+script = ExtResource("1_hapj4")
+name = "Earth"
+description = "The essence of the deep earth, ancient and grounding."

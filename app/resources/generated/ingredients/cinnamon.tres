@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://dc2v00do4gq3b"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_m28dk"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_xofvu"]
+
+[resource]
+script = ExtResource("2_xofvu")
+name = "Cinnamon"
+description = "The fragrant bark of a desert tree, its scent warming the soul."
+effects = Dictionary[ExtResource("1_m28dk"), bool]({})
+price = 0.0

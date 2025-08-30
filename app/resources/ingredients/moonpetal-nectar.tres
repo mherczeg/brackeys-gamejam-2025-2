@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://dguu46whvhnsy"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_75ixb"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_2dgul"]
+
+[resource]
+script = ExtResource("2_2dgul")
+name = "Moonpetal Nectar"
+description = "The sweet, glowing nectar of a flower that blooms only under the full moon."
+effects = Dictionary[ExtResource("1_75ixb"), bool]({})
+price = 0.0

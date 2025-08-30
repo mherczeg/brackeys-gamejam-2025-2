@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=5 format=3 uid="uid://bh4a8nop7wqon"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_xhvyd"]
+[ext_resource type="Texture2D" uid="uid://bdvibcqswxsle" path="res://assets/chocolate-atlas.png" id="2_dtsct"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_vfmyg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5i1tx"]
+atlas = ExtResource("2_dtsct")
+region = Rect2(0, 0, 32, 32)
+
+[resource]
+script = ExtResource("2_vfmyg")
+name = "Abyssal Salt"
+description = "Black salt harvested from a dead, sunless sea at the bottom of the world."
+icon = SubResource("AtlasTexture_5i1tx")
+effects = Dictionary[ExtResource("1_xhvyd"), bool]({})
+price = 0.0

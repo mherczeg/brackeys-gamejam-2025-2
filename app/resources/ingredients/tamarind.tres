@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://bggi6dvofjbdd"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_twvr5"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_sayjo"]
+
+[resource]
+script = ExtResource("2_sayjo")
+name = "Tamarind"
+description = "The sour pulp of a strange pod, known for its potent, purging qualities."
+effects = Dictionary[ExtResource("1_twvr5"), bool]({})
+price = 0.0

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://gm7xr1jiuphl"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_8xacn"]
+
+[resource]
+script = ExtResource("1_8xacn")
+name = "Digestive"
+description = "Helps the body absorb the true essence of sustenance."

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://dl6xhwsef3ei7"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_tabe6"]
+
+[resource]
+script = ExtResource("1_tabe6")
+name = "Protein"
+description = "Provides the raw essence of vitality and strength."

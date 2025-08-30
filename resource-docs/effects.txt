@@ -1,0 +1,42 @@
+Pungent: A sharp, fiery essence that awakens the senses.
+Zest: A lively, citrusy kick that invigorates the spirit.
+Burst: A sudden, explosive release of concentrated flavor and energy.
+Antioxidant: Wards off natural decay and purifies the body.
+Metabolistic: Alters the flow of one's inner vital energy.
+Fortifying: Bolsters physical resilience and hardens the spirit.
+Digestive: Helps the body absorb the true essence of sustenance.
+Comfort: Eases worldly burdens and brings peace to the mind.
+Discomfort: A nagging, unsettling quality that agitates the body and frays the nerves.
+Anti-life: A necrotic touch, anathema to living tissue.
+Focusing: Sharpens the mind's eye and clarifies thought for a brief time.
+Aromatic: An enchanting scent that can alter mood or perception.
+Acidic: A caustic quality that can dissolve or transform base substances.
+Preservative: Halts the relentless march of time's decay.
+Soothing: A gentle balm that mends minor ailments.
+Protein: Provides the raw essence of vitality and strength.
+Energizing: Infuses the drinker with a burst of raw vigor.
+Expanding: An airy essence that causes substances to expand and rise.
+Fermentation: A chaotic process that unlocks hidden, volatile properties.
+Umami: A deep, savory flavor that grounds the senses to the earth.
+Creamy: A silken, luxurious quality that coats the palate.
+Calcium: Infuses bone and stone with unnatural resilience.
+Thick: A binding agent that gives substance and weight to liquids.
+Gluten: A binding web that gives form and structure to creations.
+Slick: A slippery, elusive quality that defies grasp and eases passage.
+Tender: A softening agent that can relax even the toughest of fibers.
+Laxative: A purging quality that forcefully cleanses the body.
+Earthy: The essence of the deep earth, ancient and grounding.
+Sweet: A delightful, almost magical sweetness that enchants the senses.
+Minerals: Imparts the strength of rare earth and stone.
+Quintessence: Draws out the hidden, true essence of any flavor it touches.
+Toxic: A venomous quality that sickens and weakens the living.
+Black: The color of the starless void, absorbing all light and hope.
+White: The color of pure light, brilliant and untainted.
+Green: The color of vibrant life, from new growth to potent venom.
+Yellow: The color of radiant sun or creeping sickness, vibrant and unsettling.
+Red: The color of fresh blood and raw passion, a symbol of life and violence.
+Blue: The color of the deep ocean or a tranquil sky, serene and mysterious.
+Earth: The essence of the deep earth, ancient and grounding.
+Fire: The untamed essence of creation and destruction, burning with volatile heat.
+Air: The unseen essence of freedom and the sky, weightless and ever-moving.
+Water: The fluid essence of life and change, adaptable yet relentless.

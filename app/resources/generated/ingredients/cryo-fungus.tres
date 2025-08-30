@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://cprlqo6utjjlo"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_rjlfv"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_wo53w"]
+
+[resource]
+script = ExtResource("2_wo53w")
+name = "Cryo-Fungus"
+description = "A mushroom that grows in absolute zero, its tissues are locked in a state of perfect, deadly preservation."
+effects = Dictionary[ExtResource("1_rjlfv"), bool]({})
+price = 0.0

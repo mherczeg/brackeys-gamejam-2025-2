@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://hebx73evwbf1"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_ntmfv"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_0viyn"]
+
+[resource]
+script = ExtResource("2_0viyn")
+name = "Garlic"
+description = "A pungent bulb known to ward off both common ailments and creatures of the night."
+effects = Dictionary[ExtResource("1_ntmfv"), bool]({})
+price = 0.0

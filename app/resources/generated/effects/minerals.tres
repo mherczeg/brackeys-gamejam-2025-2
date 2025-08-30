@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://cx7j3bms1pmgf"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_luruo"]
+
+[resource]
+script = ExtResource("1_luruo")
+name = "Minerals"
+description = "Imparts the strength of rare earth and stone."

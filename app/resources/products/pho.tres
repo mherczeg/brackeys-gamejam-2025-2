@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Product" load_steps=7 format=3 uid="uid://bnx4vwcd0v8q7"]
+
+[ext_resource type="Resource" uid="uid://badmaa0lb5kq1" path="res://resources/bases/soup.tres" id="1_rjjyl"]
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_yrcct"]
+[ext_resource type="Resource" uid="uid://dftajnygqifq3" path="res://resources/effects/aromatic.tres" id="3_puhb5"]
+[ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_yiuvm"]
+[ext_resource type="Resource" uid="uid://bpeqnaoulkik0" path="res://resources/effects/soothing.tres" id="4_rx4g2"]
+[ext_resource type="Resource" uid="uid://cn1y1uf4fld1v" path="res://resources/effects/water.tres" id="5_iksbb"]
+
+[resource]
+script = ExtResource("3_yiuvm")
+name = "Pho"
+description = "An aromatic Vietnamese noodle soup with a fragrant, spiced broth."
+base = ExtResource("1_rjjyl")
+effects = Array[ExtResource("2_yrcct")]([ExtResource("3_puhb5"), ExtResource("4_rx4g2"), ExtResource("5_iksbb")])
+price = 0.0

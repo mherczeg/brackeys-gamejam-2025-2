@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Product" load_steps=7 format=3 uid="uid://cmlei7lg7jdjh"]
+
+[ext_resource type="Resource" uid="uid://badmaa0lb5kq1" path="res://resources/bases/soup.tres" id="1_y314y"]
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_01gx6"]
+[ext_resource type="Resource" uid="uid://bhci83c1g2fsl" path="res://resources/effects/umami.tres" id="3_a5obc"]
+[ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_iyb1s"]
+[ext_resource type="Resource" uid="uid://bpeqnaoulkik0" path="res://resources/effects/soothing.tres" id="4_ucu6s"]
+[ext_resource type="Resource" uid="uid://cn1y1uf4fld1v" path="res://resources/effects/water.tres" id="5_k3dfb"]
+
+[resource]
+script = ExtResource("3_iyb1s")
+name = "Miso Ramen"
+description = "A savory and comforting noodle soup with a rich umami broth."
+base = ExtResource("1_y314y")
+effects = Array[ExtResource("2_01gx6")]([ExtResource("3_a5obc"), ExtResource("4_ucu6s"), ExtResource("5_k3dfb")])
+price = 0.0

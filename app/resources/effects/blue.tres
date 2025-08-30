@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://h0hnfdlvduyv"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_we4pv"]
+
+[resource]
+script = ExtResource("1_we4pv")
+name = "Blue"
+description = "The color of the deep ocean or a tranquil sky, serene and mysterious."

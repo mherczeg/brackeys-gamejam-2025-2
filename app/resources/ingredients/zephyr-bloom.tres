@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://ccehnpxdimare"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_j0bv2"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_vdrp6"]
+
+[resource]
+script = ExtResource("2_vdrp6")
+name = "Zephyr Bloom"
+description = "A high-altitude flower whose petals are lighter than air, carrying a fresh, clean scent."
+effects = Dictionary[ExtResource("1_j0bv2"), bool]({})
+price = 0.0

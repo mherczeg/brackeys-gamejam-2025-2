@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Base" load_steps=2 format=3 uid="uid://drltyx6hp8qfs"]
+
+[ext_resource type="Script" uid="uid://bgwochg5pfqrl" path="res://resources/Base.gd" id="1_fjilj"]
+
+[resource]
+script = ExtResource("1_fjilj")
+name = "Pills"
+description = "A small, compact dose of medicine, designed for easy consumption and rapid effect."
+price = 0.0

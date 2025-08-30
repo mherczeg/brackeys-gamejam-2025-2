@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://bjo38q308kb47"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_3207c"]
+
+[resource]
+script = ExtResource("1_3207c")
+name = "Comfort"
+description = "Eases worldly burdens and brings peace to the mind."

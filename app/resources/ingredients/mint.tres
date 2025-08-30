@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://cwxbxemjk1hud"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_hm21f"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_e1s37"]
+
+[resource]
+script = ExtResource("2_e1s37")
+name = "Mint"
+description = "A common herb whose cool touch can soothe an upset stomach and calm a troubled mind."
+effects = Dictionary[ExtResource("1_hm21f"), bool]({})
+price = 0.0

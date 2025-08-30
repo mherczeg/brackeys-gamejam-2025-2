@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://bg2rhsfgjcwoo"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_4atj1"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_7sco4"]
+
+[resource]
+script = ExtResource("2_7sco4")
+name = "Glimmerwood Bark"
+description = "The pearlescent bark of a forest that never sees the sun, it hums with a quiet, protective energy."
+effects = Dictionary[ExtResource("1_4atj1"), bool]({})
+price = 0.0

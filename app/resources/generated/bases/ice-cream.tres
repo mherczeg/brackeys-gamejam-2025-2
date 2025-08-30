@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Base" load_steps=2 format=3 uid="uid://dlyv5ni5ssm3g"]
+
+[ext_resource type="Script" uid="uid://bgwochg5pfqrl" path="res://resources/Base.gd" id="1_ty0rh"]
+
+[resource]
+script = ExtResource("1_ty0rh")
+name = "Ice Cream"
+description = "A frozen dessert made from cream and sugar, a delightful treat on a hot day."
+price = 0.0

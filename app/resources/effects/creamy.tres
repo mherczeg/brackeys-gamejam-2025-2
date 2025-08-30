@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://bolcex3rycr80"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_2yros"]
+
+[resource]
+script = ExtResource("1_2yros")
+name = "Creamy"
+description = "A silken, luxurious quality that coats the palate."

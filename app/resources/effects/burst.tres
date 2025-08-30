@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://dge3gg14elpgy"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_wacp5"]
+
+[resource]
+script = ExtResource("1_wacp5")
+name = "Burst"
+description = "A sudden, explosive release of concentrated flavor and energy."

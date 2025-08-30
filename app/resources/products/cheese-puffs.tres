@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Product" load_steps=7 format=3 uid="uid://c76iimoldsnf1"]
+
+[ext_resource type="Resource" uid="uid://pnwh8bcvqsnh" path="res://resources/bases/crisps.tres" id="1_hk1r6"]
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_x7c37"]
+[ext_resource type="Resource" uid="uid://bhci83c1g2fsl" path="res://resources/effects/umami.tres" id="3_kfok6"]
+[ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_vmv5p"]
+[ext_resource type="Resource" uid="uid://3modiddoph3q" path="res://resources/effects/expanding.tres" id="4_by23n"]
+[ext_resource type="Resource" uid="uid://c0dpyigt4uf83" path="res://resources/effects/yellow.tres" id="5_gs4r8"]
+
+[resource]
+script = ExtResource("3_vmv5p")
+name = "Cheese Puffs"
+description = "Airy, cheesy, and bright yellow, a fun and savory snack."
+base = ExtResource("1_hk1r6")
+effects = Array[ExtResource("2_x7c37")]([ExtResource("3_kfok6"), ExtResource("4_by23n"), ExtResource("5_gs4r8")])
+price = 0.0

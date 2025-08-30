@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://bt81830q8sxhb"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_cqkky"]
+
+[resource]
+script = ExtResource("1_cqkky")
+name = "Preservative"
+description = "Halts the relentless march of time's decay."

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://2bdwat58asij"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_tq0qu"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_uylu1"]
+
+[resource]
+script = ExtResource("2_uylu1")
+name = "Sunstone Fragment"
+description = "A crystal that fell from the sun, it radiates warmth and boundless energy."
+effects = Dictionary[ExtResource("1_tq0qu"), bool]({})
+price = 0.0

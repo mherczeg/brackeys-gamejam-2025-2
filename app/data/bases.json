@@ -1,0 +1,58 @@
+[
+  {
+    "script_path": "res://resources/Base.gd",
+    "properties": {
+      "name": "Soda",
+      "description": "A bubbly, sweet carbonated beverage, a perfect vehicle for potent flavors."
+    }
+  },
+  {
+    "script_path": "res://resources/Base.gd",
+    "properties": {
+      "name": "Sandwich",
+      "description": "Two slices of bread holding a variety of fillings, a staple of any adventurer's diet."
+    }
+  },
+  {
+    "script_path": "res://resources/Base.gd",
+    "properties": {
+      "name": "Chocolate Bar",
+      "description": "A sweet, comforting confection made from cacao, often with added nuts or caramel."
+    }
+  },
+  {
+    "script_path": "res://resources/Base.gd",
+    "properties": {
+      "name": "Hot Beverage",
+      "description": "A warm, soothing drink, perfect for a cold day or a moment of quiet contemplation."
+    }
+  },
+  {
+    "script_path": "res://resources/Base.gd",
+    "properties": {
+      "name": "Crisps",
+      "description": "Thinly sliced and fried potatoes, a salty and crunchy snack."
+    }
+  },
+  {
+    "script_path": "res://resources/Base.gd",
+    "properties": {
+      "name": "Soup",
+      "description": "A hearty, liquid meal, often served hot and full of nourishing ingredients."
+    }
+  },
+  {
+    "script_path": "res://resources/Base.gd",
+    "properties": {
+      "name": "Ice Cream",
+      "description": "A frozen dessert made from cream and sugar, a delightful treat on a hot day."
+    }
+  },
+  {
+    "script_path": "res://resources/Base.gd",
+    "properties": {
+      "name": "Pills",
+      "description": "A small, compact dose of medicine, designed for easy consumption and rapid effect."
+    }
+  }
+]

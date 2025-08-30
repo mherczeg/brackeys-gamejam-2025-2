@@ -1,0 +1,49 @@
+Soda
+- Cola Classic
+- Lemon-Lime Sparkle
+- Orange Fizz
+- Root Beer Float
+- Grape Blast
+- Ginger Ale
+Sandwich
+- Turkey & Swiss
+- Ham & Cheddar
+- Roast Beef & Provolone
+- Tuna Salad
+- Egg Salad
+- Italian Sub
+Chocolate Bar
+- Milk Chocolate
+- Dark Chocolate with Almonds
+- Caramel-Filled Bar
+- Crispy Rice Chocolate
+- White Chocolate
+- Peanut Butter Cup
+Hot Beverage
+- Black Coffee
+- Iced Coffee
+- Latte
+- Hot Chocolate
+- Green Tea
+- Herbal Tea (Chamomile)
+Crisps
+- Chips
+- Tortilla
+- Cheese Puffs
+- Pretzels
+- Saltine Crackers
+Soups
+- Miso Ramen
+- Pho
+- Wonton 
+Ice Cream
+- CVS Sandwich
+- Chocolate Coated Bar
+- Soft-served
+- Fruit Popsicle
+- Fudge Bar
+Pills
+- Pain Reliever
+- Sleep Aid
+- Vitamin C Tablet
+- Stomach Soother

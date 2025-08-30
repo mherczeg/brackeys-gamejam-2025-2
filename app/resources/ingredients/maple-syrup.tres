@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://dfifxh01osq7"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_vh3qk"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_48a34"]
+
+[resource]
+script = ExtResource("2_48a34")
+name = "Maple Syrup"
+description = "The lifeblood of the great maple, a sweet and energizing golden sap."
+effects = Dictionary[ExtResource("1_vh3qk"), bool]({})
+price = 0.0

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Product" load_steps=7 format=3 uid="uid://cqr2d7kvc77ae"]
+
+[ext_resource type="Resource" uid="uid://pnwh8bcvqsnh" path="res://resources/bases/crisps.tres" id="1_i88yd"]
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_m7tof"]
+[ext_resource type="Resource" uid="uid://bg456i4g56iux" path="res://resources/effects/minerals.tres" id="3_il0lu"]
+[ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_vqlsq"]
+[ext_resource type="Resource" uid="uid://c1fbe03rxkc07" path="res://resources/effects/earthy.tres" id="4_d7oy1"]
+[ext_resource type="Resource" uid="uid://ckmombfq7w8dt" path="res://resources/effects/gluten.tres" id="5_xbpq3"]
+
+[resource]
+script = ExtResource("3_vqlsq")
+name = "Tortilla"
+description = "Crispy corn triangles, perfect for dipping or on their own."
+base = ExtResource("1_i88yd")
+effects = Array[ExtResource("2_m7tof")]([ExtResource("3_il0lu"), ExtResource("4_d7oy1"), ExtResource("5_xbpq3")])
+price = 0.0

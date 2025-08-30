@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://dftajnygqifq3"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_jq2tc"]
+
+[resource]
+script = ExtResource("1_jq2tc")
+name = "Aromatic"
+description = "An enchanting scent that can alter mood or perception."

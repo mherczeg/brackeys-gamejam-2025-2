@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Product" load_steps=6 format=3 uid="uid://cs4m0oimq4qa"]
+
+[ext_resource type="Resource" uid="uid://pyg5nom8yqp6" path="res://resources/bases/sandwich.tres" id="1_qklkn"]
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_7b5jr"]
+[ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_e5v3k"]
+[ext_resource type="Resource" uid="uid://dl6xhwsef3ei7" path="res://resources/effects/protein.tres" id="3_kxutb"]
+[ext_resource type="Resource" uid="uid://dgb0msy4jw7xk" path="res://resources/effects/preservative.tres" id="4_jr6gs"]
+
+[resource]
+script = ExtResource("3_e5v3k")
+name = "Roast Beef & Provolone"
+description = "Rich roast beef paired with smooth provolone for a robust flavor."
+base = ExtResource("1_qklkn")
+effects = Array[ExtResource("2_7b5jr")]([ExtResource("3_kxutb"), ExtResource("4_jr6gs")])
+price = 0.0

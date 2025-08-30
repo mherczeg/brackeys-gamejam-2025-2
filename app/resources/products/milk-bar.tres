@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Product" load_steps=6 format=3 uid="uid://0ittc7hdusq7"]
+
+[ext_resource type="Resource" uid="uid://cho25f5213qgd" path="res://resources/bases/chocolate-bar.tres" id="1_mekfu"]
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_e0gda"]
+[ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_tkbxk"]
+[ext_resource type="Resource" uid="uid://dkxgfalr0y0ei" path="res://resources/effects/sweet.tres" id="3_w5is0"]
+[ext_resource type="Resource" uid="uid://c2tm0u2u3vubs" path="res://resources/effects/comfort.tres" id="4_awcdp"]
+
+[resource]
+script = ExtResource("3_tkbxk")
+name = "Milk Bar"
+description = "Smooth, creamy milk chocolate for a moment of pure, sweet bliss."
+base = ExtResource("1_mekfu")
+effects = Array[ExtResource("2_e0gda")]([ExtResource("3_w5is0"), ExtResource("4_awcdp")])
+price = 0.0

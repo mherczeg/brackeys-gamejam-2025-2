@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Base" load_steps=4 format=3 uid="uid://vfpbkun8a2jd"]
+
+[ext_resource type="Texture2D" uid="uid://yx1evljqs00l" path="res://assets/pills-atlas.png" id="1_3ck7o"]
+[ext_resource type="Script" uid="uid://bgwochg5pfqrl" path="res://resources/Base.gd" id="1_ldy5f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ck7o"]
+atlas = ExtResource("1_3ck7o")
+region = Rect2(0, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_ldy5f")
+name = "Pills"
+description = "A small, compact dose of medicine, designed for easy consumption and rapid effect."
+icon = SubResource("AtlasTexture_3ck7o")
+price = 0.0

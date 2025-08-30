@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Product" load_steps=6 format=3 uid="uid://cbco82kmj44b4"]
+
+[ext_resource type="Resource" uid="uid://1g3i3a8rkotx" path="res://resources/bases/ice-cream.tres" id="1_e13jp"]
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_e1lne"]
+[ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_nkph8"]
+[ext_resource type="Resource" uid="uid://dkxgfalr0y0ei" path="res://resources/effects/sweet.tres" id="3_qxbr8"]
+[ext_resource type="Resource" uid="uid://bolcex3rycr80" path="res://resources/effects/creamy.tres" id="4_5g5aw"]
+
+[resource]
+script = ExtResource("3_nkph8")
+name = "Soft-served"
+description = "Creamy, swirled ice cream, light as a cloud."
+base = ExtResource("1_e13jp")
+effects = Array[ExtResource("2_e1lne")]([ExtResource("3_qxbr8"), ExtResource("4_5g5aw")])
+price = 0.0

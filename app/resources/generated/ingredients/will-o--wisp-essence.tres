@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://b2s78oqve5vti"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_1tu4r"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_myel1"]
+
+[resource]
+script = ExtResource("2_myel1")
+name = "Will-o'-Wisp Essence"
+description = "The captured light of a mischievous swamp spirit, it buzzes with chaotic energy."
+effects = Dictionary[ExtResource("1_1tu4r"), bool]({})
+price = 0.0

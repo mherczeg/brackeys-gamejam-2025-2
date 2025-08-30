@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://dcrl02ll0xbfl"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_0gwgk"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_3kxxj"]
+
+[resource]
+script = ExtResource("2_3kxxj")
+name = "Dragon's Breath Pepper"
+description = "A pepper so hot it is said to be grown in the scorched earth of a dragon's lair."
+effects = Dictionary[ExtResource("1_0gwgk"), bool]({})
+price = 0.0

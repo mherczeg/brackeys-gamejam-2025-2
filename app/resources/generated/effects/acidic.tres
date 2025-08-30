@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://dq0oeva3uld6s"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_juhma"]
+
+[resource]
+script = ExtResource("1_juhma")
+name = "Acidic"
+description = "A caustic quality that can dissolve or transform base substances."

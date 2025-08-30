@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://dgrpbk0kv8id"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_euk3k"]
+
+[resource]
+script = ExtResource("1_euk3k")
+name = "Calcium"
+description = "Infuses bone and stone with unnatural resilience."

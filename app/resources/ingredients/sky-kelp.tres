@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://cucynwi88f2an"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_twrx3"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_tuln2"]
+
+[resource]
+script = ExtResource("2_tuln2")
+name = "Sky Kelp"
+description = "A strange, buoyant seaweed that grows in massive floating continents in the upper atmosphere."
+effects = Dictionary[ExtResource("1_twrx3"), bool]({})
+price = 0.0

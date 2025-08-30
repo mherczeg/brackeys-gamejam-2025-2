@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Product" load_steps=7 format=3 uid="uid://buupivuq0v3pa"]
+
+[ext_resource type="Resource" uid="uid://pyg5nom8yqp6" path="res://resources/bases/sandwich.tres" id="1_5nepd"]
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_ixyqa"]
+[ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_khwn2"]
+[ext_resource type="Resource" uid="uid://dl6xhwsef3ei7" path="res://resources/effects/protein.tres" id="3_olj3f"]
+[ext_resource type="Resource" uid="uid://bolcex3rycr80" path="res://resources/effects/creamy.tres" id="4_vagt2"]
+[ext_resource type="Resource" uid="uid://cuxai4drd5hry" path="res://resources/effects/tender.tres" id="5_wc5e6"]
+
+[resource]
+script = ExtResource("3_khwn2")
+name = "Turkey & Swiss"
+description = "A classic combination of tender turkey and mild Swiss cheese."
+base = ExtResource("1_5nepd")
+effects = Array[ExtResource("2_ixyqa")]([ExtResource("3_olj3f"), ExtResource("4_vagt2"), ExtResource("5_wc5e6")])
+price = 0.0

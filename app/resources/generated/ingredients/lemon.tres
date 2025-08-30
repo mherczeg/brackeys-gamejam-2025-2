@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://cqwrkyt5pmluo"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_7fr6q"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_upmdt"]
+
+[resource]
+script = ExtResource("2_upmdt")
+name = "Lemon"
+description = "A sour, bright fruit whose acidic juice cleanses and fortifies."
+effects = Dictionary[ExtResource("1_7fr6q"), bool]({})
+price = 0.0

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://cae6uvogntv0i"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_tcqn1"]
+
+[resource]
+script = ExtResource("1_tcqn1")
+name = "Laxative"
+description = "A purging quality that forcefully cleanses the body."

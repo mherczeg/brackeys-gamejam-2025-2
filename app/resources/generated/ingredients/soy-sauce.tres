@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://drwppp1jnkc86"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_8158k"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_wnp2a"]
+
+[resource]
+script = ExtResource("2_wnp2a")
+name = "Soy Sauce"
+description = "A dark, salty liquid, fermented for months to draw out the savory essence of the earth."
+effects = Dictionary[ExtResource("1_8158k"), bool]({})
+price = 0.0

@@ -1,0 +1,504 @@
+[
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Cola Classic",
+      "description": "The timeless taste of cola, bubbling with sweet, familiar comfort.",
+      "base": "res://resources/bases/soda.tres",
+      "effects": [
+        "res://resources/effects/energizing.tres",
+        "res://resources/effects/sweet.tres",
+        "res://resources/effects/comfort.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Lemon-Lime Sparkle",
+      "description": "A crisp and zesty soda that dances on the tongue.",
+      "base": "res://resources/bases/soda.tres",
+      "effects": [
+        "res://resources/effects/zest.tres",
+        "res://resources/effects/green.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Orange Fizz",
+      "description": "A burst of sunny orange flavor in a fizzy delight.",
+      "base": "res://resources/bases/soda.tres",
+      "effects": [
+        "res://resources/effects/zest.tres",
+        "res://resources/effects/yellow.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Root Beer Float",
+      "description": "Creamy, dreamy, and nostalgic, a classic soda fountain treat.",
+      "base": "res://resources/bases/soda.tres",
+      "effects": [
+        "res://resources/effects/creamy.tres",
+        "res://resources/effects/metabolistic.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Grape Blast",
+      "description": "An explosion of bold grape flavor that's powerfully sweet.",
+      "base": "res://resources/bases/soda.tres",
+      "effects": [
+        "res://resources/effects/burst.tres",
+        "res://resources/effects/sweet.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Ginger Ale",
+      "description": "A soothing and spicy soda, perfect for settling the stomach or spirit.",
+      "base": "res://resources/bases/soda.tres",
+      "effects": [
+        "res://resources/effects/soothing.tres",
+        "res://resources/effects/pungent.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Turkey & Swiss",
+      "description": "A classic combination of tender turkey and mild Swiss cheese.",
+      "base": "res://resources/bases/sandwich.tres",
+      "effects": [
+        "res://resources/effects/protein.tres",
+        "res://resources/effects/creamy.tres",
+        "res://resources/effects/tender.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Ham & Cheddar",
+      "description": "Savory ham and sharp cheddar, a hearty and satisfying sandwich.",
+      "base": "res://resources/bases/sandwich.tres",
+      "effects": [
+        "res://resources/effects/protein.tres",
+        "res://resources/effects/creamy.tres",
+        "res://resources/effects/red.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Roast Beef & Provolone",
+      "description": "Rich roast beef paired with smooth provolone for a robust flavor.",
+      "base": "res://resources/bases/sandwich.tres",
+      "effects": [
+        "res://resources/effects/protein.tres",
+        "res://resources/effects/preservative.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Tuna Salad",
+      "description": "A creamy and savory tuna mix, a light yet fulfilling choice.",
+      "base": "res://resources/bases/sandwich.tres",
+      "effects": [
+        "res://resources/effects/creamy.tres",
+        "res://resources/effects/tender.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Egg Salad",
+      "description": "A simple, creamy classic made with perfectly boiled eggs.",
+      "base": "res://resources/bases/sandwich.tres",
+      "effects": [
+        "res://resources/effects/creamy.tres",
+        "res://resources/effects/digestive.tres",
+        "res://resources/effects/yellow.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Italian Sub",
+      "description": "A feast of cured meats and zesty aromas, packed into a hearty roll.",
+      "base": "res://resources/bases/sandwich.tres",
+      "effects": [
+        "res://resources/effects/gluten.tres",
+        "res://resources/effects/aromatic.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Milk Bar",
+      "description": "Smooth, creamy milk chocolate for a moment of pure, sweet bliss.",
+      "base": "res://resources/bases/chocolate-bar.tres",
+      "effects": [
+        "res://resources/effects/sweet.tres",
+        "res://resources/effects/comfort.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Dark Almonds",
+      "description": "Rich dark chocolate with the satisfying crunch of whole almonds.",
+      "base": "res://resources/bases/chocolate-bar.tres",
+      "effects": [
+        "res://resources/effects/discomfort.tres",
+        "res://resources/effects/earthy.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Caramel-Filled",
+      "description": "A river of golden caramel encased in a shell of sweet chocolate.",
+      "base": "res://resources/bases/chocolate-bar.tres",
+      "effects": [
+        "res://resources/effects/sweet.tres",
+        "res://resources/effects/thick.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Crispy Rice Chocolate",
+      "description": "Light, crispy rice puffs suspended in sweet milk chocolate.",
+      "base": "res://resources/bases/chocolate-bar.tres",
+      "effects": [
+        "res://resources/effects/expanding.tres",
+        "res://resources/effects/creamy.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "White But Y",
+      "description": "A sweet and creamy confection of pure white chocolate.",
+      "base": "res://resources/bases/chocolate-bar.tres",
+      "effects": [
+        "res://resources/effects/white.tres",
+        "res://resources/effects/sweet.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Peanut Cup Butter Cup",
+      "description": "The perfect marriage of sweet chocolate and salty peanut butter.",
+      "base": "res://resources/bases/chocolate-bar.tres",
+      "effects": [
+        "res://resources/effects/sweet.tres",
+        "res://resources/effects/earthy.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Black Coffee",
+      "description": "A bold, unadulterated brew for the purist.",
+      "base": "res://resources/bases/hot-beverage.tres",
+      "effects": [
+        "res://resources/effects/discomfort.tres",
+        "res://resources/effects/energizing.tres",
+        "res://resources/effects/black.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Iced Coffee",
+      "description": "Chilled and invigorating, the perfect cool-down coffee.",
+      "base": "res://resources/bases/hot-beverage.tres",
+      "effects": [
+        "res://resources/effects/discomfort.tres",
+        "res://resources/effects/energizing.tres",
+        "res://resources/effects/water.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Latte",
+      "description": "A smooth and creamy blend of espresso and steamed milk.",
+      "base": "res://resources/bases/hot-beverage.tres",
+      "effects": [
+        "res://resources/effects/discomfort.tres",
+        "res://resources/effects/energizing.tres",
+        "res://resources/effects/creamy.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Hot Chocolate",
+      "description": "A warm, comforting mug of rich, molten chocolate.",
+      "base": "res://resources/bases/hot-beverage.tres",
+      "effects": [
+        "res://resources/effects/comfort.tres",
+        "res://resources/effects/sweet.tres",
+        "res://resources/effects/fire.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Green Tea",
+      "description": "A delicate and refreshing tea, known for its clarifying properties.",
+      "base": "res://resources/bases/hot-beverage.tres",
+      "effects": [
+        "res://resources/effects/antioxidant.tres",
+        "res://resources/effects/focusing.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Herbal Tea",
+      "description": "A soothing infusion of herbs, perfect for relaxation.",
+      "base": "res://resources/bases/hot-beverage.tres",
+      "effects": [
+        "res://resources/effects/antioxidant.tres",
+        "res://resources/effects/comfort.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Chips",
+      "description": "Classic, salty potato crisps, irresistibly crunchy.",
+      "base": "res://resources/bases/crisps.tres",
+      "effects": [
+        "res://resources/effects/minerals.tres",
+        "res://resources/effects/earthy.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Tortilla",
+      "description": "Crispy corn triangles, perfect for dipping or on their own.",
+      "base": "res://resources/bases/crisps.tres",
+      "effects": [
+        "res://resources/effects/minerals.tres",
+        "res://resources/effects/earthy.tres",
+        "res://resources/effects/gluten.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Cheese Puffs",
+      "description": "Airy, cheesy, and bright yellow, a fun and savory snack.",
+      "base": "res://resources/bases/crisps.tres",
+      "effects": [
+        "res://resources/effects/umami.tres",
+        "res://resources/effects/expanding.tres",
+        "res://resources/effects/yellow.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Pretzels",
+      "description": "Twisted and baked, a classic salty and earthy snack.",
+      "base": "res://resources/bases/crisps.tres",
+      "effects": [
+        "res://resources/effects/gluten.tres",
+        "res://resources/effects/earthy.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Saltine Crackers",
+      "description": "Light, crisp, and perfectly salted, a simple and versatile cracker.",
+      "base": "res://resources/bases/crisps.tres",
+      "effects": [
+        "res://resources/effects/minerals.tres",
+        "res://resources/effects/digestive.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Miso Ramen",
+      "description": "A savory and comforting noodle soup with a rich umami broth.",
+      "base": "res://resources/bases/soup.tres",
+      "effects": [
+        "res://resources/effects/umami.tres",
+        "res://resources/effects/soothing.tres",
+        "res://resources/effects/water.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Pho",
+      "description": "An aromatic Vietnamese noodle soup with a fragrant, spiced broth.",
+      "base": "res://resources/bases/soup.tres",
+      "effects": [
+        "res://resources/effects/aromatic.tres",
+        "res://resources/effects/soothing.tres",
+        "res://resources/effects/water.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Wonton",
+      "description": "Delicate dumplings in a clear, soothing broth.",
+      "base": "res://resources/bases/soup.tres",
+      "effects": [
+        "res://resources/effects/protein.tres",
+        "res://resources/effects/soothing.tres",
+        "res://resources/effects/water.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "CVS Sandwich",
+      "description": "A block of vanilla ice cream between two soft chocolate wafers.",
+      "base": "res://resources/bases/ice-cream.tres",
+      "effects": [
+        "res://resources/effects/sweet.tres",
+        "res://resources/effects/creamy.tres",
+        "res://resources/effects/gluten.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Chocolate Coated Bar",
+      "description": "A simple bar of vanilla ice cream with a crisp chocolate shell.",
+      "base": "res://resources/bases/ice-cream.tres",
+      "effects": [
+        "res://resources/effects/sweet.tres",
+        "res://resources/effects/earthy.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Soft-served",
+      "description": "Creamy, swirled ice cream, light as a cloud.",
+      "base": "res://resources/bases/ice-cream.tres",
+      "effects": [
+        "res://resources/effects/sweet.tres",
+        "res://resources/effects/creamy.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Fruit Popsicle",
+      "description": "A refreshing frozen treat made with real fruit juice.",
+      "base": "res://resources/bases/ice-cream.tres",
+      "effects": [
+        "res://resources/effects/water.tres",
+        "res://resources/effects/zest.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Fudge Bar",
+      "description": "A dense, chewy, and intensely chocolatey frozen bar.",
+      "base": "res://resources/bases/ice-cream.tres",
+      "effects": [
+        "res://resources/effects/thick.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Pain Reliever",
+      "description": "A fast-acting pill to ease aches and pains.",
+      "base": "res://resources/bases/pills.tres",
+      "effects": [
+        "res://resources/effects/comfort.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Sleep Aid",
+      "description": "A gentle tablet to help you drift into a peaceful slumber.",
+      "base": "res://resources/bases/pills.tres",
+      "effects": [
+        "res://resources/effects/comfort.tres",
+        "res://resources/effects/soothing.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Vitamin C Tablet",
+      "description": "A boost for your body's defenses in a small, fortifying tablet.",
+      "base": "res://resources/bases/pills.tres",
+      "effects": [
+        "res://resources/effects/fortifying.tres"
+      ]
+    }
+  },
+  {
+    "script_path": "res://resources/Product.gd",
+    "properties": {
+      "name": "Stomach Soother",
+      "description": "A pill designed to calm and settle an upset stomach.",
+      "base": "res://resources/bases/pills.tres",
+      "effects": [
+        "res://resources/effects/digestive.tres"
+      ]
+    }
+  }
+]

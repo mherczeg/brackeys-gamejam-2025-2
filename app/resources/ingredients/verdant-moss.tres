@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://bhrvfhmj1adil"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_m8xgv"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_gqig2"]
+
+[resource]
+script = ExtResource("2_gqig2")
+name = "Verdant Moss"
+description = "A common moss from the deep woods, teeming with the raw, earthy essence of life."
+effects = Dictionary[ExtResource("1_m8xgv"), bool]({})
+price = 0.0

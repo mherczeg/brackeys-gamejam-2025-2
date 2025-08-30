@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://cp0hxmyyrncsx"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_0ef4m"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_eox70"]
+
+[resource]
+script = ExtResource("2_eox70")
+name = "Salamander Hide"
+description = "The shed skin of a fire salamander, it is permanently warm and surprisingly tough."
+effects = Dictionary[ExtResource("1_0ef4m"), bool]({})
+price = 0.0

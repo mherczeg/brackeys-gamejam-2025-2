@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://dq3v7hij0f11n"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_rdlk4"]
+
+[resource]
+script = ExtResource("1_rdlk4")
+name = "Thick"
+description = "A binding agent that gives substance and weight to liquids."

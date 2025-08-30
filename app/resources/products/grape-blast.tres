@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Product" load_steps=6 format=3 uid="uid://dduyskqr2o81d"]
+
+[ext_resource type="Resource" uid="uid://yjnv2md2an4c" path="res://resources/bases/soda.tres" id="1_doixn"]
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_p27qt"]
+[ext_resource type="Resource" uid="uid://dge3gg14elpgy" path="res://resources/effects/burst.tres" id="3_6nklo"]
+[ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_ewid1"]
+[ext_resource type="Resource" uid="uid://dkxgfalr0y0ei" path="res://resources/effects/sweet.tres" id="4_cxrnk"]
+
+[resource]
+script = ExtResource("3_ewid1")
+name = "Grape Blast"
+description = "An explosion of bold grape flavor that's powerfully sweet."
+base = ExtResource("1_doixn")
+effects = Array[ExtResource("2_p27qt")]([ExtResource("3_6nklo"), ExtResource("4_cxrnk")])
+price = 0.0

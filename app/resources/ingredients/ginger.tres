@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://hqyg6d5rgaly"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_xmmbd"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_6e4fh"]
+
+[resource]
+script = ExtResource("2_6e4fh")
+name = "Ginger"
+description = "A gnarled root with a sharp bite, said to clear the mind and settle the spirit."
+effects = Dictionary[ExtResource("1_xmmbd"), bool]({})
+price = 0.0

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Product" load_steps=6 format=3 uid="uid://dg2hyqr56vjy0"]
+
+[ext_resource type="Resource" uid="uid://crkxdpkexj8mf" path="res://resources/bases/hot-beverage.tres" id="1_acwy2"]
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_85xba"]
+[ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_2uynq"]
+[ext_resource type="Resource" uid="uid://ca7yp8e05soib" path="res://resources/effects/antioxidant.tres" id="3_kkqu2"]
+[ext_resource type="Resource" uid="uid://dp1wueirdnjw" path="res://resources/effects/focusing.tres" id="4_iyfoe"]
+
+[resource]
+script = ExtResource("3_2uynq")
+name = "Green Tea"
+description = "A delicate and refreshing tea, known for its clarifying properties."
+base = ExtResource("1_acwy2")
+effects = Array[ExtResource("2_85xba")]([ExtResource("3_kkqu2"), ExtResource("4_iyfoe")])
+price = 0.0

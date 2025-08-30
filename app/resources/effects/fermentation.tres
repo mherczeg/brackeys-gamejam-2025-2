@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://m04w45iupslw"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_syxn7"]
+
+[resource]
+script = ExtResource("1_syxn7")
+name = "Fermentation"
+description = "A chaotic process that unlocks hidden, volatile properties."

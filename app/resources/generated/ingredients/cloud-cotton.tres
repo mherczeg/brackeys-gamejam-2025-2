@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://okmcaiknom6b"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_vpjr7"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_375ww"]
+
+[resource]
+script = ExtResource("2_375ww")
+name = "Cloud Cotton"
+description = "The soft, fluffy material of a storm cloud, surprisingly light and tender."
+effects = Dictionary[ExtResource("1_vpjr7"), bool]({})
+price = 0.0

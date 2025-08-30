@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://do75n27vqljfn"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_rmq5x"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_20jyk"]
+
+[resource]
+script = ExtResource("2_20jyk")
+name = "Fairy's Lantern"
+description = "A glowing flower that floats a few inches off the ground, its light is said to bring clarity."
+effects = Dictionary[ExtResource("1_rmq5x"), bool]({})
+price = 0.0

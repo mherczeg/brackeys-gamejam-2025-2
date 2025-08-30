@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://csffanweswiy8"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_6u4og"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_6itkm"]
+
+[resource]
+script = ExtResource("2_6itkm")
+name = "Leviathan's Scale"
+description = "A hand-sized scale from a creature of the deep sea, impossibly hard and infused with oceanic minerals."
+effects = Dictionary[ExtResource("1_6u4og"), bool]({})
+price = 0.0

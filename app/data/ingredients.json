@@ -1,0 +1,643 @@
+[
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Salt",
+      "description": "Crystalline tears of the ancient earth, essential and pure.",
+      "effects": {
+        "res://resources/effects/preservative.tres": false,
+        "res://resources/effects/quintessence.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Sugar",
+      "description": "Sweet, glittering dust that provides a fleeting burst of vigor.",
+      "effects": {
+        "res://resources/effects/energizing.tres": false,
+        "res://resources/effects/sweet.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Chili Peppers",
+      "description": "The fruit of a spiteful plant, burning with an inner fire.",
+      "effects": {
+        "res://resources/effects/discomfort.tres": false,
+        "res://resources/effects/pungent.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Garlic",
+      "description": "A pungent bulb known to ward off both common ailments and creatures of the night.",
+      "effects": {
+        "res://resources/effects/fortifying.tres": false,
+        "res://resources/effects/pungent.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Coffee Beans",
+      "description": "Dark, roasted seeds that chase away sleep with a discomfort jolt.",
+      "effects": {
+        "res://resources/effects/discomfort.tres": false,
+        "res://resources/effects/energizing.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Ginger",
+      "description": "A gnarled root with a sharp bite, said to clear the mind and settle the spirit.",
+      "effects": {
+        "res://resources/effects/zest.tres": false,
+        "res://resources/effects/antioxidant.tres": false,
+        "res://resources/effects/pungent.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Turmeric",
+      "description": "A vibrant yellow root that aids digestion and bolsters the body's defenses.",
+      "effects": {
+        "res://resources/effects/yellow.tres": false,
+        "res://resources/effects/digestive.tres": false,
+        "res://resources/effects/fortifying.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Cinnamon",
+      "description": "The fragrant bark of a desert tree, its scent warming the soul.",
+      "effects": {
+        "res://resources/effects/metabolistic.tres": false,
+        "res://resources/effects/aromatic.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Mint",
+      "description": "A common herb whose cool touch can soothe an upset stomach and calm a troubled mind.",
+      "effects": {
+        "res://resources/effects/digestive.tres": false,
+        "res://resources/effects/aromatic.tres": false,
+        "res://resources/effects/soothing.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Lemon",
+      "description": "A sour, bright fruit whose acidic juice cleanses and fortifies.",
+      "effects": {
+        "res://resources/effects/acidic.tres": false,
+        "res://resources/effects/zest.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Coconut Oil",
+      "description": "A thick, creamy oil from a tropical fruit, slick and rich.",
+      "effects": {
+        "res://resources/effects/creamy.tres": false,
+        "res://resources/effects/slick.tres": false,
+        "res://resources/effects/thick.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Peanut",
+      "description": "A humble legume from the earth, its kernel is packed with savory strength and a surprisingly creamy heart.",
+      "effects": {
+        "res://resources/effects/earthy.tres": false,
+        "res://resources/effects/protein.tres": false,
+        "res://resources/effects/creamy.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Yeast",
+      "description": "A living colony of microscopic beings that transform dough and wort with their chaotic life cycle.",
+      "effects": {
+        "res://resources/effects/gluten.tres": false,
+        "res://resources/effects/fortifying.tres": false,
+        "res://resources/effects/fermentation.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Milk",
+      "description": "The first nourishment of mammals, rich with the building blocks of life.",
+      "effects": {
+        "res://resources/effects/calcium.tres": false,
+        "res://resources/effects/protein.tres": false,
+        "res://resources/effects/creamy.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Cornstarch",
+      "description": "A fine, silky powder that can thicken potions or soften tough ingredients.",
+      "effects": {
+        "res://resources/effects/protein.tres": false,
+        "res://resources/effects/tender.tres": false,
+        "res://resources/effects/thick.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Cacao",
+      "description": "A discomfort bean from the deep jungle, known to comfort the heart and ground the senses.",
+      "effects": {
+        "res://resources/effects/discomfort.tres": false,
+        "res://resources/effects/earthy.tres": false,
+        "res://resources/effects/comfort.tres": false,
+        "res://resources/effects/antioxidant.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Black Pepper",
+      "description": "Tiny, dried berries that hold a surprising, fiery power.",
+      "effects": {
+        "res://resources/effects/digestive.tres": false,
+        "res://resources/effects/discomfort.tres": false,
+        "res://resources/effects/fortifying.tres": false,
+        "res://resources/effects/pungent.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Maple Syrup",
+      "description": "The lifeblood of the great maple, a sweet and energizing golden sap.",
+      "effects": {
+        "res://resources/effects/sweet.tres": false,
+        "res://resources/effects/aromatic.tres": false,
+        "res://resources/effects/thick.tres": false,
+        "res://resources/effects/energizing.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Tamarind",
+      "description": "The sour pulp of a strange pod, known for its potent, purging qualities.",
+      "effects": {
+        "res://resources/effects/laxative.tres": false,
+        "res://resources/effects/digestive.tres": false,
+        "res://resources/effects/discomfort.tres": false,
+        "res://resources/effects/acidic.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Soy Sauce",
+      "description": "A dark, salty liquid, fermented for months to draw out the savory essence of the earth.",
+      "effects": {
+        "res://resources/effects/black.tres": false,
+        "res://resources/effects/earthy.tres": false,
+        "res://resources/effects/minerals.tres": false,
+        "res://resources/effects/umami.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Honey",
+      "description": "Liquid gold gathered by bees, a natural balm that is both sweet and soothing.",
+      "effects": {
+        "res://resources/effects/tender.tres": false,
+        "res://resources/effects/sweet.tres": false,
+        "res://resources/effects/soothing.tres": false,
+        "res://resources/effects/fortifying.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Glimmerwood Bark",
+      "description": "The pearlescent bark of a forest that never sees the sun, it hums with a quiet, protective energy.",
+      "effects": {
+        "res://resources/effects/soothing.tres": false,
+        "res://resources/effects/white.tres": false,
+        "res://resources/effects/preservative.tres": false,
+        "res://resources/effects/fortifying.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Sun-Kissed Fern",
+      "description": "A fern that grows only in direct sunlight, its fronds are warm to the touch and full of life.",
+      "effects": {
+        "res://resources/effects/green.tres": false,
+        "res://resources/effects/comfort.tres": false,
+        "res://resources/effects/soothing.tres": false,
+        "res://resources/effects/antioxidant.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Voidshroom Cap",
+      "description": "A black, rubbery mushroom found in places devoid of life, it carries a potent, necrotic poison.",
+      "effects": {
+        "res://resources/effects/toxic.tres": false,
+        "res://resources/effects/black.tres": false,
+        "res://resources/effects/earthy.tres": false,
+        "res://resources/effects/anti-life.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Dragon's Breath Pepper",
+      "description": "A pepper so hot it is said to be grown in the scorched earth of a dragon's lair.",
+      "effects": {
+        "res://resources/effects/fire.tres": false,
+        "res://resources/effects/burst.tres": false,
+        "res://resources/effects/red.tres": false,
+        "res://resources/effects/pungent.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Fairy's Lantern",
+      "description": "A glowing flower that floats a few inches off the ground, its light is said to bring clarity.",
+      "effects": {
+        "res://resources/effects/focusing.tres": false,
+        "res://resources/effects/air.tres": false,
+        "res://resources/effects/zest.tres": false,
+        "res://resources/effects/energizing.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Leviathan's Scale",
+      "description": "A hand-sized scale from a creature of the deep sea, impossibly hard and infused with oceanic minerals.",
+      "effects": {
+        "res://resources/effects/minerals.tres": false,
+        "res://resources/effects/blue.tres": false,
+        "res://resources/effects/water.tres": false,
+        "res://resources/effects/calcium.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Gravebloom Petal",
+      "description": "A flower that only blooms on the graves of the recently deceased, its properties are paradoxically both toxic and soothing.",
+      "effects": {
+        "res://resources/effects/toxic.tres": false,
+        "res://resources/effects/soothing.tres": false,
+        "res://resources/effects/discomfort.tres": false,
+        "res://resources/effects/anti-life.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Phoenix Ash",
+      "description": "The warm, glittering ash left behind after a phoenix's rebirth, crackling with latent energy.",
+      "effects": {
+        "res://resources/effects/fire.tres": false,
+        "res://resources/effects/red.tres": false,
+        "res://resources/effects/fortifying.tres": false,
+        "res://resources/effects/burst.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Zephyr Bloom",
+      "description": "A high-altitude flower whose petals are lighter than air, carrying a fresh, clean scent.",
+      "effects": {
+        "res://resources/effects/air.tres": false,
+        "res://resources/effects/aromatic.tres": false,
+        "res://resources/effects/white.tres": false,
+        "res://resources/effects/expanding.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "River Nymph's Tear",
+      "description": "A drop of water shed by a river spirit, it is the pure quintessence of life.",
+      "effects": {
+        "res://resources/effects/blue.tres": false,
+        "res://resources/effects/comfort.tres": false,
+        "res://resources/effects/water.tres": false,
+        "res://resources/effects/quintessence.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Gorgon's Eye Dust",
+      "description": "The ground-up, fossilized eye of a gorgon, carrying a fraction of its petrifying power.",
+      "effects": {
+        "res://resources/effects/acidic.tres": false,
+        "res://resources/effects/earthy.tres": false,
+        "res://resources/effects/minerals.tres": false,
+        "res://resources/effects/toxic.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Sky Kelp",
+      "description": "A strange, buoyant seaweed that grows in massive floating continents in the upper atmosphere.",
+      "effects": {
+        "res://resources/effects/slick.tres": false,
+        "res://resources/effects/green.tres": false,
+        "res://resources/effects/air.tres": false,
+        "res://resources/effects/expanding.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Molten Core Shard",
+      "description": "A fragment of rock from deep within the earth's core, still glowing with intense heat.",
+      "effects": {
+        "res://resources/effects/fire.tres": false,
+        "res://resources/effects/metabolistic.tres": false,
+        "res://resources/effects/red.tres": false,
+        "res://resources/effects/pungent.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Ectoplasmic Residue",
+      "description": "The slick, cold slime left behind by a passing spirit.",
+      "effects": {
+        "res://resources/effects/water.tres": false,
+        "res://resources/effects/white.tres": false,
+        "res://resources/effects/anti-life.tres": false,
+        "res://resources/effects/slick.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Sprite's Wing",
+      "description": "The iridescent, paper-thin wing of a forest sprite, it tastes surprisingly sweet.",
+      "effects": {
+        "res://resources/effects/zest.tres": false,
+        "res://resources/effects/green.tres": false,
+        "res://resources/effects/focusing.tres": false,
+        "res://resources/effects/air.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Kraken's Ink",
+      "description": "The dark, umami-rich ink of a colossal squid, used to obscure its escape.",
+      "effects": {
+        "res://resources/effects/toxic.tres": false,
+        "res://resources/effects/blue.tres": false,
+        "res://resources/effects/black.tres": false,
+        "res://resources/effects/umami.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Sunstone Fragment",
+      "description": "A crystal that fell from the sun, it radiates warmth and boundless energy.",
+      "effects": {
+        "res://resources/effects/burst.tres": false,
+        "res://resources/effects/fire.tres": false,
+        "res://resources/effects/minerals.tres": false,
+        "res://resources/effects/energizing.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Moonpetal Nectar",
+      "description": "The sweet, glowing nectar of a flower that blooms only under the full moon.",
+      "effects": {
+        "res://resources/effects/blue.tres": false,
+        "res://resources/effects/soothing.tres": false,
+        "res://resources/effects/sweet.tres": false,
+        "res://resources/effects/white.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Verdant Moss",
+      "description": "A common moss from the deep woods, teeming with the raw, earthy essence of life.",
+      "effects": {
+        "res://resources/effects/digestive.tres": false,
+        "res://resources/effects/green.tres": false,
+        "res://resources/effects/antioxidant.tres": false,
+        "res://resources/effects/earthy.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Abyssal Salt",
+      "description": "Black salt harvested from a dead, sunless sea at the bottom of the world.",
+      "effects": {
+        "res://resources/effects/black.tres": false,
+        "res://resources/effects/water.tres": false,
+        "res://resources/effects/preservative.tres": false,
+        "res://resources/effects/anti-life.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Cloud Cotton",
+      "description": "The soft, fluffy material of a storm cloud, surprisingly light and tender.",
+      "effects": {
+        "res://resources/effects/white.tres": false,
+        "res://resources/effects/expanding.tres": false,
+        "res://resources/effects/air.tres": false,
+        "res://resources/effects/tender.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Salamander Hide",
+      "description": "The shed skin of a fire salamander, it is permanently warm and surprisingly tough.",
+      "effects": {
+        "res://resources/effects/red.tres": false,
+        "res://resources/effects/pungent.tres": false,
+        "res://resources/effects/fire.tres": false,
+        "res://resources/effects/fortifying.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Will-o'-Wisp Essence",
+      "description": "The captured light of a mischievous swamp spirit, it buzzes with chaotic energy.",
+      "effects": {
+        "res://resources/effects/blue.tres": false,
+        "res://resources/effects/yellow.tres": false,
+        "res://resources/effects/air.tres": false,
+        "res://resources/effects/metabolistic.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Jade Vine Root",
+      "description": "A root so dense with minerals it resembles polished jade.",
+      "effects": {
+        "res://resources/effects/earthy.tres": false,
+        "res://resources/effects/green.tres": false,
+        "res://resources/effects/thick.tres": false,
+        "res://resources/effects/calcium.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Cryo-Fungus",
+      "description": "A mushroom that grows in absolute zero, its tissues are locked in a state of perfect, deadly preservation.",
+      "effects": {
+        "res://resources/effects/water.tres": false,
+        "res://resources/effects/toxic.tres": false,
+        "res://resources/effects/preservative.tres": false,
+        "res://resources/effects/white.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Singing Crystal",
+      "description": "A crystal that emits a constant, low hum, helping to focus the mind of anyone nearby.",
+      "effects": {
+        "res://resources/effects/aromatic.tres": false,
+        "res://resources/effects/focusing.tres": false,
+        "res://resources/effects/minerals.tres": false,
+        "res://resources/effects/quintessence.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Gilded Mandrake",
+      "description": "A rare mandrake root whose screams have been silenced by the veins of pure gold running through it.",
+      "effects": {
+        "res://resources/effects/toxic.tres": false,
+        "res://resources/effects/yellow.tres": false,
+        "res://resources/effects/red.tres": false,
+        "res://resources/effects/energizing.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Fae-touched Honey",
+      "description": "Honey made by bees that have pollinated flowers from the otherworldly Fae realms.",
+      "effects": {
+        "res://resources/effects/comfort.tres": false,
+        "res://resources/effects/sweet.tres": false,
+        "res://resources/effects/green.tres": false,
+        "res://resources/effects/antioxidant.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Shadow Root",
+      "description": "A twisted, black root that grows only in places of absolute darkness, it leeches the life from the soil around it.",
+      "effects": {
+        "res://resources/effects/discomfort.tres": false,
+        "res://resources/effects/black.tres": false,
+        "res://resources/effects/acidic.tres": false,
+        "res://resources/effects/anti-life.tres": false
+      }
+    }
+  },
+  {
+    "script_path": "res://resources/Ingredient.gd",
+    "properties": {
+      "name": "Celestial Dew",
+      "description": "Droplets of condensation collected from a fallen star, humming with cosmic power.",
+      "effects": {
+        "res://resources/effects/water.tres": false,
+        "res://resources/effects/blue.tres": false,
+        "res://resources/effects/metabolistic.tres": false,
+        "res://resources/effects/quintessence.tres": false
+      }
+    }
+  }
+]

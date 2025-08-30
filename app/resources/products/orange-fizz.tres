@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Product" load_steps=6 format=3 uid="uid://cy147g20yr52o"]
+
+[ext_resource type="Resource" uid="uid://yjnv2md2an4c" path="res://resources/bases/soda.tres" id="1_1ukop"]
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_jqix4"]
+[ext_resource type="Resource" uid="uid://cpee1jgrc3kus" path="res://resources/effects/zest.tres" id="3_fbefr"]
+[ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_i2b5s"]
+[ext_resource type="Resource" uid="uid://c0dpyigt4uf83" path="res://resources/effects/yellow.tres" id="4_wtneg"]
+
+[resource]
+script = ExtResource("3_i2b5s")
+name = "Orange Fizz"
+description = "A burst of sunny orange flavor in a fizzy delight."
+base = ExtResource("1_1ukop")
+effects = Array[ExtResource("2_jqix4")]([ExtResource("3_fbefr"), ExtResource("4_wtneg")])
+price = 0.0

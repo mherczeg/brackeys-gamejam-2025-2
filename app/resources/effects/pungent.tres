@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://bgc7sg3jtkm7"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_mrdd5"]
+
+[resource]
+script = ExtResource("1_mrdd5")
+name = "Pungent"
+description = "A sharp, fiery essence that awakens the senses."

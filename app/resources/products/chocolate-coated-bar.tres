@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Product" load_steps=6 format=3 uid="uid://cuur8lgmimy8f"]
+
+[ext_resource type="Resource" uid="uid://1g3i3a8rkotx" path="res://resources/bases/ice-cream.tres" id="1_lw37s"]
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_qxl7k"]
+[ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_iyy0u"]
+[ext_resource type="Resource" uid="uid://dkxgfalr0y0ei" path="res://resources/effects/sweet.tres" id="3_vba62"]
+[ext_resource type="Resource" uid="uid://c1fbe03rxkc07" path="res://resources/effects/earthy.tres" id="4_2tgvt"]
+
+[resource]
+script = ExtResource("3_iyy0u")
+name = "Chocolate Coated Bar"
+description = "A simple bar of vanilla ice cream with a crisp chocolate shell."
+base = ExtResource("1_lw37s")
+effects = Array[ExtResource("2_qxl7k")]([ExtResource("3_vba62"), ExtResource("4_2tgvt")])
+price = 0.0

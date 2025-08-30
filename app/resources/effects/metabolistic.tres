@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://ci0ah6iv6q6k2"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_r0j3c"]
+
+[resource]
+script = ExtResource("1_r0j3c")
+name = "Metabolistic"
+description = "Alters the flow of one's inner vital energy."

@@ -1,0 +1,296 @@
+[
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Pungent",
+      "description": "A sharp, fiery essence that awakens the senses."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Zest",
+      "description": "A lively, citrusy kick that invigorates the spirit."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Burst",
+      "description": "A sudden, explosive release of concentrated flavor and energy."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Antioxidant",
+      "description": "Wards off natural decay and purifies the body."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Metabolistic",
+      "description": "Alters the flow of one's inner vital energy."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Fortifying",
+      "description": "Bolsters physical resilience and hardens the spirit."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Digestive",
+      "description": "Helps the body absorb the true essence of sustenance."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Comfort",
+      "description": "Eases worldly burdens and brings peace to the mind."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Discomfort",
+      "description": "A nagging, unsettling quality that agitates the body and frays the nerves."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Anti-life",
+      "description": "A necrotic touch, anathema to living tissue."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Focusing",
+      "description": "Sharpens the mind's eye and clarifies thought for a brief time."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Aromatic",
+      "description": "An enchanting scent that can alter mood or perception."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Acidic",
+      "description": "A caustic quality that can dissolve or transform base substances."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Preservative",
+      "description": "Halts the relentless march of time's decay."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Soothing",
+      "description": "A gentle balm that mends minor ailments."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Protein",
+      "description": "Provides the raw essence of vitality and strength."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Energizing",
+      "description": "Infuses the drinker with a burst of raw vigor."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Expanding",
+      "description": "An airy essence that causes substances to expand and rise."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Fermentation",
+      "description": "A chaotic process that unlocks hidden, volatile properties."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Umami",
+      "description": "A deep, savory flavor that grounds the senses to the earth."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Creamy",
+      "description": "A silken, luxurious quality that coats the palate."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Calcium",
+      "description": "Infuses bone and stone with unnatural resilience."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Thick",
+      "description": "A binding agent that gives substance and weight to liquids."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Gluten",
+      "description": "A binding web that gives form and structure to creations."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Slick",
+      "description": "A slippery, elusive quality that defies grasp and eases passage."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Tender",
+      "description": "A softening agent that can relax even the toughest of fibers."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Laxative",
+      "description": "A purging quality that forcefully cleanses the body."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Earthy",
+      "description": "The essence of the deep earth, ancient and grounding."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Sweet",
+      "description": "A delightful, almost magical sweetness that enchants the senses."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Minerals",
+      "description": "Imparts the strength of rare earth and stone."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Quintessence",
+      "description": "Draws out the hidden, true essence of any flavor it touches."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Toxic",
+      "description": "A venomous quality that sickens and weakens the living."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Black",
+      "description": "The color of the starless void, absorbing all light and hope."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "White",
+      "description": "The color of pure light, brilliant and untainted."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Green",
+      "description": "The color of vibrant life, from new growth to potent venom."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Yellow",
+      "description": "The color of radiant sun or creeping sickness, vibrant and unsettling."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Red",
+      "description": "The color of fresh blood and raw passion, a symbol of life and violence."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Blue",
+      "description": "The color of the deep ocean or a tranquil sky, serene and mysterious."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Earth",
+      "description": "The essence of the deep earth, ancient and grounding."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Fire",
+      "description": "The untamed essence of creation and destruction, burning with volatile heat."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Air",
+      "description": "The unseen essence of freedom and the sky, weightless and ever-moving."
+    }
+  },
+  {
+    "script_path": "res://resources/Effect.gd",
+    "properties": {
+      "name": "Water",
+      "description": "The fluid essence of life and change, adaptable yet relentless."
+    }
+  }
+]

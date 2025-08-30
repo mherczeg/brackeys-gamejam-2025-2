@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://dpsralu4bq8gl"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_00dj8"]
+
+[resource]
+script = ExtResource("1_00dj8")
+name = "Earthy"
+description = "The essence of the deep earth, ancient and grounding."

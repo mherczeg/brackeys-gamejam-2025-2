@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://c1wawro0wfjn6"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_13fek"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_phavp"]
+
+[resource]
+script = ExtResource("2_phavp")
+name = "Ectoplasmic Residue"
+description = "The slick, cold slime left behind by a passing spirit."
+effects = Dictionary[ExtResource("1_13fek"), bool]({})
+price = 0.0

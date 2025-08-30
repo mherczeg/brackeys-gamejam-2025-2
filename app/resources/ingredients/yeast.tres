@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://cpm671psdh620"]
+
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_yjpa4"]
+[ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_0yxh7"]
+
+[resource]
+script = ExtResource("2_0yxh7")
+name = "Yeast"
+description = "A living colony of microscopic beings that transform dough and wort with their chaotic life cycle."
+effects = Dictionary[ExtResource("1_yjpa4"), bool]({})
+price = 0.0

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Product" load_steps=6 format=3 uid="uid://uufti85as1ux"]
+
+[ext_resource type="Resource" uid="uid://pnwh8bcvqsnh" path="res://resources/bases/crisps.tres" id="1_hd1g3"]
+[ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_ljhyh"]
+[ext_resource type="Resource" uid="uid://ckmombfq7w8dt" path="res://resources/effects/gluten.tres" id="3_gisjj"]
+[ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_un6dy"]
+[ext_resource type="Resource" uid="uid://c1fbe03rxkc07" path="res://resources/effects/earthy.tres" id="4_xk4uo"]
+
+[resource]
+script = ExtResource("3_un6dy")
+name = "Pretzels"
+description = "Twisted and baked, a classic salty and earthy snack."
+base = ExtResource("1_hd1g3")
+effects = Array[ExtResource("2_ljhyh")]([ExtResource("3_gisjj"), ExtResource("4_xk4uo")])
+price = 0.0
