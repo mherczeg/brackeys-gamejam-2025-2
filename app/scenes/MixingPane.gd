@@ -126,7 +126,7 @@ func recalculate_mixture(_b: Base, _i: Array[Ingredient]) -> void:
 	product_details.update_mixture(mixture_known_effects_set.keys(), ingredients_with_unknown_set.size())
 
 func reset_mixer() -> void:
-	set_selected_base(null)
+	EventBus.mixer.base_selected.emit(null)
 	unset_slot_ingredient(IngredientButton.SLOT.FIRST)
 	unset_slot_ingredient(IngredientButton.SLOT.SECOND)
 	unset_slot_ingredient(IngredientButton.SLOT.THIRD)
