@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bexpcaa6xwqn8" path="res://components/BaseSelectorButton.gd" id="1_x4dgr"]
 [ext_resource type="PackedScene" uid="uid://cfturkxpcx5pd" path="res://components/ShadeButtonTexture.tscn" id="2_uicyv"]
-[ext_resource type="Shader" uid="uid://eqturlsphwhk" path="res://components/outline-test-3.gdshader" id="3_toarm"]
+[ext_resource type="Shader" uid="uid://eqturlsphwhk" path="res://shaders/outline-test-3.gdshader" id="3_toarm"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v6utm"]
 shader = ExtResource("3_toarm")

@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dhdwspygl8is8" path="res://scenes/ProductDetails.tscn" id="6_cgagm"]
 [ext_resource type="PackedScene" uid="uid://loicby15dxae" path="res://scenes/ToolsPane.tscn" id="7_83n0o"]
 [ext_resource type="PackedScene" uid="uid://cixif270j8h8b" path="res://components/MoneyCounter.tscn" id="9_je0hr"]
-[ext_resource type="Theme" uid="uid://wng5u40163hw" path="res://scenes/IngredientSelector.tres" id="12_8e04o"]
+[ext_resource type="Theme" uid="uid://wng5u40163hw" path="res://themes/IngredientSelector.tres" id="12_8e04o"]
 [ext_resource type="AudioStream" uid="uid://coaa3xnsbkwep" path="res://assets/audio/coin-clean.ogg" id="14_61iek"]
 [ext_resource type="AudioStream" uid="uid://dvoee2nyuifut" path="res://assets/audio/product-drop-short.ogg" id="15_61iek"]
 

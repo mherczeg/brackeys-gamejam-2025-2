@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://segr3l7pwr4u" path="res://themes/naked-info-label.tres" id="2_fapuj"]
 
 [node name="Panel" type="Panel"]
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -50,9 +50,7 @@ theme = ExtResource("2_fapuj")
 text = "Ingredients"
 horizontal_alignment = 1
 
-[node name="Ingredients" type="GridContainer" parent="IngredientSelector/ListContainer"]
+[node name="Ingredients" type="VBoxContainer" parent="IngredientSelector/ListContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/h_separation = 12
-theme_override_constants/v_separation = 12
-columns = 5
+theme_override_constants/separation = 12

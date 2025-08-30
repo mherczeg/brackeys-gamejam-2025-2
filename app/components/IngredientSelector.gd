@@ -5,7 +5,7 @@ const INGREDIENT_SELECTOR_BUTTON_SCENE: PackedScene = preload("res://components/
 const BASE_SELECTOR_BUTTON_SCENE: PackedScene = preload("res://components/BaseSelectorButton.tscn")
 
 @onready var bases_container: GridContainer = %ListContainer/Bases
-@onready var ingredients_container: GridContainer = %ListContainer/Ingredients
+@onready var ingredients_container: VBoxContainer = %ListContainer/Ingredients
 
 
 func _ready() -> void:
@@ -15,7 +15,7 @@ func _ready() -> void:
 
 func _render_ingredient_selector_elements() -> void:
 	for ingredient: Ingredient in ResourceManager.ingredients:
-		var ingredient_selector_element_instance: IngredientSelectorButton = \
+		var ingredient_selector_element_instance = \
 			INGREDIENT_SELECTOR_BUTTON_SCENE.instantiate()
 		ingredient_selector_element_instance.ingredient = ingredient
 		ingredients_container.add_child(ingredient_selector_element_instance)

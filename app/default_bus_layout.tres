@@ -4,6 +4,7 @@
 resource_name = "PitchShift"
 
 [resource]
+bus/0/volume_db = 6.02
 bus/1/name = &"Background"
 bus/1/solo = false
 bus/1/mute = false

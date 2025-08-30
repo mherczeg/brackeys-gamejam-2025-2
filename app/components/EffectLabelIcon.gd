@@ -7,3 +7,4 @@ extends TextureRect
 func _ready() -> void:
     if effect:
         texture = effect.icon
+        tooltip_text = effect.name

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://2p7me5q6ybyg"]
 
-[ext_resource type="Shader" uid="uid://eqturlsphwhk" path="res://components/outline-test-3.gdshader" id="1_jlivj"]
+[ext_resource type="Shader" uid="uid://eqturlsphwhk" path="res://shaders/outline-test-3.gdshader" id="1_jlivj"]
 [ext_resource type="Script" uid="uid://degykrocrhqvr" path="res://components/BasePurchaseButton.gd" id="1_w4d48"]
 [ext_resource type="Theme" uid="uid://dcrvqrmx00anv" path="res://themes/shop-price.tres" id="2_sgd0g"]
 [ext_resource type="PackedScene" uid="uid://cfturkxpcx5pd" path="res://components/ShadeButtonTexture.tscn" id="3_s3qfb"]

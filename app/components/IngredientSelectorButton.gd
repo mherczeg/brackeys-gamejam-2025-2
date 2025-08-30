@@ -3,29 +3,29 @@ extends TextureButton
 
 signal disabled_changed
 
-const EFFECT_LABEL_GROUP: String = "ingredient-selector-effect-label"
+const EFFECT_LABEL_GROUP: String = "ingredient-selector-effects-label"
 const EFFECT_LABEL_ICON_SCENE: PackedScene = preload("res://components/EffectLabelIcon.tscn")
 const UNKNOWN_EFFECT_LABEL_SCENE: PackedScene = preload("res://components/UnknownEffectLabel.tscn")
 
 @export var ingredient: Ingredient
 var slot: IngredientButton.SLOT
 var _selected_for_mixture: bool = false
-# @onready var button: TextureButton = $PanelContainer/Button
+
 @onready var inventory_label: Label = $InventoryLabel
-# @onready var effect_container: GridContainer = $EffectsContainer
-# @onready var effect_containers: Array[EffectLabelIcon] = [
-# 	$PanelContainer/EffectLabelIcon,
-# 	$PanelContainer/EffectLabelIcon2,
-# 	$PanelContainer/EffectLabelIcon3,
-# 	$PanelContainer/EffectLabelIcon4
-# ]
-# @onready var name_label: Label = %Name
-# @onready var effects: HBoxContainer = %Effects
-# @onready var unknown_effect_label: UnknownEffectLabel
-# @onready var description_label: Label = %Description
+@onready var ingredient_name: Label = $MarginContainer/VBoxContainer/Name
+@onready var effect_list: HBoxContainer = $MarginContainer/VBoxContainer/EffectList
 
 func _ready() -> void:
 	texture_normal = ingredient.icon
+	ingredient_name.text = ingredient.name
+
+	for effect: Effect in ingredient.effects:
+		var effect_label = EFFECT_LABEL_ICON_SCENE.instantiate()
+		effect_label.effect = effect
+		effect_label.custom_minimum_size = Vector2(16, 16)
+		# effect_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		effect_list.add_child(effect_label)
+
 	_update_ingredient_availability()
 
 	pressed.connect(_on_pressed)

@@ -1,11 +1,11 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://wng5u40163hw"]
 
-[ext_resource type="StyleBox" uid="uid://b16502eveejlt" path="res://themes/blue-stylebox.tres" id="1_6eg7r"]
+[ext_resource type="StyleBox" uid="uid://b16502eveejlt" path="res://themes/blue-stylebox.tres" id="1_iucin"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6eg7r"]
 
 [resource]
 HBoxContainer/constants/separation = 4
-Panel/styles/panel = ExtResource("1_6eg7r")
+Panel/styles/panel = ExtResource("1_iucin")
 PanelContainer/styles/panel = SubResource("StyleBoxEmpty_6eg7r")
 VBoxContainer/constants/separation = 4
