@@ -25,6 +25,7 @@ var _current_encounter: Encounter
 var _current_npc: NPC
 var _render_complete: bool = false
 var _is_mixing: bool = false
+var _is_looping_encounters: bool = false
 
 @onready var customer_pane: CustomerPane = %CustomerPane
 @onready var mixing_pane: MixingPane = %MixingPane
@@ -37,6 +38,18 @@ func _ready() -> void:
 	EventBus.debug.start_shop.connect(shop_pane.open)
 
 func start_random_encounter() -> void:
+	_is_looping_encounters = true
+	start_encounter(ResourceManager.encounters.pick_random())
+
+func play_next_encounter() -> void:
+	var all_encounters: Array[Encounter] = ResourceManager.encounters.duplicate()
+	all_encounters.shuffle()
+	for encounter: Encounter in all_encounters:
+		if !Player.played_encounters.has(encounter):
+			start_encounter(encounter)
+			return
+
+	Player.played_encounters = {}
 	start_encounter(ResourceManager.encounters.pick_random())
 
 func start_encounter(encounter: Encounter) -> void:
@@ -79,7 +92,8 @@ func gameplay_loop() -> void:
 			_current_encounter = null
 			_current_npc = null
 			mixing_pane.complete_encounter()
-
+			if _is_looping_encounters:
+				play_next_encounter()
 func next_step() -> void:
 	if is_step_complete():
 		_current_step_index += 1

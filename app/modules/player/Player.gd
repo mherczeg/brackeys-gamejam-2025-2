@@ -10,6 +10,7 @@ var health: int = 100
 
 var ingredients: Dictionary[Ingredient, int] = {}
 var bases: Array[Base] = []
+var played_encounters: Dictionary[Encounter, bool] = {}
 
 func _ready() -> void:
 	bases = [
@@ -50,3 +51,7 @@ func _on_base_purchased(base: Base) -> void:
 		bases.append(base)
 		money -= base.price
 	EventBus.player.bases_available_changed.emit()
+
+
+func completed_encounter(encounter: Encounter) -> void:
+	played_encounters[encounter] = true

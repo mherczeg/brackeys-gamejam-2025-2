@@ -34,6 +34,7 @@ func prepare_size_for_text(new_text: String) -> void:
 	show()
 
 func display_text(new_text: String) -> Signal:
+	letter_index = 0
 	text_to_display = new_text
 	text_to_display_length = new_text.length()
 
