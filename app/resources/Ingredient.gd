@@ -8,4 +8,10 @@ extends Resource
 @export var price: float
 
 func is_effect_known(effect: Effect) -> bool:
-    return effects.has(effect) && effects[effect]
+	return effects.has(effect) && effects[effect]
+
+func has_unknown_effect() -> bool:
+	return effects.values().any(_is_false)
+
+func _is_false(value: bool) -> bool:
+	return !value

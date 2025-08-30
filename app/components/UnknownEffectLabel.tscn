@@ -1,6 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://co71iujwnx85g"]
+[gd_scene load_steps=11 format=3 uid="uid://co71iujwnx85g"]
 
 [ext_resource type="Script" uid="uid://c032qaliru1sb" path="res://components/UnknownEffectLabel.gd" id="1_4jwup"]
+[ext_resource type="FontFile" uid="uid://ck87b6iklt5dg" path="res://themes/naked-outlined_font.tres" id="1_7p2lo"]
+[ext_resource type="Theme" uid="uid://segr3l7pwr4u" path="res://themes/naked-info-label.tres" id="2_m62y1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gfx5g"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1robi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gfx5g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uj7kk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1robi"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_o10ac"]
+TooltipLabel/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+TooltipLabel/colors/font_outline_color = Color(0, 0, 0, 1)
+TooltipLabel/colors/font_shadow_color = Color(0, 0, 0, 1)
+TooltipLabel/constants/line_spacing = 3
+TooltipLabel/constants/outline_size = 10
+TooltipLabel/constants/shadow_offset_x = 1
+TooltipLabel/constants/shadow_offset_y = 1
+TooltipLabel/constants/shadow_outline_size = 10
+TooltipLabel/fonts/font = ExtResource("1_7p2lo")
+TooltipLabel/styles/normal = SubResource("StyleBoxFlat_gfx5g")
+TooltipPanel/styles/embedded_border = SubResource("StyleBoxEmpty_1robi")
+TooltipPanel/styles/embedded_unfocused_border = SubResource("StyleBoxEmpty_gfx5g")
+TooltipPanel/styles/normal = SubResource("StyleBoxEmpty_uj7kk")
+TooltipPanel/styles/panel = SubResource("StyleBoxFlat_1robi")
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_f3byg"]
 size = Vector2(32, 32)
@@ -8,9 +47,13 @@ size = Vector2(32, 32)
 [node name="HBoxContainer" type="HBoxContainer"]
 offset_right = 40.0
 offset_bottom = 40.0
+tooltip_text = "Use this ingredient, 
+to discover more effects"
+theme = SubResource("Theme_o10ac")
 script = ExtResource("1_4jwup")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -20,4 +63,6 @@ expand_mode = 1
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
-text = "May have unintended effects"
+mouse_filter = 1
+theme = ExtResource("2_m62y1")
+text = "??? "

@@ -15,7 +15,7 @@ func _ready() -> void:
 
 func _render_ingredient_selector_elements() -> void:
 	for ingredient: Ingredient in ResourceManager.ingredients:
-		var ingredient_selector_element_instance = \
+		var ingredient_selector_element_instance: IngredientSelectorButton = \
 			INGREDIENT_SELECTOR_BUTTON_SCENE.instantiate()
 		ingredient_selector_element_instance.ingredient = ingredient
 		ingredients_container.add_child(ingredient_selector_element_instance)
