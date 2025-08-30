@@ -1,6 +1,10 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://ooascwd5ji3s"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://ooascwd5ji3s"]
 
 [ext_resource type="StyleBox" uid="uid://b16502eveejlt" path="res://themes/blue-stylebox.tres" id="1_x2fqw"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x2fqw"]
+
 [resource]
+Label/styles/normal = SubResource("StyleBoxEmpty_x2fqw")
 Panel/styles/panel = ExtResource("1_x2fqw")
+PanelContainer/styles/panel = ExtResource("1_x2fqw")

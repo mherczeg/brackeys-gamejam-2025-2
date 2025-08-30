@@ -103,9 +103,11 @@ func display_result(display_product: MixedProduct) -> void:
 
 func recalculate_order() -> void:
 	if !_current_product:
-		order_details.set_simple_text("Idle text")
+		order_details.npc = null
+		order_details.product = null
 	else:
-		order_details.set_order_with_texture(_current_npc, _current_product)
+		order_details.npc = _current_npc
+		order_details.product = _current_product
 
 func recalculate_mixture(_b: Base, _i: Array[Ingredient]) -> void:
 	var effect_appeared_once_set: Dictionary[Effect, bool] = {}

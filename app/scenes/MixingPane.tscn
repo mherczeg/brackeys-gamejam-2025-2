@@ -1,9 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://cl1c5ipfnf66f"]
+[gd_scene load_steps=15 format=3 uid="uid://cl1c5ipfnf66f"]
 
 [ext_resource type="Script" uid="uid://r26vig0m7xh8" path="res://scenes/MixingPane.gd" id="1_svtgx"]
 [ext_resource type="Texture2D" uid="uid://dq28el46s1moi" path="res://assets/BackGround.png" id="2_vhkge"]
 [ext_resource type="PackedScene" uid="uid://fokn520phn5m" path="res://components/OrderDetails.tscn" id="3_cgagm"]
-[ext_resource type="Theme" uid="uid://ce7t0yssoacju" path="res://themes/order-details.tres" id="3_vhkge"]
 [ext_resource type="PackedScene" uid="uid://yrym8oofb8p4" path="res://components/MixerButtons.tscn" id="4_svtgx"]
 [ext_resource type="PackedScene" uid="uid://bvhr2kpc3py1q" path="res://components/IngredientSelector.tscn" id="5_nyt5e"]
 [ext_resource type="PackedScene" uid="uid://dhdwspygl8is8" path="res://scenes/ProductDetails.tscn" id="6_cgagm"]
@@ -55,9 +54,6 @@ theme = SubResource("Theme_vhkge")
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 1
-theme = ExtResource("3_vhkge")
-fit_content = true
-scroll_active = false
 
 [node name="HSeparator" type="HSeparator" parent="IngredientSelection"]
 custom_minimum_size = Vector2(0, 30)

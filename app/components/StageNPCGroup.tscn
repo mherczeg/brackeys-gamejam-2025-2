@@ -8,7 +8,7 @@
 [node name="StageNPCGroup" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-mouse_filter = 2
+mouse_filter = 1
 theme = ExtResource("3_111vd")
 script = ExtResource("1_ud8gk")
 
@@ -58,6 +58,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 1
 text = "Encounter 10 Stage 1 Line 2 this is the long line text, it will be about 100-120 characters long, to test long lines"
 autowrap_mode = 3
 estimated_line_char_length = 62
@@ -78,6 +79,7 @@ size_flags_horizontal = 0
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 1
 text = "Encounter 10 Stage 1 Line 2 this is the long line text, it will be about 100-120 characters long, to test long lines"
 autowrap_mode = 3
 
@@ -89,6 +91,7 @@ theme_override_constants/separation = 72
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 1
 text = "Encounter 10 Stage 1 Line 2 this is the long line text, it will be about 100-120 characters long, to test long lines"
 autowrap_mode = 3
 estimated_line_char_length = 62
