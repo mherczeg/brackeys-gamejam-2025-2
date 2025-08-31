@@ -4,24 +4,16 @@ var _beep_sounds: Array[AudioStream] = []
 var _pitched_voice_bus_index: int
 
 func _ready() -> void:
-	_load_beep_sounds("res://assets/audio/beeps/")
+	_load_beep_sounds()
 	_pitched_voice_bus_index = AudioServer.get_bus_index("Speech")
 
-# This function now lives in the global script and runs only once.
-func _load_beep_sounds(path: String) -> void:
-	var dir: DirAccess = DirAccess.open(path)
-	if not dir:
-		printerr("Textbox: Could not open directory at path: ", path)
-		return
-
-	dir.list_dir_begin()
-	var file_name: String = dir.get_next()
-	while file_name != "":
-		if not dir.current_is_dir() and (file_name.ends_with(".mp3") or file_name.ends_with(".ogg")):
-			var sound: AudioStream = load(path.path_join(file_name))
-			if sound:
-				_beep_sounds.append(sound)
-		file_name = dir.get_next()
+func _load_beep_sounds() -> void:
+	for path in VoiceList.beeps_paths:
+		var sound: AudioStream = load(path)
+		if sound:
+			_beep_sounds.append(sound)
+		else:
+			printerr("VoiceManager: Failed to load sound at path: ", path)
 
 func get_random_voice_pair() -> Array[AudioStream]:
 	_beep_sounds.shuffle()
