@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dr6kqyc8ovcgq"
+path="res://.godot/imported/Checkie Brown - Emphatic Flamingos (CB 101).mp3-808fd91e8c205119cec30ba52f6002d6.mp3str"
+
+[deps]
+
+source_file="res://assets/triftshop/audio/Checkie Brown - Emphatic Flamingos (CB 101).mp3"
+dest_files=["res://.godot/imported/Checkie Brown - Emphatic Flamingos (CB 101).mp3-808fd91e8c205119cec30ba52f6002d6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
