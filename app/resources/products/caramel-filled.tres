@@ -18,4 +18,4 @@ description = "A river of golden caramel encased in a shell of sweet chocolate."
 icon = SubResource("AtlasTexture_y4q4j")
 base = ExtResource("1_e08ld")
 effects = Array[ExtResource("2_p5l18")]([ExtResource("3_d1m63"), ExtResource("4_olh2n")])
-price = 0.0
+price = 1.44043

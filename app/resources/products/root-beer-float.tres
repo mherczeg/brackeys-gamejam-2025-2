@@ -18,4 +18,4 @@ description = "Creamy, dreamy, and nostalgic, a classic soda fountain treat."
 icon = SubResource("AtlasTexture_frkfb")
 base = ExtResource("1_m5eev")
 effects = Array[ExtResource("2_2v5i7")]([ExtResource("3_14vlx"), ExtResource("4_5ywus")])
-price = 0.0
+price = 1.13897

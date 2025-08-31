@@ -19,4 +19,4 @@ description = "A bold, unadulterated brew for the purist."
 icon = SubResource("AtlasTexture_nbmqe")
 base = ExtResource("1_f6al3")
 effects = Array[ExtResource("2_12tlw")]([ExtResource("3_08oa2"), ExtResource("4_c2utq"), ExtResource("5_nbmqe")])
-price = 0.0
+price = 1.29631

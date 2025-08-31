@@ -17,4 +17,4 @@ description = "A boost for your body's defenses in a small, fortifying tablet."
 icon = SubResource("AtlasTexture_qrpxq")
 base = ExtResource("1_v2anj")
 effects = Array[ExtResource("2_yx1g0")]([ExtResource("3_yx1g0")])
-price = 0.0
+price = 1.42202

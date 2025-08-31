@@ -8,4 +8,4 @@ script = ExtResource("1_mti4g")
 name = "Chocolate Bar"
 description = "A sweet, comforting confection made from cacao, often with added nuts or caramel."
 icon = ExtResource("1_oe63i")
-price = 0.0
+price = 10.0

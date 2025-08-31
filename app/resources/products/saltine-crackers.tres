@@ -18,4 +18,4 @@ description = "Light, crisp, and perfectly salted, a simple and versatile cracke
 icon = SubResource("AtlasTexture_37tbr")
 base = ExtResource("1_c87ab")
 effects = Array[ExtResource("2_hogi0")]([ExtResource("3_3yneu"), ExtResource("4_rjcom")])
-price = 0.0
+price = 1.73205

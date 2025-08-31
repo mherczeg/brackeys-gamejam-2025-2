@@ -19,4 +19,4 @@ description = "Delicate dumplings in a clear, soothing broth."
 icon = SubResource("AtlasTexture_dkij6")
 base = ExtResource("1_6am0j")
 effects = Array[ExtResource("2_kfbk1")]([ExtResource("3_46kmn"), ExtResource("4_y67x3"), ExtResource("5_xed48")])
-price = 0.0
+price = 1.32771

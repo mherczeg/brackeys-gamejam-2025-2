@@ -8,4 +8,4 @@ script = ExtResource("1_iv4uh")
 name = "Sandwich"
 description = "Two slices of bread holding a variety of fillings, a staple of any adventurer's diet."
 icon = ExtResource("1_wmf0j")
-price = 0.0
+price = 10.0

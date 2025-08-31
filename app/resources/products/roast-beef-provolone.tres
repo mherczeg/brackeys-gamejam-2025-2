@@ -18,4 +18,4 @@ description = "Rich roast beef paired with smooth provolone for a robust flavor.
 icon = SubResource("AtlasTexture_3anro")
 base = ExtResource("1_qklkn")
 effects = Array[ExtResource("2_7b5jr")]([ExtResource("3_kxutb"), ExtResource("4_jr6gs")])
-price = 0.0
+price = 1.68482

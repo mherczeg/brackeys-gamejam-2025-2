@@ -18,4 +18,4 @@ description = "A crisp and zesty soda that dances on the tongue."
 icon = SubResource("AtlasTexture_77gbq")
 base = ExtResource("1_xnuk8")
 effects = Array[ExtResource("2_hvcpp")]([ExtResource("3_dgmhe"), ExtResource("4_5yrlj")])
-price = 0.0
+price = 1.35416

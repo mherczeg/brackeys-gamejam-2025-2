@@ -18,4 +18,4 @@ description = "Smooth, creamy milk chocolate for a moment of pure, sweet bliss."
 icon = SubResource("AtlasTexture_halk4")
 base = ExtResource("1_mekfu")
 effects = Array[ExtResource("2_e0gda")]([ExtResource("3_w5is0"), ExtResource("4_awcdp")])
-price = 0.0
+price = 1.77328

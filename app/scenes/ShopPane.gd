@@ -5,7 +5,7 @@ const BASE_PURCHASE_BUTTON_SCENE: PackedScene = preload("res://components/BasePu
 const INGREDIENT_PURCHASE_BUTTON_SCENE: PackedScene = preload("res://components/IngredientPurchaseButton.tscn")
 
 @onready var wallet: Label = $Panel/VBoxContainer/Wallet
-@onready var items: GridContainer = $Panel/VBoxContainer/Items
+@onready var items: GridContainer = $Panel/VBoxContainer/ScrollContainer/Items
 @onready var close_button: Button = $Panel/CloseButton
 
 func _ready() -> void:

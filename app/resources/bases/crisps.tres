@@ -8,4 +8,4 @@ script = ExtResource("1_qgagy")
 name = "Crisps"
 description = "Thinly sliced and fried potatoes, a salty and crunchy snack."
 icon = ExtResource("1_65jfx")
-price = 0.0
+price = 10.0

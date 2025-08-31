@@ -18,4 +18,4 @@ description = "A simple bar of vanilla ice cream with a crisp chocolate shell."
 icon = SubResource("AtlasTexture_vcssf")
 base = ExtResource("1_lw37s")
 effects = Array[ExtResource("2_qxl7k")]([ExtResource("3_vba62"), ExtResource("4_2tgvt")])
-price = 0.0
+price = 1.15245

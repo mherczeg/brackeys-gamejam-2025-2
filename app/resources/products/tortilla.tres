@@ -15,4 +15,4 @@ description = "Crispy corn triangles, perfect for dipping or on their own."
 icon = ExtResource("6_qsrcv")
 base = ExtResource("1_i88yd")
 effects = Array[ExtResource("2_m7tof")]([ExtResource("3_il0lu"), ExtResource("4_d7oy1"), ExtResource("5_xbpq3")])
-price = 0.0
+price = 1.89997

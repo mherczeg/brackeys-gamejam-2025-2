@@ -49,11 +49,11 @@ func set_selected_base(base: Base) -> void:
 	EventBus.mixer.mixture_changed.emit(_selected_base, _selected_ingredients.values())
 
 func set_next_slot_ingredient(ingredient: Ingredient) -> void:
-	var next_slot: IngredientButton.SLOT = get_first_empty_slot()
+	var next_slot: Variant = get_first_empty_slot()
 	if (next_slot == null):
 		return
 
-	set_slot_ingredient(next_slot, ingredient)
+	set_slot_ingredient(next_slot as IngredientButton.SLOT, ingredient)
 
 func set_slot_ingredient(slot: IngredientButton.SLOT, ingredient: Ingredient) -> void:
 	product_details.update_current_display_product(null)

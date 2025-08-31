@@ -8,4 +8,4 @@ script = ExtResource("1_ek5ug")
 name = "Soda"
 description = "A bubbly, sweet carbonated beverage, a perfect vehicle for potent flavors."
 icon = ExtResource("1_qgosp")
-price = 0.0
+price = 10.0

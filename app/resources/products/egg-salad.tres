@@ -19,4 +19,4 @@ description = "A simple, creamy classic made with perfectly boiled eggs."
 icon = SubResource("AtlasTexture_gbrx1")
 base = ExtResource("1_4aptn")
 effects = Array[ExtResource("2_8gdrs")]([ExtResource("3_dfe5y"), ExtResource("4_4ooxd"), ExtResource("5_l153r")])
-price = 0.0
+price = 1.21481

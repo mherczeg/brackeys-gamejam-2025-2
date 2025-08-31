@@ -18,4 +18,4 @@ description = "Creamy, swirled ice cream, light as a cloud."
 icon = SubResource("AtlasTexture_yyqv3")
 base = ExtResource("1_e13jp")
 effects = Array[ExtResource("2_e1lne")]([ExtResource("3_qxbr8"), ExtResource("4_5g5aw")])
-price = 0.0
+price = 1.77092

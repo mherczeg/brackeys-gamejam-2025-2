@@ -18,4 +18,4 @@ description = "The perfect marriage of sweet chocolate and salty peanut butter."
 icon = SubResource("AtlasTexture_2bmai")
 base = ExtResource("1_fcjbm")
 effects = Array[ExtResource("2_ihug3")]([ExtResource("3_qbuxl"), ExtResource("4_w2rnf")])
-price = 0.0
+price = 1.01443

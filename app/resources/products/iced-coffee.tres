@@ -19,4 +19,4 @@ description = "Chilled and invigorating, the perfect cool-down coffee."
 icon = SubResource("AtlasTexture_6as85")
 base = ExtResource("1_i4e15")
 effects = Array[ExtResource("2_pgodw")]([ExtResource("3_inhdl"), ExtResource("4_fu470"), ExtResource("5_3csco")])
-price = 0.0
+price = 1.2772

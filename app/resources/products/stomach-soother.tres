@@ -17,4 +17,4 @@ description = "A pill designed to calm and settle an upset stomach."
 icon = SubResource("AtlasTexture_i04dl")
 base = ExtResource("1_btidr")
 effects = Array[ExtResource("2_1cqxj")]([ExtResource("3_1cqxj")])
-price = 0.0
+price = 1.29897

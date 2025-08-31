@@ -18,4 +18,4 @@ description = "An explosion of bold grape flavor that's powerfully sweet."
 icon = SubResource("AtlasTexture_ip4rk")
 base = ExtResource("1_doixn")
 effects = Array[ExtResource("2_p27qt")]([ExtResource("3_6nklo"), ExtResource("4_cxrnk")])
-price = 0.0
+price = 1.46762

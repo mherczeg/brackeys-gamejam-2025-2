@@ -18,4 +18,4 @@ description = "A sweet and creamy confection of pure white chocolate."
 icon = SubResource("AtlasTexture_uvc5f")
 base = ExtResource("1_65tbr")
 effects = Array[ExtResource("2_it5o6")]([ExtResource("3_pdyow"), ExtResource("4_gbcqu")])
-price = 0.0
+price = 1.87153

@@ -18,4 +18,4 @@ description = "A burst of sunny orange flavor in a fizzy delight."
 icon = SubResource("AtlasTexture_3sdqv")
 base = ExtResource("1_1ukop")
 effects = Array[ExtResource("2_jqix4")]([ExtResource("3_fbefr"), ExtResource("4_wtneg")])
-price = 0.0
+price = 1.20192

@@ -18,4 +18,4 @@ description = "A delicate and refreshing tea, known for its clarifying propertie
 icon = SubResource("AtlasTexture_80mkj")
 base = ExtResource("1_acwy2")
 effects = Array[ExtResource("2_85xba")]([ExtResource("3_kkqu2"), ExtResource("4_iyfoe")])
-price = 0.0
+price = 1.17486

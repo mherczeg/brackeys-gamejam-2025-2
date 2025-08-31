@@ -17,4 +17,4 @@ description = "A dense, chewy, and intensely chocolatey frozen bar."
 icon = SubResource("AtlasTexture_fse1f")
 base = ExtResource("1_ib6fo")
 effects = Array[ExtResource("2_qi754")]([ExtResource("3_qi754")])
-price = 0.0
+price = 1.9942

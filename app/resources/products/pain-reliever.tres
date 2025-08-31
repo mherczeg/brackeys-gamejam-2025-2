@@ -17,4 +17,4 @@ description = "A fast-acting pill to ease aches and pains."
 icon = SubResource("AtlasTexture_3yr10")
 base = ExtResource("1_g4d5i")
 effects = Array[ExtResource("2_hj4c0")]([ExtResource("3_hj4c0")])
-price = 0.0
+price = 1.20295

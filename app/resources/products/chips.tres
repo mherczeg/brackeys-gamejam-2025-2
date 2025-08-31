@@ -18,4 +18,4 @@ description = "Classic, salty potato crisps, irresistibly crunchy."
 icon = SubResource("AtlasTexture_o3fv4")
 base = ExtResource("1_7yamt")
 effects = Array[ExtResource("2_l2jkk")]([ExtResource("3_yosol"), ExtResource("4_4ck7e")])
-price = 0.0
+price = 1.7469

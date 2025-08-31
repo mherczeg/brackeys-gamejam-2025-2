@@ -19,4 +19,4 @@ description = "A smooth and creamy blend of espresso and steamed milk."
 icon = SubResource("AtlasTexture_jmalu")
 base = ExtResource("1_ws577")
 effects = Array[ExtResource("2_yctav")]([ExtResource("3_gn0ei"), ExtResource("4_gege0"), ExtResource("5_eioam")])
-price = 0.0
+price = 1.91417

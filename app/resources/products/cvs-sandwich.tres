@@ -19,4 +19,4 @@ description = "A block of vanilla ice cream between two soft chocolate wafers."
 icon = SubResource("AtlasTexture_krith")
 base = ExtResource("1_lpya0")
 effects = Array[ExtResource("2_lsbwq")]([ExtResource("3_hg0i8"), ExtResource("4_nb8s8"), ExtResource("5_any3j")])
-price = 0.0
+price = 1.55357

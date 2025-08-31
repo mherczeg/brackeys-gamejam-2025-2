@@ -12,4 +12,4 @@ script = ExtResource("1_ldy5f")
 name = "Pills"
 description = "A small, compact dose of medicine, designed for easy consumption and rapid effect."
 icon = SubResource("AtlasTexture_3ck7o")
-price = 0.0
+price = 10.0

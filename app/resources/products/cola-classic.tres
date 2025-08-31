@@ -19,4 +19,4 @@ description = "The timeless taste of cola, bubbling with sweet, familiar comfort
 icon = SubResource("AtlasTexture_0k7sg")
 base = ExtResource("1_u6vfa")
 effects = Array[ExtResource("2_tw5yl")]([ExtResource("3_yuoas"), ExtResource("4_hphsm"), ExtResource("5_ffns0")])
-price = 0.0
+price = 1.90352

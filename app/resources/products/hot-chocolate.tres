@@ -19,4 +19,4 @@ description = "A warm, comforting mug of rich, molten chocolate."
 icon = SubResource("AtlasTexture_jibeo")
 base = ExtResource("1_w5fai")
 effects = Array[ExtResource("2_yu2xx")]([ExtResource("3_oogx0"), ExtResource("4_41c7u"), ExtResource("5_nmcp4")])
-price = 0.0
+price = 1.27654

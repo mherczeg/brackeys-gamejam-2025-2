@@ -19,4 +19,4 @@ description = "A savory and comforting noodle soup with a rich umami broth."
 icon = SubResource("AtlasTexture_wk3rm")
 base = ExtResource("1_y314y")
 effects = Array[ExtResource("2_01gx6")]([ExtResource("3_a5obc"), ExtResource("4_ucu6s"), ExtResource("5_k3dfb")])
-price = 0.0
+price = 1.7738

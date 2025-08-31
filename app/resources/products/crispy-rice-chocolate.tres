@@ -18,4 +18,4 @@ description = "Light, crispy rice puffs suspended in sweet milk chocolate."
 icon = SubResource("AtlasTexture_b1jt7")
 base = ExtResource("1_j7086")
 effects = Array[ExtResource("2_t2qbr")]([ExtResource("3_01ic7"), ExtResource("4_qdb8q")])
-price = 0.0
+price = 1.6537

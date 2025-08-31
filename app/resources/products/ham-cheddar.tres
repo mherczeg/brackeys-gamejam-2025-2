@@ -19,4 +19,4 @@ description = "Savory ham and sharp cheddar, a hearty and satisfying sandwich."
 icon = SubResource("AtlasTexture_008hm")
 base = ExtResource("1_52hqp")
 effects = Array[ExtResource("2_543vr")]([ExtResource("3_ih465"), ExtResource("4_wsenw"), ExtResource("5_x3yfh")])
-price = 0.0
+price = 1.38456

@@ -18,4 +18,4 @@ description = "Rich dark chocolate with the satisfying crunch of whole almonds."
 icon = SubResource("AtlasTexture_22omc")
 base = ExtResource("1_8rb3y")
 effects = Array[ExtResource("2_3smwx")]([ExtResource("3_26h0h"), ExtResource("4_31q8j")])
-price = 0.0
+price = 1.50641

@@ -18,4 +18,4 @@ description = "A feast of cured meats and zesty aromas, packed into a hearty rol
 icon = SubResource("AtlasTexture_4yvba")
 base = ExtResource("1_a203e")
 effects = Array[ExtResource("2_wvjsv")]([ExtResource("3_2gwwh"), ExtResource("4_1uppg")])
-price = 0.0
+price = 1.56169

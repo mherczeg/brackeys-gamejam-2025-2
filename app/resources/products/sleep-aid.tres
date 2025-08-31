@@ -18,4 +18,4 @@ description = "A gentle tablet to help you drift into a peaceful slumber."
 icon = SubResource("AtlasTexture_5203m")
 base = ExtResource("1_20rpy")
 effects = Array[ExtResource("2_qyp4s")]([ExtResource("3_t8d1e"), ExtResource("4_u1jc0")])
-price = 0.0
+price = 1.83714
