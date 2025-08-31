@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://dkxgfalr0y0ei"]
+[gd_resource type="Resource" script_class="Effect" load_steps=3 format=3 uid="uid://dkxgfalr0y0ei"]
 
+[ext_resource type="Texture2D" uid="uid://lek30pxsi35v" path="res://assets/runes-icon/Icon39.png" id="1_odkqe"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_yr46h"]
 
 [resource]
 script = ExtResource("1_yr46h")
 name = "Sweet"
 description = "A delightful, almost magical sweetness that enchants the senses."
+icon = ExtResource("1_odkqe")

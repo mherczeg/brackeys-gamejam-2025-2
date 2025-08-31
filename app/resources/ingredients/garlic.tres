@@ -1,11 +1,18 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://hebx73evwbf1"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=6 format=3 uid="uid://raxgyqiktt2x"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_ntmfv"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_0viyn"]
+[ext_resource type="Resource" uid="uid://bwiumkclw4bo7" path="res://resources/effects/fortifying.tres" id="2_dv28x"]
+[ext_resource type="Resource" uid="uid://bgc7sg3jtkm7" path="res://resources/effects/pungent.tres" id="3_ed8ov"]
+[ext_resource type="Texture2D" uid="uid://bqgt8xm5vxwd" path="res://assets/ingredient-icons/Icon47.png" id="4_ge1a5"]
 
 [resource]
 script = ExtResource("2_0viyn")
 name = "Garlic"
 description = "A pungent bulb known to ward off both common ailments and creatures of the night."
-effects = Dictionary[ExtResource("1_ntmfv"), bool]({})
+icon = ExtResource("4_ge1a5")
+effects = Dictionary[ExtResource("1_ntmfv"), bool]({
+ExtResource("2_dv28x"): true,
+ExtResource("3_ed8ov"): true
+})
 price = 0.0

@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://cuxai4drd5hry"]
+[gd_resource type="Resource" script_class="Effect" load_steps=3 format=3 uid="uid://cuxai4drd5hry"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_0pbja"]
+[ext_resource type="Texture2D" uid="uid://c48epjm5ore74" path="res://assets/runes-icon/Icon34.png" id="1_ofpb4"]
 
 [resource]
 script = ExtResource("1_0pbja")
 name = "Tender"
 description = "A softening agent that can relax even the toughest of fibers."
+icon = ExtResource("1_ofpb4")

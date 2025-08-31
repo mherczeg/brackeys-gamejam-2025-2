@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Product" load_steps=7 format=3 uid="uid://bjmwxmukds3h0"]
+[gd_resource type="Resource" script_class="Product" load_steps=9 format=3 uid="uid://bjmwxmukds3h0"]
 
 [ext_resource type="Resource" uid="uid://badmaa0lb5kq1" path="res://resources/bases/soup.tres" id="1_6am0j"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_kfbk1"]
@@ -6,11 +6,17 @@
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_bcaai"]
 [ext_resource type="Resource" uid="uid://bpeqnaoulkik0" path="res://resources/effects/soothing.tres" id="4_y67x3"]
 [ext_resource type="Resource" uid="uid://cn1y1uf4fld1v" path="res://resources/effects/water.tres" id="5_xed48"]
+[ext_resource type="Texture2D" uid="uid://dtdash1wt4qm1" path="res://assets/soup-atlas.png" id="6_08atq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkij6"]
+atlas = ExtResource("6_08atq")
+region = Rect2(64, 0, 32, 32)
 
 [resource]
 script = ExtResource("3_bcaai")
 name = "Wonton"
 description = "Delicate dumplings in a clear, soothing broth."
+icon = SubResource("AtlasTexture_dkij6")
 base = ExtResource("1_6am0j")
 effects = Array[ExtResource("2_kfbk1")]([ExtResource("3_46kmn"), ExtResource("4_y67x3"), ExtResource("5_xed48")])
 price = 0.0

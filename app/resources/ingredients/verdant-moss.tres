@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://bhrvfhmj1adil"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://cx4lmq56e4rej"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_m8xgv"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_gqig2"]
+[ext_resource type="Resource" uid="uid://bqceg4oaop0yx" path="res://resources/effects/digestive.tres" id="2_u018c"]
+[ext_resource type="Resource" uid="uid://cw8cjjrksbgpr" path="res://resources/effects/green.tres" id="3_vaisl"]
+[ext_resource type="Resource" uid="uid://ca7yp8e05soib" path="res://resources/effects/antioxidant.tres" id="4_8mboi"]
+[ext_resource type="Resource" uid="uid://c1fbe03rxkc07" path="res://resources/effects/earthy.tres" id="5_enttu"]
+[ext_resource type="Texture2D" uid="uid://df8djir50lwt2" path="res://assets/ingredient-icons/Icon12.png" id="6_uj3sk"]
 
 [resource]
 script = ExtResource("2_gqig2")
 name = "Verdant Moss"
 description = "A common moss from the deep woods, teeming with the raw, earthy essence of life."
-effects = Dictionary[ExtResource("1_m8xgv"), bool]({})
+icon = ExtResource("6_uj3sk")
+effects = Dictionary[ExtResource("1_m8xgv"), bool]({
+ExtResource("2_u018c"): true,
+ExtResource("3_vaisl"): false,
+ExtResource("4_8mboi"): false,
+ExtResource("5_enttu"): false
+})
 price = 0.0

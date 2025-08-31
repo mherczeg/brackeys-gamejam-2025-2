@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://bknmbx3vgkqoi"]
+[gd_resource type="Resource" script_class="Effect" load_steps=3 format=3 uid="uid://bknmbx3vgkqoi"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_hapj4"]
+[ext_resource type="Texture2D" uid="uid://cdb626dnri37s" path="res://assets/runes-icon/Icon11.png" id="1_xo6cn"]
 
 [resource]
 script = ExtResource("1_hapj4")
 name = "Earth"
 description = "The essence of the deep earth, ancient and grounding."
+icon = ExtResource("1_xo6cn")

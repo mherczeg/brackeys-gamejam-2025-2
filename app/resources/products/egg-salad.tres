@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Product" load_steps=7 format=3 uid="uid://c27yrdvpbhoq8"]
+[gd_resource type="Resource" script_class="Product" load_steps=9 format=3 uid="uid://c27yrdvpbhoq8"]
 
 [ext_resource type="Resource" uid="uid://pyg5nom8yqp6" path="res://resources/bases/sandwich.tres" id="1_4aptn"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_8gdrs"]
@@ -6,11 +6,17 @@
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_swtw0"]
 [ext_resource type="Resource" uid="uid://bqceg4oaop0yx" path="res://resources/effects/digestive.tres" id="4_4ooxd"]
 [ext_resource type="Resource" uid="uid://c0dpyigt4uf83" path="res://resources/effects/yellow.tres" id="5_l153r"]
+[ext_resource type="Texture2D" uid="uid://yyr1n8sgd58" path="res://assets/sandwich-atlas.png" id="6_n5inv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gbrx1"]
+atlas = ExtResource("6_n5inv")
+region = Rect2(32, 0, 32, 32)
 
 [resource]
 script = ExtResource("3_swtw0")
 name = "Egg Salad"
 description = "A simple, creamy classic made with perfectly boiled eggs."
+icon = SubResource("AtlasTexture_gbrx1")
 base = ExtResource("1_4aptn")
 effects = Array[ExtResource("2_8gdrs")]([ExtResource("3_dfe5y"), ExtResource("4_4ooxd"), ExtResource("5_l153r")])
 price = 0.0

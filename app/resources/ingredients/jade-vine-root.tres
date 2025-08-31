@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://7mp1qvrlsswt"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://cvvy4f3vm8b5m"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_xf2ca"]
+[ext_resource type="Resource" uid="uid://c1fbe03rxkc07" path="res://resources/effects/earthy.tres" id="2_m8knv"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_redek"]
+[ext_resource type="Resource" uid="uid://cw8cjjrksbgpr" path="res://resources/effects/green.tres" id="3_cjw21"]
+[ext_resource type="Resource" uid="uid://652qwvhkvhrh" path="res://resources/effects/thick.tres" id="4_quwbk"]
+[ext_resource type="Resource" uid="uid://c3pipkfh57hxp" path="res://resources/effects/calcium.tres" id="5_lmrc0"]
+[ext_resource type="Texture2D" uid="uid://dr6t65u8utfgb" path="res://assets/ingredient-icons/Icon27.png" id="6_ig3lt"]
 
 [resource]
 script = ExtResource("2_redek")
 name = "Jade Vine Root"
 description = "A root so dense with minerals it resembles polished jade."
-effects = Dictionary[ExtResource("1_xf2ca"), bool]({})
+icon = ExtResource("6_ig3lt")
+effects = Dictionary[ExtResource("1_xf2ca"), bool]({
+ExtResource("2_m8knv"): true,
+ExtResource("3_cjw21"): false,
+ExtResource("4_quwbk"): false,
+ExtResource("5_lmrc0"): false
+})
 price = 0.0

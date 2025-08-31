@@ -1,15 +1,21 @@
-[gd_resource type="Resource" script_class="Product" load_steps=6 format=3 uid="uid://bi8ect484rlr5"]
+[gd_resource type="Resource" script_class="Product" load_steps=8 format=3 uid="uid://bi8ect484rlr5"]
 
 [ext_resource type="Resource" uid="uid://cho25f5213qgd" path="res://resources/bases/chocolate-bar.tres" id="1_e08ld"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_p5l18"]
 [ext_resource type="Resource" uid="uid://dkxgfalr0y0ei" path="res://resources/effects/sweet.tres" id="3_d1m63"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_wudan"]
 [ext_resource type="Resource" uid="uid://652qwvhkvhrh" path="res://resources/effects/thick.tres" id="4_olh2n"]
+[ext_resource type="Texture2D" uid="uid://bdvibcqswxsle" path="res://assets/chocolate-atlas.png" id="5_ybrt7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4q4j"]
+atlas = ExtResource("5_ybrt7")
+region = Rect2(0, 0, 32, 32)
 
 [resource]
 script = ExtResource("3_wudan")
 name = "Caramel-Filled"
 description = "A river of golden caramel encased in a shell of sweet chocolate."
+icon = SubResource("AtlasTexture_y4q4j")
 base = ExtResource("1_e08ld")
 effects = Array[ExtResource("2_p5l18")]([ExtResource("3_d1m63"), ExtResource("4_olh2n")])
 price = 0.0

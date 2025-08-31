@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://pjb6llmk5dq1"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://de5pmffo7gpyv"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_s2cr1"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_5lrte"]
+[ext_resource type="Resource" uid="uid://8x660roi4u7r" path="res://resources/effects/toxic.tres" id="2_iia33"]
+[ext_resource type="Resource" uid="uid://h0hnfdlvduyv" path="res://resources/effects/blue.tres" id="3_rq68y"]
+[ext_resource type="Resource" uid="uid://dxa1s02kg4gnc" path="res://resources/effects/black.tres" id="4_7wdb2"]
+[ext_resource type="Resource" uid="uid://bhci83c1g2fsl" path="res://resources/effects/umami.tres" id="5_68v13"]
+[ext_resource type="Texture2D" uid="uid://cahdgrh4004jk" path="res://assets/ingredient-icons/Icon14.png" id="6_uesj0"]
 
 [resource]
 script = ExtResource("2_5lrte")
 name = "Kraken's Ink"
 description = "The dark, umami-rich ink of a colossal squid, used to obscure its escape."
-effects = Dictionary[ExtResource("1_s2cr1"), bool]({})
+icon = ExtResource("6_uesj0")
+effects = Dictionary[ExtResource("1_s2cr1"), bool]({
+ExtResource("2_iia33"): true,
+ExtResource("3_rq68y"): false,
+ExtResource("4_7wdb2"): false,
+ExtResource("5_68v13"): false
+})
 price = 0.0

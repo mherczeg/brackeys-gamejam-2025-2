@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="2_s4435"]
 [ext_resource type="Resource" uid="uid://l52howq3y2ly" path="res://resources/npcs/NPC10.tres" id="3_s4435"]
 [ext_resource type="Script" uid="uid://dbbnqe7xp83lh" path="res://resources/Encounter.gd" id="3_ttqxs"]
-[ext_resource type="Resource" uid="uid://bpx6k43vfi8ri" path="res://resources/products/Product7.tres" id="4_ttqxs"]
+[ext_resource type="Resource" uid="uid://uufti85as1ux" path="res://resources/products/pretzels.tres" id="4_ttqxs"]
 
 [resource]
 script = ExtResource("3_ttqxs")

@@ -1,11 +1,18 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://c7s4ibfb3w4ri"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=6 format=3 uid="uid://cxwt2nvo3nu8s"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_80bkx"]
+[ext_resource type="Resource" uid="uid://d4lih6ctwk2l" path="res://resources/effects/discomfort.tres" id="2_hi373"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_n6fe3"]
+[ext_resource type="Resource" uid="uid://bgc7sg3jtkm7" path="res://resources/effects/pungent.tres" id="3_rtf8a"]
+[ext_resource type="Texture2D" uid="uid://bv6yljcnw4fcs" path="res://assets/ingredient-icons/Icon7.png" id="4_8x048"]
 
 [resource]
 script = ExtResource("2_n6fe3")
 name = "Chili Peppers"
 description = "The fruit of a spiteful plant, burning with an inner fire."
-effects = Dictionary[ExtResource("1_80bkx"), bool]({})
+icon = ExtResource("4_8x048")
+effects = Dictionary[ExtResource("1_80bkx"), bool]({
+ExtResource("2_hi373"): true,
+ExtResource("3_rtf8a"): true
+})
 price = 0.0

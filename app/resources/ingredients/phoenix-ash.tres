@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://cnxcai0k8bcx1"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://dtj2hld3tbjbw"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_1sid6"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_eyt41"]
+[ext_resource type="Resource" uid="uid://bcg553pe4di2b" path="res://resources/effects/fire.tres" id="2_gb3n5"]
+[ext_resource type="Resource" uid="uid://c2xrl6deftmnr" path="res://resources/effects/red.tres" id="3_cefl4"]
+[ext_resource type="Resource" uid="uid://bwiumkclw4bo7" path="res://resources/effects/fortifying.tres" id="4_gmrpa"]
+[ext_resource type="Resource" uid="uid://dge3gg14elpgy" path="res://resources/effects/burst.tres" id="5_7axxf"]
+[ext_resource type="Texture2D" uid="uid://cefh4r8tl170s" path="res://assets/ingredient-icons/Icon1.png" id="6_qlkcj"]
 
 [resource]
 script = ExtResource("2_eyt41")
 name = "Phoenix Ash"
 description = "The warm, glittering ash left behind after a phoenix's rebirth, crackling with latent energy."
-effects = Dictionary[ExtResource("1_1sid6"), bool]({})
+icon = ExtResource("6_qlkcj")
+effects = Dictionary[ExtResource("1_1sid6"), bool]({
+ExtResource("2_gb3n5"): true,
+ExtResource("3_cefl4"): false,
+ExtResource("4_gmrpa"): false,
+ExtResource("5_7axxf"): false
+})
 price = 0.0

@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://cp0hxmyyrncsx"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://5cltl6dnfya0"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_0ef4m"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_eox70"]
+[ext_resource type="Resource" uid="uid://c2xrl6deftmnr" path="res://resources/effects/red.tres" id="2_mqoo1"]
+[ext_resource type="Resource" uid="uid://bgc7sg3jtkm7" path="res://resources/effects/pungent.tres" id="3_ubipe"]
+[ext_resource type="Resource" uid="uid://bcg553pe4di2b" path="res://resources/effects/fire.tres" id="4_784ww"]
+[ext_resource type="Resource" uid="uid://bwiumkclw4bo7" path="res://resources/effects/fortifying.tres" id="5_aj6dj"]
+[ext_resource type="Texture2D" uid="uid://dtha2mt6lm4n6" path="res://assets/ingredient-icons/Icon22.png" id="6_pyhos"]
 
 [resource]
 script = ExtResource("2_eox70")
 name = "Salamander Hide"
 description = "The shed skin of a fire salamander, it is permanently warm and surprisingly tough."
-effects = Dictionary[ExtResource("1_0ef4m"), bool]({})
+icon = ExtResource("6_pyhos")
+effects = Dictionary[ExtResource("1_0ef4m"), bool]({
+ExtResource("2_mqoo1"): true,
+ExtResource("3_ubipe"): false,
+ExtResource("4_784ww"): false,
+ExtResource("5_aj6dj"): false
+})
 price = 0.0

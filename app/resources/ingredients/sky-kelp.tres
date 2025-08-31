@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://cucynwi88f2an"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://b00kaw7b4v8ag"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_twrx3"]
+[ext_resource type="Resource" uid="uid://bct3b3yxb8fdv" path="res://resources/effects/slick.tres" id="2_gc3x4"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_tuln2"]
+[ext_resource type="Resource" uid="uid://cw8cjjrksbgpr" path="res://resources/effects/green.tres" id="3_u43ij"]
+[ext_resource type="Resource" uid="uid://ddwlocnkdx7kn" path="res://resources/effects/air.tres" id="4_1argx"]
+[ext_resource type="Resource" uid="uid://3modiddoph3q" path="res://resources/effects/expanding.tres" id="5_vgf72"]
+[ext_resource type="Texture2D" uid="uid://c4ru7477ovbxw" path="res://assets/ingredient-icons/Icon20.png" id="6_437wl"]
 
 [resource]
 script = ExtResource("2_tuln2")
 name = "Sky Kelp"
 description = "A strange, buoyant seaweed that grows in massive floating continents in the upper atmosphere."
-effects = Dictionary[ExtResource("1_twrx3"), bool]({})
+icon = ExtResource("6_437wl")
+effects = Dictionary[ExtResource("1_twrx3"), bool]({
+ExtResource("2_gc3x4"): true,
+ExtResource("3_u43ij"): false,
+ExtResource("4_1argx"): false,
+ExtResource("5_vgf72"): false
+})
 price = 0.0

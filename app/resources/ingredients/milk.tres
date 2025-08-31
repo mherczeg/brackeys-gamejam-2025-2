@@ -1,11 +1,20 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://ddkd28dd06gna"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=7 format=3 uid="uid://p7ebtsv1dyig"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_huy3g"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_dl3h1"]
+[ext_resource type="Resource" uid="uid://c3pipkfh57hxp" path="res://resources/effects/calcium.tres" id="2_grr3w"]
+[ext_resource type="Resource" uid="uid://dl6xhwsef3ei7" path="res://resources/effects/protein.tres" id="3_t5hv1"]
+[ext_resource type="Resource" uid="uid://bolcex3rycr80" path="res://resources/effects/creamy.tres" id="4_6uokp"]
+[ext_resource type="Texture2D" uid="uid://fnqdxjw47cup" path="res://assets/ingredient-icons/Icon48.png" id="5_e3ne3"]
 
 [resource]
 script = ExtResource("2_dl3h1")
 name = "Milk"
 description = "The first nourishment of mammals, rich with the building blocks of life."
-effects = Dictionary[ExtResource("1_huy3g"), bool]({})
+icon = ExtResource("5_e3ne3")
+effects = Dictionary[ExtResource("1_huy3g"), bool]({
+ExtResource("2_grr3w"): true,
+ExtResource("3_t5hv1"): true,
+ExtResource("4_6uokp"): false
+})
 price = 0.0

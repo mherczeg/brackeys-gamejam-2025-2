@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://mei3dsu22pbn"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://chumoq1r2sl3"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_v1g73"]
+[ext_resource type="Resource" uid="uid://ktejujvrxm0m" path="res://resources/effects/acidic.tres" id="2_58etv"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_tn5qy"]
+[ext_resource type="Resource" uid="uid://c1fbe03rxkc07" path="res://resources/effects/earthy.tres" id="3_lsrwr"]
+[ext_resource type="Resource" uid="uid://bg456i4g56iux" path="res://resources/effects/minerals.tres" id="4_24q8g"]
+[ext_resource type="Resource" uid="uid://8x660roi4u7r" path="res://resources/effects/toxic.tres" id="5_7sq2r"]
+[ext_resource type="Texture2D" uid="uid://b6n3s7q5ky7d4" path="res://assets/ingredient-icons/Icon13.png" id="6_opmum"]
 
 [resource]
 script = ExtResource("2_tn5qy")
 name = "Gorgon's Eye Dust"
 description = "The ground-up, fossilized eye of a gorgon, carrying a fraction of its petrifying power."
-effects = Dictionary[ExtResource("1_v1g73"), bool]({})
+icon = ExtResource("6_opmum")
+effects = Dictionary[ExtResource("1_v1g73"), bool]({
+ExtResource("2_58etv"): true,
+ExtResource("3_lsrwr"): false,
+ExtResource("4_24q8g"): false,
+ExtResource("5_7sq2r"): false
+})
 price = 0.0

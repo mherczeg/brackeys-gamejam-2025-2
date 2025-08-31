@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Product" load_steps=7 format=3 uid="uid://cgs8ytjt8ie65"]
+[gd_resource type="Resource" script_class="Product" load_steps=9 format=3 uid="uid://cgs8ytjt8ie65"]
 
 [ext_resource type="Resource" uid="uid://1g3i3a8rkotx" path="res://resources/bases/ice-cream.tres" id="1_lpya0"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_lsbwq"]
@@ -6,11 +6,17 @@
 [ext_resource type="Resource" uid="uid://dkxgfalr0y0ei" path="res://resources/effects/sweet.tres" id="3_hg0i8"]
 [ext_resource type="Resource" uid="uid://bolcex3rycr80" path="res://resources/effects/creamy.tres" id="4_nb8s8"]
 [ext_resource type="Resource" uid="uid://ckmombfq7w8dt" path="res://resources/effects/gluten.tres" id="5_any3j"]
+[ext_resource type="Texture2D" uid="uid://dqhpxd2lkr22n" path="res://assets/ice-cream-atlas.png" id="6_0wwm7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krith"]
+atlas = ExtResource("6_0wwm7")
+region = Rect2(32, 0, 32, 32)
 
 [resource]
 script = ExtResource("3_16r3b")
 name = "CVS Sandwich"
 description = "A block of vanilla ice cream between two soft chocolate wafers."
+icon = SubResource("AtlasTexture_krith")
 base = ExtResource("1_lpya0")
 effects = Array[ExtResource("2_lsbwq")]([ExtResource("3_hg0i8"), ExtResource("4_nb8s8"), ExtResource("5_any3j")])
 price = 0.0

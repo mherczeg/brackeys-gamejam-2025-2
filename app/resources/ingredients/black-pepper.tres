@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://ctdri2bf2xui1"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://dksfpfb4jatj1"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_1ynur"]
+[ext_resource type="Resource" uid="uid://bqceg4oaop0yx" path="res://resources/effects/digestive.tres" id="2_86b8a"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_dl3pg"]
+[ext_resource type="Resource" uid="uid://d4lih6ctwk2l" path="res://resources/effects/discomfort.tres" id="3_s0hsj"]
+[ext_resource type="Resource" uid="uid://bwiumkclw4bo7" path="res://resources/effects/fortifying.tres" id="4_c1al1"]
+[ext_resource type="Resource" uid="uid://bgc7sg3jtkm7" path="res://resources/effects/pungent.tres" id="5_oc2lq"]
+[ext_resource type="Texture2D" uid="uid://bi51dlnhkpal" path="res://assets/ingredient-icons/Icon18.png" id="6_740rx"]
 
 [resource]
 script = ExtResource("2_dl3pg")
 name = "Black Pepper"
 description = "Tiny, dried berries that hold a surprising, fiery power."
-effects = Dictionary[ExtResource("1_1ynur"), bool]({})
+icon = ExtResource("6_740rx")
+effects = Dictionary[ExtResource("1_1ynur"), bool]({
+ExtResource("2_86b8a"): true,
+ExtResource("3_s0hsj"): false,
+ExtResource("4_c1al1"): false,
+ExtResource("5_oc2lq"): false
+})
 price = 0.0

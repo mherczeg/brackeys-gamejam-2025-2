@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://bnegqcw3yerjs"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://b2s78oqve5vti"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_1tu4r"]
+[ext_resource type="Resource" uid="uid://h0hnfdlvduyv" path="res://resources/effects/blue.tres" id="2_7dsow"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_myel1"]
+[ext_resource type="Resource" uid="uid://c0dpyigt4uf83" path="res://resources/effects/yellow.tres" id="3_cw151"]
+[ext_resource type="Resource" uid="uid://ddwlocnkdx7kn" path="res://resources/effects/air.tres" id="4_71mrn"]
+[ext_resource type="Resource" uid="uid://ci0ah6iv6q6k2" path="res://resources/effects/metabolistic.tres" id="5_c1y66"]
+[ext_resource type="Texture2D" uid="uid://mw2g88a201hs" path="res://assets/ingredient-icons/Icon40.png" id="6_paut2"]
 
 [resource]
 script = ExtResource("2_myel1")
 name = "Will-o'-Wisp Essence"
 description = "The captured light of a mischievous swamp spirit, it buzzes with chaotic energy."
-effects = Dictionary[ExtResource("1_1tu4r"), bool]({})
+icon = ExtResource("6_paut2")
+effects = Dictionary[ExtResource("1_1tu4r"), bool]({
+ExtResource("2_7dsow"): true,
+ExtResource("3_cw151"): false,
+ExtResource("4_71mrn"): false,
+ExtResource("5_c1y66"): false
+})
 price = 0.0

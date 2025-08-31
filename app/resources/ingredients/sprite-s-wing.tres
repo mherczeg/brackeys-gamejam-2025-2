@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://bkvm075c45ckt"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://bo6d5jsyjsuho"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_7ip7w"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_ix0px"]
+[ext_resource type="Resource" uid="uid://cpee1jgrc3kus" path="res://resources/effects/zest.tres" id="2_iydop"]
+[ext_resource type="Resource" uid="uid://cw8cjjrksbgpr" path="res://resources/effects/green.tres" id="3_jgw6v"]
+[ext_resource type="Resource" uid="uid://dp1wueirdnjw" path="res://resources/effects/focusing.tres" id="4_1nix5"]
+[ext_resource type="Resource" uid="uid://ddwlocnkdx7kn" path="res://resources/effects/air.tres" id="5_3hjkt"]
+[ext_resource type="Texture2D" uid="uid://b7jot1xdrtcql" path="res://assets/ingredient-icons/Icon23.png" id="6_fxy2g"]
 
 [resource]
 script = ExtResource("2_ix0px")
 name = "Sprite's Wing"
 description = "The iridescent, paper-thin wing of a forest sprite, it tastes surprisingly sweet."
-effects = Dictionary[ExtResource("1_7ip7w"), bool]({})
+icon = ExtResource("6_fxy2g")
+effects = Dictionary[ExtResource("1_7ip7w"), bool]({
+ExtResource("2_iydop"): true,
+ExtResource("3_jgw6v"): false,
+ExtResource("4_1nix5"): false,
+ExtResource("5_3hjkt"): false
+})
 price = 0.0

@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://ddwlocnkdx7kn"]
+[gd_resource type="Resource" script_class="Effect" load_steps=3 format=3 uid="uid://ddwlocnkdx7kn"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_8kycx"]
+[ext_resource type="Texture2D" uid="uid://g5re0y2kjo7r" path="res://assets/runes-icon/Icon5.png" id="1_rum5a"]
 
 [resource]
 script = ExtResource("1_8kycx")
 name = "Air"
 description = "The unseen essence of freedom and the sky, weightless and ever-moving."
+icon = ExtResource("1_rum5a")

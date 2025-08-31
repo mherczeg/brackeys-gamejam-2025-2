@@ -51,11 +51,13 @@ func generate(json_path: String, out_dir: String) -> void:
 			if typeof(conv) == TYPE_ARRAY:
 				for element in conv:
 					res[prop_name].append(element)
+			elif typeof(conv) == TYPE_DICTIONARY:
+				for key in conv.keys():
+					res[prop_name][key] = conv[key]
 			else:
 				res.set(prop_name, conv)
 			
 
-		print(res.effects)
 		_ensure_dir(out_dir)
 		var out_path = out_dir.path_join(out_name + ".tres")
 		var save_err = ResourceSaver.save(res, out_path)

@@ -1,14 +1,20 @@
-[gd_resource type="Resource" script_class="Product" load_steps=5 format=3 uid="uid://bqr8i0bpm28fa"]
+[gd_resource type="Resource" script_class="Product" load_steps=7 format=3 uid="uid://bqr8i0bpm28fa"]
 
 [ext_resource type="Resource" uid="uid://vfpbkun8a2jd" path="res://resources/bases/pills.tres" id="1_btidr"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_1cqxj"]
 [ext_resource type="Resource" uid="uid://bqceg4oaop0yx" path="res://resources/effects/digestive.tres" id="3_1cqxj"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_mrp6w"]
+[ext_resource type="Texture2D" uid="uid://yx1evljqs00l" path="res://assets/pills-atlas.png" id="4_gexak"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i04dl"]
+atlas = ExtResource("4_gexak")
+region = Rect2(96, 0, 32, 32)
 
 [resource]
 script = ExtResource("3_mrp6w")
 name = "Stomach Soother"
 description = "A pill designed to calm and settle an upset stomach."
+icon = SubResource("AtlasTexture_i04dl")
 base = ExtResource("1_btidr")
 effects = Array[ExtResource("2_1cqxj")]([ExtResource("3_1cqxj")])
 price = 0.0

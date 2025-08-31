@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://c1wawro0wfjn6"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://nlpa5l3yvipp"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_13fek"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_phavp"]
+[ext_resource type="Resource" uid="uid://cn1y1uf4fld1v" path="res://resources/effects/water.tres" id="2_sh1eg"]
+[ext_resource type="Resource" uid="uid://cn2byiu0crd82" path="res://resources/effects/white.tres" id="3_jr4an"]
+[ext_resource type="Resource" uid="uid://bdsqrvoxoi8xv" path="res://resources/effects/anti-life.tres" id="4_1mats"]
+[ext_resource type="Resource" uid="uid://bct3b3yxb8fdv" path="res://resources/effects/slick.tres" id="5_3l6ai"]
+[ext_resource type="Texture2D" uid="uid://2tox5bemjsco" path="res://assets/ingredient-icons/Icon2.png" id="6_nfyhj"]
 
 [resource]
 script = ExtResource("2_phavp")
 name = "Ectoplasmic Residue"
 description = "The slick, cold slime left behind by a passing spirit."
-effects = Dictionary[ExtResource("1_13fek"), bool]({})
+icon = ExtResource("6_nfyhj")
+effects = Dictionary[ExtResource("1_13fek"), bool]({
+ExtResource("2_sh1eg"): true,
+ExtResource("3_jr4an"): false,
+ExtResource("4_1mats"): false,
+ExtResource("5_3l6ai"): false
+})
 price = 0.0

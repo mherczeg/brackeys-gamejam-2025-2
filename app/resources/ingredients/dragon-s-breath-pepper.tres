@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://djitxxkpmo586"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://dcrl02ll0xbfl"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_0gwgk"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_3kxxj"]
+[ext_resource type="Resource" uid="uid://bcg553pe4di2b" path="res://resources/effects/fire.tres" id="2_nxhis"]
+[ext_resource type="Resource" uid="uid://dge3gg14elpgy" path="res://resources/effects/burst.tres" id="3_2fss7"]
+[ext_resource type="Resource" uid="uid://c2xrl6deftmnr" path="res://resources/effects/red.tres" id="4_eun1r"]
+[ext_resource type="Resource" uid="uid://bgc7sg3jtkm7" path="res://resources/effects/pungent.tres" id="5_jc1tv"]
+[ext_resource type="Texture2D" uid="uid://81egx722fk0i" path="res://assets/ingredient-icons/Icon25.png" id="6_pwhfu"]
 
 [resource]
 script = ExtResource("2_3kxxj")
 name = "Dragon's Breath Pepper"
 description = "A pepper so hot it is said to be grown in the scorched earth of a dragon's lair."
-effects = Dictionary[ExtResource("1_0gwgk"), bool]({})
+icon = ExtResource("6_pwhfu")
+effects = Dictionary[ExtResource("1_0gwgk"), bool]({
+ExtResource("2_nxhis"): true,
+ExtResource("3_2fss7"): false,
+ExtResource("4_eun1r"): false,
+ExtResource("5_jc1tv"): false
+})
 price = 0.0

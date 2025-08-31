@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://ckmombfq7w8dt"]
+[gd_resource type="Resource" script_class="Effect" load_steps=3 format=3 uid="uid://ckmombfq7w8dt"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_awmbx"]
+[ext_resource type="Texture2D" uid="uid://c7m3x3fkxtafg" path="res://assets/runes-icon/Icon48.png" id="1_pjhv1"]
 
 [resource]
 script = ExtResource("1_awmbx")
 name = "Gluten"
 description = "A binding web that gives form and structure to creations."
+icon = ExtResource("1_pjhv1")

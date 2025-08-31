@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://3modiddoph3q"]
+[gd_resource type="Resource" script_class="Effect" load_steps=3 format=3 uid="uid://3modiddoph3q"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_0colo"]
+[ext_resource type="Texture2D" uid="uid://bdofuvfklr7ab" path="res://assets/runes-icon/Icon45.png" id="1_rrldh"]
 
 [resource]
 script = ExtResource("1_0colo")
 name = "Expanding"
 description = "An airy essence that causes substances to expand and rise."
+icon = ExtResource("1_rrldh")

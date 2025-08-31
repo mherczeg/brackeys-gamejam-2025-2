@@ -1,15 +1,21 @@
-[gd_resource type="Resource" script_class="Product" load_steps=6 format=3 uid="uid://45ymfdxrqcpu"]
+[gd_resource type="Resource" script_class="Product" load_steps=8 format=3 uid="uid://45ymfdxrqcpu"]
 
 [ext_resource type="Resource" uid="uid://yjnv2md2an4c" path="res://resources/bases/soda.tres" id="1_xnuk8"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_hvcpp"]
 [ext_resource type="Resource" uid="uid://cpee1jgrc3kus" path="res://resources/effects/zest.tres" id="3_dgmhe"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_ohfk4"]
 [ext_resource type="Resource" uid="uid://cw8cjjrksbgpr" path="res://resources/effects/green.tres" id="4_5yrlj"]
+[ext_resource type="Texture2D" uid="uid://5rae0g6ykmmo" path="res://assets/soda-atlas.png" id="5_406tp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_77gbq"]
+atlas = ExtResource("5_406tp")
+region = Rect2(32, 0, 32, 32)
 
 [resource]
 script = ExtResource("3_ohfk4")
 name = "Lemon-Lime Sparkle"
 description = "A crisp and zesty soda that dances on the tongue."
+icon = SubResource("AtlasTexture_77gbq")
 base = ExtResource("1_xnuk8")
 effects = Array[ExtResource("2_hvcpp")]([ExtResource("3_dgmhe"), ExtResource("4_5yrlj")])
 price = 0.0

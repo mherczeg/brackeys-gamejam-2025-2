@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://cgrie128l0ovp"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://cutel5h11160x"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_4a6lg"]
+[ext_resource type="Resource" uid="uid://8x660roi4u7r" path="res://resources/effects/toxic.tres" id="2_1jiey"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_bslnm"]
+[ext_resource type="Resource" uid="uid://c0dpyigt4uf83" path="res://resources/effects/yellow.tres" id="3_cxm52"]
+[ext_resource type="Resource" uid="uid://c2xrl6deftmnr" path="res://resources/effects/red.tres" id="4_8x4tn"]
+[ext_resource type="Resource" uid="uid://cut8o4kugfvce" path="res://resources/effects/energizing.tres" id="5_0vrge"]
+[ext_resource type="Texture2D" uid="uid://c1gnror3wffq8" path="res://assets/ingredient-icons/Icon21.png" id="6_d0mwb"]
 
 [resource]
 script = ExtResource("2_bslnm")
 name = "Gilded Mandrake"
 description = "A rare mandrake root whose screams have been silenced by the veins of pure gold running through it."
-effects = Dictionary[ExtResource("1_4a6lg"), bool]({})
+icon = ExtResource("6_d0mwb")
+effects = Dictionary[ExtResource("1_4a6lg"), bool]({
+ExtResource("2_1jiey"): true,
+ExtResource("3_cxm52"): false,
+ExtResource("4_8x4tn"): false,
+ExtResource("5_0vrge"): false
+})
 price = 0.0

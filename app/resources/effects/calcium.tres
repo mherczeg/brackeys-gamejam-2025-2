@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://c3pipkfh57hxp"]
+[gd_resource type="Resource" script_class="Effect" load_steps=3 format=3 uid="uid://c3pipkfh57hxp"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_euk3k"]
+[ext_resource type="Texture2D" uid="uid://ca0e51eyfh7yt" path="res://assets/runes-icon/Icon29.png" id="1_riw5l"]
 
 [resource]
 script = ExtResource("1_euk3k")
 name = "Calcium"
 description = "Infuses bone and stone with unnatural resilience."
+icon = ExtResource("1_riw5l")

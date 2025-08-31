@@ -1,15 +1,21 @@
-[gd_resource type="Resource" script_class="Product" load_steps=6 format=3 uid="uid://br5ka07avlk55"]
+[gd_resource type="Resource" script_class="Product" load_steps=8 format=3 uid="uid://br5ka07avlk55"]
 
 [ext_resource type="Resource" uid="uid://1g3i3a8rkotx" path="res://resources/bases/ice-cream.tres" id="1_xcg1f"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_jyd3t"]
 [ext_resource type="Resource" uid="uid://cn1y1uf4fld1v" path="res://resources/effects/water.tres" id="3_kyq02"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_x8r8n"]
 [ext_resource type="Resource" uid="uid://cpee1jgrc3kus" path="res://resources/effects/zest.tres" id="4_2qmhq"]
+[ext_resource type="Texture2D" uid="uid://dqhpxd2lkr22n" path="res://assets/ice-cream-atlas.png" id="5_nsish"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g54gs"]
+atlas = ExtResource("5_nsish")
+region = Rect2(128, 0, 32, 32)
 
 [resource]
 script = ExtResource("3_x8r8n")
 name = "Fruit Popsicle"
 description = "A refreshing frozen treat made with real fruit juice."
+icon = SubResource("AtlasTexture_g54gs")
 base = ExtResource("1_xcg1f")
 effects = Array[ExtResource("2_jyd3t")]([ExtResource("3_kyq02"), ExtResource("4_2qmhq")])
 price = 0.0

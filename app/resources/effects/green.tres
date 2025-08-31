@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://cw8cjjrksbgpr"]
+[gd_resource type="Resource" script_class="Effect" load_steps=3 format=3 uid="uid://cw8cjjrksbgpr"]
 
+[ext_resource type="Texture2D" uid="uid://5o05qtoget7s" path="res://assets/runes-icon/Icon13.png" id="1_abwnx"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_m8d3t"]
 
 [resource]
 script = ExtResource("1_m8d3t")
 name = "Green"
 description = "The color of vibrant life, from new growth to potent venom."
+icon = ExtResource("1_abwnx")

@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://dv5ligpd5hwu5"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://okmcaiknom6b"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_vpjr7"]
+[ext_resource type="Resource" uid="uid://cn2byiu0crd82" path="res://resources/effects/white.tres" id="2_6nesg"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_375ww"]
+[ext_resource type="Resource" uid="uid://3modiddoph3q" path="res://resources/effects/expanding.tres" id="3_pox2q"]
+[ext_resource type="Resource" uid="uid://ddwlocnkdx7kn" path="res://resources/effects/air.tres" id="4_i7mv1"]
+[ext_resource type="Resource" uid="uid://cuxai4drd5hry" path="res://resources/effects/tender.tres" id="5_ly0pv"]
+[ext_resource type="Texture2D" uid="uid://bhg7lqkyen0u7" path="res://assets/ingredient-icons/Icon31.png" id="6_iagds"]
 
 [resource]
 script = ExtResource("2_375ww")
 name = "Cloud Cotton"
 description = "The soft, fluffy material of a storm cloud, surprisingly light and tender."
-effects = Dictionary[ExtResource("1_vpjr7"), bool]({})
+icon = ExtResource("6_iagds")
+effects = Dictionary[ExtResource("1_vpjr7"), bool]({
+ExtResource("2_6nesg"): true,
+ExtResource("3_pox2q"): false,
+ExtResource("4_i7mv1"): false,
+ExtResource("5_ly0pv"): false
+})
 price = 0.0

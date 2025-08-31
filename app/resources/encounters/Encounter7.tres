@@ -5,14 +5,14 @@
 [ext_resource type="Resource" uid="uid://doehp68r008lg" path="res://resources/npcs/NPC3.tres" id="3_51sjk"]
 [ext_resource type="Script" uid="uid://dbbnqe7xp83lh" path="res://resources/Encounter.gd" id="3_c2sgn"]
 [ext_resource type="Resource" uid="uid://0n7x2epd1lbr" path="res://resources/npcs/NPC4.tres" id="4_0w3kx"]
-[ext_resource type="Resource" uid="uid://dlgoafvrdk34i" path="res://resources/products/Product10.tres" id="4_eoiby"]
-[ext_resource type="Resource" uid="uid://cpgus6glgsi67" path="res://resources/products/Product8.tres" id="6_yk8vx"]
+[ext_resource type="Resource" uid="uid://cqr2d7kvc77ae" path="res://resources/products/tortilla.tres" id="5_0w3kx"]
+[ext_resource type="Resource" uid="uid://cy147g20yr52o" path="res://resources/products/orange-fizz.tres" id="6_eoiby"]
 
 [resource]
 script = ExtResource("3_c2sgn")
 order = Dictionary[ExtResource("1_8jf6g"), ExtResource("2_421pn")]({
-ExtResource("3_51sjk"): ExtResource("4_eoiby"),
-ExtResource("4_0w3kx"): ExtResource("6_yk8vx")
+ExtResource("3_51sjk"): ExtResource("5_0w3kx"),
+ExtResource("4_0w3kx"): ExtResource("6_eoiby")
 })
 stage_1_text = Dictionary[ExtResource("1_8jf6g"), String]({
 ExtResource("3_51sjk"): "Encounter 7 Stage 1 Line 1",

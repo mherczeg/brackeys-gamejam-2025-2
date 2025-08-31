@@ -1,11 +1,20 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://b4c0gtauw24g8"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=7 format=3 uid="uid://bvff4t0blfdue"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_eaj5a"]
+[ext_resource type="Resource" uid="uid://bolcex3rycr80" path="res://resources/effects/creamy.tres" id="2_127hb"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_qdjkw"]
+[ext_resource type="Resource" uid="uid://bct3b3yxb8fdv" path="res://resources/effects/slick.tres" id="3_ehj5j"]
+[ext_resource type="Resource" uid="uid://652qwvhkvhrh" path="res://resources/effects/thick.tres" id="4_0nco6"]
+[ext_resource type="Texture2D" uid="uid://cjsmui2i5438q" path="res://assets/ingredient-icons/Icon39.png" id="5_icdci"]
 
 [resource]
 script = ExtResource("2_qdjkw")
 name = "Coconut Oil"
 description = "A thick, creamy oil from a tropical fruit, slick and rich."
-effects = Dictionary[ExtResource("1_eaj5a"), bool]({})
+icon = ExtResource("5_icdci")
+effects = Dictionary[ExtResource("1_eaj5a"), bool]({
+ExtResource("2_127hb"): true,
+ExtResource("3_ehj5j"): true,
+ExtResource("4_0nco6"): false
+})
 price = 0.0

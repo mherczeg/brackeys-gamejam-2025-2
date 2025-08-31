@@ -5,16 +5,16 @@
 [ext_resource type="Script" uid="uid://dbbnqe7xp83lh" path="res://resources/Encounter.gd" id="3_awwrg"]
 [ext_resource type="Resource" uid="uid://dkbirsklwqvsg" path="res://resources/npcs/NPC5.tres" id="3_xybtp"]
 [ext_resource type="Resource" uid="uid://b03ap73jvboyi" path="res://resources/npcs/NPC2.tres" id="4_c0hiq"]
-[ext_resource type="Resource" uid="uid://b8ruh3tbvbnwh" path="res://resources/products/Product4.tres" id="4_p56af"]
 [ext_resource type="Resource" uid="uid://de2uc77f54xai" path="res://resources/npcs/NPC7.tres" id="5_sju0c"]
-[ext_resource type="Resource" uid="uid://dwyqi08pyif6f" path="res://resources/products/Product5.tres" id="6_1yqmo"]
-[ext_resource type="Resource" uid="uid://bpx6k43vfi8ri" path="res://resources/products/Product7.tres" id="8_nusrc"]
+[ext_resource type="Resource" uid="uid://ddo3t83yv1d7u" path="res://resources/products/ginger-ale.tres" id="6_p56af"]
+[ext_resource type="Resource" uid="uid://de41hqr238fyl" path="res://resources/products/hot-chocolate.tres" id="7_1yqmo"]
+[ext_resource type="Resource" uid="uid://dg2hyqr56vjy0" path="res://resources/products/green-tea.tres" id="8_nusrc"]
 
 [resource]
 script = ExtResource("3_awwrg")
 order = Dictionary[ExtResource("1_4coqk"), ExtResource("2_ipc7m")]({
-ExtResource("3_xybtp"): ExtResource("4_p56af"),
-ExtResource("4_c0hiq"): ExtResource("6_1yqmo"),
+ExtResource("3_xybtp"): ExtResource("6_p56af"),
+ExtResource("4_c0hiq"): ExtResource("7_1yqmo"),
 ExtResource("5_sju0c"): ExtResource("8_nusrc")
 })
 stage_1_text = Dictionary[ExtResource("1_4coqk"), String]({

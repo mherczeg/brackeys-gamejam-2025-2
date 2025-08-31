@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://dhbh8yi2lmnqj"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://h0hyn6fjpyoh"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_0hpd4"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_ahdn2"]
+[ext_resource type="Resource" uid="uid://h0hnfdlvduyv" path="res://resources/effects/blue.tres" id="2_oulxk"]
+[ext_resource type="Resource" uid="uid://c2tm0u2u3vubs" path="res://resources/effects/comfort.tres" id="3_tqt5v"]
+[ext_resource type="Resource" uid="uid://cn1y1uf4fld1v" path="res://resources/effects/water.tres" id="4_qmbux"]
+[ext_resource type="Resource" uid="uid://daqref4edonjb" path="res://resources/effects/quintessence.tres" id="5_vvuqc"]
+[ext_resource type="Texture2D" uid="uid://36g1ydd7hh7i" path="res://assets/ingredient-icons/Icon11.png" id="6_2ohsy"]
 
 [resource]
 script = ExtResource("2_ahdn2")
 name = "River Nymph's Tear"
 description = "A drop of water shed by a river spirit, it is the pure quintessence of life."
-effects = Dictionary[ExtResource("1_0hpd4"), bool]({})
+icon = ExtResource("6_2ohsy")
+effects = Dictionary[ExtResource("1_0hpd4"), bool]({
+ExtResource("2_oulxk"): true,
+ExtResource("3_tqt5v"): false,
+ExtResource("4_qmbux"): false,
+ExtResource("5_vvuqc"): false
+})
 price = 0.0

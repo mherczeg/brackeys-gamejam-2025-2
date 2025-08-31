@@ -1,14 +1,20 @@
-[gd_resource type="Resource" script_class="Product" load_steps=5 format=3 uid="uid://c0gaep7tb33qj"]
+[gd_resource type="Resource" script_class="Product" load_steps=7 format=3 uid="uid://c0gaep7tb33qj"]
 
 [ext_resource type="Resource" uid="uid://1g3i3a8rkotx" path="res://resources/bases/ice-cream.tres" id="1_ib6fo"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_qi754"]
 [ext_resource type="Resource" uid="uid://652qwvhkvhrh" path="res://resources/effects/thick.tres" id="3_qi754"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_s83m6"]
+[ext_resource type="Texture2D" uid="uid://dqhpxd2lkr22n" path="res://assets/ice-cream-atlas.png" id="4_v17ip"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fse1f"]
+atlas = ExtResource("4_v17ip")
+region = Rect2(96, 0, 32, 32)
 
 [resource]
 script = ExtResource("3_s83m6")
 name = "Fudge Bar"
 description = "A dense, chewy, and intensely chocolatey frozen bar."
+icon = SubResource("AtlasTexture_fse1f")
 base = ExtResource("1_ib6fo")
 effects = Array[ExtResource("2_qi754")]([ExtResource("3_qi754")])
 price = 0.0

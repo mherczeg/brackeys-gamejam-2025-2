@@ -1,15 +1,21 @@
-[gd_resource type="Resource" script_class="Product" load_steps=6 format=3 uid="uid://ddo3t83yv1d7u"]
+[gd_resource type="Resource" script_class="Product" load_steps=8 format=3 uid="uid://ddo3t83yv1d7u"]
 
 [ext_resource type="Resource" uid="uid://yjnv2md2an4c" path="res://resources/bases/soda.tres" id="1_iobvs"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_eq1al"]
 [ext_resource type="Resource" uid="uid://bpeqnaoulkik0" path="res://resources/effects/soothing.tres" id="3_0wgbc"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_alhph"]
 [ext_resource type="Resource" uid="uid://bgc7sg3jtkm7" path="res://resources/effects/pungent.tres" id="4_qat1g"]
+[ext_resource type="Texture2D" uid="uid://5rae0g6ykmmo" path="res://assets/soda-atlas.png" id="5_3aswk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_os33i"]
+atlas = ExtResource("5_3aswk")
+region = Rect2(192, 0, 32, 32)
 
 [resource]
 script = ExtResource("3_alhph")
 name = "Ginger Ale"
 description = "A soothing and spicy soda, perfect for settling the stomach or spirit."
+icon = SubResource("AtlasTexture_os33i")
 base = ExtResource("1_iobvs")
 effects = Array[ExtResource("2_eq1al")]([ExtResource("3_0wgbc"), ExtResource("4_qat1g")])
 price = 0.0

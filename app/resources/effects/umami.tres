@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://bhci83c1g2fsl"]
+[gd_resource type="Resource" script_class="Effect" load_steps=3 format=3 uid="uid://bhci83c1g2fsl"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_4d015"]
+[ext_resource type="Texture2D" uid="uid://dlacd8qmfijd5" path="res://assets/runes-icon/Icon47.png" id="1_p5dkq"]
 
 [resource]
 script = ExtResource("1_4d015")
 name = "Umami"
 description = "A deep, savory flavor that grounds the senses to the earth."
+icon = ExtResource("1_p5dkq")

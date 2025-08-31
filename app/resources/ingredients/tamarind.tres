@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://bggi6dvofjbdd"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://onqdx3bm1ouh"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_twvr5"]
+[ext_resource type="Resource" uid="uid://cae6uvogntv0i" path="res://resources/effects/laxative.tres" id="2_85nxx"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_sayjo"]
+[ext_resource type="Resource" uid="uid://bqceg4oaop0yx" path="res://resources/effects/digestive.tres" id="3_o42vy"]
+[ext_resource type="Resource" uid="uid://d4lih6ctwk2l" path="res://resources/effects/discomfort.tres" id="4_rupse"]
+[ext_resource type="Resource" uid="uid://ktejujvrxm0m" path="res://resources/effects/acidic.tres" id="5_fvvxb"]
+[ext_resource type="Texture2D" uid="uid://rmdqq6prugbh" path="res://assets/ingredient-icons/Icon5.png" id="6_ntat1"]
 
 [resource]
 script = ExtResource("2_sayjo")
 name = "Tamarind"
 description = "The sour pulp of a strange pod, known for its potent, purging qualities."
-effects = Dictionary[ExtResource("1_twvr5"), bool]({})
+icon = ExtResource("6_ntat1")
+effects = Dictionary[ExtResource("1_twvr5"), bool]({
+ExtResource("2_85nxx"): true,
+ExtResource("3_o42vy"): true,
+ExtResource("4_rupse"): false,
+ExtResource("5_fvvxb"): false
+})
 price = 0.0

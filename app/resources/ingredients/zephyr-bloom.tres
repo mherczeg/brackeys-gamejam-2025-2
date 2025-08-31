@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://ccehnpxdimare"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://dkxrw272a7ina"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_j0bv2"]
+[ext_resource type="Resource" uid="uid://ddwlocnkdx7kn" path="res://resources/effects/air.tres" id="2_n56eg"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_vdrp6"]
+[ext_resource type="Resource" uid="uid://dftajnygqifq3" path="res://resources/effects/aromatic.tres" id="3_5di8a"]
+[ext_resource type="Resource" uid="uid://cn2byiu0crd82" path="res://resources/effects/white.tres" id="4_uahps"]
+[ext_resource type="Resource" uid="uid://3modiddoph3q" path="res://resources/effects/expanding.tres" id="5_kfwma"]
+[ext_resource type="Texture2D" uid="uid://c4x8ang1uqkx3" path="res://assets/ingredient-icons/Icon9.png" id="6_dcwjp"]
 
 [resource]
 script = ExtResource("2_vdrp6")
 name = "Zephyr Bloom"
 description = "A high-altitude flower whose petals are lighter than air, carrying a fresh, clean scent."
-effects = Dictionary[ExtResource("1_j0bv2"), bool]({})
+icon = ExtResource("6_dcwjp")
+effects = Dictionary[ExtResource("1_j0bv2"), bool]({
+ExtResource("2_n56eg"): true,
+ExtResource("3_5di8a"): false,
+ExtResource("4_uahps"): false,
+ExtResource("5_kfwma"): false
+})
 price = 0.0

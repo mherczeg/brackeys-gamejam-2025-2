@@ -1,15 +1,21 @@
-[gd_resource type="Resource" script_class="Product" load_steps=6 format=3 uid="uid://c2aonmgq8gaek"]
+[gd_resource type="Resource" script_class="Product" load_steps=8 format=3 uid="uid://c2aonmgq8gaek"]
 
 [ext_resource type="Resource" uid="uid://cho25f5213qgd" path="res://resources/bases/chocolate-bar.tres" id="1_8rb3y"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_3smwx"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_2fwxa"]
 [ext_resource type="Resource" uid="uid://d4lih6ctwk2l" path="res://resources/effects/discomfort.tres" id="3_26h0h"]
 [ext_resource type="Resource" uid="uid://c1fbe03rxkc07" path="res://resources/effects/earthy.tres" id="4_31q8j"]
+[ext_resource type="Texture2D" uid="uid://bdvibcqswxsle" path="res://assets/chocolate-atlas.png" id="5_wd32i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22omc"]
+atlas = ExtResource("5_wd32i")
+region = Rect2(32, 0, 32, 32)
 
 [resource]
 script = ExtResource("3_2fwxa")
 name = "Dark Almonds"
 description = "Rich dark chocolate with the satisfying crunch of whole almonds."
+icon = SubResource("AtlasTexture_22omc")
 base = ExtResource("1_8rb3y")
 effects = Array[ExtResource("2_3smwx")]([ExtResource("3_26h0h"), ExtResource("4_31q8j")])
 price = 0.0

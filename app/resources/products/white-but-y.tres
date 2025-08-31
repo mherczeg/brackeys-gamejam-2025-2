@@ -1,15 +1,21 @@
-[gd_resource type="Resource" script_class="Product" load_steps=6 format=3 uid="uid://cfcsu8txpr82"]
+[gd_resource type="Resource" script_class="Product" load_steps=8 format=3 uid="uid://cfcsu8txpr82"]
 
 [ext_resource type="Resource" uid="uid://cho25f5213qgd" path="res://resources/bases/chocolate-bar.tres" id="1_65tbr"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_it5o6"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_elf4t"]
 [ext_resource type="Resource" uid="uid://cn2byiu0crd82" path="res://resources/effects/white.tres" id="3_pdyow"]
 [ext_resource type="Resource" uid="uid://dkxgfalr0y0ei" path="res://resources/effects/sweet.tres" id="4_gbcqu"]
+[ext_resource type="Texture2D" uid="uid://bdvibcqswxsle" path="res://assets/chocolate-atlas.png" id="5_30ik0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvc5f"]
+atlas = ExtResource("5_30ik0")
+region = Rect2(128, 0, 32, 32)
 
 [resource]
 script = ExtResource("3_elf4t")
 name = "White But Y"
 description = "A sweet and creamy confection of pure white chocolate."
+icon = SubResource("AtlasTexture_uvc5f")
 base = ExtResource("1_65tbr")
 effects = Array[ExtResource("2_it5o6")]([ExtResource("3_pdyow"), ExtResource("4_gbcqu")])
 price = 0.0

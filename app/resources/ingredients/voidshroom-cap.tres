@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://dxqv6uy18jslo"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://chtj3h8quob2p"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_mj7by"]
+[ext_resource type="Resource" uid="uid://8x660roi4u7r" path="res://resources/effects/toxic.tres" id="2_3ev3n"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_y2nm4"]
+[ext_resource type="Resource" uid="uid://dxa1s02kg4gnc" path="res://resources/effects/black.tres" id="3_ddct5"]
+[ext_resource type="Resource" uid="uid://c1fbe03rxkc07" path="res://resources/effects/earthy.tres" id="4_gmojb"]
+[ext_resource type="Resource" uid="uid://bdsqrvoxoi8xv" path="res://resources/effects/anti-life.tres" id="5_il3iu"]
+[ext_resource type="Texture2D" uid="uid://bplsmwjv38udy" path="res://assets/ingredient-icons/Icon24.png" id="6_7w0ep"]
 
 [resource]
 script = ExtResource("2_y2nm4")
 name = "Voidshroom Cap"
 description = "A black, rubbery mushroom found in places devoid of life, it carries a potent, necrotic poison."
-effects = Dictionary[ExtResource("1_mj7by"), bool]({})
+icon = ExtResource("6_7w0ep")
+effects = Dictionary[ExtResource("1_mj7by"), bool]({
+ExtResource("2_3ev3n"): true,
+ExtResource("3_ddct5"): false,
+ExtResource("4_gmojb"): false,
+ExtResource("5_il3iu"): false
+})
 price = 0.0

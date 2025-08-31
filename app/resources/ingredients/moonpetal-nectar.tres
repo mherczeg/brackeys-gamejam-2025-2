@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://dguu46whvhnsy"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://p4sgroep427h"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_75ixb"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_2dgul"]
+[ext_resource type="Resource" uid="uid://h0hnfdlvduyv" path="res://resources/effects/blue.tres" id="2_bn0s3"]
+[ext_resource type="Resource" uid="uid://bpeqnaoulkik0" path="res://resources/effects/soothing.tres" id="3_sqj42"]
+[ext_resource type="Resource" uid="uid://dkxgfalr0y0ei" path="res://resources/effects/sweet.tres" id="4_di3vc"]
+[ext_resource type="Resource" uid="uid://cn2byiu0crd82" path="res://resources/effects/white.tres" id="5_y21mk"]
+[ext_resource type="Texture2D" uid="uid://fsl4hw57qtvg" path="res://assets/ingredient-icons/Icon38.png" id="6_jwsaa"]
 
 [resource]
 script = ExtResource("2_2dgul")
 name = "Moonpetal Nectar"
 description = "The sweet, glowing nectar of a flower that blooms only under the full moon."
-effects = Dictionary[ExtResource("1_75ixb"), bool]({})
+icon = ExtResource("6_jwsaa")
+effects = Dictionary[ExtResource("1_75ixb"), bool]({
+ExtResource("2_bn0s3"): true,
+ExtResource("3_sqj42"): false,
+ExtResource("4_di3vc"): false,
+ExtResource("5_y21mk"): false
+})
 price = 0.0

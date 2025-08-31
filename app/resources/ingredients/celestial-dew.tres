@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://bfuuj22ympqun"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://b0kvrjaxovqy0"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_njppg"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_55abf"]
+[ext_resource type="Resource" uid="uid://cn1y1uf4fld1v" path="res://resources/effects/water.tres" id="2_mfdek"]
+[ext_resource type="Resource" uid="uid://h0hnfdlvduyv" path="res://resources/effects/blue.tres" id="3_jtsrv"]
+[ext_resource type="Resource" uid="uid://ci0ah6iv6q6k2" path="res://resources/effects/metabolistic.tres" id="4_wqkc8"]
+[ext_resource type="Resource" uid="uid://daqref4edonjb" path="res://resources/effects/quintessence.tres" id="5_4icqu"]
+[ext_resource type="Texture2D" uid="uid://bmmsxfqm21u1k" path="res://assets/ingredient-icons/Icon10.png" id="6_s5xcr"]
 
 [resource]
 script = ExtResource("2_55abf")
 name = "Celestial Dew"
 description = "Droplets of condensation collected from a fallen star, humming with cosmic power."
-effects = Dictionary[ExtResource("1_njppg"), bool]({})
+icon = ExtResource("6_s5xcr")
+effects = Dictionary[ExtResource("1_njppg"), bool]({
+ExtResource("2_mfdek"): true,
+ExtResource("3_jtsrv"): false,
+ExtResource("4_wqkc8"): false,
+ExtResource("5_4icqu"): false
+})
 price = 0.0

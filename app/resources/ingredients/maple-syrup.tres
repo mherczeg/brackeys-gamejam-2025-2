@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://dfifxh01osq7"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://bfcw7oyxirctl"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_vh3qk"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_48a34"]
+[ext_resource type="Resource" uid="uid://dkxgfalr0y0ei" path="res://resources/effects/sweet.tres" id="2_bdj5y"]
+[ext_resource type="Resource" uid="uid://dftajnygqifq3" path="res://resources/effects/aromatic.tres" id="3_g05s7"]
+[ext_resource type="Resource" uid="uid://652qwvhkvhrh" path="res://resources/effects/thick.tres" id="4_37fxe"]
+[ext_resource type="Resource" uid="uid://cut8o4kugfvce" path="res://resources/effects/energizing.tres" id="5_rvybs"]
+[ext_resource type="Texture2D" uid="uid://8rwd40ydl1m5" path="res://assets/ingredient-icons/Icon28.png" id="6_plw08"]
 
 [resource]
 script = ExtResource("2_48a34")
 name = "Maple Syrup"
 description = "The lifeblood of the great maple, a sweet and energizing golden sap."
-effects = Dictionary[ExtResource("1_vh3qk"), bool]({})
+icon = ExtResource("6_plw08")
+effects = Dictionary[ExtResource("1_vh3qk"), bool]({
+ExtResource("2_bdj5y"): false,
+ExtResource("3_g05s7"): false,
+ExtResource("4_37fxe"): false,
+ExtResource("5_rvybs"): false
+})
 price = 0.0

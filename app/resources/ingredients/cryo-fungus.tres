@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://sr08slhi68u7"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://cprlqo6utjjlo"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_rjlfv"]
+[ext_resource type="Resource" uid="uid://cn1y1uf4fld1v" path="res://resources/effects/water.tres" id="2_two7x"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_wo53w"]
+[ext_resource type="Resource" uid="uid://8x660roi4u7r" path="res://resources/effects/toxic.tres" id="3_cx262"]
+[ext_resource type="Resource" uid="uid://dgb0msy4jw7xk" path="res://resources/effects/preservative.tres" id="4_dql2g"]
+[ext_resource type="Resource" uid="uid://cn2byiu0crd82" path="res://resources/effects/white.tres" id="5_1l0yx"]
+[ext_resource type="Texture2D" uid="uid://chkhclmu2gl6m" path="res://assets/ingredient-icons/Icon30.png" id="6_xvn8i"]
 
 [resource]
 script = ExtResource("2_wo53w")
 name = "Cryo-Fungus"
 description = "A mushroom that grows in absolute zero, its tissues are locked in a state of perfect, deadly preservation."
-effects = Dictionary[ExtResource("1_rjlfv"), bool]({})
+icon = ExtResource("6_xvn8i")
+effects = Dictionary[ExtResource("1_rjlfv"), bool]({
+ExtResource("2_two7x"): true,
+ExtResource("3_cx262"): false,
+ExtResource("4_dql2g"): false,
+ExtResource("5_1l0yx"): false
+})
 price = 0.0

@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://bcg553pe4di2b"]
+[gd_resource type="Resource" script_class="Effect" load_steps=3 format=3 uid="uid://bcg553pe4di2b"]
 
+[ext_resource type="Texture2D" uid="uid://cp8dkgj7pthm6" path="res://assets/runes-icon/Icon40.png" id="1_u1kdg"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_y721h"]
 
 [resource]
 script = ExtResource("1_y721h")
 name = "Fire"
 description = "The untamed essence of creation and destruction, burning with volatile heat."
+icon = ExtResource("1_u1kdg")

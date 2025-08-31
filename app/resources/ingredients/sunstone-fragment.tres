@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://cyi8fqiv82g2t"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://2bdwat58asij"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_tq0qu"]
+[ext_resource type="Resource" uid="uid://dge3gg14elpgy" path="res://resources/effects/burst.tres" id="2_b1y20"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_uylu1"]
+[ext_resource type="Resource" uid="uid://bcg553pe4di2b" path="res://resources/effects/fire.tres" id="3_5t1r7"]
+[ext_resource type="Resource" uid="uid://bg456i4g56iux" path="res://resources/effects/minerals.tres" id="4_jugll"]
+[ext_resource type="Resource" uid="uid://cut8o4kugfvce" path="res://resources/effects/energizing.tres" id="5_b8qat"]
+[ext_resource type="Texture2D" uid="uid://cr5srxkk460vr" path="res://assets/ingredient-icons/Icon17.png" id="6_8ihp1"]
 
 [resource]
 script = ExtResource("2_uylu1")
 name = "Sunstone Fragment"
 description = "A crystal that fell from the sun, it radiates warmth and boundless energy."
-effects = Dictionary[ExtResource("1_tq0qu"), bool]({})
+icon = ExtResource("6_8ihp1")
+effects = Dictionary[ExtResource("1_tq0qu"), bool]({
+ExtResource("2_b1y20"): true,
+ExtResource("3_5t1r7"): false,
+ExtResource("4_jugll"): false,
+ExtResource("5_b8qat"): false
+})
 price = 0.0

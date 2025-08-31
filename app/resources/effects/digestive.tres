@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://bqceg4oaop0yx"]
+[gd_resource type="Resource" script_class="Effect" load_steps=3 format=3 uid="uid://bqceg4oaop0yx"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_8xacn"]
+[ext_resource type="Texture2D" uid="uid://bu6uo4tbyk3sx" path="res://assets/runes-icon/Icon33.png" id="1_dpro6"]
 
 [resource]
 script = ExtResource("1_8xacn")
 name = "Digestive"
 description = "Helps the body absorb the true essence of sustenance."
+icon = ExtResource("1_dpro6")

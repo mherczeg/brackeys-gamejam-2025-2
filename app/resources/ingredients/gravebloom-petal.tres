@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://ccy8m7tfxhnt0"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://bpx1r4687h557"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_mrbvc"]
+[ext_resource type="Resource" uid="uid://8x660roi4u7r" path="res://resources/effects/toxic.tres" id="2_3cofh"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_qybla"]
+[ext_resource type="Resource" uid="uid://bpeqnaoulkik0" path="res://resources/effects/soothing.tres" id="3_1oyiq"]
+[ext_resource type="Resource" uid="uid://d4lih6ctwk2l" path="res://resources/effects/discomfort.tres" id="4_mdf0m"]
+[ext_resource type="Resource" uid="uid://bdsqrvoxoi8xv" path="res://resources/effects/anti-life.tres" id="5_qylwr"]
+[ext_resource type="Texture2D" uid="uid://cw56bwoctqwtw" path="res://assets/ingredient-icons/Icon4.png" id="6_h0qvf"]
 
 [resource]
 script = ExtResource("2_qybla")
 name = "Gravebloom Petal"
 description = "A flower that only blooms on the graves of the recently deceased, its properties are paradoxically both toxic and soothing."
-effects = Dictionary[ExtResource("1_mrbvc"), bool]({})
+icon = ExtResource("6_h0qvf")
+effects = Dictionary[ExtResource("1_mrbvc"), bool]({
+ExtResource("2_3cofh"): true,
+ExtResource("3_1oyiq"): false,
+ExtResource("4_mdf0m"): false,
+ExtResource("5_qylwr"): false
+})
 price = 0.0

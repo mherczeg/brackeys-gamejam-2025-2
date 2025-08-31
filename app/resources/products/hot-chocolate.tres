@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Product" load_steps=7 format=3 uid="uid://de41hqr238fyl"]
+[gd_resource type="Resource" script_class="Product" load_steps=9 format=3 uid="uid://de41hqr238fyl"]
 
 [ext_resource type="Resource" uid="uid://crkxdpkexj8mf" path="res://resources/bases/hot-beverage.tres" id="1_w5fai"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_yu2xx"]
@@ -6,11 +6,17 @@
 [ext_resource type="Resource" uid="uid://c2tm0u2u3vubs" path="res://resources/effects/comfort.tres" id="3_oogx0"]
 [ext_resource type="Resource" uid="uid://dkxgfalr0y0ei" path="res://resources/effects/sweet.tres" id="4_41c7u"]
 [ext_resource type="Resource" uid="uid://bcg553pe4di2b" path="res://resources/effects/fire.tres" id="5_nmcp4"]
+[ext_resource type="Texture2D" uid="uid://bkh4tkg87u1oo" path="res://assets/hot-bev-atlas.png" id="6_vm8y5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jibeo"]
+atlas = ExtResource("6_vm8y5")
+region = Rect2(96, 0, 32, 32)
 
 [resource]
 script = ExtResource("3_a7m8c")
 name = "Hot Chocolate"
 description = "A warm, comforting mug of rich, molten chocolate."
+icon = SubResource("AtlasTexture_jibeo")
 base = ExtResource("1_w5fai")
 effects = Array[ExtResource("2_yu2xx")]([ExtResource("3_oogx0"), ExtResource("4_41c7u"), ExtResource("5_nmcp4")])
 price = 0.0

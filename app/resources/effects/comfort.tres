@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://c2tm0u2u3vubs"]
+[gd_resource type="Resource" script_class="Effect" load_steps=3 format=3 uid="uid://c2tm0u2u3vubs"]
 
+[ext_resource type="Texture2D" uid="uid://b18eyhh6k5cxt" path="res://assets/runes-icon/Icon18.png" id="1_4pnw6"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_3207c"]
 
 [resource]
 script = ExtResource("1_3207c")
 name = "Comfort"
 description = "Eases worldly burdens and brings peace to the mind."
+icon = ExtResource("1_4pnw6")

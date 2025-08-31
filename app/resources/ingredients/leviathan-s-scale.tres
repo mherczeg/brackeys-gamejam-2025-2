@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://csffanweswiy8"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://dklw0n8u8gfva"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_6u4og"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_6itkm"]
+[ext_resource type="Resource" uid="uid://bg456i4g56iux" path="res://resources/effects/minerals.tres" id="2_e8vty"]
+[ext_resource type="Resource" uid="uid://h0hnfdlvduyv" path="res://resources/effects/blue.tres" id="3_tm1j8"]
+[ext_resource type="Resource" uid="uid://cn1y1uf4fld1v" path="res://resources/effects/water.tres" id="4_rua6x"]
+[ext_resource type="Resource" uid="uid://c3pipkfh57hxp" path="res://resources/effects/calcium.tres" id="5_0x5sn"]
+[ext_resource type="Texture2D" uid="uid://bwhrb2ci2tbgr" path="res://assets/ingredient-icons/Icon3.png" id="6_at226"]
 
 [resource]
 script = ExtResource("2_6itkm")
 name = "Leviathan's Scale"
 description = "A hand-sized scale from a creature of the deep sea, impossibly hard and infused with oceanic minerals."
-effects = Dictionary[ExtResource("1_6u4og"), bool]({})
+icon = ExtResource("6_at226")
+effects = Dictionary[ExtResource("1_6u4og"), bool]({
+ExtResource("2_e8vty"): true,
+ExtResource("3_tm1j8"): false,
+ExtResource("4_rua6x"): false,
+ExtResource("5_0x5sn"): false
+})
 price = 0.0

@@ -1,11 +1,20 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://b6lsgjx4x73j0"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=7 format=3 uid="uid://bke4oua5puxer"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_5knfi"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_8e11t"]
+[ext_resource type="Resource" uid="uid://c0dpyigt4uf83" path="res://resources/effects/yellow.tres" id="2_a8dqf"]
+[ext_resource type="Resource" uid="uid://bqceg4oaop0yx" path="res://resources/effects/digestive.tres" id="3_tgrre"]
+[ext_resource type="Resource" uid="uid://bwiumkclw4bo7" path="res://resources/effects/fortifying.tres" id="4_btkwr"]
+[ext_resource type="Texture2D" uid="uid://df1ibkwkg7ktx" path="res://assets/ingredient-icons/Icon44.png" id="5_jue3g"]
 
 [resource]
 script = ExtResource("2_8e11t")
 name = "Turmeric"
 description = "A vibrant yellow root that aids digestion and bolsters the body's defenses."
-effects = Dictionary[ExtResource("1_5knfi"), bool]({})
+icon = ExtResource("5_jue3g")
+effects = Dictionary[ExtResource("1_5knfi"), bool]({
+ExtResource("2_a8dqf"): true,
+ExtResource("3_tgrre"): false,
+ExtResource("4_btkwr"): false
+})
 price = 0.0

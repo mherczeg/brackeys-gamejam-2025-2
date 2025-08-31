@@ -1,15 +1,21 @@
-[gd_resource type="Resource" script_class="Product" load_steps=6 format=3 uid="uid://cjiw7aopalpyo"]
+[gd_resource type="Resource" script_class="Product" load_steps=8 format=3 uid="uid://cjiw7aopalpyo"]
 
 [ext_resource type="Resource" uid="uid://pyg5nom8yqp6" path="res://resources/bases/sandwich.tres" id="1_a203e"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_wvjsv"]
 [ext_resource type="Resource" uid="uid://ckmombfq7w8dt" path="res://resources/effects/gluten.tres" id="3_2gwwh"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_tmysr"]
 [ext_resource type="Resource" uid="uid://dftajnygqifq3" path="res://resources/effects/aromatic.tres" id="4_1uppg"]
+[ext_resource type="Texture2D" uid="uid://yyr1n8sgd58" path="res://assets/sandwich-atlas.png" id="5_7d7sj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4yvba"]
+atlas = ExtResource("5_7d7sj")
+region = Rect2(192, 0, 32, 32)
 
 [resource]
 script = ExtResource("3_tmysr")
 name = "Italian Sub"
 description = "A feast of cured meats and zesty aromas, packed into a hearty roll."
+icon = SubResource("AtlasTexture_4yvba")
 base = ExtResource("1_a203e")
 effects = Array[ExtResource("2_wvjsv")]([ExtResource("3_2gwwh"), ExtResource("4_1uppg")])
 price = 0.0

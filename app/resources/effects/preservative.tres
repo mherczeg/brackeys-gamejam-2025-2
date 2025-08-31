@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://dgb0msy4jw7xk"]
+[gd_resource type="Resource" script_class="Effect" load_steps=3 format=3 uid="uid://dgb0msy4jw7xk"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_cqkky"]
+[ext_resource type="Texture2D" uid="uid://bbdfgw0n87t4l" path="res://assets/runes-icon/Icon14.png" id="1_kk6j8"]
 
 [resource]
 script = ExtResource("1_cqkky")
 name = "Preservative"
 description = "Halts the relentless march of time's decay."
+icon = ExtResource("1_kk6j8")

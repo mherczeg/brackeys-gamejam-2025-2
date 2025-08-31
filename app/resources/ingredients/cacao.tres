@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://e7u8pds5ovm8"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://dkgtcy2fm2kko"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_lk3tf"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_1qrfq"]
+[ext_resource type="Resource" uid="uid://d4lih6ctwk2l" path="res://resources/effects/discomfort.tres" id="2_en26h"]
+[ext_resource type="Resource" uid="uid://c1fbe03rxkc07" path="res://resources/effects/earthy.tres" id="3_in214"]
+[ext_resource type="Resource" uid="uid://c2tm0u2u3vubs" path="res://resources/effects/comfort.tres" id="4_krxnh"]
+[ext_resource type="Resource" uid="uid://ca7yp8e05soib" path="res://resources/effects/antioxidant.tres" id="5_1fu4n"]
+[ext_resource type="Texture2D" uid="uid://cifqr8aaswalk" path="res://assets/ingredient-icons/Icon42.png" id="6_pbwcs"]
 
 [resource]
 script = ExtResource("2_1qrfq")
 name = "Cacao"
 description = "A discomfort bean from the deep jungle, known to comfort the heart and ground the senses."
-effects = Dictionary[ExtResource("1_lk3tf"), bool]({})
+icon = ExtResource("6_pbwcs")
+effects = Dictionary[ExtResource("1_lk3tf"), bool]({
+ExtResource("2_en26h"): true,
+ExtResource("3_in214"): true,
+ExtResource("4_krxnh"): false,
+ExtResource("5_1fu4n"): false
+})
 price = 0.0

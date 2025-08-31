@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://dl6xhwsef3ei7"]
+[gd_resource type="Resource" script_class="Effect" load_steps=3 format=3 uid="uid://dl6xhwsef3ei7"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_tabe6"]
+[ext_resource type="Texture2D" uid="uid://b00k7k0t228qk" path="res://assets/runes-icon/Icon2.png" id="1_y0vx5"]
 
 [resource]
 script = ExtResource("1_tabe6")
 name = "Protein"
 description = "Provides the raw essence of vitality and strength."
+icon = ExtResource("1_y0vx5")

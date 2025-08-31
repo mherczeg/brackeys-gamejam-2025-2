@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://cn2byiu0crd82"]
+[gd_resource type="Resource" script_class="Effect" load_steps=3 format=3 uid="uid://cn2byiu0crd82"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_3yq8t"]
+[ext_resource type="Texture2D" uid="uid://l48g5x10a1j8" path="res://assets/runes-icon/Icon21.png" id="1_gxffh"]
 
 [resource]
 script = ExtResource("1_3yq8t")
 name = "White"
 description = "The color of pure light, brilliant and untainted."
+icon = ExtResource("1_gxffh")

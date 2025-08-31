@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://c6uitpsi7md7n"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://do75n27vqljfn"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_rmq5x"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_20jyk"]
+[ext_resource type="Resource" uid="uid://dp1wueirdnjw" path="res://resources/effects/focusing.tres" id="2_so4bq"]
+[ext_resource type="Resource" uid="uid://ddwlocnkdx7kn" path="res://resources/effects/air.tres" id="3_gt861"]
+[ext_resource type="Resource" uid="uid://cpee1jgrc3kus" path="res://resources/effects/zest.tres" id="4_yq3mw"]
+[ext_resource type="Resource" uid="uid://cut8o4kugfvce" path="res://resources/effects/energizing.tres" id="5_q32lg"]
+[ext_resource type="Texture2D" uid="uid://cx20v484hkumu" path="res://assets/ingredient-icons/Icon33.png" id="6_8rfrr"]
 
 [resource]
 script = ExtResource("2_20jyk")
 name = "Fairy's Lantern"
 description = "A glowing flower that floats a few inches off the ground, its light is said to bring clarity."
-effects = Dictionary[ExtResource("1_rmq5x"), bool]({})
+icon = ExtResource("6_8rfrr")
+effects = Dictionary[ExtResource("1_rmq5x"), bool]({
+ExtResource("2_so4bq"): true,
+ExtResource("3_gt861"): false,
+ExtResource("4_yq3mw"): false,
+ExtResource("5_q32lg"): false
+})
 price = 0.0

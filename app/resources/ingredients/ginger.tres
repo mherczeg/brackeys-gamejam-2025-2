@@ -1,11 +1,20 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://hqyg6d5rgaly"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=7 format=3 uid="uid://bxa874xuh6p5b"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_xmmbd"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_6e4fh"]
+[ext_resource type="Resource" uid="uid://cpee1jgrc3kus" path="res://resources/effects/zest.tres" id="2_82kml"]
+[ext_resource type="Resource" uid="uid://ca7yp8e05soib" path="res://resources/effects/antioxidant.tres" id="3_4p52l"]
+[ext_resource type="Resource" uid="uid://bgc7sg3jtkm7" path="res://resources/effects/pungent.tres" id="4_6m38q"]
+[ext_resource type="Texture2D" uid="uid://syiu2h1srgr8" path="res://assets/ingredient-icons/Icon34.png" id="5_yhxv4"]
 
 [resource]
 script = ExtResource("2_6e4fh")
 name = "Ginger"
 description = "A gnarled root with a sharp bite, said to clear the mind and settle the spirit."
-effects = Dictionary[ExtResource("1_xmmbd"), bool]({})
+icon = ExtResource("5_yhxv4")
+effects = Dictionary[ExtResource("1_xmmbd"), bool]({
+ExtResource("2_82kml"): true,
+ExtResource("3_4p52l"): true,
+ExtResource("4_6m38q"): false
+})
 price = 0.0

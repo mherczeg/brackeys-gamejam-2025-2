@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://do7cj8rn4buh7"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://bg2rhsfgjcwoo"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_4atj1"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_7sco4"]
+[ext_resource type="Resource" uid="uid://bpeqnaoulkik0" path="res://resources/effects/soothing.tres" id="2_y2hlg"]
+[ext_resource type="Resource" uid="uid://cn2byiu0crd82" path="res://resources/effects/white.tres" id="3_r0emg"]
+[ext_resource type="Resource" uid="uid://dgb0msy4jw7xk" path="res://resources/effects/preservative.tres" id="4_smcbd"]
+[ext_resource type="Resource" uid="uid://bwiumkclw4bo7" path="res://resources/effects/fortifying.tres" id="5_4efd4"]
+[ext_resource type="Texture2D" uid="uid://7wtfeanspvny" path="res://assets/ingredient-icons/Icon46.png" id="6_g3yoo"]
 
 [resource]
 script = ExtResource("2_7sco4")
 name = "Glimmerwood Bark"
 description = "The pearlescent bark of a forest that never sees the sun, it hums with a quiet, protective energy."
-effects = Dictionary[ExtResource("1_4atj1"), bool]({})
+icon = ExtResource("6_g3yoo")
+effects = Dictionary[ExtResource("1_4atj1"), bool]({
+ExtResource("2_y2hlg"): true,
+ExtResource("3_r0emg"): false,
+ExtResource("4_smcbd"): false,
+ExtResource("5_4efd4"): false
+})
 price = 0.0

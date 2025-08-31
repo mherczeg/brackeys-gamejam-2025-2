@@ -1,15 +1,21 @@
-[gd_resource type="Resource" script_class="Product" load_steps=6 format=3 uid="uid://b3mlye6eaidxv"]
+[gd_resource type="Resource" script_class="Product" load_steps=8 format=3 uid="uid://b3mlye6eaidxv"]
 
 [ext_resource type="Resource" uid="uid://pnwh8bcvqsnh" path="res://resources/bases/crisps.tres" id="1_7yamt"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_l2jkk"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_m3e7j"]
 [ext_resource type="Resource" uid="uid://bg456i4g56iux" path="res://resources/effects/minerals.tres" id="3_yosol"]
 [ext_resource type="Resource" uid="uid://c1fbe03rxkc07" path="res://resources/effects/earthy.tres" id="4_4ck7e"]
+[ext_resource type="Texture2D" uid="uid://dpnmaf0dq2jdd" path="res://assets/crisps-atlas.png" id="5_fgwmj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3fv4"]
+atlas = ExtResource("5_fgwmj")
+region = Rect2(160, 0, 32, 32)
 
 [resource]
 script = ExtResource("3_m3e7j")
 name = "Chips"
 description = "Classic, salty potato crisps, irresistibly crunchy."
+icon = SubResource("AtlasTexture_o3fv4")
 base = ExtResource("1_7yamt")
 effects = Array[ExtResource("2_l2jkk")]([ExtResource("3_yosol"), ExtResource("4_4ck7e")])
 price = 0.0

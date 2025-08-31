@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://cu0sfulj2ugpe"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://goxmscaalmkt"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_oxmkh"]
+[ext_resource type="Resource" uid="uid://bcg553pe4di2b" path="res://resources/effects/fire.tres" id="2_o1w74"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_rs8bu"]
+[ext_resource type="Resource" uid="uid://ci0ah6iv6q6k2" path="res://resources/effects/metabolistic.tres" id="3_tcaay"]
+[ext_resource type="Resource" uid="uid://c2xrl6deftmnr" path="res://resources/effects/red.tres" id="4_p5411"]
+[ext_resource type="Resource" uid="uid://bgc7sg3jtkm7" path="res://resources/effects/pungent.tres" id="5_l8fmh"]
+[ext_resource type="Texture2D" uid="uid://boqqr83ngwaak" path="res://assets/ingredient-icons/Icon43.png" id="6_1ynin"]
 
 [resource]
 script = ExtResource("2_rs8bu")
 name = "Molten Core Shard"
 description = "A fragment of rock from deep within the earth's core, still glowing with intense heat."
-effects = Dictionary[ExtResource("1_oxmkh"), bool]({})
+icon = ExtResource("6_1ynin")
+effects = Dictionary[ExtResource("1_oxmkh"), bool]({
+ExtResource("2_o1w74"): true,
+ExtResource("3_tcaay"): false,
+ExtResource("4_p5411"): false,
+ExtResource("5_l8fmh"): false
+})
 price = 0.0

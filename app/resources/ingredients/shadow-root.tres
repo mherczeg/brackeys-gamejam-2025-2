@@ -1,11 +1,22 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://br3ie53yu40va"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=8 format=3 uid="uid://cpitjxie14anq"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_j53go"]
+[ext_resource type="Resource" uid="uid://d4lih6ctwk2l" path="res://resources/effects/discomfort.tres" id="2_kxly0"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_oxjk1"]
+[ext_resource type="Resource" uid="uid://dxa1s02kg4gnc" path="res://resources/effects/black.tres" id="3_s6uv0"]
+[ext_resource type="Resource" uid="uid://ktejujvrxm0m" path="res://resources/effects/acidic.tres" id="4_hw871"]
+[ext_resource type="Resource" uid="uid://bdsqrvoxoi8xv" path="res://resources/effects/anti-life.tres" id="5_cg7yx"]
+[ext_resource type="Texture2D" uid="uid://bj0iooxxfd8go" path="res://assets/ingredient-icons/Icon19.png" id="6_ywj1l"]
 
 [resource]
 script = ExtResource("2_oxjk1")
 name = "Shadow Root"
 description = "A twisted, black root that grows only in places of absolute darkness, it leeches the life from the soil around it."
-effects = Dictionary[ExtResource("1_j53go"), bool]({})
+icon = ExtResource("6_ywj1l")
+effects = Dictionary[ExtResource("1_j53go"), bool]({
+ExtResource("2_kxly0"): true,
+ExtResource("3_s6uv0"): false,
+ExtResource("4_hw871"): false,
+ExtResource("5_cg7yx"): false
+})
 price = 0.0

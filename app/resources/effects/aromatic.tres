@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://dftajnygqifq3"]
+[gd_resource type="Resource" script_class="Effect" load_steps=3 format=3 uid="uid://dftajnygqifq3"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_jq2tc"]
+[ext_resource type="Texture2D" uid="uid://bo6jqia8ekfie" path="res://assets/runes-icon/Icon7.png" id="1_xnvmd"]
 
 [resource]
 script = ExtResource("1_jq2tc")
 name = "Aromatic"
 description = "An enchanting scent that can alter mood or perception."
+icon = ExtResource("1_xnvmd")

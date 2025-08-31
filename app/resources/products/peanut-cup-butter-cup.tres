@@ -1,15 +1,21 @@
-[gd_resource type="Resource" script_class="Product" load_steps=6 format=3 uid="uid://bcwmr5hlpqy5a"]
+[gd_resource type="Resource" script_class="Product" load_steps=8 format=3 uid="uid://bcwmr5hlpqy5a"]
 
 [ext_resource type="Resource" uid="uid://cho25f5213qgd" path="res://resources/bases/chocolate-bar.tres" id="1_fcjbm"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_ihug3"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_hkcsk"]
 [ext_resource type="Resource" uid="uid://dkxgfalr0y0ei" path="res://resources/effects/sweet.tres" id="3_qbuxl"]
 [ext_resource type="Resource" uid="uid://c1fbe03rxkc07" path="res://resources/effects/earthy.tres" id="4_w2rnf"]
+[ext_resource type="Texture2D" uid="uid://bdvibcqswxsle" path="res://assets/chocolate-atlas.png" id="5_bf5uq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2bmai"]
+atlas = ExtResource("5_bf5uq")
+region = Rect2(192, 0, 32, 32)
 
 [resource]
 script = ExtResource("3_hkcsk")
 name = "Peanut Cup Butter Cup"
 description = "The perfect marriage of sweet chocolate and salty peanut butter."
+icon = SubResource("AtlasTexture_2bmai")
 base = ExtResource("1_fcjbm")
 effects = Array[ExtResource("2_ihug3")]([ExtResource("3_qbuxl"), ExtResource("4_w2rnf")])
 price = 0.0

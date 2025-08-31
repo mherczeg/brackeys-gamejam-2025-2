@@ -1,11 +1,18 @@
-[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://d23bvwshbovcs"]
+[gd_resource type="Resource" script_class="Ingredient" load_steps=6 format=3 uid="uid://cow6k4obgyg1y"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_crydq"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_3kvp7"]
+[ext_resource type="Resource" uid="uid://cut8o4kugfvce" path="res://resources/effects/energizing.tres" id="2_806sw"]
+[ext_resource type="Resource" uid="uid://dkxgfalr0y0ei" path="res://resources/effects/sweet.tres" id="3_2l1sv"]
+[ext_resource type="Texture2D" uid="uid://dwrjeqjuo0ngr" path="res://assets/ingredient-icons/Icon16.png" id="4_b6btj"]
 
 [resource]
 script = ExtResource("2_3kvp7")
 name = "Sugar"
 description = "Sweet, glittering dust that provides a fleeting burst of vigor."
-effects = Dictionary[ExtResource("1_crydq"), bool]({})
+icon = ExtResource("4_b6btj")
+effects = Dictionary[ExtResource("1_crydq"), bool]({
+ExtResource("2_806sw"): true,
+ExtResource("3_2l1sv"): true
+})
 price = 0.0
