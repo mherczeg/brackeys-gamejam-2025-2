@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://bg456i4g56iux" path="res://resources/effects/minerals.tres" id="3_3yneu"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_v3u1f"]
 [ext_resource type="Resource" uid="uid://bqceg4oaop0yx" path="res://resources/effects/digestive.tres" id="4_rjcom"]
-[ext_resource type="Texture2D" uid="uid://dpnmaf0dq2jdd" path="res://assets/crisps-atlas.png" id="5_ebdq3"]
+[ext_resource type="Texture2D" uid="uid://dpnmaf0dq2jdd" path="res://assets/images/crisps-atlas.png" id="5_ebdq3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_37tbr"]
 atlas = ExtResource("5_ebdq3")

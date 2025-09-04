@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="NPC" load_steps=6 format=3 uid="uid://0n7x2epd1lbr"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_qa1ij"]
-[ext_resource type="Texture2D" uid="uid://daduajcy7mdne" path="res://assets/NPCAtlas.png" id="2_0rir0"]
+[ext_resource type="Texture2D" uid="uid://daduajcy7mdne" path="res://assets/images/NPCAtlas.png" id="2_0rir0"]
 [ext_resource type="Script" uid="uid://dxpfvppfif2ht" path="res://resources/NPC.gd" id="3_dlg74"]
-[ext_resource type="Texture2D" uid="uid://bk7650302ole4" path="res://assets/triftshop/humans/gl.png" id="4_sxoly"]
+[ext_resource type="Texture2D" uid="uid://bk7650302ole4" path="res://assets/images/humans/gl.png" id="4_sxoly"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qogo5"]
 atlas = ExtResource("2_0rir0")

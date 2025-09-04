@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://b2s0fqwahvqd"]
+
+[ext_resource type="Texture2D" uid="uid://dtdash1wt4qm1" path="res://assets/images/soup-atlas.png" id="1_0gvcp"]
+
+[resource]
+atlas = ExtResource("1_0gvcp")
+region = Rect2(0, 0, 32, 32)

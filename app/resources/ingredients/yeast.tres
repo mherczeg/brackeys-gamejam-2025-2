@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://ckmombfq7w8dt" path="res://resources/effects/gluten.tres" id="2_avvlw"]
 [ext_resource type="Resource" uid="uid://bwiumkclw4bo7" path="res://resources/effects/fortifying.tres" id="3_l42ea"]
 [ext_resource type="Resource" uid="uid://m04w45iupslw" path="res://resources/effects/fermentation.tres" id="4_6egts"]
-[ext_resource type="Texture2D" uid="uid://dcj1t2qegnae4" path="res://assets/ingredient-icons/Icon26.png" id="5_r8w55"]
+[ext_resource type="Texture2D" uid="uid://dcj1t2qegnae4" path="res://assets/images/ingredient-icons/Icon26.png" id="5_r8w55"]
 
 [resource]
 script = ExtResource("2_0yxh7")

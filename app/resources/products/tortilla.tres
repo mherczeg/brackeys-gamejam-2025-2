@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_vqlsq"]
 [ext_resource type="Resource" uid="uid://c1fbe03rxkc07" path="res://resources/effects/earthy.tres" id="4_d7oy1"]
 [ext_resource type="Resource" uid="uid://ckmombfq7w8dt" path="res://resources/effects/gluten.tres" id="5_xbpq3"]
-[ext_resource type="Texture2D" uid="uid://bq5r82rpomvis" path="res://assets/crips-atlas.tres" id="6_qsrcv"]
+[ext_resource type="Texture2D" uid="uid://bq5r82rpomvis" path="res://assets/textures/crips-atlas.tres" id="6_qsrcv"]
 
 [resource]
 script = ExtResource("3_vqlsq")

@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_qi754"]
 [ext_resource type="Resource" uid="uid://652qwvhkvhrh" path="res://resources/effects/thick.tres" id="3_qi754"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_s83m6"]
-[ext_resource type="Texture2D" uid="uid://dqhpxd2lkr22n" path="res://assets/ice-cream-atlas.png" id="4_v17ip"]
+[ext_resource type="Texture2D" uid="uid://dqhpxd2lkr22n" path="res://assets/images/ice-cream-atlas.png" id="4_v17ip"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fse1f"]
 atlas = ExtResource("4_v17ip")

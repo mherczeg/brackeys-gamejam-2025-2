@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="NPC" load_steps=6 format=3 uid="uid://b03ap73jvboyi"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_t402h"]
-[ext_resource type="Texture2D" uid="uid://daduajcy7mdne" path="res://assets/NPCAtlas.png" id="2_42thi"]
-[ext_resource type="Texture2D" uid="uid://5wcd5bbdh4y5" path="res://assets/triftshop/humans/c.png" id="2_gy16u"]
+[ext_resource type="Texture2D" uid="uid://daduajcy7mdne" path="res://assets/images/NPCAtlas.png" id="2_42thi"]
+[ext_resource type="Texture2D" uid="uid://5wcd5bbdh4y5" path="res://assets/images/humans/c.png" id="2_gy16u"]
 [ext_resource type="Script" uid="uid://dxpfvppfif2ht" path="res://resources/NPC.gd" id="3_hthj8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qogo5"]

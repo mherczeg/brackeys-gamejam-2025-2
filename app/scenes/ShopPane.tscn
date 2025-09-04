@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://ooascwd5ji3s" path="res://themes/blue-text-bubble.tres" id="1_5lax1"]
 [ext_resource type="Script" uid="uid://g4880y1y5y6w" path="res://scenes/ShopPane.gd" id="1_808da"]
 [ext_resource type="Theme" uid="uid://segr3l7pwr4u" path="res://themes/naked-info-label.tres" id="3_052uh"]
-[ext_resource type="Texture2D" uid="uid://dq28el46s1moi" path="res://assets/BackGround.png" id="4_052uh"]
+[ext_resource type="Texture2D" uid="uid://dq28el46s1moi" path="res://assets/images/BackGround.png" id="4_052uh"]
 [ext_resource type="Theme" uid="uid://cpa44ka17yapc" path="res://themes/naked-button.tres" id="4_abysv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_052uh"]

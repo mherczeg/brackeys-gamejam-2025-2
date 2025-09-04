@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=5 format=3 uid="uid://b60apfe0tvloq"]
 
-[ext_resource type="FontFile" uid="uid://tig34mlfw83n" path="res://assets/m6x11plus.ttf" id="1_vjyg0"]
+[ext_resource type="FontFile" uid="uid://tig34mlfw83n" path="res://assets/fonts/m6x11plus.ttf" id="1_vjyg0"]
 
 [sub_resource type="FontVariation" id="FontVariation_dmrsr"]
 base_font = ExtResource("1_vjyg0")

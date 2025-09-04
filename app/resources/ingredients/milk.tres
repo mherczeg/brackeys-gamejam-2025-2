@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://c3pipkfh57hxp" path="res://resources/effects/calcium.tres" id="2_grr3w"]
 [ext_resource type="Resource" uid="uid://dl6xhwsef3ei7" path="res://resources/effects/protein.tres" id="3_t5hv1"]
 [ext_resource type="Resource" uid="uid://bolcex3rycr80" path="res://resources/effects/creamy.tres" id="4_6uokp"]
-[ext_resource type="Texture2D" uid="uid://fnqdxjw47cup" path="res://assets/ingredient-icons/Icon48.png" id="5_e3ne3"]
+[ext_resource type="Texture2D" uid="uid://fnqdxjw47cup" path="res://assets/images/ingredient-icons/Icon48.png" id="5_e3ne3"]
 
 [resource]
 script = ExtResource("2_dl3h1")

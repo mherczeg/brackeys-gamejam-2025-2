@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Base" load_steps=5 format=3 uid="uid://crkxdpkexj8mf"]
 
 [ext_resource type="Script" uid="uid://bgwochg5pfqrl" path="res://resources/Base.gd" id="1_nw17j"]
-[ext_resource type="Texture2D" uid="uid://bkh4tkg87u1oo" path="res://assets/hot-bev-atlas.png" id="1_vsynk"]
+[ext_resource type="Texture2D" uid="uid://bkh4tkg87u1oo" path="res://assets/images/hot-bev-atlas.png" id="1_vsynk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vsynk"]
 atlas = ExtResource("1_vsynk")

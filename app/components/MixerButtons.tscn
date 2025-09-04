@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d3obb74fl2sda" path="res://components/MixerButtons.gd" id="1_jsqpx"]
 [ext_resource type="PackedScene" uid="uid://qqu3aivipcrv" path="res://components/IngredientButton.tscn" id="1_lnkbb"]
-[ext_resource type="Texture2D" uid="uid://cxnqy72easkxu" path="res://assets/slots-purple.png" id="2_ht0kh"]
+[ext_resource type="Texture2D" uid="uid://cxnqy72easkxu" path="res://assets/images/slots-purple.png" id="2_ht0kh"]
 
 [node name="MixerButtons" type="HBoxContainer"]
 script = ExtResource("1_jsqpx")

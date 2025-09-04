@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Effect" load_steps=3 format=3 uid="uid://b6d25wclaavh"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_8kycx"]
-[ext_resource type="Texture2D" uid="uid://cefh4r8tl170s" path="res://assets/ingredient-icons/Icon1.png" id="1_giwqr"]
+[ext_resource type="Texture2D" uid="uid://cefh4r8tl170s" path="res://assets/images/ingredient-icons/Icon1.png" id="1_giwqr"]
 
 [resource]
 script = ExtResource("1_8kycx")

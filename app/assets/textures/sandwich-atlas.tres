@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://bi22kkxkntkyj"]
+
+[ext_resource type="Texture2D" uid="uid://yyr1n8sgd58" path="res://assets/images/sandwich-atlas.png" id="1_tfurg"]
+
+[resource]
+atlas = ExtResource("1_tfurg")
+region = Rect2(0, 0, 32, 32)

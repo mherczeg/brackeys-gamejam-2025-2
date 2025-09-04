@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Effect" load_steps=3 format=3 uid="uid://ca7yp8e05soib"]
 
-[ext_resource type="Texture2D" uid="uid://ctx8u1nret7x3" path="res://assets/runes-icon/Icon32.png" id="1_4bie8"]
+[ext_resource type="Texture2D" uid="uid://ctx8u1nret7x3" path="res://assets/images/runes-icon/Icon32.png" id="1_4bie8"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_6hube"]
 
 [resource]

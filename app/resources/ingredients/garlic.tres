@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_0viyn"]
 [ext_resource type="Resource" uid="uid://bwiumkclw4bo7" path="res://resources/effects/fortifying.tres" id="2_dv28x"]
 [ext_resource type="Resource" uid="uid://bgc7sg3jtkm7" path="res://resources/effects/pungent.tres" id="3_ed8ov"]
-[ext_resource type="Texture2D" uid="uid://bqgt8xm5vxwd" path="res://assets/ingredient-icons/Icon47.png" id="4_ge1a5"]
+[ext_resource type="Texture2D" uid="uid://bqgt8xm5vxwd" path="res://assets/images/ingredient-icons/Icon47.png" id="4_ge1a5"]
 
 [resource]
 script = ExtResource("2_0viyn")

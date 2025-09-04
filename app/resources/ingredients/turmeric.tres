@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://c0dpyigt4uf83" path="res://resources/effects/yellow.tres" id="2_a8dqf"]
 [ext_resource type="Resource" uid="uid://bqceg4oaop0yx" path="res://resources/effects/digestive.tres" id="3_tgrre"]
 [ext_resource type="Resource" uid="uid://bwiumkclw4bo7" path="res://resources/effects/fortifying.tres" id="4_btkwr"]
-[ext_resource type="Texture2D" uid="uid://df1ibkwkg7ktx" path="res://assets/ingredient-icons/Icon44.png" id="5_jue3g"]
+[ext_resource type="Texture2D" uid="uid://df1ibkwkg7ktx" path="res://assets/images/ingredient-icons/Icon44.png" id="5_jue3g"]
 
 [resource]
 script = ExtResource("2_8e11t")

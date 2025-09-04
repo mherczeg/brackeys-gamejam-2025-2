@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_vmv5p"]
 [ext_resource type="Resource" uid="uid://3modiddoph3q" path="res://resources/effects/expanding.tres" id="4_by23n"]
 [ext_resource type="Resource" uid="uid://c0dpyigt4uf83" path="res://resources/effects/yellow.tres" id="5_gs4r8"]
-[ext_resource type="Texture2D" uid="uid://dpnmaf0dq2jdd" path="res://assets/crisps-atlas.png" id="6_jqwy4"]
+[ext_resource type="Texture2D" uid="uid://dpnmaf0dq2jdd" path="res://assets/images/crisps-atlas.png" id="6_jqwy4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6lmgf"]
 atlas = ExtResource("6_jqwy4")

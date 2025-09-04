@@ -4,7 +4,7 @@
 [ext_resource type="Resource" uid="uid://ci0ah6iv6q6k2" path="res://resources/effects/metabolistic.tres" id="2_ouo2m"]
 [ext_resource type="Script" uid="uid://dl1mifitwir4r" path="res://resources/Ingredient.gd" id="2_xofvu"]
 [ext_resource type="Resource" uid="uid://dftajnygqifq3" path="res://resources/effects/aromatic.tres" id="3_qoo3q"]
-[ext_resource type="Texture2D" uid="uid://2y80p03i0kp7" path="res://assets/ingredient-icons/Icon15.png" id="4_1hth6"]
+[ext_resource type="Texture2D" uid="uid://2y80p03i0kp7" path="res://assets/images/ingredient-icons/Icon15.png" id="4_1hth6"]
 
 [resource]
 script = ExtResource("2_xofvu")

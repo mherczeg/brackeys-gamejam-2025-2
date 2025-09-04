@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://h0hnfdlvduyv" path="res://resources/effects/blue.tres" id="3_rq68y"]
 [ext_resource type="Resource" uid="uid://dxa1s02kg4gnc" path="res://resources/effects/black.tres" id="4_7wdb2"]
 [ext_resource type="Resource" uid="uid://bhci83c1g2fsl" path="res://resources/effects/umami.tres" id="5_68v13"]
-[ext_resource type="Texture2D" uid="uid://cahdgrh4004jk" path="res://assets/ingredient-icons/Icon14.png" id="6_uesj0"]
+[ext_resource type="Texture2D" uid="uid://cahdgrh4004jk" path="res://assets/images/ingredient-icons/Icon14.png" id="6_uesj0"]
 
 [resource]
 script = ExtResource("2_5lrte")

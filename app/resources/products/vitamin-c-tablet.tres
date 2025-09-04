@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_yx1g0"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_2m4ks"]
 [ext_resource type="Resource" uid="uid://bwiumkclw4bo7" path="res://resources/effects/fortifying.tres" id="3_yx1g0"]
-[ext_resource type="Texture2D" uid="uid://yx1evljqs00l" path="res://assets/pills-atlas.png" id="4_bqibs"]
+[ext_resource type="Texture2D" uid="uid://yx1evljqs00l" path="res://assets/images/pills-atlas.png" id="4_bqibs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qrpxq"]
 atlas = ExtResource("4_bqibs")

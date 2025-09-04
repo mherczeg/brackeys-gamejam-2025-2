@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://cl1c5ipfnf66f"]
 
 [ext_resource type="Script" uid="uid://r26vig0m7xh8" path="res://scenes/MixingPane.gd" id="1_svtgx"]
-[ext_resource type="Texture2D" uid="uid://dq28el46s1moi" path="res://assets/BackGround.png" id="2_vhkge"]
+[ext_resource type="Texture2D" uid="uid://dq28el46s1moi" path="res://assets/images/BackGround.png" id="2_vhkge"]
 [ext_resource type="PackedScene" uid="uid://fokn520phn5m" path="res://components/OrderDetails.tscn" id="3_cgagm"]
 [ext_resource type="PackedScene" uid="uid://yrym8oofb8p4" path="res://components/MixerButtons.tscn" id="4_svtgx"]
 [ext_resource type="PackedScene" uid="uid://bvhr2kpc3py1q" path="res://components/IngredientSelector.tscn" id="5_nyt5e"]

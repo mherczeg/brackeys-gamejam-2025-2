@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://dl6xhwsef3ei7" path="res://resources/effects/protein.tres" id="3_ih465"]
 [ext_resource type="Resource" uid="uid://bolcex3rycr80" path="res://resources/effects/creamy.tres" id="4_wsenw"]
 [ext_resource type="Resource" uid="uid://c2xrl6deftmnr" path="res://resources/effects/red.tres" id="5_x3yfh"]
-[ext_resource type="Texture2D" uid="uid://yyr1n8sgd58" path="res://assets/sandwich-atlas.png" id="6_7umko"]
+[ext_resource type="Texture2D" uid="uid://yyr1n8sgd58" path="res://assets/images/sandwich-atlas.png" id="6_7umko"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_008hm"]
 atlas = ExtResource("6_7umko")
