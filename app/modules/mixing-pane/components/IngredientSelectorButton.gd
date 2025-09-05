@@ -9,7 +9,7 @@ const EFFECT_LABEL_ICON_SCENE: PackedScene = preload("res://modules/shared/Effec
 const UNKNOWN_EFFECT_LABEL_SCENE: PackedScene = preload("res://modules/shared/UnknownEffectLabel.tscn")
 
 @export var ingredient: Ingredient
-var slot: IngredientButton.SLOT
+var slot: MixerButtons.SLOT
 var _selected_for_mixture: bool = false
 
 @onready var inventory_label: Label = $InventoryLabel

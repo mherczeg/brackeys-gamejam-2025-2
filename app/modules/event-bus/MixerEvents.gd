@@ -2,7 +2,7 @@ class_name MixerEvents
 extends Node
 
 signal base_selected(base: Base)
-signal ingredient_selector_unset(slot: IngredientButton.SLOT)
+signal ingredient_selector_unset(slot: MixerButtons.SLOT)
 signal ingredient_selected(ingredient: Ingredient)
 signal mixture_changed(base: Base, ingredients: Array[Ingredient])
 signal serve_mix(product: MixedProduct)

@@ -13,7 +13,7 @@ var _selected_base: Base:
 			mixer_buttons.update_base_icon(null)
 		product_details.update_base(updated_base)
 
-var _selected_ingredients: Dictionary[IngredientButton.SLOT, Ingredient] = {}
+var _selected_ingredients: Dictionary[MixerButtons.SLOT, Ingredient] = {}
 var _current_encounter: Encounter = null
 var _current_npc: NPC = null:
 	set(new_npc):
@@ -53,22 +53,22 @@ func set_next_slot_ingredient(ingredient: Ingredient) -> void:
 	if (next_slot == null):
 		return
 
-	set_slot_ingredient(next_slot as IngredientButton.SLOT, ingredient)
+	set_slot_ingredient(next_slot as MixerButtons.SLOT, ingredient)
 
-func set_slot_ingredient(slot: IngredientButton.SLOT, ingredient: Ingredient) -> void:
+func set_slot_ingredient(slot: MixerButtons.SLOT, ingredient: Ingredient) -> void:
 	product_details.update_current_display_product(null)
 	_selected_ingredients[slot] = ingredient
 	mixer_buttons.update_slot_icon(slot, ingredient.icon)
 	EventBus.mixer.mixture_changed.emit(_selected_base, _selected_ingredients.values())
 
-func unset_slot_ingredient(slot: IngredientButton.SLOT) -> void:
+func unset_slot_ingredient(slot: MixerButtons.SLOT) -> void:
 	if _selected_ingredients.has(slot):
 		_selected_ingredients.erase(slot)
 		mixer_buttons.update_slot_icon(slot, null)
 		EventBus.mixer.mixture_changed.emit(_selected_base, _selected_ingredients.values())
 
 func get_first_empty_slot() -> Variant:
-	for slot: IngredientButton.SLOT in mixer_buttons.slot_buttons.keys():
+	for slot: MixerButtons.SLOT in mixer_buttons.slot_buttons.keys():
 		if !_selected_ingredients.has(slot):
 			return slot
 
@@ -129,10 +129,10 @@ func recalculate_mixture(_b: Base, _i: Array[Ingredient]) -> void:
 
 func reset_mixer() -> void:
 	EventBus.mixer.base_selected.emit(null)
-	unset_slot_ingredient(IngredientButton.SLOT.FIRST)
-	unset_slot_ingredient(IngredientButton.SLOT.SECOND)
-	unset_slot_ingredient(IngredientButton.SLOT.THIRD)
-	unset_slot_ingredient(IngredientButton.SLOT.FOURTH)
+	unset_slot_ingredient(MixerButtons.SLOT.FIRST)
+	unset_slot_ingredient(MixerButtons.SLOT.SECOND)
+	unset_slot_ingredient(MixerButtons.SLOT.THIRD)
+	unset_slot_ingredient(MixerButtons.SLOT.FOURTH)
 
 func _on_serve_button_pressed() -> void:
 	var mixed_product: MixedProduct = MixedProduct.new()

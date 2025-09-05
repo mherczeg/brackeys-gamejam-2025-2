@@ -32,12 +32,9 @@ layout_mode = 2
 
 [node name="IngredientButton2" parent="." instance=ExtResource("1_lnkbb")]
 layout_mode = 2
-ingredient_slot = 1
 
 [node name="IngredientButton3" parent="." instance=ExtResource("1_lnkbb")]
 layout_mode = 2
-ingredient_slot = 2
 
 [node name="IngredientButton4" parent="." instance=ExtResource("1_lnkbb")]
 layout_mode = 2
-ingredient_slot = 3
