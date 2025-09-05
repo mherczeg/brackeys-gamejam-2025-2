@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cfturkxpcx5pd" path="res://modules/shared/ShadeButtonTexture.tscn" id="1_86uwb"]
 [ext_resource type="Script" uid="uid://dmh6d3sagh00b" path="res://modules/mixing-pane/components/IngredientSelectorButton.gd" id="1_jaaf6"]
-[ext_resource type="Shader" uid="uid://eqturlsphwhk" path="res://shaders/outline-test-3.gdshader" id="2_jaaf6"]
+[ext_resource type="Shader" uid="uid://eqturlsphwhk" path="res://shaders/interactable-icon.gdshader" id="2_jaaf6"]
 [ext_resource type="Theme" uid="uid://segr3l7pwr4u" path="res://themes/naked-info-label.tres" id="3_5opft"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rh374"]

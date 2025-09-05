@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dtnqnc2gqicsd"]
 
 [ext_resource type="Texture2D" uid="uid://dotkqju4undxo" path="res://assets/images/a-human.png" id="1_7evva"]
-[ext_resource type="Shader" uid="uid://eqturlsphwhk" path="res://shaders/outline-test-3.gdshader" id="1_7re8j"]
+[ext_resource type="Shader" uid="uid://eqturlsphwhk" path="res://shaders/interactable-icon.gdshader" id="1_7re8j"]
 [ext_resource type="Script" uid="uid://cckbd01iwdkmn" path="res://modules/customer-pane/components/StageNPC.gd" id="2_o16h7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j7gbh"]

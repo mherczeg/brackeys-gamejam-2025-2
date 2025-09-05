@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dr872keysshyr"]
 
 [ext_resource type="Script" uid="uid://dn43iwo7m768c" path="res://modules/shared/EffectLabelIcon.gd" id="1_40u37"]
-[ext_resource type="Shader" uid="uid://eqturlsphwhk" path="res://shaders/outline-test-3.gdshader" id="1_ib4o0"]
+[ext_resource type="Shader" uid="uid://eqturlsphwhk" path="res://shaders/interactable-icon.gdshader" id="1_ib4o0"]
 [ext_resource type="Theme" uid="uid://vmyqstksg4ch" path="res://themes/EffectLabelIcon.tres" id="2_dye7e"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dye7e"]
