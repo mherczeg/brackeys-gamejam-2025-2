@@ -18,8 +18,8 @@ func _ready() -> void:
 
 func _load_resources(paths: Array[String]) -> Array:
 	var resources: Array = []
-	for path in paths:
-		var resource = load(path)
+	for path: String in paths:
+		var resource: Variant = load(path)
 		if resource:
 			resources.append(resource)
 		else:

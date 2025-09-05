@@ -8,7 +8,7 @@ func _ready() -> void:
 	_pitched_voice_bus_index = AudioServer.get_bus_index("Speech")
 
 func _load_beep_sounds() -> void:
-	for path in VoiceList.beeps_paths:
+	for path: String in VoiceList.beeps_paths:
 		var sound: AudioStream = load(path)
 		if sound:
 			_beep_sounds.append(sound)

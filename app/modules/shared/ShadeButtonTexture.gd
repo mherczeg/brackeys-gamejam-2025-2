@@ -43,7 +43,8 @@ func _config_shader() -> void:
 func _config_disabled_state_handler() -> void:
 	_last_disabled_state = _button.disabled
 	if _button.has_signal("disabled_changed"):
-		_button.disabled_changed.connect(_update_shader_disabled_state)
+		# connect with this pattern, to get rid of non-existent signal warnings
+		_button.connect("disabled_changed", _update_shader_disabled_state)
 
 func _update_shader_disabled_state() -> void:
 	if _button.disabled:

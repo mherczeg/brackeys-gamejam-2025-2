@@ -85,7 +85,8 @@ func _update_effect_labels() -> void:
 			else:
 				effect_label.hide()
 		if node.is_in_group(UNKNOWN_EFFECT_GROUP):
+			var effect_label: UnknownEffectLabel = node
 			if ingredient.has_unknown_effect():
-				node.show()
+				effect_label.show()
 			else:
-				node.hide()
+				effect_label.hide()
