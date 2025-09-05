@@ -1,8 +1,7 @@
 class_name Game
 extends Node2D
 
-# I hate this, but I am not gonna figure out a good workaround to godot enum values matching up with other enums
-enum GAMEPLAY_STEPS {MIXING = 11, CLEANUP = 12, WAIT_FOR_FEEDBACK = 13}
+enum GAMEPLAY_STEPS {MIXING = Constants.GAMEPLAY_STEPS_ENUM_RESERVED_RANGE, CLEANUP, WAIT_FOR_FEEDBACK}
 
 const GAME_LOOP_STEPS: Array = [
 	Encounter.STAGE.FIRST,
@@ -17,8 +16,6 @@ const SKIPPABLE_STEPS: Dictionary = {
 	Encounter.STAGE.SECOND: true,
 	Encounter.STAGE.THIRD: true,
 }
-
-const ENCOUNTERS: String = "res://resources/encounters"
 
 var _current_step_index: int = 0
 var _current_encounter: Encounter
@@ -62,6 +59,7 @@ func start_encounter(encounter: Encounter) -> void:
 
 
 func gameplay_loop() -> void:
+	prints(_current_step_index, GAME_LOOP_STEPS[_current_step_index])
 	match GAME_LOOP_STEPS[_current_step_index]:
 		Encounter.STAGE.FIRST:
 			_render_complete = false

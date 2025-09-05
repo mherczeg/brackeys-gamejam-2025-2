@@ -1,7 +1,7 @@
 class_name Encounter
 extends Resource
 
-enum STAGE {FIRST, SECOND, THIRD, LIKE, DISLIKE, FAILURE}
+enum STAGE {FIRST = Constants.ENCOUNTER_STAGE_ENUM_RESERVED_RANGE, SECOND, THIRD, LIKE, DISLIKE, FAILURE}
 
 @export var order: Dictionary[NPC, Product] = {}
 @export var stage_1_text: Dictionary[NPC, String] = {}

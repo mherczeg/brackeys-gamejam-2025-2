@@ -4,7 +4,7 @@ extends Node
 const STAGE_NPC_GROUP: String = "stage-npc-group"
 
 @export var encounter: Encounter
-@export var stage: Encounter.STAGE
+@export var stage: Encounter.STAGE = Encounter.STAGE.FIRST
 
 @onready var stage_group_nodes: Dictionary[Encounter.STAGE, StageNPCGroup] = {
 	Encounter.STAGE.FIRST: $FirstStageGroup,
