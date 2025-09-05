@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dag5yg0qs22q0"]
+
+[ext_resource type="Script" uid="uid://b8ogcb4jcv1b0" path="res://modules/game/components/GameStateMachine.gd" id="1_db4mf"]
+
+[node name="GameStateMachine" type="Node"]
+script = ExtResource("1_db4mf")

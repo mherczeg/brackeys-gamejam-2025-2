@@ -1,6 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://bqlkljml3wgye"]
+[gd_scene load_steps=12 format=3 uid="uid://bqlkljml3wgye"]
 
-[ext_resource type="Script" uid="uid://crplonc8qkgt7" path="res://scenes/Game.gd" id="1_78awf"]
+[ext_resource type="Script" uid="uid://crplonc8qkgt7" path="res://modules/game/Game.gd" id="1_78awf"]
 [ext_resource type="PackedScene" uid="uid://dtq073ey6thiy" path="res://modules/customer-pane/CustomerPane.tscn" id="2_cpr0p"]
 [ext_resource type="PackedScene" uid="uid://cl1c5ipfnf66f" path="res://modules/mixing-pane/MixingPane.tscn" id="2_qbsmt"]
 [ext_resource type="Theme" uid="uid://yqmay0cd53tl" path="res://themes/MetalPixelTheme4/MetalPixel.tres" id="2_s0nni"]
@@ -8,7 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://b1qtp0cds7p43" path="res://modules/shop/ShopPane.tscn" id="6_aug50"]
 [ext_resource type="AudioStream" uid="uid://8sg43fxjcy2r" path="res://assets/audio/ambiance.ogg" id="8_400sg"]
 [ext_resource type="PackedScene" uid="uid://dgwigelak44s5" path="res://modules/npc-info-box/NPCInfoBox.tscn" id="9_g4kob"]
+[ext_resource type="PackedScene" uid="uid://dag5yg0qs22q0" path="res://modules/game/components/GameStateMachine.tscn" id="10_3xj3m"]
 [ext_resource type="Texture2D" uid="uid://bnliprcb2rfcl" path="res://assets/images/City.png" id="10_qy1jj"]
+[ext_resource type="PackedScene" uid="uid://djpqlc8r6ylr3" path="res://modules/game/components/EncounterManager.tscn" id="11_7ed7s"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_78awf")
@@ -26,7 +28,7 @@ autoplay = true
 bus = &"Background"
 area_mask = 2
 
-[node name="Control" type="Control" parent="."]
+[node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -38,7 +40,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="UI"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -46,18 +48,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MixingPane" parent="Control/VBoxContainer" instance=ExtResource("2_qbsmt")]
+[node name="MixingPane" parent="UI/VBoxContainer" instance=ExtResource("2_qbsmt")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_s0nni")
 
-[node name="CustomerPane" parent="Control/VBoxContainer" instance=ExtResource("2_cpr0p")]
+[node name="CustomerPane" parent="UI/VBoxContainer" instance=ExtResource("2_cpr0p")]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 
-[node name="Devtools" parent="Control" instance=ExtResource("3_cpr0p")]
+[node name="Devtools" parent="UI" instance=ExtResource("3_cpr0p")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
@@ -67,7 +69,7 @@ offset_bottom = -25.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="ShopPane" parent="Control" instance=ExtResource("6_aug50")]
+[node name="ShopPane" parent="UI" instance=ExtResource("6_aug50")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -77,3 +79,12 @@ offset_left = 1291.0
 offset_top = 4.0
 offset_right = 1563.0
 offset_bottom = 120.0
+
+[node name="Scripting" type="Node" parent="."]
+
+[node name="GameStateMachine" parent="Scripting" node_paths=PackedStringArray("encounter_manager") instance=ExtResource("10_3xj3m")]
+unique_name_in_owner = true
+encounter_manager = NodePath("../EncounterManager")
+
+[node name="EncounterManager" parent="Scripting" instance=ExtResource("11_7ed7s")]
+unique_name_in_owner = true

@@ -14,6 +14,7 @@ const STAGE_NPC_GROUP: String = "stage-npc-group"
 
 func _ready() -> void:
 	_reset_group_visibility()
+	EventBus.game.encounter_evaluate_stage_started.connect(_on_encounter_evaluate_stage_started)
 
 
 func render_story_step(new_encounter: Encounter, new_stage: Encounter.STAGE) -> Signal:
@@ -37,3 +38,6 @@ func _render() -> Signal:
 func _reset_group_visibility() -> void:
 	for stage_group_node: StageNPCGroup in stage_group_nodes.values():
 		stage_group_node.hide()
+
+func _on_encounter_evaluate_stage_started() -> void:
+	clear_stage_text()
