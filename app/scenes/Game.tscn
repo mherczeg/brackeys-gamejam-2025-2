@@ -1,22 +1,30 @@
 [gd_scene load_steps=10 format=3 uid="uid://bqlkljml3wgye"]
 
 [ext_resource type="Script" uid="uid://crplonc8qkgt7" path="res://scenes/Game.gd" id="1_78awf"]
-[ext_resource type="PackedScene" uid="uid://dtq073ey6thiy" path="res://scenes/CustomerPane.tscn" id="2_cpr0p"]
-[ext_resource type="Texture2D" uid="uid://bnliprcb2rfcl" path="res://assets/images/City.png" id="2_g4kob"]
-[ext_resource type="PackedScene" uid="uid://cl1c5ipfnf66f" path="res://scenes/MixingPane.tscn" id="2_qbsmt"]
+[ext_resource type="PackedScene" uid="uid://dtq073ey6thiy" path="res://modules/customer-pane/CustomerPane.tscn" id="2_cpr0p"]
+[ext_resource type="PackedScene" uid="uid://cl1c5ipfnf66f" path="res://modules/mixing-pane/MixingPane.tscn" id="2_qbsmt"]
 [ext_resource type="Theme" uid="uid://yqmay0cd53tl" path="res://themes/MetalPixelTheme4/MetalPixel.tres" id="2_s0nni"]
-[ext_resource type="PackedScene" uid="uid://b37hth77ew4nl" path="res://components/CustomerDevtools.tscn" id="3_cpr0p"]
-[ext_resource type="PackedScene" uid="uid://b1qtp0cds7p43" path="res://scenes/ShopPane.tscn" id="6_aug50"]
+[ext_resource type="PackedScene" uid="uid://b37hth77ew4nl" path="res://modules/devtools/Devtools.tscn" id="3_cpr0p"]
+[ext_resource type="PackedScene" uid="uid://b1qtp0cds7p43" path="res://modules/shop/ShopPane.tscn" id="6_aug50"]
 [ext_resource type="AudioStream" uid="uid://8sg43fxjcy2r" path="res://assets/audio/ambiance.ogg" id="8_400sg"]
-[ext_resource type="PackedScene" uid="uid://dgwigelak44s5" path="res://components/NPCInfoBox.tscn" id="9_g4kob"]
+[ext_resource type="PackedScene" uid="uid://dgwigelak44s5" path="res://modules/npc-info-box/NPCInfoBox.tscn" id="9_g4kob"]
+[ext_resource type="Texture2D" uid="uid://bnliprcb2rfcl" path="res://assets/images/City.png" id="10_qy1jj"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_78awf")
 
-[node name="City-fullhd" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
 position = Vector2(640, 360)
 scale = Vector2(0.666667, 0.666667)
-texture = ExtResource("2_g4kob")
+texture = ExtResource("10_qy1jj")
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="BackgroundAmbiance" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("8_400sg")
+autoplay = true
+bus = &"Background"
+area_mask = 2
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -49,7 +57,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 
-[node name="CustomerDevtools" parent="Control" instance=ExtResource("3_cpr0p")]
+[node name="Devtools" parent="Control" instance=ExtResource("3_cpr0p")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
@@ -61,13 +69,8 @@ grow_vertical = 1
 
 [node name="ShopPane" parent="Control" instance=ExtResource("6_aug50")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("8_400sg")
-autoplay = true
-bus = &"Background"
-area_mask = 2
 
 [node name="NpcInfoBox" parent="." instance=ExtResource("9_g4kob")]
 offset_left = 1291.0

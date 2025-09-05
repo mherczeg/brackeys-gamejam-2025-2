@@ -1,0 +1,135 @@
+[gd_scene load_steps=16 format=3 uid="uid://fokn520phn5m"]
+
+[ext_resource type="StyleBox" uid="uid://b16502eveejlt" path="res://themes/blue-stylebox.tres" id="1_b7d52"]
+[ext_resource type="Script" uid="uid://djrys7ciqeqg6" path="res://modules/mixing-pane/components/OrderDetails.gd" id="2_drpq3"]
+[ext_resource type="Texture2D" uid="uid://d4g76pnkb2fwm" path="res://assets/images/panel-blue.png" id="2_jj4ms"]
+[ext_resource type="Theme" uid="uid://segr3l7pwr4u" path="res://themes/naked-info-label.tres" id="3_b7d52"]
+[ext_resource type="FontFile" uid="uid://ck87b6iklt5dg" path="res://themes/naked-outlined_font.tres" id="5_elyog"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b7d52"]
+
+[sub_resource type="Theme" id="Theme_b7d52"]
+Label/styles/normal = SubResource("StyleBoxEmpty_b7d52")
+Panel/styles/panel = ExtResource("1_b7d52")
+PanelContainer/styles/panel = ExtResource("1_b7d52")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_elyog"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+texture = ExtResource("2_jj4ms")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+region_rect = Rect2(0, 0, 180, 55)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gfx5g"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1robi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gfx5g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uj7kk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1robi"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_cv6x0"]
+TooltipLabel/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+TooltipLabel/colors/font_outline_color = Color(0, 0, 0, 1)
+TooltipLabel/colors/font_shadow_color = Color(0, 0, 0, 1)
+TooltipLabel/constants/line_spacing = 3
+TooltipLabel/constants/outline_size = 10
+TooltipLabel/constants/shadow_offset_x = 1
+TooltipLabel/constants/shadow_offset_y = 1
+TooltipLabel/constants/shadow_outline_size = 10
+TooltipLabel/fonts/font = ExtResource("5_elyog")
+TooltipLabel/styles/normal = SubResource("StyleBoxFlat_gfx5g")
+TooltipPanel/styles/embedded_border = SubResource("StyleBoxEmpty_1robi")
+TooltipPanel/styles/embedded_unfocused_border = SubResource("StyleBoxEmpty_gfx5g")
+TooltipPanel/styles/normal = SubResource("StyleBoxEmpty_uj7kk")
+TooltipPanel/styles/panel = SubResource("StyleBoxFlat_1robi")
+
+[sub_resource type="Theme" id="Theme_elyog"]
+TooltipLabel/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+TooltipLabel/colors/font_outline_color = Color(0, 0, 0, 1)
+TooltipLabel/colors/font_shadow_color = Color(0, 0, 0, 1)
+TooltipLabel/constants/line_spacing = 3
+TooltipLabel/constants/outline_size = 10
+TooltipLabel/constants/shadow_offset_x = 1
+TooltipLabel/constants/shadow_offset_y = 1
+TooltipLabel/constants/shadow_outline_size = 10
+TooltipLabel/fonts/font = ExtResource("5_elyog")
+TooltipLabel/styles/normal = SubResource("StyleBoxFlat_gfx5g")
+TooltipPanel/styles/embedded_border = SubResource("StyleBoxEmpty_1robi")
+TooltipPanel/styles/embedded_unfocused_border = SubResource("StyleBoxEmpty_gfx5g")
+TooltipPanel/styles/normal = SubResource("StyleBoxEmpty_uj7kk")
+TooltipPanel/styles/panel = SubResource("StyleBoxFlat_1robi")
+
+[node name="OrderDetails" type="PanelContainer"]
+custom_minimum_size = Vector2(298, 0)
+offset_right = 298.0
+offset_bottom = 54.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme = SubResource("Theme_b7d52")
+theme_override_styles/panel = SubResource("StyleBoxTexture_elyog")
+script = ExtResource("2_drpq3")
+
+[node name="IdleLabel" type="Label" parent="."]
+layout_mode = 2
+theme = ExtResource("3_b7d52")
+text = "This is the idle label"
+
+[node name="ProductInfo" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme = ExtResource("3_b7d52")
+theme_override_constants/separation = 10
+
+[node name="Control" type="BoxContainer" parent="ProductInfo"]
+layout_mode = 2
+
+[node name="NPCName" type="Label" parent="ProductInfo/Control"]
+layout_mode = 2
+mouse_filter = 1
+uppercase = true
+
+[node name="ProductText" type="Label" parent="ProductInfo/Control"]
+layout_mode = 2
+text = " wants a "
+
+[node name="ProductIcon" type="TextureRect" parent="ProductInfo/Control"]
+layout_mode = 2
+theme = SubResource("Theme_cv6x0")
+
+[node name="Label" type="Label" parent="ProductInfo/Control"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ProductInfo"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 14
+text = "Recipe:"
+
+[node name="Recipe" type="HFlowContainer" parent="ProductInfo"]
+layout_mode = 2
+
+[node name="Base" type="HBoxContainer" parent="ProductInfo/Recipe"]
+layout_mode = 2
+
+[node name="BaseIcon" type="TextureRect" parent="ProductInfo/Recipe/Base"]
+layout_mode = 2
+theme = SubResource("Theme_elyog")
+stretch_mode = 3
