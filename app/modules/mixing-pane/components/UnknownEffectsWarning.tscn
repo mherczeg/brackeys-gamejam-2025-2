@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://owle6tau1tw2"]
+
+[ext_resource type="Theme" uid="uid://cpa44ka17yapc" path="res://themes/naked-button.tres" id="1_y8rtr"]
+[ext_resource type="Script" uid="uid://dd48ng5meui8a" path="res://modules/mixing-pane/components/UnknownEffectsWarning.gd" id="2_xqpqa"]
+
+[node name="UnknownEffectsWarning" type="Label"]
+custom_minimum_size = Vector2(69, 44)
+size_flags_horizontal = 3
+theme = ExtResource("1_y8rtr")
+text = "May have unintended effects!"
+horizontal_alignment = 1
+autowrap_mode = 2
+justification_flags = 131
+script = ExtResource("2_xqpqa")

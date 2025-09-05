@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsi2607mq006a"]
+
+[ext_resource type="Theme" uid="uid://cpa44ka17yapc" path="res://themes/naked-button.tres" id="1_ohxn6"]
+[ext_resource type="Script" uid="uid://bqlgyjmoog678" path="res://modules/mixing-pane/components/BaseWarning.gd" id="2_ebplu"]
+
+[node name="BaseWarning" type="Label"]
+custom_minimum_size = Vector2(0, 25)
+size_flags_horizontal = 4
+theme = ExtResource("1_ohxn6")
+text = "Base not selected!"
+script = ExtResource("2_ebplu")
