@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="Base" load_steps=3 format=3 uid="uid://1g3i3a8rkotx"]
+[gd_resource type="Resource" script_class="ProductType" load_steps=3 format=3 uid="uid://1g3i3a8rkotx"]
 
 [ext_resource type="Texture2D" uid="uid://cwog7c280njhm" path="res://assets/textures/ice-cream-atlas.tres" id="1_bh7xp"]
-[ext_resource type="Script" uid="uid://bgwochg5pfqrl" path="res://resources/Base.gd" id="1_ixhq2"]
+[ext_resource type="Script" uid="uid://bgwochg5pfqrl" path="res://resources/ProductType.gd" id="1_ixhq2"]
 
 [resource]
 script = ExtResource("1_ixhq2")

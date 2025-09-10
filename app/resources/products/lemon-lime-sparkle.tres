@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Product" load_steps=8 format=3 uid="uid://45ymfdxrqcpu"]
 
-[ext_resource type="Resource" uid="uid://yjnv2md2an4c" path="res://resources/bases/soda.tres" id="1_xnuk8"]
+[ext_resource type="Resource" uid="uid://yjnv2md2an4c" path="res://resources/product-types/soda.tres" id="1_xnuk8"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_hvcpp"]
 [ext_resource type="Resource" uid="uid://cpee1jgrc3kus" path="res://resources/effects/zest.tres" id="3_dgmhe"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_ohfk4"]
@@ -16,6 +16,6 @@ script = ExtResource("3_ohfk4")
 name = "Lemon-Lime Sparkle"
 description = "A crisp and zesty soda that dances on the tongue."
 icon = SubResource("AtlasTexture_77gbq")
-base = ExtResource("1_xnuk8")
+product_type = ExtResource("1_xnuk8")
 effects = Array[ExtResource("2_hvcpp")]([ExtResource("3_dgmhe"), ExtResource("4_5yrlj")])
 price = 1.35416

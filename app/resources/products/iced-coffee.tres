@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Product" load_steps=9 format=3 uid="uid://dgv5ru3c8aebr"]
 
-[ext_resource type="Resource" uid="uid://crkxdpkexj8mf" path="res://resources/bases/hot-beverage.tres" id="1_i4e15"]
+[ext_resource type="Resource" uid="uid://crkxdpkexj8mf" path="res://resources/product-types/hot-beverage.tres" id="1_i4e15"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_pgodw"]
 [ext_resource type="Resource" uid="uid://d4lih6ctwk2l" path="res://resources/effects/discomfort.tres" id="3_inhdl"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_ljfr5"]
@@ -17,6 +17,6 @@ script = ExtResource("3_ljfr5")
 name = "Iced Coffee"
 description = "Chilled and invigorating, the perfect cool-down coffee."
 icon = SubResource("AtlasTexture_6as85")
-base = ExtResource("1_i4e15")
+product_type = ExtResource("1_i4e15")
 effects = Array[ExtResource("2_pgodw")]([ExtResource("3_inhdl"), ExtResource("4_fu470"), ExtResource("5_3csco")])
 price = 1.2772

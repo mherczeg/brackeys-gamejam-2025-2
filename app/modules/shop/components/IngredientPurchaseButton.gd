@@ -8,13 +8,13 @@ signal disabled_changed
 var ingredient: Ingredient
 var bulk_price: float = 0.0
 
-@onready var base_name: Label = $Name
+@onready var product_type_name: Label = $Name
 @onready var price: Label = $Price
 
 func _ready() -> void:
 	bulk_price = ingredient.price * pcs
 	texture_normal = ingredient.icon
-	base_name.text = ingredient.name
+	product_type_name.text = ingredient.name
 	price.text = "$%d / %dpcs" % [bulk_price, pcs]
 
 	pressed.connect(_on_pressed)

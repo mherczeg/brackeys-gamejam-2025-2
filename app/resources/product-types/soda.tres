@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="Base" load_steps=3 format=3 uid="uid://yjnv2md2an4c"]
+[gd_resource type="Resource" script_class="ProductType" load_steps=3 format=3 uid="uid://yjnv2md2an4c"]
 
-[ext_resource type="Script" uid="uid://bgwochg5pfqrl" path="res://resources/Base.gd" id="1_ek5ug"]
+[ext_resource type="Script" uid="uid://bgwochg5pfqrl" path="res://resources/ProductType.gd" id="1_ek5ug"]
 [ext_resource type="Texture2D" uid="uid://dw0k8f3e4icjh" path="res://assets/textures/soda-atlas.tres" id="1_qgosp"]
 
 [resource]

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ProductType" load_steps=2 format=3 uid="uid://big0y4iij6kf3"]
+
+[ext_resource type="Script" uid="uid://bgwochg5pfqrl" path="res://resources/ProductType.gd" id="1_5ik6c"]
+
+[resource]
+script = ExtResource("1_5ik6c")
+name = "Soup"
+description = "A hearty, liquid meal, often served hot and full of nourishing ingredients."
+price = 0.0

@@ -3,7 +3,7 @@ extends HBoxContainer
 
 enum SLOT {FIRST, SECOND, THIRD, FOURTH}
 
-@onready var selected_base_icon: TextureRect = $BaseButton/Icon
+@onready var selected_product_type: ProductTypeButton = $ProductTypeButton
 @onready var slot_buttons: Dictionary[MixerButtons.SLOT, IngredientButton] = {
 	SLOT.FIRST: $IngredientButton1,
 	SLOT.SECOND: $IngredientButton2,
@@ -20,8 +20,8 @@ func _ready() -> void:
 func get_slot_button(slot: MixerButtons.SLOT) -> IngredientButton:
 	return slot_buttons[slot]
 
-func update_base_icon(icon: Texture2D) -> void:
-	selected_base_icon.texture = icon
+func update_product_type_icon(icon: Texture2D) -> void:
+	selected_product_type.icon.texture = icon
 
 func update_slot_icon(slot: SLOT, icon: Texture2D) -> void:
 	slot_buttons[slot].icon.texture = icon

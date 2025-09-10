@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Product" load_steps=7 format=3 uid="uid://cwn6dobrnx3dj"]
 
-[ext_resource type="Resource" uid="uid://vfpbkun8a2jd" path="res://resources/bases/pills.tres" id="1_g4d5i"]
+[ext_resource type="Resource" uid="uid://vfpbkun8a2jd" path="res://resources/product-types/pills.tres" id="1_g4d5i"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_hj4c0"]
 [ext_resource type="Resource" uid="uid://c2tm0u2u3vubs" path="res://resources/effects/comfort.tres" id="3_hj4c0"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_mfrm2"]
@@ -15,6 +15,6 @@ script = ExtResource("3_mfrm2")
 name = "Pain Reliever"
 description = "A fast-acting pill to ease aches and pains."
 icon = SubResource("AtlasTexture_3yr10")
-base = ExtResource("1_g4d5i")
+product_type = ExtResource("1_g4d5i")
 effects = Array[ExtResource("2_hj4c0")]([ExtResource("3_hj4c0")])
 price = 1.20295

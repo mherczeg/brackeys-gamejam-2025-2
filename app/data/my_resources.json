@@ -29,7 +29,7 @@
     "properties": {
       "name": "Healing Potion",
       "description": "Restores health",
-      "base": "res://bases/liquid_base.tres",
+      "product-type": "res://product-types/liquid_base.tres",
       "effects": [
         "res://effects/healing_effect.tres",
         "res://effects/bitter_effect.tres"

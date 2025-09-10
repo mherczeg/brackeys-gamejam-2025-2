@@ -25,14 +25,14 @@ var ingredients: Array[Ingredient]:
 
 
 func has_fulfilled_product(product: Product) -> bool:
-	var is_correct_base: bool = base == product.base
+	var is_correct_product_type: bool = product_type == product.product_type
 	var has_all_effects: bool = SetUtils.is_a_subset_of_b(
 		SetUtils.array_to_set(product.effects),
 		SetUtils.array_to_set(effects)
 	)
 
 
-	return is_correct_base && has_all_effects
+	return is_correct_product_type && has_all_effects
 
 func has_additional_liked_effects(product: Product, npc: NPC) -> bool:
 	var additional_effects: Dictionary = SetUtils.difference(

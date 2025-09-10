@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Product" load_steps=8 format=3 uid="uid://c2aonmgq8gaek"]
 
-[ext_resource type="Resource" uid="uid://cho25f5213qgd" path="res://resources/bases/chocolate-bar.tres" id="1_8rb3y"]
+[ext_resource type="Resource" uid="uid://cho25f5213qgd" path="res://resources/product-types/chocolate-bar.tres" id="1_8rb3y"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_3smwx"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_2fwxa"]
 [ext_resource type="Resource" uid="uid://d4lih6ctwk2l" path="res://resources/effects/discomfort.tres" id="3_26h0h"]
@@ -16,6 +16,6 @@ script = ExtResource("3_2fwxa")
 name = "Dark Almonds"
 description = "Rich dark chocolate with the satisfying crunch of whole almonds."
 icon = SubResource("AtlasTexture_22omc")
-base = ExtResource("1_8rb3y")
+product_type = ExtResource("1_8rb3y")
 effects = Array[ExtResource("2_3smwx")]([ExtResource("3_26h0h"), ExtResource("4_31q8j")])
 price = 1.50641

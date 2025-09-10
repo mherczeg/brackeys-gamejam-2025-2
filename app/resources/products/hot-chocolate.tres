@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Product" load_steps=9 format=3 uid="uid://de41hqr238fyl"]
 
-[ext_resource type="Resource" uid="uid://crkxdpkexj8mf" path="res://resources/bases/hot-beverage.tres" id="1_w5fai"]
+[ext_resource type="Resource" uid="uid://crkxdpkexj8mf" path="res://resources/product-types/hot-beverage.tres" id="1_w5fai"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_yu2xx"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_a7m8c"]
 [ext_resource type="Resource" uid="uid://c2tm0u2u3vubs" path="res://resources/effects/comfort.tres" id="3_oogx0"]
@@ -17,6 +17,6 @@ script = ExtResource("3_a7m8c")
 name = "Hot Chocolate"
 description = "A warm, comforting mug of rich, molten chocolate."
 icon = SubResource("AtlasTexture_jibeo")
-base = ExtResource("1_w5fai")
+product_type = ExtResource("1_w5fai")
 effects = Array[ExtResource("2_yu2xx")]([ExtResource("3_oogx0"), ExtResource("4_41c7u"), ExtResource("5_nmcp4")])
 price = 1.27654

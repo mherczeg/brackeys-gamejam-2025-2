@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Product" load_steps=9 format=3 uid="uid://c80p5k17b1550"]
 
-[ext_resource type="Resource" uid="uid://crkxdpkexj8mf" path="res://resources/bases/hot-beverage.tres" id="1_ws577"]
+[ext_resource type="Resource" uid="uid://crkxdpkexj8mf" path="res://resources/product-types/hot-beverage.tres" id="1_ws577"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_yctav"]
 [ext_resource type="Resource" uid="uid://d4lih6ctwk2l" path="res://resources/effects/discomfort.tres" id="3_gn0ei"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_i2yg5"]
@@ -17,6 +17,6 @@ script = ExtResource("3_i2yg5")
 name = "Latte"
 description = "A smooth and creamy blend of espresso and steamed milk."
 icon = SubResource("AtlasTexture_jmalu")
-base = ExtResource("1_ws577")
+product_type = ExtResource("1_ws577")
 effects = Array[ExtResource("2_yctav")]([ExtResource("3_gn0ei"), ExtResource("4_gege0"), ExtResource("5_eioam")])
 price = 1.91417

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Product" load_steps=8 format=3 uid="uid://d2edk4goplnqd"]
 
-[ext_resource type="Resource" uid="uid://pyg5nom8yqp6" path="res://resources/bases/sandwich.tres" id="1_djt0i"]
+[ext_resource type="Resource" uid="uid://pyg5nom8yqp6" path="res://resources/product-types/sandwich.tres" id="1_djt0i"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_40gpe"]
 [ext_resource type="Resource" uid="uid://bolcex3rycr80" path="res://resources/effects/creamy.tres" id="3_g0234"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_kybev"]
@@ -16,6 +16,6 @@ script = ExtResource("3_kybev")
 name = "Tuna Salad"
 description = "A creamy and savory tuna mix, a light yet fulfilling choice."
 icon = SubResource("AtlasTexture_q86sd")
-base = ExtResource("1_djt0i")
+product_type = ExtResource("1_djt0i")
 effects = Array[ExtResource("2_40gpe")]([ExtResource("3_g0234"), ExtResource("4_cedrl")])
 price = 1.3832

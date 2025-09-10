@@ -32,13 +32,13 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 12
 
-[node name="BasesLabel" type="Label" parent="IngredientSelector/ListContainer"]
+[node name="ProductTypesLabel" type="Label" parent="IngredientSelector/ListContainer"]
 layout_mode = 2
 theme = ExtResource("2_fapuj")
-text = "Bases"
+text = "Product Type"
 horizontal_alignment = 1
 
-[node name="Bases" type="GridContainer" parent="IngredientSelector/ListContainer"]
+[node name="ProductTypes" type="GridContainer" parent="IngredientSelector/ListContainer"]
 layout_mode = 2
 theme_override_constants/h_separation = 12
 theme_override_constants/v_separation = 10

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Product" load_steps=8 format=3 uid="uid://cxqy374ivvpvi"]
 
-[ext_resource type="Resource" uid="uid://pnwh8bcvqsnh" path="res://resources/bases/crisps.tres" id="1_c87ab"]
+[ext_resource type="Resource" uid="uid://pnwh8bcvqsnh" path="res://resources/product-types/crisps.tres" id="1_c87ab"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_hogi0"]
 [ext_resource type="Resource" uid="uid://bg456i4g56iux" path="res://resources/effects/minerals.tres" id="3_3yneu"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_v3u1f"]
@@ -16,6 +16,6 @@ script = ExtResource("3_v3u1f")
 name = "Saltine Crackers"
 description = "Light, crisp, and perfectly salted, a simple and versatile cracker."
 icon = SubResource("AtlasTexture_37tbr")
-base = ExtResource("1_c87ab")
+product_type = ExtResource("1_c87ab")
 effects = Array[ExtResource("2_hogi0")]([ExtResource("3_3yneu"), ExtResource("4_rjcom")])
 price = 1.73205

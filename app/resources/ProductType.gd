@@ -1,4 +1,4 @@
-class_name Base
+class_name ProductType
 extends Resource
 
 @export var name: String

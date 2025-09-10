@@ -10,14 +10,14 @@
 theme_override_constants/separation = 16
 script = ExtResource("1_nixoc")
 
-[node name="BaseIconBg" type="TextureRect" parent="."]
+[node name="ProductTypeIconBg" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_crg54")
 
-[node name="BaseIcon" type="TextureRect" parent="BaseIconBg"]
+[node name="ProductTypeIcon" type="TextureRect" parent="ProductTypeIconBg"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 1
 anchors_preset = 8
@@ -34,11 +34,11 @@ grow_vertical = 2
 size_flags_horizontal = 4
 texture = SubResource("PlaceholderTexture2D_scono")
 
-[node name="BaseLabel" type="Label" parent="."]
+[node name="ProductTypeLabel" type="Label" parent="."]
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("3_scono")
-text = "BaseLabel"
+text = "ProductTypeLabel"
 
 [node name="Effects" type="HBoxContainer" parent="."]
 layout_mode = 2

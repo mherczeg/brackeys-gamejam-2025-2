@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://2p7me5q6ybyg"]
 
 [ext_resource type="Shader" uid="uid://eqturlsphwhk" path="res://shaders/interactable-icon.gdshader" id="1_jlivj"]
-[ext_resource type="Script" uid="uid://degykrocrhqvr" path="res://modules/shop/components/BasePurchaseButton.gd" id="1_w4d48"]
+[ext_resource type="Script" uid="uid://degykrocrhqvr" path="res://modules/shop/components/ProductTypePurchaseButton.gd" id="1_w4d48"]
 [ext_resource type="Theme" uid="uid://dcrvqrmx00anv" path="res://themes/shop-price.tres" id="2_sgd0g"]
 [ext_resource type="PackedScene" uid="uid://cfturkxpcx5pd" path="res://modules/shared/ShadeButtonTexture.tscn" id="3_s3qfb"]
 
@@ -13,7 +13,7 @@ shader_parameter/blink_color = Color(1, 1, 1, 1)
 shader_parameter/blink_time_scale = 0.0
 shader_parameter/grayscale = 0.0
 
-[node name="BasePurchaseButton" type="TextureButton"]
+[node name="ProductTypePurchaseButton" type="TextureButton"]
 custom_minimum_size = Vector2(64, 64)
 offset_left = 1.0
 offset_right = 65.0

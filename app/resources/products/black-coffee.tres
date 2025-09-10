@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Product" load_steps=9 format=3 uid="uid://m0a7fluajcsw"]
 
-[ext_resource type="Resource" uid="uid://crkxdpkexj8mf" path="res://resources/bases/hot-beverage.tres" id="1_f6al3"]
+[ext_resource type="Resource" uid="uid://crkxdpkexj8mf" path="res://resources/product-types/hot-beverage.tres" id="1_f6al3"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_12tlw"]
 [ext_resource type="Resource" uid="uid://d4lih6ctwk2l" path="res://resources/effects/discomfort.tres" id="3_08oa2"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_l4s3y"]
@@ -17,6 +17,6 @@ script = ExtResource("3_l4s3y")
 name = "Black Coffee"
 description = "A bold, unadulterated brew for the purist."
 icon = SubResource("AtlasTexture_nbmqe")
-base = ExtResource("1_f6al3")
+product_type = ExtResource("1_f6al3")
 effects = Array[ExtResource("2_12tlw")]([ExtResource("3_08oa2"), ExtResource("4_c2utq"), ExtResource("5_nbmqe")])
 price = 1.29631

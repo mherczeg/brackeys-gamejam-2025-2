@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="Base" load_steps=3 format=3 uid="uid://badmaa0lb5kq1"]
+[gd_resource type="Resource" script_class="ProductType" load_steps=3 format=3 uid="uid://badmaa0lb5kq1"]
 
-[ext_resource type="Script" uid="uid://bgwochg5pfqrl" path="res://resources/Base.gd" id="1_4beo1"]
+[ext_resource type="Script" uid="uid://bgwochg5pfqrl" path="res://resources/ProductType.gd" id="1_4beo1"]
 [ext_resource type="Texture2D" uid="uid://b2s0fqwahvqd" path="res://assets/textures/soup-atlas.tres" id="1_85vi2"]
 
 [resource]

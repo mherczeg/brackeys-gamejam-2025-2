@@ -1,17 +1,17 @@
-class_name BasePurchaseButton
+class_name ProductTypePurchaseButton
 extends TextureButton
 
 signal disabled_changed
 
-var base: Base
+var product_type: ProductType
 
-@onready var base_name: Label = $Name
+@onready var product_type_name: Label = $Name
 @onready var price: Label = $Price
 
 func _ready() -> void:
-	texture_normal = base.icon
-	base_name.text = base.name
-	price.text = "$%d" % base.price
+	texture_normal = product_type.icon
+	product_type_name.text = product_type.name
+	price.text = "$%d" % product_type.price
 
 	pressed.connect(_on_pressed)
 	EventBus.player.money_changed.connect(_on_money_changed)
@@ -19,7 +19,7 @@ func _ready() -> void:
 	_set_availability()
 
 func _set_availability() -> void:
-	if Player.money >= base.price && !Player.bases.has(base):
+	if Player.money >= product_type.price && !Player.product_types.has(product_type):
 		disabled = false
 	else:
 		disabled = true
@@ -27,7 +27,7 @@ func _set_availability() -> void:
 	disabled_changed.emit()
 
 func _on_pressed() -> void:
-	EventBus.shop.base_purchased.emit(base)
+	EventBus.shop.product_type_purchased.emit(product_type)
 	_set_availability()
 
 func _on_money_changed(_new_money: float, _old_money: float) -> void:

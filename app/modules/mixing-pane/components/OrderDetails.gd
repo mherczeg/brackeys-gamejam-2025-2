@@ -18,7 +18,7 @@ const EFFECT_LABEL_SCENE: PackedScene = preload("res://modules/shared/EffectLabe
 @onready var product_info: VBoxContainer = $ProductInfo
 @onready var npc_name: Label = $ProductInfo/Control/NPCName
 @onready var product_icon: TextureRect = $ProductInfo/Control/ProductIcon
-@onready var base_icon: TextureRect = $ProductInfo/Recipe/Base/BaseIcon
+@onready var product_type_icon: TextureRect = $ProductInfo/Recipe/ProductType/Icon
 @onready var effect_list: FlowContainer = $ProductInfo/Recipe
 
 func _ready() -> void:
@@ -34,8 +34,8 @@ func update_ui() -> void:
 	npc_name.text = npc.display_name
 	product_icon.texture = product.icon
 	product_icon.tooltip_text = product.name
-	base_icon.texture = product.base.icon
-	base_icon.tooltip_text = product.base.name
+	product_type_icon.texture = product.product_type.icon
+	product_type_icon.tooltip_text = product.product_type.name
 
 	for child: Node in effect_list.get_children():
 		if child.is_in_group(EFFECT_LABEL_GROUP):

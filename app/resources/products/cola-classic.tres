@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Product" load_steps=9 format=3 uid="uid://cv28hyrrxji3o"]
 
-[ext_resource type="Resource" uid="uid://yjnv2md2an4c" path="res://resources/bases/soda.tres" id="1_u6vfa"]
+[ext_resource type="Resource" uid="uid://yjnv2md2an4c" path="res://resources/product-types/soda.tres" id="1_u6vfa"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_tw5yl"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_31tid"]
 [ext_resource type="Resource" uid="uid://cut8o4kugfvce" path="res://resources/effects/energizing.tres" id="3_yuoas"]
@@ -17,6 +17,6 @@ script = ExtResource("3_31tid")
 name = "Cola Classic"
 description = "The timeless taste of cola, bubbling with sweet, familiar comfort."
 icon = SubResource("AtlasTexture_0k7sg")
-base = ExtResource("1_u6vfa")
+product_type = ExtResource("1_u6vfa")
 effects = Array[ExtResource("2_tw5yl")]([ExtResource("3_yuoas"), ExtResource("4_hphsm"), ExtResource("5_ffns0")])
 price = 1.90352

@@ -9,7 +9,7 @@ const EFFECT_LABEL_GROUP: String = "product-details-effect-labels"
 
 var _mixture: Array[Effect] = []
 var _ingredients_with_unknown_effect: int = 0
-var _base: Base
+var _product_type: ProductType
 
 var _has_mix_information: bool:
 	get():
@@ -29,7 +29,7 @@ var _has_unknown_potential: bool:
 
 var _is_craftable: bool:
 	get():
-		return _base && (_has_unknown_potential || _has_mix_information)
+		return _product_type && (_has_unknown_potential || _has_mix_information)
 
 var _current_display_product: MixedProduct:
 	set(new_product):
@@ -46,8 +46,8 @@ func _ready() -> void:
 	_load_all_effects()
 	server_button.pressed.connect(serve_button_pressed.emit)
 
-func update_base(updated_base: Base) -> void:
-	_base = updated_base
+func update_product_type(updated_product_type: ProductType) -> void:
+	_product_type = updated_product_type
 	update_content()
 
 func update_mixture(updated_mixture: Array[Effect], ingredients_with_unknown_effect: int) -> void:
@@ -93,10 +93,10 @@ func update_visibility() -> void:
 	else:
 		EventBus.mixer.unknown_effect_warning.emit(false)
 
-	if _base || _current_display_product:
-		EventBus.mixer.base_warning.emit(false)
+	if _product_type || _current_display_product:
+		EventBus.mixer.product_type_warning.emit(false)
 	else:
-		EventBus.mixer.base_warning.emit(true)
+		EventBus.mixer.product_type_warning.emit(true)
 
 	if _is_craftable:
 		server_button.show()

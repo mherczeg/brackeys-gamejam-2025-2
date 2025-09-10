@@ -47,7 +47,7 @@ func _update_ingredient_availability() -> void:
 
 	disabled_changed.emit()
 
-func _update_ingredient_selected(_selected_base: Base, _selected_ingredients: Array[Ingredient]) -> void:
+func _update_ingredient_selected(_selected_product_type: ProductType, _selected_ingredients: Array[Ingredient]) -> void:
 	_selected_for_mixture = _selected_ingredients.has(ingredient)
 
 	_update_ingredient_availability()

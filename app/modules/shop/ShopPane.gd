@@ -1,7 +1,8 @@
 class_name ShopPane
 extends Control
 
-const BASE_PURCHASE_BUTTON_SCENE: PackedScene = preload("res://modules/shop/components/BasePurchaseButton.tscn")
+const PRODUCT_TYPE_PURCHASE_BUTTON_SCENE: PackedScene = \
+	preload("res://modules/shop/components/ProductTypePurchaseButton.tscn")
 const INGREDIENT_PURCHASE_BUTTON_SCENE: PackedScene = \
 	preload("res://modules/shop/components/IngredientPurchaseButton.tscn")
 
@@ -23,11 +24,11 @@ func open() -> void:
 	update_money_label()
 	reset_items()
 
-	for base: Base in ResourceManager.bases:
-		if !Player.bases.has(base):
-			var base_purchase_button: BasePurchaseButton = BASE_PURCHASE_BUTTON_SCENE.instantiate()
-			base_purchase_button.base = base
-			items.add_child(base_purchase_button)
+	for product_type: ProductType in ResourceManager.product_types:
+		if !Player.product_types.has(product_type):
+			var product_type_purchase_button: ProductTypePurchaseButton = PRODUCT_TYPE_PURCHASE_BUTTON_SCENE.instantiate()
+			product_type_purchase_button.product_type = product_type
+			items.add_child(product_type_purchase_button)
 
 	for ingredient: Ingredient in ResourceManager.ingredients:
 		var ingredient_purchase_button: IngredientPurchaseButton = INGREDIENT_PURCHASE_BUTTON_SCENE.instantiate()

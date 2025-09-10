@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Product" load_steps=8 format=3 uid="uid://br5ka07avlk55"]
 
-[ext_resource type="Resource" uid="uid://1g3i3a8rkotx" path="res://resources/bases/ice-cream.tres" id="1_xcg1f"]
+[ext_resource type="Resource" uid="uid://1g3i3a8rkotx" path="res://resources/product-types/ice-cream.tres" id="1_xcg1f"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_jyd3t"]
 [ext_resource type="Resource" uid="uid://cn1y1uf4fld1v" path="res://resources/effects/water.tres" id="3_kyq02"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_x8r8n"]
@@ -16,6 +16,6 @@ script = ExtResource("3_x8r8n")
 name = "Fruit Popsicle"
 description = "A refreshing frozen treat made with real fruit juice."
 icon = SubResource("AtlasTexture_g54gs")
-base = ExtResource("1_xcg1f")
+product_type = ExtResource("1_xcg1f")
 effects = Array[ExtResource("2_jyd3t")]([ExtResource("3_kyq02"), ExtResource("4_2qmhq")])
 price = 1.82266

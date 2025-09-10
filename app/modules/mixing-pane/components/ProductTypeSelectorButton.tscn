@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://co8rafq3ug2by"]
 
-[ext_resource type="Script" uid="uid://bexpcaa6xwqn8" path="res://modules/mixing-pane/components/BaseSelectorButton.gd" id="1_x4dgr"]
+[ext_resource type="Script" uid="uid://bexpcaa6xwqn8" path="res://modules/mixing-pane/components/ProductTypeSelectorButton.gd" id="1_x4dgr"]
 [ext_resource type="PackedScene" uid="uid://cfturkxpcx5pd" path="res://modules/shared/ShadeButtonTexture.tscn" id="2_uicyv"]
 [ext_resource type="Shader" uid="uid://eqturlsphwhk" path="res://shaders/interactable-icon.gdshader" id="3_toarm"]
 
@@ -12,7 +12,7 @@ shader_parameter/blink_color = Color(1, 1, 1, 1)
 shader_parameter/blink_time_scale = 0.0
 shader_parameter/grayscale = 0.0
 
-[node name="BaseSelectorButton" type="TextureButton"]
+[node name="ProductTypeSelectorButton" type="TextureButton"]
 custom_minimum_size = Vector2(64, 64)
 anchors_preset = 8
 anchor_left = 0.5

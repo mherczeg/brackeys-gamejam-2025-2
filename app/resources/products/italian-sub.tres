@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Product" load_steps=8 format=3 uid="uid://cjiw7aopalpyo"]
 
-[ext_resource type="Resource" uid="uid://pyg5nom8yqp6" path="res://resources/bases/sandwich.tres" id="1_a203e"]
+[ext_resource type="Resource" uid="uid://pyg5nom8yqp6" path="res://resources/product-types/sandwich.tres" id="1_a203e"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_wvjsv"]
 [ext_resource type="Resource" uid="uid://ckmombfq7w8dt" path="res://resources/effects/gluten.tres" id="3_2gwwh"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_tmysr"]
@@ -16,6 +16,6 @@ script = ExtResource("3_tmysr")
 name = "Italian Sub"
 description = "A feast of cured meats and zesty aromas, packed into a hearty roll."
 icon = SubResource("AtlasTexture_4yvba")
-base = ExtResource("1_a203e")
+product_type = ExtResource("1_a203e")
 effects = Array[ExtResource("2_wvjsv")]([ExtResource("3_2gwwh"), ExtResource("4_1uppg")])
 price = 1.56169

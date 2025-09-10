@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Product" load_steps=8 format=3 uid="uid://pn4v14wq0r17"]
 
-[ext_resource type="Resource" uid="uid://yjnv2md2an4c" path="res://resources/bases/soda.tres" id="1_m5eev"]
+[ext_resource type="Resource" uid="uid://yjnv2md2an4c" path="res://resources/product-types/soda.tres" id="1_m5eev"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_2v5i7"]
 [ext_resource type="Resource" uid="uid://bolcex3rycr80" path="res://resources/effects/creamy.tres" id="3_14vlx"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_erh6w"]
@@ -16,6 +16,6 @@ script = ExtResource("3_erh6w")
 name = "Root Beer Float"
 description = "Creamy, dreamy, and nostalgic, a classic soda fountain treat."
 icon = SubResource("AtlasTexture_frkfb")
-base = ExtResource("1_m5eev")
+product_type = ExtResource("1_m5eev")
 effects = Array[ExtResource("2_2v5i7")]([ExtResource("3_14vlx"), ExtResource("4_5ywus")])
 price = 1.13897

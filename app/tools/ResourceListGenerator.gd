@@ -4,7 +4,7 @@ extends EditorScript
 const OUTPUT_PATH = "res://modules/resource-manager/ResourceList.gd"
 
 const RESOURCE_FOLDERS = {
-	"bases": "res://resources/bases/",
+	"product_type": "res://resources/product-types/",
 	"effects": "res://resources/effects/",
 	"encounters": "res://resources/encounters/",
 	"ingredients": "res://resources/ingredients/",

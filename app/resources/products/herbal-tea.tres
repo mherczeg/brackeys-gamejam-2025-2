@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Product" load_steps=8 format=3 uid="uid://br2b3ynok2vp"]
 
-[ext_resource type="Resource" uid="uid://crkxdpkexj8mf" path="res://resources/bases/hot-beverage.tres" id="1_vaf6g"]
+[ext_resource type="Resource" uid="uid://crkxdpkexj8mf" path="res://resources/product-types/hot-beverage.tres" id="1_vaf6g"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_upv0y"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_1e80d"]
 [ext_resource type="Resource" uid="uid://ca7yp8e05soib" path="res://resources/effects/antioxidant.tres" id="3_enbv5"]
@@ -16,6 +16,6 @@ script = ExtResource("3_1e80d")
 name = "Herbal Tea"
 description = "A soothing infusion of herbs, perfect for relaxation."
 icon = SubResource("AtlasTexture_gv18x")
-base = ExtResource("1_vaf6g")
+product_type = ExtResource("1_vaf6g")
 effects = Array[ExtResource("2_upv0y")]([ExtResource("3_enbv5"), ExtResource("4_seuk3")])
 price = 1.78859

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ProductType" load_steps=2 format=3 uid="uid://1nkxl2f0nc21"]
+
+[ext_resource type="Script" uid="uid://bgwochg5pfqrl" path="res://resources/ProductType.gd" id="1_gqnim"]
+
+[resource]
+script = ExtResource("1_gqnim")
+name = "Soda"
+description = "A bubbly, sweet carbonated beverage, a perfect vehicle for potent flavors."
+price = 0.0

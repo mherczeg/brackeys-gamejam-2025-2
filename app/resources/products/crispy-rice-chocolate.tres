@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Product" load_steps=8 format=3 uid="uid://co03tmfd3kw7q"]
 
-[ext_resource type="Resource" uid="uid://cho25f5213qgd" path="res://resources/bases/chocolate-bar.tres" id="1_j7086"]
+[ext_resource type="Resource" uid="uid://cho25f5213qgd" path="res://resources/product-types/chocolate-bar.tres" id="1_j7086"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_t2qbr"]
 [ext_resource type="Resource" uid="uid://3modiddoph3q" path="res://resources/effects/expanding.tres" id="3_01ic7"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_i2xtk"]
@@ -16,6 +16,6 @@ script = ExtResource("3_i2xtk")
 name = "Crispy Rice Chocolate"
 description = "Light, crispy rice puffs suspended in sweet milk chocolate."
 icon = SubResource("AtlasTexture_b1jt7")
-base = ExtResource("1_j7086")
+product_type = ExtResource("1_j7086")
 effects = Array[ExtResource("2_t2qbr")]([ExtResource("3_01ic7"), ExtResource("4_qdb8q")])
 price = 1.6537

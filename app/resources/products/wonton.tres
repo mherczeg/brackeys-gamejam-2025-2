@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Product" load_steps=9 format=3 uid="uid://bjmwxmukds3h0"]
 
-[ext_resource type="Resource" uid="uid://badmaa0lb5kq1" path="res://resources/bases/soup.tres" id="1_6am0j"]
+[ext_resource type="Resource" uid="uid://badmaa0lb5kq1" path="res://resources/product-types/soup.tres" id="1_6am0j"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_kfbk1"]
 [ext_resource type="Resource" uid="uid://dl6xhwsef3ei7" path="res://resources/effects/protein.tres" id="3_46kmn"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_bcaai"]
@@ -17,6 +17,6 @@ script = ExtResource("3_bcaai")
 name = "Wonton"
 description = "Delicate dumplings in a clear, soothing broth."
 icon = SubResource("AtlasTexture_dkij6")
-base = ExtResource("1_6am0j")
+product_type = ExtResource("1_6am0j")
 effects = Array[ExtResource("2_kfbk1")]([ExtResource("3_46kmn"), ExtResource("4_y67x3"), ExtResource("5_xed48")])
 price = 1.32771

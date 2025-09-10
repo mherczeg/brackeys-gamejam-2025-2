@@ -1,31 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://yrym8oofb8p4"]
+[gd_scene load_steps=5 format=3 uid="uid://yrym8oofb8p4"]
 
 [ext_resource type="Script" uid="uid://d3obb74fl2sda" path="res://modules/mixing-pane/components/MixerButtons.gd" id="1_jsqpx"]
 [ext_resource type="PackedScene" uid="uid://qqu3aivipcrv" path="res://modules/shared/IngredientButton.tscn" id="1_lnkbb"]
-[ext_resource type="Texture2D" uid="uid://cxnqy72easkxu" path="res://assets/images/slots-purple.png" id="2_ht0kh"]
+[ext_resource type="PackedScene" uid="uid://djggirvysyvbe" path="res://modules/mixing-pane/components/ProductTypeButton.tscn" id="2_to4md"]
+[ext_resource type="Script" uid="uid://dnk181u3iox3c" path="res://modules/mixing-pane/components/ProductTypeButton.gd" id="3_jfc5i"]
 
 [node name="MixerButtons" type="HBoxContainer"]
 script = ExtResource("1_jsqpx")
 
-[node name="BaseButton" type="TextureButton" parent="."]
-custom_minimum_size = Vector2(64, 64)
+[node name="ProductTypeButton" parent="." instance=ExtResource("2_to4md")]
 layout_mode = 2
-texture_normal = ExtResource("2_ht0kh")
-stretch_mode = 0
-
-[node name="Icon" type="TextureRect" parent="BaseButton"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
+script = ExtResource("3_jfc5i")
 
 [node name="IngredientButton1" parent="." instance=ExtResource("1_lnkbb")]
 layout_mode = 2

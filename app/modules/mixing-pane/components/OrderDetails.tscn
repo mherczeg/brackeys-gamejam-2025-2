@@ -126,10 +126,10 @@ text = "Recipe:"
 [node name="Recipe" type="HFlowContainer" parent="ProductInfo"]
 layout_mode = 2
 
-[node name="Base" type="HBoxContainer" parent="ProductInfo/Recipe"]
+[node name="ProductType" type="HBoxContainer" parent="ProductInfo/Recipe"]
 layout_mode = 2
 
-[node name="BaseIcon" type="TextureRect" parent="ProductInfo/Recipe/Base"]
+[node name="Icon" type="TextureRect" parent="ProductInfo/Recipe/ProductType"]
 layout_mode = 2
 theme = SubResource("Theme_elyog")
 stretch_mode = 3

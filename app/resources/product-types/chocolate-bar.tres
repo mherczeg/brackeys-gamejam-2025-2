@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="Base" load_steps=3 format=3 uid="uid://cho25f5213qgd"]
+[gd_resource type="Resource" script_class="ProductType" load_steps=3 format=3 uid="uid://cho25f5213qgd"]
 
-[ext_resource type="Script" uid="uid://bgwochg5pfqrl" path="res://resources/Base.gd" id="1_mti4g"]
+[ext_resource type="Script" uid="uid://bgwochg5pfqrl" path="res://resources/ProductType.gd" id="1_mti4g"]
 [ext_resource type="Texture2D" uid="uid://opmkybsq4gcf" path="res://assets/textures/chocolate-atlas.tres" id="1_oe63i"]
 
 [resource]

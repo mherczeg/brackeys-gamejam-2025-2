@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="Base" load_steps=3 format=3 uid="uid://pnwh8bcvqsnh"]
+[gd_resource type="Resource" script_class="ProductType" load_steps=3 format=3 uid="uid://pnwh8bcvqsnh"]
 
 [ext_resource type="Texture2D" uid="uid://bq5r82rpomvis" path="res://assets/textures/crips-atlas.tres" id="1_65jfx"]
-[ext_resource type="Script" uid="uid://bgwochg5pfqrl" path="res://resources/Base.gd" id="1_qgagy"]
+[ext_resource type="Script" uid="uid://bgwochg5pfqrl" path="res://resources/ProductType.gd" id="1_qgagy"]
 
 [resource]
 script = ExtResource("1_qgagy")

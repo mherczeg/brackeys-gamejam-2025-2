@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Product" load_steps=9 format=3 uid="uid://cgs8ytjt8ie65"]
 
-[ext_resource type="Resource" uid="uid://1g3i3a8rkotx" path="res://resources/bases/ice-cream.tres" id="1_lpya0"]
+[ext_resource type="Resource" uid="uid://1g3i3a8rkotx" path="res://resources/product-types/ice-cream.tres" id="1_lpya0"]
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="2_lsbwq"]
 [ext_resource type="Script" uid="uid://dq7ayo4b47kat" path="res://resources/Product.gd" id="3_16r3b"]
 [ext_resource type="Resource" uid="uid://dkxgfalr0y0ei" path="res://resources/effects/sweet.tres" id="3_hg0i8"]
@@ -17,6 +17,6 @@ script = ExtResource("3_16r3b")
 name = "CVS Sandwich"
 description = "A block of vanilla ice cream between two soft chocolate wafers."
 icon = SubResource("AtlasTexture_krith")
-base = ExtResource("1_lpya0")
+product_type = ExtResource("1_lpya0")
 effects = Array[ExtResource("2_lsbwq")]([ExtResource("3_hg0i8"), ExtResource("4_nb8s8"), ExtResource("5_any3j")])
 price = 1.55357
