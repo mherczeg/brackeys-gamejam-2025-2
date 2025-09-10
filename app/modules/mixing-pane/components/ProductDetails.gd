@@ -1,3 +1,4 @@
+# TODO cleanup
 class_name ProductDetails
 extends VBoxContainer
 
@@ -46,20 +47,31 @@ func _ready() -> void:
 	_load_all_effects()
 	server_button.pressed.connect(serve_button_pressed.emit)
 
-func update_product_type(updated_product_type: ProductType) -> void:
-	_product_type = updated_product_type
-	update_content()
-
-func update_mixture(updated_mixture: Array[Effect], ingredients_with_unknown_effect: int) -> void:
-	_mixture = updated_mixture
-	_ingredients_with_unknown_effect = ingredients_with_unknown_effect
-	update_content()
-
 func update_content() -> void:
 	update_mixture_list()
 	update_visibility()
 
-func update_current_display_product(product: MixedProduct) -> void:
+func update_product_type(updated_product_type: ProductType) -> void:
+	_product_type = updated_product_type
+	update_content()
+
+func update_ingredients(ingredients: Dictionary[MixerButtons.SLOT, Ingredient]) -> void:
+	var ingredient_stats: MixtureIngredientStats = MixtureIngredientStats.new(ingredients)
+	_update_unknown_effects(ingredient_stats.ingredients_with_unknown_count)
+	_update_mixture(ingredient_stats.effect_counts)
+	update_content()
+
+func _update_mixture(effect_counts: Dictionary[Effect, int]) -> void:
+	var new_mixture: Array[Effect] = []
+	for effect: Effect in effect_counts.keys():
+		if effect_counts[effect] >= 2:
+			new_mixture.append(effect)
+	_mixture = new_mixture
+
+func _update_unknown_effects(count: int) -> void:
+	_ingredients_with_unknown_effect = count
+
+func update_current_end_result(product: MixedProduct) -> void:
 	_current_display_product = product
 
 func update_mixture_list() -> void:

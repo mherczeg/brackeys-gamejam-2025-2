@@ -23,6 +23,9 @@ var ingredients: Array[Ingredient]:
 		effects = product_effects.keys()
 		unlocked_effects = new_unlocked_effects
 
+func _init(_product_type: ProductType, _ingredients: Array[Ingredient]) -> void:
+	product_type = _product_type
+	ingredients = _ingredients
 
 func has_fulfilled_product(product: Product) -> bool:
 	var is_correct_product_type: bool = product_type == product.product_type
@@ -30,7 +33,6 @@ func has_fulfilled_product(product: Product) -> bool:
 		SetUtils.array_to_set(product.effects),
 		SetUtils.array_to_set(effects)
 	)
-
 
 	return is_correct_product_type && has_all_effects
 

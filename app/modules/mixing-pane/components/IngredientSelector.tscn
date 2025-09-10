@@ -1,16 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://bvhr2kpc3py1q"]
 
-[ext_resource type="Script" uid="uid://b33kbla3k83ji" path="res://modules/mixing-pane/components/IngredientSelector.gd" id="1_wu8nm"]
+[ext_resource type="Script" uid="uid://b33kbla3k83ji" path="res://modules/game/IngredientSelector.gd" id="1_wu8nm"]
 [ext_resource type="Theme" uid="uid://segr3l7pwr4u" path="res://themes/naked-info-label.tres" id="2_fapuj"]
 
-[node name="Panel" type="Panel"]
+[node name="IngredientSelector" type="Panel"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_wu8nm")
 
-[node name="IngredientSelector" type="ScrollContainer" parent="."]
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -22,9 +23,8 @@ offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
-script = ExtResource("1_wu8nm")
 
-[node name="ListContainer" type="VBoxContainer" parent="IngredientSelector"]
+[node name="ListContainer" type="VBoxContainer" parent="ScrollContainer"]
 unique_name_in_owner = true
 clip_contents = true
 layout_mode = 2
@@ -32,25 +32,25 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 12
 
-[node name="ProductTypesLabel" type="Label" parent="IngredientSelector/ListContainer"]
+[node name="ProductTypesLabel" type="Label" parent="ScrollContainer/ListContainer"]
 layout_mode = 2
 theme = ExtResource("2_fapuj")
 text = "Product Type"
 horizontal_alignment = 1
 
-[node name="ProductTypes" type="GridContainer" parent="IngredientSelector/ListContainer"]
+[node name="ProductTypes" type="GridContainer" parent="ScrollContainer/ListContainer"]
 layout_mode = 2
 theme_override_constants/h_separation = 12
 theme_override_constants/v_separation = 10
 columns = 5
 
-[node name="IngredientsLabel" type="Label" parent="IngredientSelector/ListContainer"]
+[node name="IngredientsLabel" type="Label" parent="ScrollContainer/ListContainer"]
 layout_mode = 2
 theme = ExtResource("2_fapuj")
 text = "Ingredients"
 horizontal_alignment = 1
 
-[node name="Ingredients" type="VBoxContainer" parent="IngredientSelector/ListContainer"]
+[node name="Ingredients" type="VBoxContainer" parent="ScrollContainer/ListContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 12

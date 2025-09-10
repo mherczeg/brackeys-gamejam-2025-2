@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpwl5qtg12yqs"]
+
+[ext_resource type="Script" uid="uid://dcdbh7nkb716d" path="res://modules/mixing-pane/components/MixingPaneAudioPlayer.gd" id="1_ryjue"]
+[ext_resource type="AudioStream" uid="uid://coaa3xnsbkwep" path="res://assets/audio/coin-clean.ogg" id="1_sh40g"]
+[ext_resource type="AudioStream" uid="uid://dvoee2nyuifut" path="res://assets/audio/product-drop-short.ogg" id="2_ryjue"]
+
+[node name="MixingPaneAudioPlayer" type="Node"]
+script = ExtResource("1_ryjue")
+
+[node name="CoinInsert" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, -1)
+stream = ExtResource("1_sh40g")
+volume_db = 10.0
+
+[node name="ProductDrop" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, -1)
+stream = ExtResource("2_ryjue")
+volume_db = -10.0

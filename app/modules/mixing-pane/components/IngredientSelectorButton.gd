@@ -1,3 +1,5 @@
+#TODO cleanup
+
 class_name IngredientSelectorButton
 extends TextureButton
 
@@ -10,7 +12,7 @@ const UNKNOWN_EFFECT_LABEL_SCENE: PackedScene = preload("res://modules/shared/Un
 
 @export var ingredient: Ingredient
 var slot: MixerButtons.SLOT
-var _selected_for_mixture: bool = false
+var _is_selected_for_mixture: bool = false
 
 @onready var inventory_label: Label = $InventoryLabel
 @onready var ingredient_name: Label = $MarginContainer/VBoxContainer/Name
@@ -26,7 +28,6 @@ func _ready() -> void:
 	pressed.connect(_on_pressed)
 	EventBus.player.ingredient_stock_changed.connect(_on_ingredient_stock_changed)
 	EventBus.mixer.ingredient_effects_unlocked.connect(_update_effect_labels)
-	EventBus.mixer.mixture_changed.connect(_update_ingredient_selected)
 
 func _on_pressed() -> void:
 	EventBus.mixer.ingredient_selected.emit(ingredient)
@@ -40,15 +41,17 @@ func _update_ingredient_availability() -> void:
 		hide()
 	inventory_label.text = "%d" % ingredient_count
 
-	if ingredient_count > 0 && !_selected_for_mixture:
+	if ingredient_count > 0 && !_is_selected_for_mixture:
 		disabled = false
 	else:
 		disabled = true
 
 	disabled_changed.emit()
 
-func _update_ingredient_selected(_selected_product_type: ProductType, _selected_ingredients: Array[Ingredient]) -> void:
-	_selected_for_mixture = _selected_ingredients.has(ingredient)
+func update_selection_state(
+	selected_ingredients: Dictionary[MixerButtons.SLOT, Ingredient]
+) -> void:
+	_is_selected_for_mixture = selected_ingredients.values().has(ingredient)
 
 	_update_ingredient_availability()
 

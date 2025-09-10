@@ -28,6 +28,15 @@ autoplay = true
 bus = &"Background"
 area_mask = 2
 
+[node name="Scripting" type="Node" parent="."]
+
+[node name="GameStateMachine" parent="Scripting" node_paths=PackedStringArray("encounter_manager") instance=ExtResource("10_3xj3m")]
+unique_name_in_owner = true
+encounter_manager = NodePath("../EncounterManager")
+
+[node name="EncounterManager" parent="Scripting" instance=ExtResource("11_7ed7s")]
+unique_name_in_owner = true
+
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
@@ -79,12 +88,3 @@ offset_left = 1291.0
 offset_top = 4.0
 offset_right = 1563.0
 offset_bottom = 120.0
-
-[node name="Scripting" type="Node" parent="."]
-
-[node name="GameStateMachine" parent="Scripting" node_paths=PackedStringArray("encounter_manager") instance=ExtResource("10_3xj3m")]
-unique_name_in_owner = true
-encounter_manager = NodePath("../EncounterManager")
-
-[node name="EncounterManager" parent="Scripting" instance=ExtResource("11_7ed7s")]
-unique_name_in_owner = true

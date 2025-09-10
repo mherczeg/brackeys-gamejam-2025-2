@@ -1,3 +1,4 @@
+# TODO cleanup
 class_name OrderDetails
 extends PanelContainer
 
@@ -31,26 +32,38 @@ func update_ui() -> void:
 		product_info.hide()
 		return
 
+	_update_npc_details()
+	_update_product_details()
+	_update_effect_labels()
+
+func _update_npc_details() -> void:
 	npc_name.text = npc.display_name
+
+func _update_product_details() -> void:
 	product_icon.texture = product.icon
 	product_icon.tooltip_text = product.name
 	product_type_icon.texture = product.product_type.icon
 	product_type_icon.tooltip_text = product.product_type.name
 
+
+func _update_effect_labels() -> void:
 	for child: Node in effect_list.get_children():
 		if child.is_in_group(EFFECT_LABEL_GROUP):
 			child.free()
 
 	for effect: Effect in product.effects:
-		var effect_label: EffectLabel = EFFECT_LABEL_SCENE.instantiate()
-		effect_label.effect = effect
-		effect_label.add_to_group(EFFECT_LABEL_GROUP)
-		effect_label.has_plus = true
-		effect_list.add_child(effect_label)
-		effect_label.icon.custom_minimum_size = Vector2i(32, 32)
+		_create_effect_label(effect)
 
 	idle_label.hide()
 	product_info.show()
+
+func _create_effect_label(effect: Effect) -> void:
+	var effect_label: EffectLabel = EFFECT_LABEL_SCENE.instantiate()
+	effect_label.effect = effect
+	effect_label.add_to_group(EFFECT_LABEL_GROUP)
+	effect_label.has_plus = true
+	effect_list.add_child(effect_label)
+	effect_label.icon.custom_minimum_size = Vector2i(32, 32)
 
 func _on_npc_name_hover_start() -> void:
 	EventBus.ui.show_npc_info.emit(npc, get_global_mouse_position() + Vector2(32, 32))

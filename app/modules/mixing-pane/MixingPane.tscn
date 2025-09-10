@@ -1,15 +1,23 @@
-[gd_scene load_steps=13 format=3 uid="uid://cl1c5ipfnf66f"]
+[gd_scene load_steps=14 format=3 uid="uid://cl1c5ipfnf66f"]
 
 [ext_resource type="Script" uid="uid://r26vig0m7xh8" path="res://modules/mixing-pane/MixingPane.gd" id="1_svtgx"]
-[ext_resource type="Texture2D" uid="uid://dq28el46s1moi" path="res://assets/images/BackGround.png" id="2_vhkge"]
+[ext_resource type="Script" uid="uid://d15d6nc3jb0l2" path="res://modules/mixing-pane/resources/MixingPaneConfig.gd" id="2_mhavr"]
 [ext_resource type="PackedScene" uid="uid://fokn520phn5m" path="res://modules/mixing-pane/components/OrderDetails.tscn" id="3_cgagm"]
 [ext_resource type="PackedScene" uid="uid://yrym8oofb8p4" path="res://modules/mixing-pane/components/MixerButtons.tscn" id="4_svtgx"]
 [ext_resource type="PackedScene" uid="uid://bvhr2kpc3py1q" path="res://modules/mixing-pane/components/IngredientSelector.tscn" id="5_nyt5e"]
 [ext_resource type="PackedScene" uid="uid://dhdwspygl8is8" path="res://modules/mixing-pane/components/ProductDetails.tscn" id="6_cgagm"]
 [ext_resource type="PackedScene" uid="uid://cixif270j8h8b" path="res://modules/mixing-pane/components/MoneyCounter.tscn" id="9_je0hr"]
+[ext_resource type="PackedScene" uid="uid://bpwl5qtg12yqs" path="res://modules/mixing-pane/components/MixingPaneAudioPlayer.tscn" id="9_wskut"]
+[ext_resource type="Script" uid="uid://5w1qvqbfvmkg" path="res://modules/mixing-pane/components/MixerState.gd" id="10_mhavr"]
 [ext_resource type="Theme" uid="uid://wng5u40163hw" path="res://themes/IngredientSelector.tres" id="12_8e04o"]
-[ext_resource type="AudioStream" uid="uid://coaa3xnsbkwep" path="res://assets/audio/coin-clean.ogg" id="14_61iek"]
-[ext_resource type="AudioStream" uid="uid://dvoee2nyuifut" path="res://assets/audio/product-drop-short.ogg" id="15_61iek"]
+
+[sub_resource type="Resource" id="Resource_xovcq"]
+script = ExtResource("2_mhavr")
+ingredient_list_spacing = 10
+coin_insert_delay = 0.0
+ingredient_selector_y_offset = 0
+max_mixer_slots = 0
+metadata/_custom_type_script = "uid://d15d6nc3jb0l2"
 
 [sub_resource type="Theme" id="Theme_vhkge"]
 
@@ -25,8 +33,17 @@ offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_svtgx")
+config = SubResource("Resource_xovcq")
 
-[node name="IngredientSelection" type="VBoxContainer" parent="."]
+[node name="UI" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="IngredientSelection" type="VBoxContainer" parent="UI"]
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
@@ -41,39 +58,33 @@ size_flags_horizontal = 3
 size_flags_vertical = 0
 theme = SubResource("Theme_vhkge")
 
-[node name="OrderDetails" parent="IngredientSelection" instance=ExtResource("3_cgagm")]
+[node name="OrderDetails" parent="UI/IngredientSelection" instance=ExtResource("3_cgagm")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 1
 
-[node name="HSeparator" type="HSeparator" parent="IngredientSelection"]
+[node name="HSeparator" type="HSeparator" parent="UI/IngredientSelection"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxEmpty_fi2f3")
 
-[node name="MixerButtons" parent="IngredientSelection" instance=ExtResource("4_svtgx")]
+[node name="MixerButtons" parent="UI/IngredientSelection" instance=ExtResource("4_svtgx")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="HSeparator2" type="HSeparator" parent="IngredientSelection"]
+[node name="HSeparator2" type="HSeparator" parent="UI/IngredientSelection"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxEmpty_fi2f3")
 
-[node name="Background" type="Sprite2D" parent="IngredientSelection"]
-visible = false
-show_behind_parent = true
-position = Vector2(540, 321)
-scale = Vector2(5, 5)
-texture = ExtResource("2_vhkge")
-
-[node name="IngredientSelector" parent="IngredientSelection" instance=ExtResource("5_nyt5e")]
+[node name="IngredientSelector" parent="UI/IngredientSelection" instance=ExtResource("5_nyt5e")]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("12_8e04o")
 
-[node name="ProductDetails" parent="." instance=ExtResource("6_cgagm")]
+[node name="ProductDetails" parent="UI" instance=ExtResource("6_cgagm")]
 unique_name_in_owner = true
 layout_mode = 2
 offset_left = 520.0
@@ -81,27 +92,24 @@ offset_top = 50.0
 offset_right = 920.0
 offset_bottom = 680.0
 
-[node name="MoneyCounter" parent="." instance=ExtResource("9_je0hr")]
+[node name="MoneyCounter" parent="UI" instance=ExtResource("9_je0hr")]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.96
 anchor_top = 0.05
 anchor_right = 0.96
 anchor_bottom = 0.05
-offset_left = -59.0
+offset_left = -104.0
 offset_top = 0.0
 offset_right = 0.0
-offset_bottom = 40.0
+offset_bottom = 64.0
 grow_horizontal = 0
 
-[node name="Audio" type="Node" parent="."]
+[node name="MixingPaneAudioPlayer" parent="." instance=ExtResource("9_wskut")]
+unique_name_in_owner = true
 
-[node name="CoinInsert" type="AudioStreamPlayer2D" parent="Audio"]
-position = Vector2(0, -1)
-stream = ExtResource("14_61iek")
-volume_db = 10.0
+[node name="Scripting" type="Node" parent="."]
 
-[node name="ProductDrop" type="AudioStreamPlayer2D" parent="Audio"]
-position = Vector2(0, -1)
-stream = ExtResource("15_61iek")
-volume_db = -10.0
+[node name="MixerState" type="Node" parent="Scripting"]
+unique_name_in_owner = true
+script = ExtResource("10_mhavr")
