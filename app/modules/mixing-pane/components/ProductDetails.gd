@@ -1,125 +1,138 @@
-# TODO cleanup
 class_name ProductDetails
 extends VBoxContainer
 
-signal serve_button_pressed
-
-const EFFECTS_PATH: String = "res://resources/effects"
 const EFFECT_LABEL_ICON_SCENE: PackedScene = preload("res://modules/shared/EffectLabelIcon.tscn")
 const EFFECT_LABEL_GROUP: String = "product-details-effect-labels"
+const EFFECT_ICON_SIZE: Vector2i = Vector2i(32, 32)
 
-var _mixture: Array[Effect] = []
-var _ingredients_with_unknown_effect: int = 0
-var _product_type: ProductType
+@onready var effect_list: VBoxContainer = %EffectList
+@onready var effect_icons: HBoxContainer = %EffectIcons
+@onready var serve_button: Button = %ServeButton
+@onready var product_display: ProductDisplay = %ProductDisplay
+@onready var state_manager: ProductDetailsStateManager = %StateManager
 
-var _has_mix_information: bool:
-	get():
-		if _ingredients_with_unknown_effect >= 2:
-			return true
-		if _mixture.size() > 0:
-			return true
-		return false
-
-var _has_unknown_potential: bool:
-	get():
-		if _ingredients_with_unknown_effect >= 2:
-			return true
-		if _mixture.size() > 0 && _ingredients_with_unknown_effect == 1:
-			return true
-		return false
-
-var _is_craftable: bool:
-	get():
-		return _product_type && (_has_unknown_potential || _has_mix_information)
-
-var _current_display_product: MixedProduct:
-	set(new_product):
-		_current_display_product = new_product
-		update_content()
-
-@onready var effect_list: VBoxContainer = $EffectList
-@onready var effect_icons: HBoxContainer = $EffectList/EffectIcons
-@onready var server_button: Button = $ServeButton
-@onready var product_display: ProductDisplay = $ProductDisplay
 
 func _ready() -> void:
-	hide()
-	_load_all_effects()
-	server_button.pressed.connect(serve_button_pressed.emit)
+	_initialize_effects()
+	_connect_signals()
+	_apply_state(ProductDetailsStateManager.STATE.HIDDEN, [])
 
-func update_content() -> void:
-	update_mixture_list()
-	update_visibility()
-
-func update_product_type(updated_product_type: ProductType) -> void:
-	_product_type = updated_product_type
-	update_content()
+func update_product_type(product_type: ProductType) -> void:
+	state_manager.update_product_type(product_type)
 
 func update_ingredients(ingredients: Dictionary[MixerButtons.SLOT, Ingredient]) -> void:
-	var ingredient_stats: MixtureIngredientStats = MixtureIngredientStats.new(ingredients)
-	_update_unknown_effects(ingredient_stats.ingredients_with_unknown_count)
-	_update_mixture(ingredient_stats.effect_counts)
-	update_content()
+	var stats: MixtureIngredientStats = MixtureIngredientStats.new(ingredients)
+	var mixture: Array[Effect] = _extract_mixture_from_stats(stats.effect_counts)
 
-func _update_mixture(effect_counts: Dictionary[Effect, int]) -> void:
-	var new_mixture: Array[Effect] = []
-	for effect: Effect in effect_counts.keys():
-		if effect_counts[effect] >= 2:
-			new_mixture.append(effect)
-	_mixture = new_mixture
-
-func _update_unknown_effects(count: int) -> void:
-	_ingredients_with_unknown_effect = count
+	state_manager.update_mixture(mixture)
+	state_manager.update_unknown_effects_count(stats.ingredients_with_unknown_count)
 
 func update_current_end_result(product: MixedProduct) -> void:
-	_current_display_product = product
+	state_manager.update_current_product(product)
 
-func update_mixture_list() -> void:
-	var visible_icons: int = 0
+func _connect_signals() -> void:
+	state_manager.state_changed.connect(_on_state_changed)
+
+func _on_state_changed(
+	state: ProductDetailsStateManager.STATE,
+	mix_details_elements: Array[ProductDetailsStateManager.MIX_DETAILS_ELEMENTS]
+) -> void:
+	_apply_state(state, mix_details_elements)
+
+func _apply_state(
+	state: ProductDetailsStateManager.STATE,
+	mix_details_elements: Array[ProductDetailsStateManager.MIX_DETAILS_ELEMENTS]
+) -> void:
+	prints("_apply_state")
+	match state:
+		ProductDetailsStateManager.STATE.HIDDEN:
+			prints("hidden")
+			_apply_hidden_state()
+		ProductDetailsStateManager.STATE.SHOWING_PRODUCT:
+			prints("product")
+			_apply_showing_product_state()
+		ProductDetailsStateManager.STATE.SHOWING_MIX_DETAILS:
+			prints("mix")
+			_apply_showing_mix_details_state(mix_details_elements)
+
+func _apply_hidden_state() -> void:
+	hide()
+	effect_list.hide()
+	serve_button.hide()
+	product_display.hide()
+	_clear_all_warnings()
+
+func _apply_showing_product_state() -> void:
+	show()
+	effect_list.hide()
+	serve_button.hide()
+	product_display.show_product(state_manager.get_current_product())
+	_clear_all_warnings()
+
+func _apply_showing_mix_details_state(
+	mix_details_elements: Array[ProductDetailsStateManager.MIX_DETAILS_ELEMENTS]
+) -> void:
+	_apply_mix_details_elements(mix_details_elements)
+	_update_mixture_list()
+	show()
+	# effect_list.show()
+	product_display.hide()
+
+
+# TODO get rid of signals
+func _apply_mix_details_elements(
+	mix_details_elements: Array[ProductDetailsStateManager.MIX_DETAILS_ELEMENTS]
+) -> void:
+	serve_button.hide()
+	_clear_all_warnings()
+
+	for mix_details_element: ProductDetailsStateManager.MIX_DETAILS_ELEMENTS in mix_details_elements:
+		match mix_details_element:
+			ProductDetailsStateManager.MIX_DETAILS_ELEMENTS.UNKNOWN_EFFECT_WARNING:
+				prints("unknown warning")
+				EventBus.mixer.unknown_effect_warning.emit(true)
+			ProductDetailsStateManager.MIX_DETAILS_ELEMENTS.PRODUCT_TYPE_WARNING:
+				prints("product type warning")
+				EventBus.mixer.product_type_warning.emit(true)
+			ProductDetailsStateManager.MIX_DETAILS_ELEMENTS.SERVE_BUTTON_VISIBLE:
+				prints("serve button")
+				serve_button.show()
+
+func _clear_all_warnings() -> void:
+	EventBus.mixer.unknown_effect_warning.emit(false)
+	EventBus.mixer.product_type_warning.emit(false)
+
+func _extract_mixture_from_stats(effect_counts: Dictionary[Effect, int]) -> Array[Effect]:
+	var mixture: Array[Effect] = []
+	for effect: Effect in effect_counts.keys():
+		if effect_counts[effect] >= 2:
+			mixture.append(effect)
+	return mixture
+
+func _update_mixture_list() -> void:
+	var mixture: Array[Effect] = state_manager.get_mixture()
+	var visible_count: int = 0
+
 	for child: EffectLabelIcon in effect_icons.get_children():
-		if child.is_in_group(EFFECT_LABEL_GROUP):
-			if _mixture.has(child.effect):
-				visible_icons += 1
-				child.show()
-			else:
-				child.hide()
+		if !child.is_in_group(EFFECT_LABEL_GROUP):
+			continue
 
-	if visible_icons > 0:
-		effect_list.show()
-	else:
-		effect_list.hide()
+		var should_show: bool = mixture.has(child.effect)
+		child.visible = should_show
+		if should_show:
+			visible_count += 1
 
-func update_visibility() -> void:
-	if _has_mix_information || _current_display_product:
-		show()
-	else:
-		hide()
+	print(visible_count)
+	effect_list.visible = visible_count > 0 || state_manager.has_unknown_potential()
 
-	if _current_display_product:
-		product_display.show_product(_current_display_product)
-	else:
-		product_display.hide()
-
-	if _has_unknown_potential:
-		EventBus.mixer.unknown_effect_warning.emit(true)
-	else:
-		EventBus.mixer.unknown_effect_warning.emit(false)
-
-	if _product_type || _current_display_product:
-		EventBus.mixer.product_type_warning.emit(false)
-	else:
-		EventBus.mixer.product_type_warning.emit(true)
-
-	if _is_craftable:
-		server_button.show()
-	else:
-		server_button.hide()
-
-func _load_all_effects() -> void:
+func _initialize_effects() -> void:
 	for effect: Effect in ResourceManager.effects:
-		var effect_label: EffectLabelIcon = EFFECT_LABEL_ICON_SCENE.instantiate()
-		effect_label.effect = effect
-		effect_label.custom_minimum_size = Vector2(32, 32)
-		effect_label.hide()
-		effect_label.add_to_group(EFFECT_LABEL_GROUP)
-		effect_icons.add_child(effect_label)
+		effect_icons.add_child(_create_effect_label(effect))
+
+func _create_effect_label(effect: Effect) -> EffectLabelIcon:
+	var effect_label: EffectLabelIcon = EFFECT_LABEL_ICON_SCENE.instantiate()
+	effect_label.custom_minimum_size = EFFECT_ICON_SIZE
+	effect_label.effect = effect
+	effect_label.hide()
+	effect_label.add_to_group(EFFECT_LABEL_GROUP)
+	return effect_label

@@ -25,7 +25,7 @@ func _configure_child_nodes() -> void:
 		audio_player.set_coin_insert_delay(config.coin_insert_delay)
 
 func _connect_signals() -> void:
-	product_details.serve_button_pressed.connect(_on_serve_button_pressed)
+	product_details.serve_button.pressed.connect(_on_serve_button_pressed)
 	mixer_state.order_changed.connect(_on_mixer_state_order_changed)
 	mixer_state.selection_changed.connect(_on_mixer_state_selection_changed)
 

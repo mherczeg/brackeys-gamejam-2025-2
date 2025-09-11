@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://si8dgykp5em6"]
+
+[ext_resource type="Script" uid="uid://cr0xg6mbxtnwv" path="res://modules/mixing-pane/components/ProductDetailsStateManager.gd" id="1_eyrxa"]
+
+[node name="ProductDetailsStateManager" type="Node"]
+script = ExtResource("1_eyrxa")
