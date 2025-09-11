@@ -1,3 +1,4 @@
+@icon("res://tools/custom-node-icons/AudioStreamPlayer2D.svg")
 class_name MixingPaneAudioPlayer
 extends Node
 

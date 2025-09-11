@@ -105,7 +105,9 @@ offset_right = 0.0
 offset_bottom = 64.0
 grow_horizontal = 0
 
-[node name="MixingPaneAudioPlayer" parent="." instance=ExtResource("9_wskut")]
+[node name="Audio" type="Node" parent="."]
+
+[node name="MixingPaneAudioPlayer" parent="Audio" instance=ExtResource("9_wskut")]
 unique_name_in_owner = true
 
 [node name="Scripting" type="Node" parent="."]

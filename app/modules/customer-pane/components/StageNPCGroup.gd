@@ -4,7 +4,7 @@ extends Control
 signal encounter_complete
 
 
-@export var stage: Encounter.STAGE
+@export var stage: Encounter.STAGE = Encounter.STAGE.FIRST
 
 var _npc_with_interaciton: int = 0
 @onready var stage_npcs: Array[StageNPC] = [

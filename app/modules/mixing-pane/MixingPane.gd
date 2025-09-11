@@ -90,12 +90,7 @@ func _on_mixer_state_selection_changed() -> void:
 	update_by_selection()
 
 func update_by_order() -> void:
-	if !mixer_state.current_product:
-		order_details.npc = null
-		order_details.product = null
-	else:
-		order_details.npc = mixer_state.current_npc
-		order_details.product = mixer_state.current_product
+	order_details.update_details(mixer_state.current_npc, mixer_state.current_product)
 
 func update_by_selection() -> void:
 	product_details.update_ingredients(mixer_state.selected_ingredients)
