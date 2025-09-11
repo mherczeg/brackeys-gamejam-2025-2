@@ -17,13 +17,19 @@ func _ready() -> void:
 
 func _create_ingredient_selector_elements() -> void:
 	for ingredient: Ingredient in ResourceManager.ingredients:
-		var ingredient_selector_element_instance: IngredientSelectorButton = \
-			INGREDIENT_SELECTOR_BUTTON_SCENE.instantiate()
-		ingredient_selector_element_instance.ingredient = ingredient
-		ingredients_container.add_child(ingredient_selector_element_instance)
+		_create_ingredient_selector_element(ingredient)
+
+func _create_ingredient_selector_element(ingredient: Ingredient) -> void:
+	var ingredient_selector_element_instance: IngredientSelectorButton = \
+		INGREDIENT_SELECTOR_BUTTON_SCENE.instantiate()
+	ingredient_selector_element_instance.ingredient = ingredient
+	ingredients_container.add_child(ingredient_selector_element_instance)
 
 func _create_product_type_selector_elements() -> void:
 	for product_type: ProductType in ResourceManager.product_types:
+		_create_product_type_selector_element(product_type)
+
+func _create_product_type_selector_element(product_type: ProductType) -> void:
 		var product_type_selector_element: ProductTypeSelectorButton = \
 			PRODUCT_TYPE_SELECTOR_BUTTON_SCENE.instantiate()
 		product_type_selector_element.product_type = product_type
