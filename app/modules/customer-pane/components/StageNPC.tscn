@@ -1,13 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://dtnqnc2gqicsd"]
+[gd_scene load_steps=6 format=3 uid="uid://dtnqnc2gqicsd"]
 
 [ext_resource type="Texture2D" uid="uid://dotkqju4undxo" path="res://assets/images/a-human.png" id="1_7evva"]
 [ext_resource type="Shader" uid="uid://eqturlsphwhk" path="res://shaders/interactable-icon.gdshader" id="1_7re8j"]
 [ext_resource type="Script" uid="uid://cckbd01iwdkmn" path="res://modules/customer-pane/components/StageNPC.gd" id="2_o16h7"]
+[ext_resource type="PackedScene" uid="uid://ca5r3syt15mn7" path="res://modules/shared/ShadeHighlightTexture.tscn" id="4_atkdp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j7gbh"]
 shader = ExtResource("1_7re8j")
 shader_parameter/outline_color = Color(1, 1, 1, 1)
-shader_parameter/width = 0.0
+shader_parameter/width = 1.0
 shader_parameter/blink_color = Color(1, 1, 1, 1)
 shader_parameter/blink_time_scale = 0.0
 shader_parameter/grayscale = 0.0
@@ -21,3 +22,5 @@ offset_bottom = 193.0
 texture = ExtResource("1_7evva")
 expand_mode = 1
 script = ExtResource("2_o16h7")
+
+[node name="ShadeHighlightTexture" parent="." instance=ExtResource("4_atkdp")]

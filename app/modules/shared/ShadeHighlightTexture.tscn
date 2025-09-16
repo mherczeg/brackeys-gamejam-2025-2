@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://ca5r3syt15mn7"]
+
+[ext_resource type="Script" uid="uid://c33xl86ucudif" path="res://modules/shared/ShadeHighlightTexture.gd" id="1_mrot6"]
+[ext_resource type="Shader" uid="uid://eqturlsphwhk" path="res://shaders/interactable-icon.gdshader" id="2_n6cx1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g7rfi"]
+shader = ExtResource("2_n6cx1")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/width = 0.0
+shader_parameter/blink_color = Color(1, 1, 1, 1)
+shader_parameter/blink_time_scale = 0.0
+shader_parameter/grayscale = 0.0
+
+[node name="ShadeHighlightTexture" type="Node"]
+script = ExtResource("1_mrot6")
+material = SubResource("ShaderMaterial_g7rfi")

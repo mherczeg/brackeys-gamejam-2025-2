@@ -45,56 +45,61 @@ offset_left = 322.0
 offset_top = 51.0
 offset_right = 733.0
 offset_bottom = 351.0
+mouse_filter = 2
 theme_override_constants/separation = 8
 
 [node name="NPC2Text" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/separation = 34
 
 [node name="VSeparator" type="VSeparator" parent="VBoxContainer/NPC2Text"]
 layout_mode = 2
+mouse_filter = 1
 
 [node name="Text" parent="VBoxContainer/NPC2Text" instance=ExtResource("3_xpn2c")]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 size_flags_horizontal = 3
-mouse_filter = 1
 text = "Encounter 10 Stage 1 Line 2 this is the long line text, it will be about 100-120 characters long, to test long lines"
 autowrap_mode = 3
 estimated_line_char_length = 62
 
 [node name="VSeparator2" type="VSeparator" parent="VBoxContainer/NPC2Text"]
 layout_mode = 2
+mouse_filter = 1
 
 [node name="NPC1Text" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 4
+mouse_filter = 2
 theme_override_constants/separation = 176
 
 [node name="VSeparator" type="VSeparator" parent="VBoxContainer/NPC1Text"]
 layout_mode = 2
 size_flags_horizontal = 0
+mouse_filter = 1
 
 [node name="Text2" parent="VBoxContainer/NPC1Text" instance=ExtResource("3_xpn2c")]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 size_flags_horizontal = 3
-mouse_filter = 1
 text = "Encounter 10 Stage 1 Line 2 this is the long line text, it will be about 100-120 characters long, to test long lines"
 autowrap_mode = 3
 
 [node name="NPC3Text" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/separation = 72
 
 [node name="Text3" parent="VBoxContainer/NPC3Text" instance=ExtResource("3_xpn2c")]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 size_flags_horizontal = 3
-mouse_filter = 1
 text = "Encounter 10 Stage 1 Line 2 this is the long line text, it will be about 100-120 characters long, to test long lines"
 autowrap_mode = 3
 estimated_line_char_length = 62
 
 [node name="VSeparator" type="VSeparator" parent="VBoxContainer/NPC3Text"]
 layout_mode = 2
+mouse_filter = 1

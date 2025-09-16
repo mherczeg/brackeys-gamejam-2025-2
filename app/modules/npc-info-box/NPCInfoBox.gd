@@ -20,8 +20,16 @@ func _on_show_npc_info(new_npc: NPC, new_position: Vector2) -> void:
 		return
 	npc = new_npc
 	_render()
-	position = new_position
+	position = _get_position_restricted_to_viewport(new_position)
 	show()
+
+func _get_position_restricted_to_viewport(new_position: Vector2) -> Vector2:
+	var viewport_size: Vector2 = get_viewport_rect().size
+
+	return Vector2(
+		min(viewport_size.x - size.x, new_position.x),
+		min(viewport_size.y - size.y, new_position.y)
+	)
 
 func _on_hide_npc_info() -> void:
 	hide()

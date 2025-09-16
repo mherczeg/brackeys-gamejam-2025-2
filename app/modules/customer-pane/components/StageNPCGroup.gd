@@ -25,7 +25,7 @@ func show_encounter(encounter: Encounter) -> Signal:
 
 func _setup_visible_npcs(npcs: Array[NPC], texts: Array[String]) -> void:
 	for i: int in npcs.size():
-		# stage_npcs[i].texture = npcs[i].body_image
+		stage_npcs[i].npc = npcs[i]
 		stage_npcs[i].activate_for_interaction()
 		stage_npcs[i].textbox.prepare_size_for_text(texts[i])
 
