@@ -28,9 +28,9 @@ func _connect_signals() -> void:
 	product_details.serve_button.pressed.connect(_on_serve_button_pressed)
 	mixer_state.order_changed.connect(_on_mixer_state_order_changed)
 	mixer_state.selection_changed.connect(_on_mixer_state_selection_changed)
+	ingredient_selector.ingredient_selected.connect(_on_ingredient_selected)
 
 	EventBus.mixer.product_type_selected.connect(_on_product_type_selected)
-	EventBus.mixer.ingredient_selected.connect(_on_ingredient_selected)
 	EventBus.mixer.ingredient_selector_slot_cleared.connect(_on_ingredient_selector_slot_cleared)
 
 

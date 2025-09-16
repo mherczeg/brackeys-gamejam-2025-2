@@ -1,6 +1,8 @@
 class_name IngredientSelector
 extends Panel
 
+signal ingredient_selected(ingredient: Ingredient)
+
 const INGREDIENT_SELECTOR_BUTTON_SCENE: PackedScene = \
 	preload("res://modules/mixing-pane/components/IngredientSelectorButton.tscn")
 const PRODUCT_TYPE_SELECTOR_BUTTON_SCENE: PackedScene = \
@@ -15,15 +17,19 @@ func _ready() -> void:
 	_create_product_type_selector_elements()
 	_create_ingredient_selector_elements()
 
+func _on_ingredient_selector_button_pressed(ingredient: Ingredient) -> void:
+	ingredient_selected.emit(ingredient)
+
 func _create_ingredient_selector_elements() -> void:
 	for ingredient: Ingredient in ResourceManager.ingredients:
 		_create_ingredient_selector_element(ingredient)
 
 func _create_ingredient_selector_element(ingredient: Ingredient) -> void:
-	var ingredient_selector_element_instance: IngredientSelectorButton = \
+	var ingredient_selector_button: IngredientSelectorButton = \
 		INGREDIENT_SELECTOR_BUTTON_SCENE.instantiate()
-	ingredient_selector_element_instance.ingredient = ingredient
-	ingredients_container.add_child(ingredient_selector_element_instance)
+	ingredient_selector_button.ingredient = ingredient
+	ingredient_selector_button.pressed.connect(_on_ingredient_selector_button_pressed.bind(ingredient))
+	ingredients_container.add_child(ingredient_selector_button)
 
 func _create_product_type_selector_elements() -> void:
 	for product_type: ProductType in ResourceManager.product_types:
