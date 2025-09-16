@@ -1,9 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://dhdwspygl8is8"]
+[gd_scene load_steps=14 format=3 uid="uid://dhdwspygl8is8"]
 
 [ext_resource type="Script" uid="uid://dqtxo8v0bpt3t" path="res://modules/mixing-pane/components/ProductDetails.gd" id="1_hum7m"]
 [ext_resource type="PackedScene" uid="uid://17do5csli6m2" path="res://modules/mixing-pane/components/ProductDisplay.tscn" id="2_0xnmx"]
-[ext_resource type="Theme" uid="uid://cpa44ka17yapc" path="res://themes/naked-button.tres" id="2_wvuut"]
-[ext_resource type="PackedScene" uid="uid://owle6tau1tw2" path="res://modules/mixing-pane/components/UnknownEffectsWarning.tscn" id="3_ulapd"]
+[ext_resource type="PackedScene" uid="uid://c2a6f5f727kfr" path="res://modules/mixing-pane/components/EffectList.tscn" id="2_ulapd"]
 [ext_resource type="Texture2D" uid="uid://rwa0voyxkihk" path="res://assets/images/button.png" id="3_vr7d3"]
 [ext_resource type="FontFile" uid="uid://cegaqt0bhepqa" path="res://assets/fonts/Public_Pixel_Font_1_24/PublicPixel.otf" id="3_wvuut"]
 [ext_resource type="PackedScene" uid="uid://bsi2607mq006a" path="res://modules/mixing-pane/components/ProductTypeWarning.tscn" id="4_ulapd"]
@@ -84,27 +83,7 @@ size_flags_horizontal = 3
 theme_override_constants/separation = 16
 script = ExtResource("1_hum7m")
 
-[node name="EffectList" type="VBoxContainer" parent="."]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/separation = 16
-
-[node name="Label" type="Label" parent="EffectList"]
-custom_minimum_size = Vector2(0, 24)
-layout_mode = 2
-size_flags_horizontal = 4
-theme = ExtResource("2_wvuut")
-text = "Known effects in mixture:"
-
-[node name="EffectIcons" type="HBoxContainer" parent="EffectList"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_constants/separation = 8
-
-[node name="UnknownEffectsWarning" parent="EffectList" instance=ExtResource("3_ulapd")]
+[node name="EffectList" parent="." instance=ExtResource("2_ulapd")]
 unique_name_in_owner = true
 layout_mode = 2
 

@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2a6f5f727kfr"]
+
+[ext_resource type="Theme" uid="uid://cpa44ka17yapc" path="res://themes/naked-button.tres" id="1_cow6p"]
+[ext_resource type="Script" uid="uid://o0gg7xw00knm" path="res://modules/mixing-pane/components/EffectList.gd" id="1_tdilj"]
+[ext_resource type="PackedScene" uid="uid://owle6tau1tw2" path="res://modules/mixing-pane/components/UnknownEffectsWarning.tscn" id="2_tdilj"]
+
+[node name="EffectList" type="VBoxContainer"]
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 16
+script = ExtResource("1_tdilj")
+
+[node name="EffectIconsLabel" type="Label" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_cow6p")
+text = "Known effects in mixture:"
+
+[node name="EffectIcons" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 8
+
+[node name="UnknownEffectsWarning" parent="." instance=ExtResource("2_tdilj")]
+unique_name_in_owner = true
+layout_mode = 2

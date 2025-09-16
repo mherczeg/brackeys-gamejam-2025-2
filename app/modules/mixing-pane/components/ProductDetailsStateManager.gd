@@ -2,6 +2,7 @@ class_name ProductDetailsStateManager
 extends Node
 
 signal state_changed(state: STATE, mix_details_elements: Array[MIX_DETAILS_ELEMENTS])
+signal mixture_changed(mixture: Array[Effect])
 
 
 enum STATE {
@@ -26,8 +27,10 @@ var _current_display_product: MixedProduct
 
 
 func update_mixture(mixture: Array[Effect]) -> void:
+	var old_mixture: Array[Effect] = _mixture.duplicate()
 	_mixture = mixture
 	_evaluate_state()
+	_evaluate_mixture(old_mixture, mixture)
 
 func update_unknown_effects_count(count: int) -> void:
 	_ingredients_with_unknown_effect = count
@@ -57,7 +60,7 @@ func _has_state_changed(
 	new_state: STATE,
 	new_mix_details_elements: Array[MIX_DETAILS_ELEMENTS]
 ) -> bool:
-	return new_state != current_state || !_are_mix_detail_elements_equal(
+	return new_state != current_state || !_are_array_elements_equal(
 		new_mix_details_elements,
 		current_mix_details_elements
 	)
@@ -88,6 +91,10 @@ func _determine_mix_details_elements(state: STATE) -> Array[MIX_DETAILS_ELEMENTS
 
 	return mix_details_elements
 
+func _evaluate_mixture(old_mixture: Array[Effect], new_mixture: Array[Effect]) -> void:
+	if !_are_array_elements_equal(old_mixture, new_mixture):
+		mixture_changed.emit(new_mixture)
+
 func _has_mix_information() -> bool:
 	return _ingredients_with_unknown_effect >= 2 || _mixture.size() > 0
 
@@ -101,13 +108,10 @@ func _is_craftable() -> bool:
 func _has_mixable_effect() -> bool:
 	return _has_unknown_potential() || _has_mix_information()
 
-func _are_mix_detail_elements_equal(
-	a: Array[MIX_DETAILS_ELEMENTS],
-	b: Array[MIX_DETAILS_ELEMENTS]
-) -> bool:
+func _are_array_elements_equal(a: Array, b: Array) -> bool:
 	if a.size() != b.size():
 		return false
-	for item: MIX_DETAILS_ELEMENTS in a:
+	for item: Variant in a:
 		if !b.has(item):
 			return false
 	return true
