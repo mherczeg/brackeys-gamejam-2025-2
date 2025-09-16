@@ -29,11 +29,3 @@ func display_text(text: String) -> Signal:
 func fast_forward_display_text() -> void:
 	if textbox.is_active_for_interaction:
 		textbox.fast_forward = true
-
-func _get_configuration_warnings() -> PackedStringArray:
-	var lbl: Textbox = get_node_or_null("Text")
-	if lbl == null:
-		return ["StageNPC expects a child Label named 'Text'. Add a Textbox node as a direct child."]
-	if not lbl is Textbox:
-		return ["Child node 'Text' is present but is not a Textbox. Make it a Textbox."]
-	return []

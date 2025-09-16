@@ -3,74 +3,121 @@ extends Label
 
 signal display_complete
 
-const ESTIMATED_LINE_HEIGH: int = 19
+const DEFAULT_DISPLAY_TIME: float = 0.02
+const PITCH_VARIATION_MIN: float = 0.8
+const PITCH_VARIATION_MAX: float = 1.2
+const ESTIMATED_LINE_HEIGHT: int = 19
 const VOWELS: String = "aeiouAEIOU"
 
 @export var consonant_sound: AudioStream
 @export var vowel_sound: AudioStream
 @export var estimated_line_char_length: int = 40
-var letter_index: int = 0
-var display_time: float = 0.02
-var text_to_display: String = ""
+var text_to_display_length: int = 0
 var is_active_for_interaction: bool = false
 var fast_forward: bool = false
-var text_to_display_length: int = 0
-var _current_consonant_sound: AudioStream
-var _current_vowel_sound: AudioStream
+var _text_to_display: String = ""
+var _current_voice_pair: Array[AudioStream]
+var _letter_index: int = 0
 
-@onready var display_timer: Timer = $DisplayTimer
-@onready var voice: AudioStreamPlayer2D = $Voice
+@onready var _display_timer: Timer = $DisplayTimer
+@onready var _voice: AudioStreamPlayer2D = $Voice
 
 func _ready() -> void:
-	display_timer.timeout.connect(_display_letter)
+	_display_timer.timeout.connect(_on_display_timer_timeout)
+	_setup_initial_state()
+
+func _setup_initial_state() -> void:
+	text = ""
+	_letter_index = 0
+	is_active_for_interaction = false
 
 func clear_text() -> void:
-	display_timer.stop()
+	_stop_display()
 	text = ""
 
+func clear_display() -> void:
+	is_active_for_interaction = false
+	fast_forward = false
+
 func prepare_size_for_text(new_text: String) -> void:
-	var lines: int = ceil(float(new_text.length()) / estimated_line_char_length)
-	custom_minimum_size.y = max(0, lines) * ESTIMATED_LINE_HEIGH
+	var lines: int = _calculate_line_count(new_text)
+	custom_minimum_size.y = lines * ESTIMATED_LINE_HEIGHT
 	show()
 
 func display_text(new_text: String) -> Signal:
-	letter_index = 0
-	text_to_display = new_text
-	text_to_display_length = new_text.length()
+	if is_active_for_interaction:
+		_stop_display()
 
-	var voice_pair: Array[AudioStream] = VoiceManager.get_random_voice_pair()
-	_current_vowel_sound = voice_pair[0]
-	_current_consonant_sound = voice_pair[1]
-
-	# start with timer instead of calling the function to sequence boxes
-	display_timer.start(display_time)
-
+	_initialize_display(new_text)
+	_start_display()
 	return display_complete
 
-func _display_letter() -> void:
-	if fast_forward:
-		display_timer.stop()
-		text = text_to_display
-		fast_forward = false
-		display_complete.emit()
+func _initialize_display(new_text: String) -> void:
+	_letter_index = 0
+	_text_to_display = new_text
+	_current_voice_pair = VoiceManager.get_random_voice_pair()
+	text = ""
+	fast_forward = false
+
+func _start_display() -> void:
+	_display_timer.start(DEFAULT_DISPLAY_TIME)
+	is_active_for_interaction = true
+
+func _stop_display() -> void:
+	_display_timer.stop()
+	is_active_for_interaction = false
+
+func _calculate_line_count(input_text: String) -> int:
+	return max(1, ceili(float(input_text.length()) / estimated_line_char_length))
+
+func _on_display_timer_timeout() -> void:
+	if _should_complete_fast():
+		_complete_display_immediately()
 		return
 
-	if letter_index >= text_to_display_length:
-		is_active_for_interaction = false
-		display_complete.emit()
+	if _is_display_finished():
+		_complete_display_normally()
 		return
 
-	var letter: String = text_to_display[letter_index]
+	_display_next_letter()
 
-	if letter != " ":
-		if VOWELS.contains(letter):
-			voice.stream = _current_vowel_sound
-		else:
-			voice.stream = _current_consonant_sound
 
-		VoiceManager.set_voice_pitch(randf_range(0.8, 1.2))
-		voice.play()
+func _should_complete_fast() -> bool:
+	return fast_forward
 
+func _is_display_finished() -> bool:
+	return _letter_index >= _text_to_display.length()
+
+func _complete_display_immediately() -> void:
+	_stop_display()
+	text = _text_to_display
+	fast_forward = false
+	display_complete.emit()
+
+func _complete_display_normally() -> void:
+	is_active_for_interaction = false
+	display_complete.emit()
+
+func _display_next_letter() -> void:
+	var letter: String = _text_to_display[_letter_index]
+
+	if _should_play_voice_for_letter(letter):
+		_play_voice_for_letter(letter)
+
+	_letter_index += 1
 	text += letter
-	letter_index += 1
-	display_timer.start(display_time)
+	_display_timer.start(DEFAULT_DISPLAY_TIME)
+
+func _should_play_voice_for_letter(letter: String) -> bool:
+	return letter != " "
+
+func _play_voice_for_letter(letter: String) -> void:
+	var sound_stream: AudioStream = _get_sound_for_letter(letter)
+	_voice.stream = sound_stream
+	VoiceManager.set_voice_pitch(randf_range(PITCH_VARIATION_MIN, PITCH_VARIATION_MAX))
+	_voice.play()
+
+func _get_sound_for_letter(letter: String) -> AudioStream:
+	if VOWELS.contains(letter):
+		return _current_voice_pair[0]
+	return _current_voice_pair[1]
