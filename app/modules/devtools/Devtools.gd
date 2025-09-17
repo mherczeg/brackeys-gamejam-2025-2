@@ -14,6 +14,7 @@ var encounter_stages: Array[Encounter.STAGE] = [
 @onready var start_encounter_button: Button = $HBoxContainer/StartEncounter
 @onready var simulate_serving_mix: Button = $HBoxContainer/SimulateServingMix
 @onready var start_shop_turn: Button = $HBoxContainer/StartShopTurn
+@onready var open_npc_db: Button = $HBoxContainer/OpenNpcDB
 
 func _ready() -> void:
 	_init_encounter_selector()
@@ -21,6 +22,7 @@ func _ready() -> void:
 	start_encounter_button.pressed.connect(EventBus.debug.start_random_encounter.emit)
 	simulate_serving_mix.pressed.connect(EventBus.debug.serve_mixture.emit)
 	start_shop_turn.pressed.connect(EventBus.debug.start_shop.emit)
+	open_npc_db.pressed.connect(EventBus.debug.open_npc_db.emit)
 
 func _init_encounter_selector() -> void:
 	var encounter_id: int = 1

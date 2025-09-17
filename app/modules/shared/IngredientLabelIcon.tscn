@@ -1,13 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://c22e28wmv25ih"]
+[gd_scene load_steps=6 format=3 uid="uid://c22e28wmv25ih"]
 
 [ext_resource type="Script" uid="uid://bn3r71t8bkdho" path="res://modules/shared/IngredientLabelIcon.gd" id="1_3jgr3"]
 [ext_resource type="Shader" uid="uid://eqturlsphwhk" path="res://shaders/interactable-icon.gdshader" id="1_n3nu5"]
+[ext_resource type="Theme" uid="uid://vmyqstksg4ch" path="res://themes/LabelIcon.tres" id="2_a5bt3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_u7rbb"]
 shader = ExtResource("1_n3nu5")
 shader_parameter/outline_color = Color(1, 1, 1, 1)
 shader_parameter/width = 1.0
-shader_parameter/blink_color = Color(1, 1, 1, 1)
+shader_parameter/blink_color = Color(1, 1, 1, 0)
 shader_parameter/blink_time_scale = 0.0
 shader_parameter/grayscale = 0.0
 
@@ -17,5 +18,6 @@ size = Vector2(32, 32)
 [node name="IngredientLabelIcon" type="TextureRect"]
 material = SubResource("ShaderMaterial_u7rbb")
 custom_minimum_size = Vector2(48, 48)
+theme = ExtResource("2_a5bt3")
 texture = SubResource("PlaceholderTexture2D_cypqi")
 script = ExtResource("1_3jgr3")

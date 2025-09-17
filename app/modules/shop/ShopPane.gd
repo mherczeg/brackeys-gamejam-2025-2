@@ -6,9 +6,9 @@ const PRODUCT_TYPE_PURCHASE_BUTTON_SCENE: PackedScene = \
 const INGREDIENT_PURCHASE_BUTTON_SCENE: PackedScene = \
 	preload("res://modules/shop/components/IngredientPurchaseButton.tscn")
 
-@onready var wallet: Label = $Panel/VBoxContainer/Wallet
-@onready var items: GridContainer = $Panel/VBoxContainer/ScrollContainer/Items
-@onready var close_button: Button = $Panel/CloseButton
+@onready var wallet: Label = %Wallet
+@onready var items: GridContainer = %Items
+@onready var close_button: Button = %CloseButton
 
 func _ready() -> void:
 	hide()

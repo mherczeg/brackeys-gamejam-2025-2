@@ -70,7 +70,11 @@ func _on_serve_button_pressed() -> void:
 		mixer_state.selected_ingredients.values()
 	)
 	await audio_player.play_product_drop()
-	EventBus.mixer.serve_mix.emit(mixed_product)
+	EventBus.mixer.serve_mix.emit(ServedOrder.new(
+		mixed_product,
+		mixer_state.current_npc,
+		mixer_state.current_product
+	))
 
 func _on_mixer_state_order_changed() -> void:
 	update_by_order()

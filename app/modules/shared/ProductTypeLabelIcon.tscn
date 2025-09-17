@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://drj2bcqwaqh5u"]
+
+[ext_resource type="Script" uid="uid://bwsv0m0his1wr" path="res://modules/shared/ProductTypeLabelIcon.gd" id="1_erv5n"]
+[ext_resource type="Theme" uid="uid://vmyqstksg4ch" path="res://themes/LabelIcon.tres" id="1_sfagg"]
+[ext_resource type="Shader" uid="uid://eqturlsphwhk" path="res://shaders/interactable-icon.gdshader" id="1_srr5e"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e08w1"]
+shader = ExtResource("1_srr5e")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/width = 1.0
+shader_parameter/blink_color = Color(1, 1, 1, 0)
+shader_parameter/blink_time_scale = 0.0
+shader_parameter/grayscale = 0.0
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_sfagg"]
+
+[node name="ProductTypeLabelIcon" type="TextureRect"]
+material = SubResource("ShaderMaterial_e08w1")
+custom_minimum_size = Vector2(48, 48)
+theme = ExtResource("1_sfagg")
+texture = SubResource("PlaceholderTexture2D_sfagg")
+script = ExtResource("1_erv5n")

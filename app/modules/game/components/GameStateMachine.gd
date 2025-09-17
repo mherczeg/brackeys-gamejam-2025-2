@@ -102,9 +102,9 @@ func _handle_mixing_for_npc(current_npc: NPC) -> void:
 func _handle_mixing_order(current_npc: NPC) -> MixedProduct:
 	_is_mixing = true
 	mixing_step_started.emit(current_npc)
-	var mixed_product: MixedProduct = await EventBus.mixer.serve_mix
+	var served_order: ServedOrder = await EventBus.mixer.serve_mix
 	_is_mixing = false
-	return mixed_product
+	return served_order.mixed_product
 
 
 func _handle_evaluating_order(mixed_product: MixedProduct) -> void:

@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://ic6qogrwj1np"]
+
+[ext_resource type="Script" uid="uid://cu3g76oer3rhl" path="res://modules/npc-db/components/OrderHistoryItem.gd" id="1_68apa"]
+[ext_resource type="Theme" uid="uid://segr3l7pwr4u" path="res://themes/naked-info-label.tres" id="1_e2q1d"]
+[ext_resource type="Script" uid="uid://bwsv0m0his1wr" path="res://modules/shared/ProductTypeLabelIcon.gd" id="3_73h5n"]
+[ext_resource type="Script" uid="uid://bn3r71t8bkdho" path="res://modules/shared/IngredientLabelIcon.gd" id="3_sc42o"]
+
+[node name="OrderHistoryItem" type="VBoxContainer"]
+theme = ExtResource("1_e2q1d")
+script = ExtResource("1_68apa")
+
+[node name="IngredientList" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ProductType" type="TextureRect" parent="IngredientList"]
+layout_mode = 2
+script = ExtResource("3_73h5n")
+metadata/_custom_type_script = "uid://bwsv0m0his1wr"
+
+[node name="Ingredient1" type="TextureRect" parent="IngredientList"]
+layout_mode = 2
+script = ExtResource("3_sc42o")
+metadata/_custom_type_script = "uid://bn3r71t8bkdho"
+
+[node name="Ingredient2" type="TextureRect" parent="IngredientList"]
+layout_mode = 2
+script = ExtResource("3_sc42o")
+metadata/_custom_type_script = "uid://bn3r71t8bkdho"
+
+[node name="Ingredient3" type="TextureRect" parent="IngredientList"]
+layout_mode = 2
+script = ExtResource("3_sc42o")
+metadata/_custom_type_script = "uid://bn3r71t8bkdho"
+
+[node name="Ingredient4" type="TextureRect" parent="IngredientList"]
+layout_mode = 2
+script = ExtResource("3_sc42o")
+metadata/_custom_type_script = "uid://bn3r71t8bkdho"
+
+[node name="Label" type="Label" parent="IngredientList"]
+layout_mode = 2
+text = "("
+
+[node name="EffectList" type="HBoxContainer" parent="IngredientList"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="NoEffectsLabel" type="Label" parent="IngredientList"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "No Effects"
+
+[node name="Label3" type="Label" parent="IngredientList"]
+layout_mode = 2
+text = ")"
