@@ -1,12 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1qtp0cds7p43"]
+[gd_scene load_steps=8 format=3 uid="uid://bheolg2um5hlw"]
 
-[ext_resource type="Theme" uid="uid://ooascwd5ji3s" path="res://themes/blue-text-bubble.tres" id="1_5lax1"]
-[ext_resource type="Script" uid="uid://g4880y1y5y6w" path="res://modules/shop/ShopPane.gd" id="1_808da"]
-[ext_resource type="Theme" uid="uid://segr3l7pwr4u" path="res://themes/naked-info-label.tres" id="3_052uh"]
-[ext_resource type="Texture2D" uid="uid://dq28el46s1moi" path="res://assets/images/BackGround.png" id="4_052uh"]
-[ext_resource type="Theme" uid="uid://cpa44ka17yapc" path="res://themes/naked-button.tres" id="4_abysv"]
+[ext_resource type="Script" uid="uid://baiyqysy8r4to" path="res://modules/npc-db/NPCPane.gd" id="1_a6wwv"]
+[ext_resource type="Theme" uid="uid://ooascwd5ji3s" path="res://themes/blue-text-bubble.tres" id="1_v4jxf"]
+[ext_resource type="Texture2D" uid="uid://dq28el46s1moi" path="res://assets/images/BackGround.png" id="3_4emjx"]
+[ext_resource type="Theme" uid="uid://cpa44ka17yapc" path="res://themes/naked-button.tres" id="4_2wifm"]
+[ext_resource type="Theme" uid="uid://segr3l7pwr4u" path="res://themes/naked-info-label.tres" id="5_ssv52"]
+[ext_resource type="PackedScene" uid="uid://dgwigelak44s5" path="res://modules/npc-db/components/NPCInfoBox.tscn" id="6_ehb40"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_052uh"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4jxf"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 border_width_left = 4
 border_width_top = 4
@@ -14,15 +15,15 @@ border_width_right = 4
 border_width_bottom = 4
 border_color = Color(0.0862745, 0.0745098, 0.133333, 1)
 
-[node name="ShopPane" type="Control"]
+[node name="NPCPane" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_5lax1")
-script = ExtResource("1_808da")
+theme = ExtResource("1_v4jxf")
+script = ExtResource("1_a6wwv")
 
 [node name="Panel" type="Panel" parent="."]
 clip_contents = true
@@ -36,13 +37,13 @@ offset_right = -200.0
 offset_bottom = -200.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_052uh")
+theme_override_styles/panel = SubResource("StyleBoxFlat_v4jxf")
 
 [node name="BackGround" type="Sprite2D" parent="Panel"]
 show_behind_parent = true
 position = Vector2(440, 162)
 scale = Vector2(5.00008, 4.97235)
-texture = ExtResource("4_052uh")
+texture = ExtResource("3_4emjx")
 
 [node name="CloseButton" type="Button" parent="Panel"]
 unique_name_in_owner = true
@@ -56,7 +57,7 @@ offset_right = -13.0
 offset_bottom = 47.0
 grow_horizontal = 0
 mouse_default_cursor_shape = 2
-theme = ExtResource("4_abysv")
+theme = ExtResource("4_2wifm")
 text = "Close"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
@@ -73,29 +74,20 @@ theme_override_constants/separation = 16
 [node name="Label" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("3_052uh")
+theme = ExtResource("5_ssv52")
 theme_override_font_sizes/font_size = 32
-text = "Shop"
+text = "Customers"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Wallet" type="Label" parent="Panel/VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-theme = ExtResource("3_052uh")
-text = "Funds: $0"
-horizontal_alignment = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Items" type="GridContainer" parent="Panel/VBoxContainer/ScrollContainer"]
+[node name="Items" type="VBoxContainer" parent="Panel/VBoxContainer/ScrollContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 3
-theme_override_constants/h_separation = 25
-theme_override_constants/v_separation = 40
-columns = 8
+size_flags_horizontal = 3
+
+[node name="NpcInfoBox" parent="Panel/VBoxContainer/ScrollContainer/Items" instance=ExtResource("6_ehb40")]
+layout_mode = 2

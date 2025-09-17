@@ -12,13 +12,23 @@ func setup(
 	starting_ingredients: Dictionary[Ingredient, int],
 	starting_money: float
 ) -> void:
+	_setup_starting_products(starting_product_types)
+	_setup_starting_ingredients(starting_ingredients)
+	_setup_starting_money(starting_money)
+
+func _setup_starting_products(starting_product_types: Array[ProductType]) -> void:
 	for product_type: ProductType in ResourceManager.product_types:
 		_product_types[product_type] = starting_product_types.has(product_type)
+	EventBus.player.product_types_available_changed.emit.call_deferred()
+
+func _setup_starting_ingredients(starting_ingredients: Dictionary[Ingredient, int]) -> void:
 	for ingredient: Ingredient in ResourceManager.ingredients:
 		_ingredients[ingredient] = starting_ingredients.get(ingredient, 0)
-		EventBus.player.ingredient_stock_changed.emit(ingredient)
-	EventBus.player.product_types_available_changed.emit()
-	set_money(starting_money)
+		EventBus.player.ingredient_stock_changed.emit.bind(ingredient).call_deferred()
+
+func _setup_starting_money(starting_money: float) -> void:
+	_money = starting_money
+	EventBus.player.money_changed.emit.bind(starting_money, starting_money).call_deferred()
 
 func has_product_type(product_type: ProductType) -> bool:
 	return _product_types.get(product_type, false)

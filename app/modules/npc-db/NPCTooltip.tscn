@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://km7jukryytkx"]
+
+[ext_resource type="Script" uid="uid://b6neo6vjsq3ac" path="res://modules/npc-db/NPCTooltip.gd" id="1_hcxg0"]
+[ext_resource type="PackedScene" uid="uid://dgwigelak44s5" path="res://modules/npc-db/components/NPCInfoBox.tscn" id="2_i3upo"]
+
+[node name="NPCTooltip" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_hcxg0")
+
+[node name="NPCInfoBox" parent="." instance=ExtResource("2_i3upo")]
+unique_name_in_owner = true
+layout_mode = 0

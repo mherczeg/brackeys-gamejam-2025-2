@@ -3,6 +3,8 @@ extends Node
 var health: int = 100
 
 var inventory: Inventory = Inventory.new()
+var order_history: OrderHistory = OrderHistory.new()
+
 var played_encounters: Dictionary[Encounter, bool] = {}
 
 func _ready() -> void:
@@ -26,8 +28,9 @@ func _ready() -> void:
 func _on_order_start(product: Product) -> void:
 	inventory.increase_money(product.price)
 
-func _on_product_served(product: MixedProduct) -> void:
-	for product_ingredient: Ingredient in product.ingredients:
+func _on_product_served(served_order: ServedOrder) -> void:
+	order_history.add_order(served_order)
+	for product_ingredient: Ingredient in served_order.mixed_product.ingredients:
 		if inventory.has_ingredient(product_ingredient):
 			inventory.increase_ingredient_amount(product_ingredient, -1)
 

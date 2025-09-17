@@ -62,12 +62,15 @@ func evaluate_product(mixed_product: MixedProduct) -> String:
 
 	return reaction_text
 
-
 func _get_reaction_text(mixed_product: MixedProduct, ordered_product: Product, npc: NPC) -> String:
-	if not mixed_product.has_fulfilled_product(ordered_product):
-		return current_encounter.failure_text[npc]
-	if mixed_product.has_additional_liked_effects(ordered_product, npc):
-		return current_encounter.like_text[npc]
-	if mixed_product.has_additional_disliked_effects(ordered_product, npc):
-		return current_encounter.dislike_text[npc]
-	return "..."
+	var reaction: MixedProduct.REACTION = mixed_product.get_complete_reaction(ordered_product, npc)
+
+	match reaction:
+		MixedProduct.REACTION.UNFULFILLED:
+			return current_encounter.failure_text[npc]
+		MixedProduct.REACTION.LIKES:
+			return current_encounter.like_text[npc]
+		MixedProduct.REACTION.DISLIKES:
+			return current_encounter.dislike_text[npc]
+		_:
+			return "..."

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bqlkljml3wgye"]
+[gd_scene load_steps=13 format=3 uid="uid://bqlkljml3wgye"]
 
 [ext_resource type="Script" uid="uid://crplonc8qkgt7" path="res://modules/game/Game.gd" id="1_78awf"]
 [ext_resource type="PackedScene" uid="uid://dtq073ey6thiy" path="res://modules/customer-pane/CustomerPane.tscn" id="2_cpr0p"]
@@ -7,10 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://b37hth77ew4nl" path="res://modules/devtools/Devtools.tscn" id="3_cpr0p"]
 [ext_resource type="PackedScene" uid="uid://b1qtp0cds7p43" path="res://modules/shop/ShopPane.tscn" id="6_aug50"]
 [ext_resource type="AudioStream" uid="uid://8sg43fxjcy2r" path="res://assets/audio/ambiance.ogg" id="8_400sg"]
-[ext_resource type="PackedScene" uid="uid://dgwigelak44s5" path="res://modules/npc-info-box/NPCInfoBox.tscn" id="9_g4kob"]
 [ext_resource type="PackedScene" uid="uid://dag5yg0qs22q0" path="res://modules/game/components/GameStateMachine.tscn" id="10_3xj3m"]
 [ext_resource type="Texture2D" uid="uid://bnliprcb2rfcl" path="res://assets/images/City.png" id="10_qy1jj"]
 [ext_resource type="PackedScene" uid="uid://djpqlc8r6ylr3" path="res://modules/game/components/EncounterManager.tscn" id="11_7ed7s"]
+[ext_resource type="PackedScene" uid="uid://bheolg2um5hlw" path="res://modules/npc-db/NPCPane.tscn" id="11_nvdm8"]
+[ext_resource type="PackedScene" uid="uid://km7jukryytkx" path="res://modules/npc-db/NPCTooltip.tscn" id="12_nvdm8"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_78awf")
@@ -80,11 +81,14 @@ grow_vertical = 1
 
 [node name="ShopPane" parent="UI" instance=ExtResource("6_aug50")]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 
-[node name="NpcInfoBox" parent="." instance=ExtResource("9_g4kob")]
-offset_left = 1291.0
+[node name="NPCPane" parent="UI" instance=ExtResource("11_nvdm8")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="NpcTooltip" parent="." instance=ExtResource("12_nvdm8")]
+offset_left = 1293.0
 offset_top = 4.0
-offset_right = 1563.0
-offset_bottom = 120.0
+offset_right = 1293.0
+offset_bottom = 4.0

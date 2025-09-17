@@ -4,6 +4,7 @@ extends Node2D
 @onready var customer_pane: CustomerPane = %CustomerPane
 @onready var mixing_pane: MixingPane = %MixingPane
 @onready var shop_pane: ShopPane = %ShopPane
+@onready var npc_pane: NPCPane = %NPCPane
 @onready var game_state_machine: GameStateMachine = %GameStateMachine
 @onready var encounter_manager: EncounterManager = %EncounterManager
 
@@ -27,6 +28,7 @@ func _connect_debug_signals() -> void:
 	EventBus.debug.render_encounter_stage.connect(render_encounter_stage)
 	EventBus.debug.start_random_encounter.connect(start_random_encounter)
 	EventBus.debug.start_shop.connect(shop_pane.open)
+	EventBus.debug.open_npc_db.connect(npc_pane.open)
 
 func _connect_game_state_signals() -> void:
 	game_state_machine.before_encounter_started.connect(_on_before_encounter_started)
