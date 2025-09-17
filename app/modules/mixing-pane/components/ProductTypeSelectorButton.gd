@@ -16,7 +16,7 @@ func _on_pressed() -> void:
 	EventBus.mixer.product_type_selected.emit(product_type)
 
 func _update_product_type_availability() -> void:
-	if Player.product_types.has(product_type):
+	if Player.inventory.has_product_type(product_type):
 		show()
 	else:
 		hide()

@@ -17,7 +17,7 @@ func _ready() -> void:
 
 
 func update_money_label() -> void:
-	wallet.text = "Funds: $%d" % Player.money
+	wallet.text = "Funds: $%d" % Player.inventory.money
 
 
 func open() -> void:
@@ -25,7 +25,7 @@ func open() -> void:
 	reset_items()
 
 	for product_type: ProductType in ResourceManager.product_types:
-		if !Player.product_types.has(product_type):
+		if !Player.inventory.has_product_type(product_type):
 			var product_type_purchase_button: ProductTypePurchaseButton = PRODUCT_TYPE_PURCHASE_BUTTON_SCENE.instantiate()
 			product_type_purchase_button.product_type = product_type
 			items.add_child(product_type_purchase_button)

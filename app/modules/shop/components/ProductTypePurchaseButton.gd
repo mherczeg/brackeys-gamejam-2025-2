@@ -19,7 +19,7 @@ func _ready() -> void:
 	_set_availability()
 
 func _set_availability() -> void:
-	if Player.money >= product_type.price && !Player.product_types.has(product_type):
+	if Player.inventory.money >= product_type.price && !Player.inventory.has_product_type(product_type):
 		disabled = false
 	else:
 		disabled = true

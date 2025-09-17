@@ -10,7 +10,7 @@ func _ready() -> void:
 
 
 func _render_product_type_buttons() -> void:
-	for product_type: ProductType in Player.product_types:
+	for product_type: ProductType in Player.inventory.get_available_product_types():
 		var button_instance: ProductTypeSelectorButton = PRODUCT_TYPE_SELECTOR_BUTTON_SCENE.instantiate()
 		button_instance.product_type = product_type
 		add_child(button_instance)

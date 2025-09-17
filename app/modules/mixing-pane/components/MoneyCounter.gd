@@ -7,7 +7,7 @@ extends HBoxContainer
 
 func _ready() -> void:
 	animation = coin.texture
-	update_money_label(Player.money, Player.money)
+	update_money_label(Player.inventory.money, Player.inventory.money)
 	EventBus.player.money_changed.connect(update_money_label)
 
 func update_money_label(new_money: float, old_money: float) -> void:

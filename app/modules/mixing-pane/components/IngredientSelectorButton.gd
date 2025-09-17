@@ -44,7 +44,7 @@ func update_selection_state(
 	_update_availability()
 
 func _get_ingredient_count() -> int:
-	return Player.ingredients.get(ingredient, 0)
+	return Player.inventory.get_ingredient_amount(ingredient)
 
 func _update_availability() -> void:
 	var ingredient_count: int = _get_ingredient_count()

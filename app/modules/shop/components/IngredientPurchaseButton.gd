@@ -23,7 +23,7 @@ func _ready() -> void:
 	_set_availability()
 
 func _set_availability() -> void:
-	if Player.money >= bulk_price:
+	if Player.inventory.money >= bulk_price:
 		disabled = false
 	else:
 		disabled = true
