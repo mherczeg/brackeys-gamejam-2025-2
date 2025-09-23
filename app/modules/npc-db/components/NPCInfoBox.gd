@@ -35,8 +35,7 @@ func _render() -> void:
 	_render_orders()
 
 func _render_likes() -> void:
-	for child: Node in liked_effects.get_children():
-		child.free()
+	Utils.clear_children(liked_effects)
 
 	for effect: Effect in npc.likes:
 		var effect_label: EffectLabelIcon = EFFECT_LABEL_ICON_SCENE.instantiate()
@@ -45,8 +44,7 @@ func _render_likes() -> void:
 		liked_effects.add_child(effect_label)
 
 func _render_dislikes() -> void:
-	for child: Node in disliked_effects.get_children():
-		child.free()
+	Utils.clear_children(disliked_effects)
 
 	for effect: Effect in npc.dislikes:
 		var effect_label: EffectLabelIcon = EFFECT_LABEL_ICON_SCENE.instantiate()
@@ -55,12 +53,13 @@ func _render_dislikes() -> void:
 		disliked_effects.add_child(effect_label)
 
 func _render_orders() -> void:
-	for child: Node in order_history_items.get_children():
-		child.free()
+	Utils.clear_children(order_history_items)
 
 	for order: OrderHistoryElement in orders:
-		var order_history_item: OrderHistoryItem = ORDER_HISTORY_ITEM_SCENE.instantiate()
-		order_history_item.product_type = order.product.product_type
-		order_history_item.ingredients = order.product.ingredients
-		order_history_item.effects = order.product.effects
-		order_history_items.add_child(order_history_item)
+		order_history_items.add_child(_create_order_history_item(order))
+
+func _create_order_history_item(order: OrderHistoryElement) -> OrderHistoryItem:
+	var order_history_item: OrderHistoryItem = ORDER_HISTORY_ITEM_SCENE.instantiate()
+	order_history_item.order = order
+
+	return order_history_item

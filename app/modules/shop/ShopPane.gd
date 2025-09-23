@@ -22,7 +22,7 @@ func update_money_label() -> void:
 
 func open() -> void:
 	update_money_label()
-	reset_items()
+	Utils.clear_children(items)
 
 	for product_type: ProductType in ResourceManager.product_types:
 		if !Player.inventory.has_product_type(product_type):
@@ -36,7 +36,3 @@ func open() -> void:
 		items.add_child(ingredient_purchase_button)
 
 	show()
-
-func reset_items() -> void:
-	for child: Node in items.get_children():
-		child.free()

@@ -13,16 +13,13 @@ func _ready() -> void:
 	close_button.pressed.connect(hide)
 
 func open() -> void:
-	reset_items()
+	Utils.clear_children(items)
 
 	for npc: NPC in Player.order_history.get_served_npcs():
-		var npc_info_box: NPCInfoBox = NPC_INFO_BOX.instantiate()
-		items.add_child(npc_info_box)
-		npc_info_box.set_npc(npc, Player.order_history.get_npc_orders(npc))
-		npc_info_box.order_history.show()
+		if npc:
+			var npc_info_box: NPCInfoBox = NPC_INFO_BOX.instantiate()
+			items.add_child(npc_info_box)
+			npc_info_box.set_npc(npc, Player.order_history.get_npc_orders(npc))
+			npc_info_box.order_history.show()
 
 	show()
-
-func reset_items() -> void:
-	for child: Node in items.get_children():
-		child.free()

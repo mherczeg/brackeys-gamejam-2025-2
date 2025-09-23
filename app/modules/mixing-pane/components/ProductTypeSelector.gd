@@ -15,10 +15,6 @@ func _render_product_type_buttons() -> void:
 		button_instance.product_type = product_type
 		add_child(button_instance)
 
-func _reset_items() -> void:
-	for child: Node in get_children():
-		child.free()
-
 func _on_product_types_available_changed() -> void:
-	_reset_items()
+	Utils.clear_children(self)
 	_render_product_type_buttons()

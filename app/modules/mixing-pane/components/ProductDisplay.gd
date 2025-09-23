@@ -29,8 +29,7 @@ func show_product(product: MixedProduct) -> void:
 			effect_label.hide()
 
 	if product.unlocked_effects.size():
-		for child: Node in discovered_ingredients.get_children():
-			child.free()
+		Utils.clear_children(discovered_ingredients)
 
 		for ingredient: Ingredient in product.unlocked_effects.keys():
 			var icon: IngredientLabelIcon = INGREDIENT_LABEL_ICON_SCENE.instantiate()
