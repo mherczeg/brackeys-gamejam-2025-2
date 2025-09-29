@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://dhf7bummp47q6"]
+
+[ext_resource type="Script" uid="uid://bqyftxal52icp" path="res://modules/mixing-pane/components/HealthBar.gd" id="1_j7ryo"]
+[ext_resource type="AudioStream" uid="uid://dsnv3d3g17ke7" path="res://assets/audio/damage-1.ogg" id="2_8lb4b"]
+[ext_resource type="AudioStream" uid="uid://cy0tty3h7vasy" path="res://assets/audio/damage-2.ogg" id="3_m1e5n"]
+[ext_resource type="AudioStream" uid="uid://f1vg7g4kgybv" path="res://assets/audio/damage-3.ogg" id="4_mtl0w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mhavr"]
+bg_color = Color(0.77254903, 0.50980395, 0.77254903, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xovcq"]
+bg_color = Color(0.23252481, 0.71663463, 0, 1)
+
+[sub_resource type="Theme" id="Theme_peo5f"]
+ProgressBar/styles/background = SubResource("StyleBoxFlat_mhavr")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_xovcq")
+
+[node name="HealthBar" type="ProgressBar"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_peo5f")
+value = 50.0
+show_percentage = false
+script = ExtResource("1_j7ryo")
+damage_sounds = Array[AudioStream]([ExtResource("2_8lb4b"), ExtResource("3_m1e5n"), ExtResource("4_mtl0w")])

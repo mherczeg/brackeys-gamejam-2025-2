@@ -40,24 +40,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_052uh")
 
 [node name="BackGround" type="Sprite2D" parent="Panel"]
 show_behind_parent = true
-position = Vector2(440, 162)
+position = Vector2(440, 158)
 scale = Vector2(5.00008, 4.97235)
 texture = ExtResource("4_052uh")
-
-[node name="CloseButton" type="Button" parent="Panel"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -93.0
-offset_top = 16.0
-offset_right = -13.0
-offset_bottom = 47.0
-grow_horizontal = 0
-mouse_default_cursor_shape = 2
-theme = ExtResource("4_abysv")
-text = "Close"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 layout_mode = 1
@@ -99,3 +84,29 @@ size_flags_vertical = 3
 theme_override_constants/h_separation = 25
 theme_override_constants/v_separation = 40
 columns = 8
+
+[node name="RepairButton" type="Button" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 6.0
+offset_top = 8.0
+offset_right = 214.0
+offset_bottom = 24.0
+mouse_default_cursor_shape = 2
+theme = ExtResource("4_abysv")
+text = "Repair Damage"
+
+[node name="CloseButton" type="Button" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -93.0
+offset_top = 16.0
+offset_right = -13.0
+offset_bottom = 47.0
+grow_horizontal = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("4_abysv")
+text = "Close"
