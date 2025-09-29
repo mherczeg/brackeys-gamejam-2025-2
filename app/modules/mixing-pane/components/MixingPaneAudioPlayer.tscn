@@ -6,13 +6,5 @@
 
 [node name="MixingPaneAudioPlayer" type="Node"]
 script = ExtResource("1_ryjue")
-
-[node name="CoinInsert" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(0, -1)
-stream = ExtResource("1_sh40g")
-volume_db = 10.0
-
-[node name="ProductDrop" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(0, -1)
-stream = ExtResource("2_ryjue")
-volume_db = -10.0
+coin_insert = ExtResource("1_sh40g")
+product_drop = ExtResource("2_ryjue")

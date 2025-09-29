@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dju24ojyrd8lu"]
+
+[ext_resource type="Script" uid="uid://dyrlnilfvw3dh" path="res://modules/game/components/UISoundEffects.gd" id="1_4uebg"]
+
+[node name="UISoundEffects" type="AudioStreamPlayer2D"]
+bus = &"UI Sound"
+script = ExtResource("1_4uebg")
