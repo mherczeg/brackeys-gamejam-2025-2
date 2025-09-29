@@ -74,7 +74,7 @@ func get_money() -> float:
 
 func set_money(new_value: float) -> void:
 	var old_value: float = money
-	money = new_value
+	_money = new_value
 	EventBus.player.money_changed.emit(new_value, old_value)
 
 func increase_money(amount: float) -> void:
