@@ -14,6 +14,7 @@ var bulk_price: float = 0.0
 func _ready() -> void:
 	bulk_price = ingredient.price * pcs
 	texture_normal = ingredient.icon
+	tooltip_text = ingredient.name
 	product_type_name.text = ingredient.name
 	price.text = "$%d / %dpcs" % [bulk_price, pcs]
 
