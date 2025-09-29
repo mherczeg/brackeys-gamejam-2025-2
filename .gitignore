@@ -1,6 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
 # this is where I usually keep my godot executable
-godot/ 
+# godot/ 
 /android/
 .vscode/launch.json
+godot/Frame0-1.0.0 Setup.exe
