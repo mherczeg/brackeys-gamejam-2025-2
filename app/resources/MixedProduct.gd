@@ -48,7 +48,7 @@ func get_additional_effects(product: Product) -> Dictionary[Effect, bool]:
 func has_additional_liked_effects(product: Product, npc: NPC) -> bool:
 	var additional_effects: Dictionary[Effect, bool] = get_additional_effects(product)
 
-	for liked_effect: Effect in npc.likes:
+	for liked_effect: Effect in npc.likes.keys():
 		if additional_effects.has(liked_effect):
 			return true
 	return false
@@ -56,7 +56,7 @@ func has_additional_liked_effects(product: Product, npc: NPC) -> bool:
 func has_additional_disliked_effects(product: Product, npc: NPC) -> bool:
 	var additional_effects: Dictionary[Effect, bool] = get_additional_effects(product)
 
-	for disliked_effect: Effect in npc.dislikes:
+	for disliked_effect: Effect in npc.dislikes.keys():
 		if additional_effects.has(disliked_effect):
 			return true
 	return false

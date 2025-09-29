@@ -16,3 +16,6 @@ func _init(served_order: ServedOrder) -> void:
 	additional_effects = served_order.mixed_product.get_additional_effects(
 		served_order.order_product
 	).keys()
+
+func is_npc_preference_deductible() -> bool:
+	return additional_effects.size() == 1

@@ -37,20 +37,22 @@ func _render() -> void:
 func _render_likes() -> void:
 	Utils.clear_children(liked_effects)
 
-	for effect: Effect in npc.likes:
-		var effect_label: EffectLabelIcon = EFFECT_LABEL_ICON_SCENE.instantiate()
-		effect_label.effect = effect
-		effect_label.custom_minimum_size = Vector2(16, 16)
-		liked_effects.add_child(effect_label)
+	for effect: Effect in npc.likes.keys():
+		if npc.likes[effect]:
+			var effect_label: EffectLabelIcon = EFFECT_LABEL_ICON_SCENE.instantiate()
+			effect_label.effect = effect
+			effect_label.custom_minimum_size = Vector2(16, 16)
+			liked_effects.add_child(effect_label)
 
 func _render_dislikes() -> void:
 	Utils.clear_children(disliked_effects)
 
-	for effect: Effect in npc.dislikes:
-		var effect_label: EffectLabelIcon = EFFECT_LABEL_ICON_SCENE.instantiate()
-		effect_label.effect = effect
-		effect_label.custom_minimum_size = Vector2(16, 16)
-		disliked_effects.add_child(effect_label)
+	for effect: Effect in npc.dislikes.keys():
+		if npc.dislikes[effect]:
+			var effect_label: EffectLabelIcon = EFFECT_LABEL_ICON_SCENE.instantiate()
+			effect_label.effect = effect
+			effect_label.custom_minimum_size = Vector2(16, 16)
+			disliked_effects.add_child(effect_label)
 
 func _render_orders() -> void:
 	Utils.clear_children(order_history_items)

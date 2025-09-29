@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="NPC" load_steps=6 format=3 uid="uid://dkbirsklwqvsg"]
+[gd_resource type="Resource" script_class="NPC" load_steps=8 format=3 uid="uid://dkbirsklwqvsg"]
 
 [ext_resource type="Script" uid="uid://c2ydqh3uk8if4" path="res://resources/Effect.gd" id="1_yqmdp"]
+[ext_resource type="Resource" uid="uid://c2xrl6deftmnr" path="res://resources/effects/red.tres" id="2_c50v2"]
 [ext_resource type="Texture2D" uid="uid://daduajcy7mdne" path="res://assets/images/NPCAtlas.png" id="2_lgakp"]
 [ext_resource type="Script" uid="uid://dxpfvppfif2ht" path="res://resources/NPC.gd" id="3_tjo7p"]
+[ext_resource type="Resource" uid="uid://ddwlocnkdx7kn" path="res://resources/effects/air.tres" id="4_8ptcg"]
 [ext_resource type="Texture2D" uid="uid://u6ucwloeir2m" path="res://assets/images/humans/com.png" id="5_t4lkn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qogo5"]
@@ -15,7 +17,10 @@ real_name = "NPC 5 Name"
 display_name = "NPC 5 G_Name"
 icon = SubResource("AtlasTexture_qogo5")
 body_image = ExtResource("5_t4lkn")
-likes = Array[ExtResource("1_yqmdp")]([])
-dislikes = Array[ExtResource("1_yqmdp")]([])
-allergies = Array[ExtResource("1_yqmdp")]([])
+dislikes = Dictionary[ExtResource("1_yqmdp"), bool]({
+ExtResource("4_8ptcg"): false
+})
+allergies = Dictionary[ExtResource("1_yqmdp"), bool]({
+ExtResource("2_c50v2"): false
+})
 metadata/_custom_type_script = "uid://dxpfvppfif2ht"
