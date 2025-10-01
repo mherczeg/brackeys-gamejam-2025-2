@@ -11,6 +11,7 @@ var encounters: Dictionary[int, Encounter] = {}
 @onready var start_encounter: Button = %StartEncounter
 @onready var restart_encounter: Button = %RestartEncounter
 @onready var give_money: Button = %GiveMoney
+@onready var heal: Button = %GiveHealth
 
 
 func _ready() -> void:
@@ -21,6 +22,7 @@ func _ready() -> void:
 	start_encounter.pressed.connect(_on_start_encounter_pressed)
 	restart_encounter.pressed.connect(_on_restart_encounter_pressed)
 	give_money.pressed.connect(_on_give_money_pressed)
+	heal.pressed.connect(_on_heal_pressed)
 
 func _init_encounter_selector() -> void:
 	var encounter_id: int = 1
@@ -39,6 +41,9 @@ func _on_restart_encounter_pressed() -> void:
 
 func _on_give_money_pressed() -> void:
 	EventBus.debug.increase_money.emit(GIVE_MONEY_AMOUNT)
+
+func _on_heal_pressed() -> void:
+	EventBus.debug.heal.emit(20)
 
 func _on_toggle_visibility_pressed() -> void:
 	devtool_actions.visible = !devtool_actions.visible

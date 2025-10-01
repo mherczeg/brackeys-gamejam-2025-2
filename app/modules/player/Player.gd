@@ -26,6 +26,7 @@ func _ready() -> void:
 	}, STARTING_MONEY)
 
 	EventBus.debug.increase_money.connect(_on_debug_increase_money)
+	EventBus.debug.heal.connect(_on_debug_heal)
 	EventBus.mixer.order_received.connect(_on_order_start)
 	EventBus.mixer.serve_mix.connect(_on_product_served)
 	EventBus.shop.product_type_purchased.connect(_on_product_type_purchased)
@@ -108,3 +109,6 @@ func _on_repair_purchased() -> void:
 
 func _on_debug_increase_money(amount: float) -> void:
 	inventory.increase_money(amount)
+
+func _on_debug_heal(amount: int) -> void:
+	increase_health(amount)

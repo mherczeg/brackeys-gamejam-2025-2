@@ -37,3 +37,8 @@ text = "Restart Encounter"
 unique_name_in_owner = true
 layout_mode = 2
 text = "Increase Money"
+
+[node name="GiveHealth" type="Button" parent="DevtoolsActions"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Heal"
