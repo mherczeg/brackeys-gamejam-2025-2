@@ -25,7 +25,9 @@ func render_encounter_stage(encounter: Encounter, stage: Encounter.STAGE) -> voi
 
 func _connect_signals() -> void:
 	customer_pane.pressed.connect(_on_customer_pane_pressed)
+	shop_pane.closed.connect(_on_shop_pane_closed)
 	EventBus.ui.toggle_npc_pane.connect(_on_ui_toggle_npc_pane)
+	EventBus.game.shop_stage_started.connect(_on_game_shop_stage_started)
 	_connect_game_state_signals()
 	_connect_debug_signals()
 
@@ -85,3 +87,9 @@ func _on_debug_restart_encounter() -> void:
 
 func _on_ui_toggle_npc_pane() -> void:
 	npc_pane.toggle()
+
+func _on_game_shop_stage_started() -> void:
+	shop_pane.open()
+
+func _on_shop_pane_closed() -> void:
+	EventBus.game.shop_stage_completed.emit()

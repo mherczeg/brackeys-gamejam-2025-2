@@ -1,6 +1,8 @@
 class_name ShopPane
 extends Control
 
+signal closed
+
 const PRODUCT_TYPE_PURCHASE_BUTTON_SCENE: PackedScene = \
 	preload("res://modules/shop/components/ProductTypePurchaseButton.tscn")
 const INGREDIENT_PURCHASE_BUTTON_SCENE: PackedScene = \
@@ -14,7 +16,7 @@ const INGREDIENT_PURCHASE_BUTTON_SCENE: PackedScene = \
 func _ready() -> void:
 	hide()
 	update_repair_button()
-	close_button.pressed.connect(hide)
+	close_button.pressed.connect(_on_close_button_pressed)
 	repair_button.pressed.connect(EventBus.shop.repair_purchased.emit)
 	EventBus.player.money_changed.connect(_on_player_money_changed)
 
@@ -57,3 +59,7 @@ func open() -> void:
 func _on_player_money_changed(new_money: float, _old_money: float) -> void:
 	update_money_label(new_money)
 	update_repair_button()
+
+func _on_close_button_pressed() -> void:
+	hide()
+	closed.emit()

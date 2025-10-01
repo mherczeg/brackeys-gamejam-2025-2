@@ -15,15 +15,19 @@ enum STAGE {
 	STORY_SECOND,
 	MIXING,
 	STORY_THIRD,
+	SHOP,
 	CLEANUP,
 	IDLE
 }
+
+const DEFAULT_SHOP_TIMER: int = 3 # TODO dial in
 
 @export var encounter_manager: EncounterManager
 
 var _current_stage: STAGE = STAGE.IDLE
 var _is_mixing: bool = false
 var _is_processing: bool = false
+var _time_to_shop: int = DEFAULT_SHOP_TIMER
 
 func _start_encounter_failsafe_cleanup() -> void:
 	if _is_processing:
@@ -43,6 +47,16 @@ func start_encounter(encounter: Encounter) -> void:
 func _start_encounter(encounter: Encounter) -> void:
 	before_encounter_started.emit(encounter)
 	_transition_to(STAGE.STORY_FIRST)
+
+func _start_next_encounter() -> void:
+	var next_encounter: Encounter = encounter_manager.get_next_encounter()
+	start_encounter(next_encounter)
+
+func _go_to_idle() -> void:
+	_current_stage = STAGE.IDLE
+
+func _start_shop_turn() -> void:
+	_transition_to(STAGE.SHOP)
 
 func skip_stage() -> void:
 	if encounter_manager.current_encounter == null or _is_mixing:
@@ -64,7 +78,7 @@ func _advance_state() -> void:
 			_transition_to(STAGE.MIXING)
 		STAGE.MIXING:
 			_transition_to(STAGE.STORY_THIRD)
-		STAGE.STORY_THIRD:
+		STAGE.STORY_THIRD, STAGE.SHOP:
 			_transition_to(STAGE.CLEANUP)
 		STAGE.CLEANUP, STAGE.IDLE, STAGE.MIXING:
 			pass # Handled in _execute_current_state or already idle
@@ -84,6 +98,8 @@ func _execute_current_state() -> void:
 			await _handle_mixing()
 		STAGE.STORY_THIRD:
 			await _handle_story_stage(Encounter.STAGE.THIRD)
+		STAGE.SHOP:
+			await _handle_shop_stage()
 		STAGE.CLEANUP:
 			_handle_cleanup()
 
@@ -129,11 +145,23 @@ func _handle_evaluating_order(mixed_product: MixedProduct) -> void:
 		await product_reaction_display_completed
 	_is_processing = false
 
+func _handle_shop_stage() -> void:
+	EventBus.game.shop_stage_started.emit()
+	await EventBus.game.shop_stage_completed
+	# +1 for the current turn that doesn't end until cleanup
+	_time_to_shop = DEFAULT_SHOP_TIMER + 1
+	_advance_state()
+
 func _handle_cleanup() -> void:
 	encounter_completed.emit()
+	_time_to_shop = max(0, _time_to_shop - 1)
 
-	if encounter_manager.should_continue_encounters():
-		var next_encounter: Encounter = encounter_manager.get_next_encounter()
-		start_encounter(next_encounter)
-	else:
-		_current_stage = STAGE.IDLE
+	if !encounter_manager.should_continue_encounters():
+		_go_to_idle()
+		return
+
+	if _time_to_shop == 0:
+		_start_shop_turn()
+		return
+
+	_start_next_encounter()
