@@ -4,7 +4,7 @@ extends Node
 signal before_encounter_started(encounter: Encounter)
 signal mixing_step_started(current_npc: NPC)
 signal mixing_step_product_completed(product: MixedProduct)
-signal encounter_completed
+signal encounter_completed(is_successful: bool)
 signal encounter_stage_prepared_for_display(stage: Encounter.STAGE)
 signal encounter_stage_display_completed
 signal product_reaction_prepared_for_display(product_reaction: String)
@@ -17,46 +17,24 @@ enum STAGE {
 	STORY_THIRD,
 	SHOP,
 	CLEANUP,
-	IDLE
+	IDLE,
+	GAME_OVER
 }
 
 const DEFAULT_SHOP_TIMER: int = 3 # TODO dial in
 
 @export var encounter_manager: EncounterManager
 
+var current_stage: STAGE: get = get_current_stage
+
 var _current_stage: STAGE = STAGE.IDLE
 var _is_mixing: bool = false
 var _is_processing: bool = false
 var _time_to_shop: int = DEFAULT_SHOP_TIMER
 
-func _start_encounter_failsafe_cleanup() -> void:
-	if _is_processing:
-		_fast_forward_state()
-
-	if _is_mixing:
-		_is_mixing = false
-
-	if encounter_manager.current_encounter:
-		encounter_completed.emit()
-		_current_stage = STAGE.IDLE
-
 func start_encounter(encounter: Encounter) -> void:
 	_start_encounter_failsafe_cleanup()
 	_start_encounter.bind(encounter).call_deferred()
-
-func _start_encounter(encounter: Encounter) -> void:
-	before_encounter_started.emit(encounter)
-	_transition_to(STAGE.STORY_FIRST)
-
-func _start_next_encounter() -> void:
-	var next_encounter: Encounter = encounter_manager.get_next_encounter()
-	start_encounter(next_encounter)
-
-func _go_to_idle() -> void:
-	_current_stage = STAGE.IDLE
-
-func _start_shop_turn() -> void:
-	_transition_to(STAGE.SHOP)
 
 func skip_stage() -> void:
 	if encounter_manager.current_encounter == null or _is_mixing:
@@ -66,6 +44,40 @@ func skip_stage() -> void:
 		_fast_forward_state()
 	else:
 		_advance_state()
+
+func game_over() -> void:
+	# there is no true game over. with a more fleshed out gameplay loop,
+	# we will skip to the future with some resources lost, if the player has any.
+	# for now, just clears the encounter
+	_transition_to(STAGE.GAME_OVER)
+
+func _start_encounter(encounter: Encounter) -> void:
+	before_encounter_started.emit(encounter)
+	_transition_to(STAGE.STORY_FIRST)
+
+func _start_encounter_failsafe_cleanup() -> void:
+	if _is_processing:
+		_fast_forward_state()
+
+	if _is_mixing:
+		_is_mixing = false
+
+	if encounter_manager.current_encounter:
+		encounter_completed.emit(false)
+		_current_stage = STAGE.IDLE
+
+func _start_next_encounter() -> void:
+	var next_encounter: Encounter = encounter_manager.get_next_encounter()
+	start_encounter(next_encounter)
+
+func _go_to_idle() -> void:
+	_current_stage = STAGE.IDLE
+
+func _go_to_game_over() -> void:
+	_current_stage = STAGE.GAME_OVER
+
+func _start_shop_turn() -> void:
+	_transition_to(STAGE.SHOP)
 
 func _fast_forward_state() -> void:
 	EventBus.customer.fast_forward.emit()
@@ -80,7 +92,7 @@ func _advance_state() -> void:
 			_transition_to(STAGE.STORY_THIRD)
 		STAGE.STORY_THIRD, STAGE.SHOP:
 			_transition_to(STAGE.CLEANUP)
-		STAGE.CLEANUP, STAGE.IDLE, STAGE.MIXING:
+		STAGE.CLEANUP, STAGE.IDLE, STAGE.MIXING, STAGE.GAME_OVER:
 			pass # Handled in _execute_current_state or already idle
 
 func _transition_to(new_state: STAGE) -> void:
@@ -102,6 +114,8 @@ func _execute_current_state() -> void:
 			await _handle_shop_stage()
 		STAGE.CLEANUP:
 			_handle_cleanup()
+		STAGE.GAME_OVER:
+			_handle_game_over()
 
 func _handle_story_stage(stage: Encounter.STAGE) -> void:
 	_is_processing = true
@@ -153,7 +167,7 @@ func _handle_shop_stage() -> void:
 	_advance_state()
 
 func _handle_cleanup() -> void:
-	encounter_completed.emit()
+	encounter_completed.emit(true)
 	_time_to_shop = max(0, _time_to_shop - 1)
 
 	if !encounter_manager.should_continue_encounters():
@@ -165,3 +179,10 @@ func _handle_cleanup() -> void:
 		return
 
 	_start_next_encounter()
+
+func _handle_game_over() -> void:
+	encounter_completed.emit(false)
+	_go_to_game_over()
+
+func get_current_stage() -> STAGE:
+	return _current_stage

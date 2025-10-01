@@ -9,6 +9,7 @@ extends Node2D
 @onready var encounter_manager: EncounterManager = %EncounterManager
 
 func _ready() -> void:
+	Player.reset()
 	_connect_signals()
 	_start_game()
 
@@ -26,8 +27,10 @@ func render_encounter_stage(encounter: Encounter, stage: Encounter.STAGE) -> voi
 func _connect_signals() -> void:
 	customer_pane.pressed.connect(_on_customer_pane_pressed)
 	shop_pane.closed.connect(_on_shop_pane_closed)
+	mixing_pane.impossible_order.connect(_on_mixing_pane_impossible_order)
 	EventBus.ui.toggle_npc_pane.connect(_on_ui_toggle_npc_pane)
 	EventBus.game.shop_stage_started.connect(_on_game_shop_stage_started)
+	EventBus.player.health_changed.connect(_on_player_health_changed)
 	_connect_game_state_signals()
 	_connect_debug_signals()
 
@@ -59,10 +62,10 @@ func _on_mixing_step_started(npc: NPC) -> void:
 func _on_mixing_step_mixing_step_product_completed(mixed_product: MixedProduct) -> void:
 	mixing_pane.display_result(mixed_product)
 
-func _on_encounter_completed() -> void:
+func _on_encounter_completed(is_successful: bool) -> void:
 	customer_pane.encounter_storybox.clear()
 	mixing_pane.complete_encounter()
-	encounter_manager.complete_encounter()
+	encounter_manager.complete_encounter(is_successful)
 
 func _on_encounter_stage_prepared_for_display(stage: Encounter.STAGE) -> void:
 	await customer_pane.encounter_storybox.render_story_step(
@@ -93,3 +96,10 @@ func _on_game_shop_stage_started() -> void:
 
 func _on_shop_pane_closed() -> void:
 	EventBus.game.shop_stage_completed.emit()
+
+func _on_player_health_changed(new_health: int, _old_health: int) -> void:
+	if new_health == 0:
+		game_state_machine.game_over()
+
+func _on_mixing_pane_impossible_order() -> void:
+	game_state_machine.game_over()

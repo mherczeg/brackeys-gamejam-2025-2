@@ -1,6 +1,8 @@
 class_name MixingPane
 extends Control
 
+signal impossible_order
+
 @export var config: MixingPaneConfig
 
 @onready var mixer_buttons: MixerButtons = %MixerButtons
@@ -49,6 +51,9 @@ func complete_encounter() -> void:
 	mixer_state.current_npc = null
 
 func start_new_order(npc: NPC) -> void:
+	if Player.inventory.get_available_ingredients().size() < 2:
+		impossible_order.emit()
+		return
 	await audio_player.play_coin_insert()
 	reset_mixer()
 	mixer_state.current_npc = npc

@@ -13,6 +13,24 @@ var order_history: OrderHistory = OrderHistory.new()
 var played_encounters: Dictionary[Encounter, bool] = {}
 
 func _ready() -> void:
+	_init_inventory()
+
+	EventBus.debug.increase_money.connect(_on_debug_increase_money)
+	EventBus.debug.heal.connect(_on_debug_heal)
+	EventBus.mixer.order_received.connect(_on_order_start)
+	EventBus.mixer.serve_mix.connect(_on_product_served)
+	EventBus.shop.product_type_purchased.connect(_on_product_type_purchased)
+	EventBus.shop.ingredient_purchased.connect(_on_ingredient_purchased)
+	EventBus.shop.repair_purchased.connect(_on_repair_purchased)
+
+func reset() -> void:
+	inventory = Inventory.new()
+	order_history = OrderHistory.new()
+	played_encounters = {}
+	health = MAX_HEALTH
+	_init_inventory()
+
+func _init_inventory() -> void:
 	inventory.setup([
 		ResourceManager.product_types[0],
 		ResourceManager.product_types[1],
@@ -24,14 +42,6 @@ func _ready() -> void:
 		ResourceManager.ingredients[2]: 10,
 		ResourceManager.ingredients[3]: 1
 	}, STARTING_MONEY)
-
-	EventBus.debug.increase_money.connect(_on_debug_increase_money)
-	EventBus.debug.heal.connect(_on_debug_heal)
-	EventBus.mixer.order_received.connect(_on_order_start)
-	EventBus.mixer.serve_mix.connect(_on_product_served)
-	EventBus.shop.product_type_purchased.connect(_on_product_type_purchased)
-	EventBus.shop.ingredient_purchased.connect(_on_ingredient_purchased)
-	EventBus.shop.repair_purchased.connect(_on_repair_purchased)
 
 func _on_order_start(product: Product) -> void:
 	inventory.increase_money(product.price)

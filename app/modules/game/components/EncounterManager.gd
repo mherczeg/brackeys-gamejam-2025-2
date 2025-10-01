@@ -39,8 +39,8 @@ func get_next_encounter() -> Encounter:
 func should_continue_encounters() -> bool:
 	return _is_looping
 
-func complete_encounter() -> void:
-	if current_encounter:
+func complete_encounter(is_successful: bool = true) -> void:
+	if current_encounter && is_successful:
 		Player.played_encounters[current_encounter] = true
 	current_encounter = null
 	_current_npc_index = 0
