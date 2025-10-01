@@ -12,6 +12,7 @@
 
 [resource]
 script = ExtResource("3_awwrg")
+name = "Encounter 4"
 order = Dictionary[ExtResource("1_4coqk"), ExtResource("2_ipc7m")]({
 ExtResource("3_xybtp"): ExtResource("6_p56af"),
 ExtResource("4_c0hiq"): ExtResource("7_1yqmo"),

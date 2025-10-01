@@ -25,8 +25,22 @@ var _current_stage: STAGE = STAGE.IDLE
 var _is_mixing: bool = false
 var _is_processing: bool = false
 
+func _start_encounter_failsafe_cleanup() -> void:
+	if _is_processing:
+		_fast_forward_state()
+
+	if _is_mixing:
+		_is_mixing = false
+
+	if encounter_manager.current_encounter:
+		encounter_completed.emit()
+		_current_stage = STAGE.IDLE
 
 func start_encounter(encounter: Encounter) -> void:
+	_start_encounter_failsafe_cleanup()
+	_start_encounter.bind(encounter).call_deferred()
+
+func _start_encounter(encounter: Encounter) -> void:
 	before_encounter_started.emit(encounter)
 	_transition_to(STAGE.STORY_FIRST)
 

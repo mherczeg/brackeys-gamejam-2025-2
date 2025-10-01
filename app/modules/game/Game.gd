@@ -11,10 +11,13 @@ extends Node2D
 func _ready() -> void:
 	_connect_signals()
 
-func start_random_encounter() -> void:
+func start_encounter(encounter: Encounter) -> void:
 	encounter_manager._is_looping = true
-	var encounter: Encounter = ResourceManager.encounters.pick_random()
 	game_state_machine.start_encounter(encounter)
+
+func start_random_encounter() -> void:
+	var encounter: Encounter = ResourceManager.encounters.pick_random()
+	start_encounter(encounter)
 
 func render_encounter_stage(encounter: Encounter, stage: Encounter.STAGE) -> void:
 	customer_pane.encounter_storybox.render_story_step(encounter, stage)
@@ -25,10 +28,8 @@ func _connect_signals() -> void:
 	_connect_debug_signals()
 
 func _connect_debug_signals() -> void:
-	EventBus.debug.render_encounter_stage.connect(render_encounter_stage)
-	EventBus.debug.start_random_encounter.connect(start_random_encounter)
-	EventBus.debug.start_shop.connect(shop_pane.open)
-	EventBus.debug.open_npc_db.connect(npc_pane.open)
+	EventBus.debug.start_encounter.connect(_on_debug_start_encounter)
+	EventBus.debug.restart_encounter.connect(_on_debug_restart_encounter)
 
 func _connect_game_state_signals() -> void:
 	game_state_machine.before_encounter_started.connect(_on_before_encounter_started)
@@ -70,3 +71,10 @@ func _on_product_reaction_prepared_for_display(product_reaction: String) -> void
 		product_reaction
 	)
 	game_state_machine.product_reaction_display_completed.emit()
+
+func _on_debug_start_encounter(encounter: Encounter) -> void:
+	start_encounter(encounter)
+
+func _on_debug_restart_encounter() -> void:
+	if encounter_manager.current_encounter:
+		start_encounter(encounter_manager.current_encounter)

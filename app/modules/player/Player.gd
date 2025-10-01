@@ -1,6 +1,6 @@
 extends Node
 
-const STARTING_MONEY: int = 100
+const STARTING_MONEY: float = 10.73
 const DISLIKED_ORDER_DAMAGE: int = 10
 const REPAIR_AMOUNT: int = 10
 const REPAIR_COST: int = 10
@@ -25,6 +25,7 @@ func _ready() -> void:
 		ResourceManager.ingredients[3]: 1
 	}, STARTING_MONEY)
 
+	EventBus.debug.increase_money.connect(_on_debug_increase_money)
 	EventBus.mixer.order_received.connect(_on_order_start)
 	EventBus.mixer.serve_mix.connect(_on_product_served)
 	EventBus.shop.product_type_purchased.connect(_on_product_type_purchased)
@@ -104,3 +105,6 @@ func _on_repair_purchased() -> void:
 	if inventory.money >= REPAIR_COST && health < MAX_HEALTH:
 		inventory.increase_money(REPAIR_COST * -1)
 		increase_health(REPAIR_AMOUNT)
+
+func _on_debug_increase_money(amount: float) -> void:
+	inventory.increase_money(amount)

@@ -3,6 +3,7 @@ extends Resource
 
 enum STAGE {FIRST = Constants.ENCOUNTER_STAGE_ENUM_RESERVED_RANGE, SECOND, THIRD, LIKE, DISLIKE, FAILURE}
 
+@export var name: String
 @export var order: Dictionary[NPC, Product] = {}
 @export var stage_1_text: Dictionary[NPC, String] = {}
 @export var stage_2_text: Dictionary[NPC, String] = {}
