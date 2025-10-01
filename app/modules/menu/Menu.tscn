@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvxvrl8o2sb1j"]
+
+[ext_resource type="PackedScene" uid="uid://qxvhrutylcwt" path="res://modules/shared/Background.tscn" id="1_bikqr"]
+[ext_resource type="Script" uid="uid://bs85qhneksxmq" path="res://modules/menu/Menu.gd" id="1_xdo57"]
+[ext_resource type="Theme" uid="uid://3kwdlg2k6yft" path="res://themes/button.tres" id="2_cg32f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cg32f"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_xdo57")
+
+[node name="Background" parent="." instance=ExtResource("1_bikqr")]
+position = Vector2(640, 360)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Buttons" type="VBoxContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.1
+anchor_right = 0.5
+anchor_bottom = 0.1
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="NewGame" type="Button" parent="UI/Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_cg32f")
+theme_override_font_sizes/font_size = 24
+text = "New Game"
+
+[node name="HSeparator" type="HSeparator" parent="UI/Buttons"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_cg32f")
+
+[node name="ButtonsSection" type="VBoxContainer" parent="UI/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="LoadGame" type="Button" parent="UI/Buttons/ButtonsSection"]
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_cg32f")
+text = "Load
+"
+
+[node name="Settings" type="Button" parent="UI/Buttons/ButtonsSection"]
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_cg32f")
+text = "Settings"
+
+[node name="Exit" type="Button" parent="UI/Buttons/ButtonsSection"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_cg32f")
+text = "Exit"

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://crplonc8qkgt7" path="res://modules/game/Game.gd" id="1_78awf"]
 [ext_resource type="PackedScene" uid="uid://dtq073ey6thiy" path="res://modules/customer-pane/CustomerPane.tscn" id="2_cpr0p"]
+[ext_resource type="PackedScene" uid="uid://qxvhrutylcwt" path="res://modules/shared/Background.tscn" id="2_pq0v8"]
 [ext_resource type="PackedScene" uid="uid://cl1c5ipfnf66f" path="res://modules/mixing-pane/MixingPane.tscn" id="2_qbsmt"]
 [ext_resource type="Theme" uid="uid://yqmay0cd53tl" path="res://themes/MetalPixelTheme4/MetalPixel.tres" id="2_s0nni"]
 [ext_resource type="PackedScene" uid="uid://b37hth77ew4nl" path="res://modules/devtools/Devtools.tscn" id="3_cpr0p"]
@@ -9,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://b1qtp0cds7p43" path="res://modules/shop/ShopPane.tscn" id="6_aug50"]
 [ext_resource type="AudioStream" uid="uid://8sg43fxjcy2r" path="res://assets/audio/ambiance.ogg" id="8_400sg"]
 [ext_resource type="PackedScene" uid="uid://dag5yg0qs22q0" path="res://modules/game/components/GameStateMachine.tscn" id="10_3xj3m"]
-[ext_resource type="Texture2D" uid="uid://bnliprcb2rfcl" path="res://assets/images/City.png" id="10_qy1jj"]
 [ext_resource type="PackedScene" uid="uid://djpqlc8r6ylr3" path="res://modules/game/components/EncounterManager.tscn" id="11_7ed7s"]
 [ext_resource type="PackedScene" uid="uid://bheolg2um5hlw" path="res://modules/npc-db/NPCPane.tscn" id="11_nvdm8"]
 [ext_resource type="PackedScene" uid="uid://km7jukryytkx" path="res://modules/npc-db/NPCTooltip.tscn" id="12_nvdm8"]
@@ -17,10 +17,8 @@
 [node name="Game" type="Node2D"]
 script = ExtResource("1_78awf")
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" parent="." instance=ExtResource("2_pq0v8")]
 position = Vector2(640, 360)
-scale = Vector2(0.666667, 0.666667)
-texture = ExtResource("10_qy1jj")
 
 [node name="Audio" type="Node" parent="."]
 
@@ -40,6 +38,8 @@ encounter_manager = NodePath("../EncounterManager")
 
 [node name="EncounterManager" parent="Scripting" instance=ExtResource("11_7ed7s")]
 unique_name_in_owner = true
+
+[node name="Node" type="Node" parent="Scripting"]
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3

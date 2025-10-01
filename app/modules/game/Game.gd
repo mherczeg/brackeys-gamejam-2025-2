@@ -10,6 +10,7 @@ extends Node2D
 
 func _ready() -> void:
 	_connect_signals()
+	_start_game()
 
 func start_encounter(encounter: Encounter) -> void:
 	encounter_manager._is_looping = true
@@ -40,6 +41,8 @@ func _connect_game_state_signals() -> void:
 	game_state_machine.encounter_stage_prepared_for_display.connect(_on_encounter_stage_prepared_for_display)
 	game_state_machine.product_reaction_prepared_for_display.connect(_on_product_reaction_prepared_for_display)
 
+func _start_game() -> void:
+	start_random_encounter()
 
 func _on_customer_pane_pressed() -> void:
 	game_state_machine.skip_stage()

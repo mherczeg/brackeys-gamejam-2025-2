@@ -5,6 +5,7 @@ extends ProgressBar
 
 func _ready() -> void:
 	EventBus.player.health_changed.connect(_on_player_health_changed)
+	value = Player.health
 
 func _on_player_health_changed(new_health: int, _old_health: int) -> void:
 	value = new_health
