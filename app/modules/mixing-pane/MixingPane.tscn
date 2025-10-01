@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cl1c5ipfnf66f"]
+[gd_scene load_steps=17 format=3 uid="uid://cl1c5ipfnf66f"]
 
 [ext_resource type="Script" uid="uid://r26vig0m7xh8" path="res://modules/mixing-pane/MixingPane.gd" id="1_svtgx"]
 [ext_resource type="Script" uid="uid://d15d6nc3jb0l2" path="res://modules/mixing-pane/resources/MixingPaneConfig.gd" id="2_mhavr"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://yrym8oofb8p4" path="res://modules/mixing-pane/components/MixerButtons.tscn" id="4_svtgx"]
 [ext_resource type="PackedScene" uid="uid://bvhr2kpc3py1q" path="res://modules/mixing-pane/components/IngredientSelector.tscn" id="5_nyt5e"]
 [ext_resource type="PackedScene" uid="uid://dhdwspygl8is8" path="res://modules/mixing-pane/components/ProductDetails.tscn" id="6_cgagm"]
+[ext_resource type="PackedScene" uid="uid://clojjom5g4x2h" path="res://modules/mixing-pane/components/GameWindowButtons.tscn" id="8_peo5f"]
 [ext_resource type="PackedScene" uid="uid://cixif270j8h8b" path="res://modules/mixing-pane/components/MoneyCounter.tscn" id="9_je0hr"]
 [ext_resource type="PackedScene" uid="uid://bpwl5qtg12yqs" path="res://modules/mixing-pane/components/MixingPaneAudioPlayer.tscn" id="9_wskut"]
 [ext_resource type="PackedScene" uid="uid://dhf7bummp47q6" path="res://modules/mixing-pane/components/HealthBar.tscn" id="9_xovcq"]
@@ -20,6 +21,8 @@ metadata/_custom_type_script = "uid://d15d6nc3jb0l2"
 [sub_resource type="Theme" id="Theme_vhkge"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fi2f3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xovcq"]
 
 [node name="MixingPane" type="Control"]
 layout_mode = 3
@@ -90,30 +93,31 @@ offset_top = 50.0
 offset_right = 920.0
 offset_bottom = 680.0
 
-[node name="MoneyCounter" parent="UI" instance=ExtResource("9_je0hr")]
+[node name="InfoCorner" type="VBoxContainer" parent="UI"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.96
+anchor_left = 0.9
 anchor_top = 0.05
-anchor_right = 0.96
-anchor_bottom = 0.05
-offset_left = -104.0
-offset_top = 0.0
-offset_right = 0.0
-offset_bottom = 64.0
+anchor_right = 0.95
+anchor_bottom = 0.55
 grow_horizontal = 0
 
-[node name="HealthBar" parent="UI" instance=ExtResource("9_xovcq")]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.85
-anchor_top = 0.2
-anchor_right = 0.95
-anchor_bottom = 0.2
-offset_left = -4.0
-offset_bottom = 27.0
-grow_horizontal = 0
-grow_vertical = 1
+[node name="GameWindowButtons" parent="UI/InfoCorner" instance=ExtResource("8_peo5f")]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="UI/InfoCorner"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_xovcq")
+
+[node name="MoneyCounter" parent="UI/InfoCorner" instance=ExtResource("9_je0hr")]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="UI/InfoCorner"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_xovcq")
+
+[node name="HealthBar" parent="UI/InfoCorner" instance=ExtResource("9_xovcq")]
+layout_mode = 2
 
 [node name="Audio" type="Node" parent="."]
 

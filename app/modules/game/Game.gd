@@ -24,6 +24,7 @@ func render_encounter_stage(encounter: Encounter, stage: Encounter.STAGE) -> voi
 
 func _connect_signals() -> void:
 	customer_pane.pressed.connect(_on_customer_pane_pressed)
+	EventBus.ui.toggle_npc_pane.connect(_on_ui_toggle_npc_pane)
 	_connect_game_state_signals()
 	_connect_debug_signals()
 
@@ -78,3 +79,6 @@ func _on_debug_start_encounter(encounter: Encounter) -> void:
 func _on_debug_restart_encounter() -> void:
 	if encounter_manager.current_encounter:
 		start_encounter(encounter_manager.current_encounter)
+
+func _on_ui_toggle_npc_pane() -> void:
+	npc_pane.toggle()

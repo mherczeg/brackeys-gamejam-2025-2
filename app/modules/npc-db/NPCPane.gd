@@ -12,6 +12,12 @@ func _ready() -> void:
 	hide()
 	close_button.pressed.connect(hide)
 
+func toggle() -> void:
+	if visible:
+		hide()
+	else:
+		open()
+
 func open() -> void:
 	Utils.clear_children(items)
 
