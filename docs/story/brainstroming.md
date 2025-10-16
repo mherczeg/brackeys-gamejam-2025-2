@@ -313,6 +313,33 @@ what songs they write?
 **Player Interactivity:** Perspective-based storytelling, maybe subtle influence through which items you recommend.
 
 
+## 24. The Vending Machine Thief
+
+**Characters:** 
+- "Eddie" (20s). Tech-savvy, arrogant, and always looking for an angle.
+
+**Story Arc:**
+- Will try to use a trap change
+- May try to break open the machine
+- Could also try to steal from other NPCs
+
+
+## 25. The Low-Level Drug Dealer
+
+**Characters:** 
+- "Silas" (20s). Quiet, nervous, and trying to stay under the radar.
+
+**Story Arc:**
+- Leaves drugs in dead drop
+- May take lost money/bag/around the vending machine
+
+## 26. The Extortionist
+
+**Character:** 
+- "Sal" (40s). A smooth talker with a menacing edge.
+
+**Story Arc:**
+- I have more of a scene in mind for this for now, than an actual story arc. A man hiding in the shadows, unnoticed, overhearing a secret.
 
 Leo (21): The Aspiring Musician and the Skeptical Sibling. (Could be connected to The Bandmates).
 Maya (24): The Aspiring Musician and the Skeptical Sibling.
