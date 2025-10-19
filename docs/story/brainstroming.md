@@ -378,3 +378,7 @@ Things the engine currently does not support/support well.
 - Manual like/dislike discovery: NPCs can leave hints on what they like/dislike about their intended order already, so players can make notes about them, without actually generating a lile/dislike response
 - Fixtures: permanent residents of a cycle (day), who may or may not order, or chat with the coming and going NPCs: a street vendor, a musician, a homeless guy camping out, a broken down bus' driver 
 - Timing the fullfillment of the order. Maybe someone is in a hurry
+- Special sound effects for a dialogue (a person humming to themselves)
+- needs way of letting emotions know. maybe emoticons above head? (it seems jarring to end every dialogue with a description of their mood to let players know if something was just a joke, or if they asked something nervously)
+- maybe narration logs? both for displaying emotions, but also for letting minor details know. like when the wrong product is served, if they take the product anyway
+- insert money in multiple coins, show correct amount or insufficient amount
