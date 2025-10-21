@@ -3,6 +3,7 @@
 ## Original Pitch 
 - Leo (21): An optimistic, slightly scruffy musician. Always talking about his band's next gig, a new song he wrote, or the "big break" that's just around the corner,. Often buys cheap chips.
 - Maya (24): Leo's older sister. Works in a corporate office nearby. She's pragmatic and worried about Leo's future. She loves him but wishes he'd get a "real job". Buys diet soda and a granola bar.
+- Maya's Coworker
 
 - Maya and Leo visit together. She's giving him money for lunch and nagging him about finding a stable job. He's trying to convince her to come to his next show.
 - Leo visits alone, humming a new tune, excited because a "real producer" is coming to their next gig.
